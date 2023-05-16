@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.507" height="15.278" viewBox="0 0 15.507 15.278">
+  <g id="Server_Lock" data-name="Server Lock" transform="translate(-2 -2)">
+    <path id="Path_1180" data-name="Path 1180" d="M15.641,2h-12A1.637,1.637,0,0,0,2,3.637V5.82a.546.546,0,0,0,.546.546H16.732a.546.546,0,0,0,.546-.546V3.637A1.637,1.637,0,0,0,15.641,2Z" fill="#a8cdfc"/>
+    <rect id="Rectangle_452" data-name="Rectangle 452" width="15.507" height="4.652" rx="1" transform="translate(2 7.199)" fill="#a8cdfc"/>
+    <path id="Path_1181" data-name="Path 1181" d="M14.55,22h-12A.546.546,0,0,0,2,22.546v2.183a1.637,1.637,0,0,0,1.637,1.637H14.55a.546.546,0,0,0,.546-.546V22.546A.546.546,0,0,0,14.55,22Z" transform="translate(0 -9.087)" fill="#a8cdfc"/>
+    <path id="Path_1182" data-name="Path 1182" d="M8.728,16.091H6.546a.546.546,0,1,1,0-1.091H8.728a.546.546,0,0,1,0,1.091Z" transform="translate(-1.817 -5.907)" fill="#0593ff"/>
+    <path id="Path_1183" data-name="Path 1183" d="M8.728,6.091H6.546A.546.546,0,0,1,6.546,5H8.728a.546.546,0,0,1,0,1.091Z" transform="translate(-1.817 -1.363)" fill="#0593ff"/>
+    <path id="Path_1184" data-name="Path 1184" d="M8.728,26.091H6.546a.546.546,0,1,1,0-1.091H8.728a.546.546,0,0,1,0,1.091Z" transform="translate(-1.817 -10.45)" fill="#0593ff"/>
+  </g>
+</svg>

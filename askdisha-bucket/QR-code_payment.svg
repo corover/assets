@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87.577" height="77.473" viewBox="0 0 87.577 77.473">
+  <g id="QR-code_payment" transform="translate(-105.823 -58.245)">
+    <rect id="Rectangle_416" data-name="Rectangle 416" width="3.157" height="3.071" transform="translate(145.311 65.165)"/>
+    <g id="Group_715" data-name="Group 715" transform="translate(130.241 65.165)">
+      <path id="Path_1122" data-name="Path 1122" d="M204.2,243.725H191.568V256.36H204.2Zm-2.788,9.847h-7.06v-7.06h7.06Z" transform="translate(-191.375 -243.725)"/>
+      <rect id="Rectangle_412" data-name="Rectangle 412" width="2.599" height="2.599" transform="translate(5.212 5.018)"/>
+      <path id="Path_1123" data-name="Path 1123" d="M289.047,243.725H276.412V256.36h12.635Zm-2.788,9.847H279.2v-7.06h7.06Z" transform="translate(-251.866 -243.725)"/>
+      <rect id="Rectangle_413" data-name="Rectangle 413" width="2.599" height="2.599" transform="translate(29.565 5.018)"/>
+      <path id="Path_1124" data-name="Path 1124" d="M204.2,330.862H191.568V343.5H204.2Zm-2.788,9.847h-7.06v-7.06h7.06Z" transform="translate(-191.375 -305.851)"/>
+      <rect id="Rectangle_414" data-name="Rectangle 414" width="2.599" height="2.599" transform="translate(5.212 30.029)"/>
+      <path id="Path_1125" data-name="Path 1125" d="M288.92,335.948V323.313h-9.529v-3.039h-3.157l.051,15.674Zm-2.788-2.788h-7.06V326.1h7.06Z" transform="translate(-251.738 -298.302)"/>
+      <rect id="Rectangle_415" data-name="Rectangle 415" width="2.599" height="2.599" transform="translate(29.565 30.029)"/>
+      <rect id="Rectangle_417" data-name="Rectangle 417" width="3.157" height="3.071" transform="translate(0 14.614)"/>
+      <rect id="Rectangle_418" data-name="Rectangle 418" width="3.157" height="3.071" transform="translate(14.456 21.94)"/>
+      <path id="Path_1126" data-name="Path 1126" d="M233.939,267.5v-7.124h2.785A1.579,1.579,0,0,0,238.3,258.8v-4.375h-3.157v2.8H232.36a1.579,1.579,0,0,0-1.579,1.579v7.124H225.7v3.157h6.657A1.579,1.579,0,0,0,233.939,267.5Z" transform="translate(-215.712 -251.354)"/>
+      <path id="Path_1127" data-name="Path 1127" d="M276.412,297.646h4.739v3.59a1.579,1.579,0,0,0,1.579,1.579h6.318v-3.157h-4.739v-3.59a1.579,1.579,0,0,0-1.579-1.579h-6.318Z" transform="translate(-251.866 -279.918)"/>
+      <path id="Path_1128" data-name="Path 1128" d="M253.482,337.18v-6.318h-3.157V335.6h-3.569v3.157H251.9a1.579,1.579,0,0,0,1.579-1.579Z" transform="translate(-230.721 -305.852)"/>
+      <rect id="Rectangle_419" data-name="Rectangle 419" width="5.732" height="3.157" transform="translate(3.645 19.74)"/>
+    </g>
+    <path id="Path_1129" data-name="Path 1129" d="M169.059,223.535v4.846h3.157v-4.846a.763.763,0,0,1,.762-.762h4.864v-3.157h-4.864A3.924,3.924,0,0,0,169.059,223.535Z" transform="translate(-45.085 -161.371)" fill="#f25400"/>
+    <path id="Path_1130" data-name="Path 1130" d="M321.124,228.381v-4.846a3.924,3.924,0,0,0-3.919-3.919h-4.864v3.157h4.864a.763.763,0,0,1,.762.762v4.846Z" transform="translate(-147.241 -161.371)" fill="#f25400"/>
+    <path id="Path_1131" data-name="Path 1131" d="M169.059,366.826v4.846a3.924,3.924,0,0,0,3.919,3.919h4.864v-3.157h-4.864a.763.763,0,0,1-.762-.762v-4.846Z" transform="translate(-45.085 -266.327)" fill="#f25400"/>
+    <path id="Path_1132" data-name="Path 1132" d="M321.124,371.672v-4.846h-3.157v4.846a.763.763,0,0,1-.762.762h-4.864v3.157h4.864A3.924,3.924,0,0,0,321.124,371.672Z" transform="translate(-147.241 -266.327)" fill="#f25400"/>
+    <rect id="Rectangle_420" data-name="Rectangle 420" width="20.877" height="3.157" transform="translate(105.824 79.657)" fill="#f25400"/>
+    <rect id="Rectangle_421" data-name="Rectangle 421" width="22.244" height="3.157" transform="translate(171.156 79.657)" fill="#f25400"/>
+    <path id="Path_1133" data-name="Path 1133" d="M195.909,348.516a2.87,2.87,0,0,1-2.87,2.87h-60.6a2.87,2.87,0,0,1-2.87-2.87v-32.3h-4.374v40.363a9.385,9.385,0,0,0,9.384,9.384H190.9a9.385,9.385,0,0,0,9.385-9.385V316.213h-4.374Zm-26.6,11.643H156.17v-3.444H169.3Z" transform="translate(-13.808 -230.242)" fill="#537103"/>
+  </g>
+</svg>
