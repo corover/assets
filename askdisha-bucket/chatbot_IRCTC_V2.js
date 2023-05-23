@@ -33,18 +33,20 @@ overlayDiv.style.cssText = `
 display: none;
 position: fixed;
 inset: 0px;
-background-color: #000000a1;
+background-color: #ffffff26;
 z-index: 99999;
+-webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 `;
 document.body.appendChild(overlayDiv);
 let loading = true;
 let loader = document.createElement("div");
 loader.style.cssText = `
-height: 85%;
+height: 100%;
 width: 100%;
 text-align: center;
 // display: flex;
-display:none;
+display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
@@ -376,7 +378,7 @@ const setPlaceholderMaxHeight = () => {
     let initCSS =
       "display: none; z-index: 9; height: fit-content; position: fixed; border-radius: 50%; bottom: 38px; width: fit-content; right: 45px; box-shadow: none;";
     let smallCSS =
-      "border-radius: 8px; box-sizing: border-box;right: 0; width: fit-content !important; max-width: none; position: fixed; z-index: 999; bottom: -36px; visibility: visible; opacity: 1; min-width: 410px; right: 16px; height: calc(var(--vh, 1vh) * 100)";
+      "border-radius: 8px; box-sizing: border-box;right: 0; width: fit-content !important; max-width: none; position: fixed; z-index: 999; bottom: 0px; visibility: visible; opacity: 1; min-width: 410px; right: 16px; height: calc(var(--vh, 1vh) * 100); left:50%; transform:translateX(-50%)";
     let maxCSS =
       "border-radius: 8px; box-sizing: border-box;right: 0; width: 100% !important; max-width: none; position: fixed; z-index: 999; bottom: 0px; visibility: visible; opacity: 1;box-shadow: 0 7px 6px 1px rgb(0 0 0 / 16%); -webkit-box-shadow: 0 7px 6px 1px rgb(0 0 0 / 16%); -moz-box-shadow: 0 7px 6px 1px rgba(0,0,0,.16); height: 100%";
     //Creates Div
@@ -630,7 +632,7 @@ const setPlaceholderMaxHeight = () => {
     ad.style.display = "none";
     ad.style.overflowX = "hidden";
     ad.style.height = "fit-content";
-    // ad.style.height = "85%";
+    // ad.style.height = "100%";
     ad.innerHTML += `
      <div
          style="
@@ -894,7 +896,7 @@ const setPlaceholderMaxHeight = () => {
       "geolocation https://irctc.corover.ai/; microphone https://irctc.corover.ai/; camera; otp-credentials; midi; accelerometer; gyroscope; payment"
     );
     n.style.width = "100%";
-    n.style.height = "85%";
+    n.style.height = "100%";
     // n.style.background = "transparent";
     n.style.position = "relative";
     n.style.margin = 0;
@@ -920,7 +922,8 @@ const setPlaceholderMaxHeight = () => {
     crossClose.style.position = "fixed";
     crossClose.style.borderRadius = "29px";
     crossClose.style.cursor = "pointer";
-    crossClose.style.right = "16px";
+    crossClose.style.right = "25px";
+    crossClose.style.top = "25px";
     crossClose.style.pointer = "cursor";
     crossClose.style.boxShadow = "0 7px 6px 1px rgb(0 0 0 / 16%)";
     crossClose.style.webkitBoxShadow = "0 7px 6px 1px rgb(0 0 0 / 16%)";
@@ -928,7 +931,7 @@ const setPlaceholderMaxHeight = () => {
     //   alert();
     //   // n.contentWindow.postMessage("botClosed", "*");
     // };
-    d.appendChild(crossClose);
+    overlayDiv.appendChild(crossClose);
     //*
     // n.src = `https://assistant.corover.mobi/eticket/`;
     //#
@@ -961,11 +964,11 @@ const setPlaceholderMaxHeight = () => {
       checkForClick(e);
       checkForRecent(e);
       if (e.data === "LOADED") {
-        // if (!loading) loader.style.display = "none";
-        // else
-        //   setTimeout(() => {
-        //     loader.style.display = "none";
-        //   }, 1000);
+        if (!loading) loader.style.display = "none";
+        else
+          setTimeout(() => {
+            loader.style.display = "none";
+          }, 1000);
       }
 
       if (e.data === "GET_DISHA_DATA") {
@@ -1397,7 +1400,7 @@ const setPlaceholderMaxHeight = () => {
 
     document.getElementById("disha-banner-close").onclick = () => {
       openBanner(false);
-      switchIcon();
+      // switchIcon();
     };
 
     function iOS() {
@@ -1437,7 +1440,7 @@ const setPlaceholderMaxHeight = () => {
       n.contentWindow.postMessage("hideCross", "*");
       n.style.borderRadius = "8px";
       n.style.width = "100%";
-      n.style.height = "85%";
+      n.style.height = "100%";
       isOpen = true;
 
       dealOfDay.style.display = `none`;
@@ -1493,7 +1496,7 @@ const setPlaceholderMaxHeight = () => {
       n.contentWindow.postMessage("hideCross", "*");
       n.style.borderRadius = "8px";
       n.style.width = "100%";
-      n.style.height = "85%";
+      n.style.height = "100%";
       isOpen = true;
 
       if (true) dealOfDay.style.display = `none`;
@@ -1666,8 +1669,8 @@ const setPlaceholderMaxHeight = () => {
           n.contentWindow.postMessage("hideCross", "*");
         } else {
           d.style.cssText = smallCSS;
-          n.style.height = "85%";
-          loader.style.height = "85%";
+          n.style.height = "100%";
+          loader.style.height = "100%";
           // if (ad.childElementCount == 1) ad.appendChild(videoFrame);
           // setAdWidth();
           // n.contentWindow.postMessage("showCross", "*");
@@ -2434,7 +2437,7 @@ const setPlaceholderMaxHeight = () => {
        .disha-loader {
         border: 10px solid #f3f3f3;
         border-radius: 50%;
-        border-top: 10px solid #3498db;
+        border-top: 10px solid rgb(52, 109, 179);
         width: 60px;
         height: 60px;
         -webkit-animation: disha-spin 1s linear infinite; /* Safari */
