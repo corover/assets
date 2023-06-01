@@ -69,9 +69,7 @@ loader.innerHTML = `
     width: 100%;
   
     margin-top: 10px;
-    margin-bottom: 0px;">Please Wait...</p>
-
-    
+    margin-bottom: 0px;">Please Wait...</p>    
     `;
 
 const defineGPTslots = (all) => {
@@ -824,10 +822,10 @@ const setPlaceholderMaxHeight = () => {
     document.body.appendChild(adDownIframe);
     document.body.appendChild(adDownIframe2);
     const dealOfDay = document.createElement("a");
-
+    // https://bit.ly/3gBANx7 PLUTOS
     dealOfDay.style.display = `inline`;
-    if (isMobile) dealOfDay.href = "https://bit.ly/3gBANx7";
-    else dealOfDay.href = "https://bit.ly/3gBANx7";
+    if (isMobile) dealOfDay.href = "https://amzn.to/34WK1uY";
+    else dealOfDay.href = "https://amzn.to/34WK1uY";
 
     dealOfDay.target = "_blank";
     dealOfDay.innerHTML = `
