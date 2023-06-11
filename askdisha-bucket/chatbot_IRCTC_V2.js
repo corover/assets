@@ -2435,7 +2435,7 @@ const setPlaceholderMaxHeight = () => {
   document.head.insertAdjacentHTML(
     "beforeend",
     `<style type="text/css">
-       #div-gpt-ad-1654160819405-0{position:fixed !important;}
+       #div-gpt-ad-1686031619172-0{position:fixed !important;}
        #div-gpt-ad-1677756304492-0{
         min-width: 300px; min-height: 250px;
        }
