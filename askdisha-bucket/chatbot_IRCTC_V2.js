@@ -84,12 +84,14 @@ const defineGPTslots = (all) => {
         )
         .addService(googletag.pubads());
     }
-    // IR_UB = googletag
-    //   .defineSlot(
-    //     "/21748009408/irctc.co.in_320x50_corover",
-    //     [320, 50],
-    //     "div-gpt-ad-1654160819405-0"
-    //   )
+
+    IR_UB = googletag
+      .defineSlot(
+        "/22686085093/irctc_320x50",
+        [320, 50],
+        "div-gpt-ad-1686031619172-0"
+      )
+      .addService(googletag.pubads());
     //   .addService(googletag.pubads());
     // IR_UB_300x250 = googletag
     //   .defineSlot(
@@ -760,8 +762,9 @@ const setPlaceholderMaxHeight = () => {
      `;
     adDownIframe2.href = "https://irctc.corover.ai/";
     adDownIframe2.target = "_blank";
-    const adDownIframe = document.createElement("iframe");
-    adDownIframe.src = "https://assistant.corover.mobi/320x50_placeholder.html";
+    const adDownIframe = document.createElement("div");
+    // adDownIframe.src = "https://assistant.corover.mobi/320x50_placeholder.html";
+    adDownIframe.id = "div-gpt-ad-1686031619172-0";
     const adDownScript = document.createElement("script");
     // adDownIframe.id = "div-gpt-ad-1654160819405-0";
 
@@ -1931,6 +1934,7 @@ const setPlaceholderMaxHeight = () => {
           if (!isMob()) {
             googletag.pubads().refresh([IR_UB_NEW]);
           }
+          googletag.pubads().refresh([IR_UB]);
         });
 
         if (!isSplashScreenOpen) {
@@ -2326,6 +2330,10 @@ const setPlaceholderMaxHeight = () => {
     defineGPTslots(all);
     googletag.cmd.push(function () {
       googletag.display("div-gpt-ad-1654160819405-0");
+    });
+
+    googletag.cmd.push(function () {
+      googletag.display("div-gpt-ad-1686031619172-0");
     });
 
     if (all && !isMob()) {
