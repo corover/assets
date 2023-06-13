@@ -776,6 +776,7 @@ const setPlaceholderMaxHeight = () => {
 
     const add320 = () => {
       document.body.appendChild(adDownIframe);
+      reloadADs(false);
     };
 
     const remove320 = () => {
