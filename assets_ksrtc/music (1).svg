@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 126.72 126.72">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .Graphic-Style-4, .cls-2 {
+        mix-blend-mode: multiply;
+      }
+
+      .Graphic-Style {
+        fill: #808285;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-23, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        opacity: 0;
+      }
+
+      .cls-6 {
+        fill: #f7f7f7;
+        opacity: 0.06;
+      }
+
+      .cls-7 {
+        fill: #efeff0;
+        opacity: 0.13;
+      }
+
+      .cls-8 {
+        fill: #e7e8e8;
+        opacity: 0.19;
+      }
+
+      .cls-9 {
+        fill: #dfe0e1;
+        opacity: 0.25;
+      }
+
+      .cls-10 {
+        fill: #d7d8d9;
+        opacity: 0.31;
+      }
+
+      .cls-11 {
+        fill: #cfd0d1;
+        opacity: 0.38;
+      }
+
+      .cls-12 {
+        fill: #c7c8ca;
+        opacity: 0.44;
+      }
+
+      .cls-13 {
+        fill: #c0c1c2;
+        opacity: 0.5;
+      }
+
+      .cls-14 {
+        fill: #b8b9ba;
+        opacity: 0.56;
+      }
+
+      .cls-15 {
+        fill: #b0b1b3;
+        opacity: 0.63;
+      }
+
+      .cls-16 {
+        fill: #a8a9ab;
+        opacity: 0.69;
+      }
+
+      .cls-17 {
+        fill: #a0a1a4;
+        opacity: 0.75;
+      }
+
+      .cls-18 {
+        fill: #98999c;
+        opacity: 0.81;
+      }
+
+      .cls-19 {
+        fill: #909294;
+        opacity: 0.88;
+      }
+
+      .cls-20 {
+        fill: #888a8d;
+        opacity: 0.94;
+      }
+
+      .cls-21 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-22 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .Graphic-Style-4 {
+        fill: #a7a9ac;
+        opacity: 0.8;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="536.64" y1="1136.64" x2="663.36" y2="1136.64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#d1d3d4"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="539.81" y1="1136.64" x2="660.19" y2="1136.64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d1d3d4"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="15.84" y1="63.36" x2="110.88" y2="63.36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e24263"/>
+      <stop offset="1" stop-color="#dd1e47"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="560.4" y1="1136.64" x2="639.6" y2="1136.64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dd1e47"/>
+      <stop offset="1" stop-color="#e24263"/>
+    </linearGradient>
+  </defs>
+  <title>music</title>
+  <g class="cls-1">
+    <g id="symbol_buttons" data-name="symbol buttons">
+      <g>
+        <g>
+          <g class="cls-2">
+            <path class="Graphic-Style" d="M600,1199.21a62.57,62.57,0,1,1,62.57-62.57A62.64,62.64,0,0,1,600,1199.21Z" transform="translate(-536.64 -1073.28)"/>
+          </g>
+          <path class="cls-3" d="M600,1200a63.36,63.36,0,1,1,63.36-63.36A63.43,63.43,0,0,1,600,1200Z" transform="translate(-536.64 -1073.28)"/>
+          <path class="cls-4" d="M600,1196.83a60.19,60.19,0,1,1,60.19-60.19A60.26,60.26,0,0,1,600,1196.83Z" transform="translate(-536.64 -1073.28)"/>
+          <g class="cls-2">
+            <circle class="cls-5" cx="76.36" cy="76.36" r="47.52"/>
+            <circle class="cls-6" cx="75.55" cy="75.55" r="47.47"/>
+            <circle class="cls-7" cx="74.74" cy="74.73" r="47.42"/>
+            <circle class="cls-8" cx="73.92" cy="73.92" r="47.37"/>
+            <circle class="cls-9" cx="73.11" cy="73.11" r="47.32"/>
+            <circle class="cls-10" cx="72.3" cy="72.3" r="47.27"/>
+            <circle class="cls-11" cx="71.49" cy="71.48" r="47.22"/>
+            <circle class="cls-12" cx="70.67" cy="70.67" r="47.17"/>
+            <circle class="cls-13" cx="69.86" cy="69.86" r="47.12"/>
+            <circle class="cls-14" cx="69.05" cy="69.05" r="47.07"/>
+            <circle class="cls-15" cx="68.24" cy="68.23" r="47.03"/>
+            <circle class="cls-16" cx="67.42" cy="67.42" r="46.98"/>
+            <circle class="cls-17" cx="66.61" cy="66.61" r="46.93"/>
+            <circle class="cls-18" cx="65.8" cy="65.8" r="46.88"/>
+            <circle class="cls-19" cx="64.99" cy="64.98" r="46.83"/>
+            <circle class="cls-20" cx="64.17" cy="64.17" r="46.78"/>
+            <circle class="Graphic-Style" cx="63.36" cy="63.36" r="46.73"/>
+          </g>
+          <circle class="cls-21" cx="63.36" cy="63.36" r="47.52"/>
+          <path class="cls-22" d="M600,1176.24a39.6,39.6,0,1,1,39.6-39.6A39.65,39.65,0,0,1,600,1176.24Z" transform="translate(-536.64 -1073.28)"/>
+        </g>
+        <g>
+          <path class="Graphic-Style-4" d="M584.85,1157.75c-4.3,0-7.8-2.69-7.8-6s3.5-6,7.8-6c0.27,0,.54,0,0.8,0l1.29,0.1v-21.5a3,3,0,0,1,.06-0.58l0-.2,0-.33a3.88,3.88,0,0,1-.05-0.54,4.8,4.8,0,0,1,4.8-4.8l26.51-2.4a4.79,4.79,0,0,1,4.69,4.8,3.87,3.87,0,0,1-.05.54l0,0.33,0,0.2a3,3,0,0,1,.06.58v27.36c0,3.31-3.5,6-7.8,6s-7.8-2.69-7.8-6,3.5-6,7.8-6c0.27,0,.54,0,0.8,0l1.3,0.1V1125l-24.59,2.66v24.09C592.65,1155.06,589.15,1157.75,584.85,1157.75Z" transform="translate(-536.64 -1073.28)"/>
+          <path class="cls-23" d="M582.45,1155.35c-4.3,0-7.8-2.69-7.8-6s3.5-6,7.8-6c0.27,0,.54,0,0.8,0l1.29,0.1V1122a3,3,0,0,1,.06-0.58l0-.2,0-.33a3.88,3.88,0,0,1-.05-0.54,4.8,4.8,0,0,1,4.8-4.8l26.51-2.4a4.79,4.79,0,0,1,4.69,4.8,3.87,3.87,0,0,1-.05.54l0,0.33,0,0.2a3,3,0,0,1,.06.58v27.36c0,3.31-3.5,6-7.8,6s-7.8-2.69-7.8-6,3.5-6,7.8-6c0.27,0,.54,0,0.8,0l1.29,0.1V1122.6l-24.59,2.66v24.09C590.25,1152.66,586.75,1155.35,582.45,1155.35Z" transform="translate(-536.64 -1073.28)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
