@@ -774,6 +774,23 @@ const setPlaceholderMaxHeight = () => {
     //        });
     //  `;
 
+    const reloadADs = (all) => {
+      defineGPTslots(all);
+      googletag.cmd.push(function () {
+        googletag.display("div-gpt-ad-1654160819405-0");
+      });
+
+      googletag.cmd.push(function () {
+        googletag.display("div-gpt-ad-1686031619172-0");
+      });
+
+      if (all && !isMob()) {
+        googletag.cmd.push(function () {
+          googletag.display("div-gpt-ad-1677756304492-0");
+        });
+      }
+    };
+
     const add320 = () => {
       document.body.appendChild(adDownIframe);
       reloadADs(false);
@@ -2326,23 +2343,6 @@ const setPlaceholderMaxHeight = () => {
       console.log(err);
     }
   }
-
-  const reloadADs = (all) => {
-    defineGPTslots(all);
-    googletag.cmd.push(function () {
-      googletag.display("div-gpt-ad-1654160819405-0");
-    });
-
-    googletag.cmd.push(function () {
-      googletag.display("div-gpt-ad-1686031619172-0");
-    });
-
-    if (all && !isMob()) {
-      googletag.cmd.push(function () {
-        googletag.display("div-gpt-ad-1677756304492-0");
-      });
-    }
-  };
 
   let oldUrl = window.location.href;
 
