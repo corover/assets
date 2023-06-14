@@ -1,0 +1,45 @@
+[{
+  "label": "Your Story",
+  "icon": "fa fa-laptop",
+  "query": "Your Story"
+},
+{
+  "label": "Her Story",
+  "icon": "fa fa-female",
+  "query": "Her Story"
+},
+{
+  "label": "Social Story",
+  "icon": "fa fa-globe",
+  "query": "Social Story"
+},
+{
+  "label": "SMB Story",
+  "icon": "fa fa-bolt",
+  "query": "SMB Story"
+},
+{
+  "label": "My Story",
+  "icon": "fa fa-user-circle-o",
+  "query": "My Story"
+},
+{
+  "label": "Business Story",
+  "icon": "fa fa-briefcase",
+  "query": "Business Story"
+},
+{
+  "label": "Startup Story",
+  "icon": "fa fa-rocket",
+  "query": "Startup Story"
+},
+{
+  "label": "Weekends",
+  "icon": "fa fa-sun-o",
+  "query": "Weekends"
+},
+{
+  "label": "Journal",
+  "icon": "fa fa-book",
+  "query": "Journal"
+}]

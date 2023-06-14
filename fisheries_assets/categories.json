@@ -1,0 +1,461 @@
+[{
+  "english": 
+[{
+  "label": "Your Story",
+  "icon": "fa fa-laptop",
+  "query": "Your Story"
+},
+{
+ "label": "Her Story",
+ "icon": "fa fa-female",
+ "query": "Her Story"
+},
+{
+ "label": "Social Story",
+ "icon": "fa fa-globe",
+ "query": "Social Story"
+},
+{
+ "label": "SMB Story",
+ "icon": "fa fa-bolt",
+ "query": "SMB Story"
+},
+{
+ "label": "My Story",
+ "icon": "fa fa-user-circle-o",
+ "query": "My Story"
+},
+{
+ "label": "Business Story",
+ "icon": "fa fa-briefcase",
+ "query": "Business Story"
+},
+{
+ "label": "Startup Story",
+ "icon": "fa fa-rocket",
+ "query": "Startup Story"
+},
+{
+ "label": "Weekends",
+ "icon": "fa fa-sun-o",
+ "query": "Weekends"
+},
+{
+ "label": "Journal",
+ "icon": "fa fa-book",
+ "query": "Journal"
+}],
+    "hindi": [{
+ "label": "आपकी कहानी",
+ "icon": "fa fa-laptop",
+ "query": "योर स्टोरी"
+},
+{
+ "label": "उसकी कहानी",
+ "icon": "fa fa-female",
+ "query": "उसकी कहानी"
+},
+{
+ "label": "सोशल स्टोरी",
+ "icon": "fa fa-globe",
+ "query": "सोशल स्टोरी"
+},
+{
+ "label": "एसएमबी स्टोरी",
+ "icon": "fa fa-bolt",
+ "query": "एसएमबी स्टोरी"
+},
+{
+ "label": "मेरी कहानी",
+ "icon": "fa fa-user-circle-o",
+ "query": "माय स्टोरी"
+},
+{
+ "label": "बिजनेस स्टोरी",
+ "icon": "fa fa-briefcase",
+ "query": "बिजनेस स्टोरी"
+},
+{
+ "label": "स्टार्टअप स्टोरी",
+ "icon": "fa fa-rocket",
+ "query": "स्टार्टअप स्टोरी"
+},
+{
+ "label": "सप्ताहांत",
+ "icon": "fa fa-sun-o",
+ "query": "सप्ताहांत"
+},
+{
+ "label": "जर्नल",
+ "icon": "fa fa-book",
+ "query": "जर्नल"
+}],
+"punjabi": 
+[{
+ "label": "ਤੁਹਾਡੀ ਕਹਾਣੀ",
+ "icon": "fa fa-laptop",
+ "query": "ਤੁਹਾਡੀ ਕਹਾਣੀ"
+},
+{
+ "label": "ਉਸਦੀ ਕਹਾਣੀ",
+ "icon": "fa fa-female",
+ "query": "ਉਸ ਦੀ ਕਹਾਣੀ"
+},
+{
+ "label": "ਸੋਸ਼ਲ ਸਟੋਰੀ",
+ "icon": "fa fa-globe",
+ "query": "ਸਮਾਜਿਕ ਕਹਾਣੀ"
+},
+{
+ "label": "ਐਸ ਐਮ ਬੀ ਸਟੋਰੀ",
+ "icon": "fa fa-bolt",
+ "query": "ਐਸ ਐਮ ਬੀ ਸਟੋਰੀ"
+},
+{
+ "label": "ਮੇਰੀ ਕਹਾਣੀ",
+ "icon": "fa fa-user-circle-o",
+ "query": "ਮੇਰੀ ਕਹਾਣੀ"
+},
+{
+ "label": "ਵਪਾਰਕ ਕਹਾਣੀ",
+ "icon": "fa fa-briefcase",
+ "query": "ਵਪਾਰਕ ਕਹਾਣੀ"
+},
+{
+ "label": "ਸਟਾਰਟਅਪ ਸਟੋਰੀ",
+ "icon": "fa fa-rocket",
+ "query": "ਸਟਾਰਟਅਪ ਸਟੋਰੀ"
+},
+{
+ "label": "ਹਫਤੇ",
+ "icon": "fa fa-sun-o",
+ "query": "ਹਫਤੇ"
+},
+{
+ "label": "ਜਰਨਲ",
+ "icon": "fa fa-book",
+ "query": "ਜਰਨਲ"
+}],
+"bangali": 
+[{
+ "label": "আপনার গল্প",
+ "icon": "ফা ফা-ল্যাপটপ",
+ "query": "আপনার গল্প"
+},
+{
+ "label": "তার গল্প",
+ "icon": "fa fa-female",
+ "query": "তার গল্প"
+},
+{
+ "label": "সামাজিক গল্প",
+ "icon": "fa fa-globe",
+ "query": "সামাজিক গল্প"
+},
+{
+ "label": "এসএমবি স্টোরি",
+ "icon": "fa fa-bolt",
+ "query": "এসএমবি স্টোরি"
+},
+{
+ "label": "আমার গল্প",
+ "icon": "fa fa-user-circle-o",
+ "query": "আমার গল্প"
+},
+{
+ "label": "ব্যবসায় গল্প",
+ "icon": "fa fa-briefcase",
+ "query": "ব্যবসায়ের গল্প"
+},
+{
+ "label": "স্টার্টআপ স্টোরি",
+ "icon": "fa fa-rocket",
+ "query": "স্টার্টআপ স্টোরি"
+},
+{
+ "label": "সপ্তাহান্তে",
+ "icon": "fa fa-sun-o",
+ "query": "উইকএন্ডস"
+},
+{
+ "label": "জার্নাল",
+ "icon": "fa fa-book",
+ "query": "জার্নাল"
+}],
+"kannada": 
+[{
+ "label": "ನಿಮ್ಮ ಕಥೆ",
+ "icon": "ಫಾ ಫಾ-ಲ್ಯಾಪ್‌ಟಾಪ್",
+ "query": "ನಿಮ್ಮ ಕಥೆ"
+},
+{
+ "label": "ಅವಳ ಕಥೆ",
+ "icon": "fa fa-female",
+ "query": "ಅವಳ ಕಥೆ"
+},
+{
+ "label": "ಸಾಮಾಜಿಕ ಕಥೆ",
+ "icon": "fa fa-globe",
+ "query": "ಸಾಮಾಜಿಕ ಕಥೆ"
+},
+{
+ "label": "SMB ಸ್ಟೋರಿ",
+ "icon": "fa fa-bolt",
+ "query": "SMB ಕಥೆ"
+},
+{
+ "label": "ನನ್ನ ಕಥೆ",
+ "icon": "fa fa-user-circle-o",
+ "query": "ನನ್ನ ಕಥೆ"
+},
+{
+ "label": "ವ್ಯವಹಾರ ಕಥೆ",
+ "icon": "fa fa-briefcase",
+ "query": "ವ್ಯವಹಾರ ಕಥೆ"
+},
+{
+ "label": "ಆರಂಭಿಕ ಕಥೆ",
+ "icon": "fa fa-rocket",
+ "query": "ಆರಂಭಿಕ ಕಥೆ"
+},
+{
+ "label": "ವೀಕೆಂಡ್ಸ್",
+ "icon": "fa fa-sun-o",
+ "query": "ವಾರಾಂತ್ಯಗಳು"
+},
+{
+ "label": "ಜರ್ನಲ್",
+ "icon": "fa fa-book",
+ "query": "ಜರ್ನಲ್"
+}],
+"malayalam": 
+[{
+ "label": "നിങ്ങളുടെ സ്റ്റോറി",
+ "icon": "fa fa-laptop",
+ "query": "നിങ്ങളുടെ കഥ"
+},
+{
+ "label": "അവളുടെ കഥ",
+ "icon": "fa fa-female",
+ "query": "അവളുടെ കഥ"
+},
+{
+ "label": "സോഷ്യൽ സ്റ്റോറി",
+ "icon": "fa fa-globe",
+ "query": "സോഷ്യൽ സ്റ്റോറി"
+},
+{
+ "label": "SMB സ്റ്റോറി",
+ "icon": "fa fa-bolt",
+ "query": "SMB സ്റ്റോറി"
+},
+{
+ "label": "എന്റെ സ്റ്റോറി",
+ "icon": "fa fa-user-circle-o",
+ "query": "എന്റെ കഥ"
+},
+{
+ "label": "ബിസിനസ് സ്റ്റോറി",
+ "icon": "fa fa-briefcase",
+ "query": "ബിസിനസ്സ് സ്റ്റോറി"
+},
+{
+ "label": "സ്റ്റാർട്ടപ്പ് സ്റ്റോറി",
+ "icon": "fa fa-rocket",
+ "query": "സ്റ്റാർട്ടപ്പ് സ്റ്റോറി"
+},
+{
+ "label": "വാരാന്ത്യങ്ങൾ",
+ "icon": "fa fa-sun-o",
+ "query": "വാരാന്ത്യങ്ങൾ"
+},
+{
+ "label": "ജേണൽ",
+ "icon": "fa fa-book",
+ "query": "ജേണൽ"
+}],
+"gujarati": 
+[{
+ "label": "તમારી વાર્તા",
+ "icon": "fa fa-laptop",
+ "query": "તમારી વાર્તા"
+},
+{
+ "label": "તેણીની વાર્તા",
+ "icon": "fa fa-female",
+ "query": "હર સ્ટોરી"
+},
+{
+ "label": "સામાજિક વાર્તા",
+ "icon": "fa fa-globe",
+ "query": "સામાજિક વાર્તા"
+},
+{
+ "label": "એસએમબી સ્ટોરી",
+ "icon": "fa fa-bolt",
+ "query": "એસએમબી સ્ટોરી"
+},
+{
+ "label": "મારી વાર્તા",
+ "icon": "fa fa-user-circle-o",
+ "query": "મારી વાર્તા"
+},
+{
+ "label": "વ્યવસાય વાર્તા",
+ "icon": "fa fa-briefcase",
+ "query": "બિઝનેસ સ્ટોરી"
+},
+{
+ "label": "સ્ટાર્ટઅપ સ્ટોરી",
+ "icon": "fa fa-rocket",
+ "query": "સ્ટાર્ટઅપ સ્ટોરી"
+},
+{
+ "label": "વિકેન્ડ",
+ "icon": "fa fa-sun-o",
+ "query": "વિકેન્ડ"
+},
+{
+ "label": "જર્નલ",
+ "icon": "fa fa-book",
+ "query": "જર્નલ"
+}],
+"marathi": 
+[{
+ "label": "आपली कथा",
+ "icon": "fa fa-laptop",
+ "query": "आपली कथा"
+},
+{
+ "label": "तिची कहाणी",
+ "icon": "fa fa-female",
+ "query": "तिची कहाणी"
+},
+{
+ "label": "सामाजिक कथा",
+ "icon": "fa fa-globe",
+ "query": "सामाजिक कथा"
+},
+{
+ "label": "एसएमबी स्टोरी",
+ "icon": "fa fa-bolt",
+ "query": "एसएमबी स्टोरी"
+},
+{
+ "label": "माझी कथा",
+ "icon": "fa fa-user-circle-o",
+ "query": "माझी कथा"
+},
+{
+ "label": "व्यवसाय कथा",
+ "icon": "fa fa-briefcase",
+ "query": "व्यवसाय कथा"
+},
+{
+ "label": "स्टार्टअप स्टोरी",
+ "icon": "fa fa-rocket",
+ "query": "स्टार्टअप स्टोरी"
+},
+{
+ "label": "शनिवार व रविवार",
+ "icon": "fa fa-sun-o",
+ "query": "शनिवार व रविवार"
+},
+{
+ "label": "जर्नल",
+ "icon": "fa fa-book",
+ "query": "जर्नल"
+}],
+"telugu": 
+[{
+ "label": "మీ కథ",
+ "icon": "fa fa-laptop",
+ "query": "మీ కథ"
+},
+{
+ "label": "ఆమె కథ",
+ "icon": "fa fa-female",
+ "query": "ఆమె కథ"
+},
+{
+ "label": "సోషల్ స్టోరీ",
+ "icon": "fa fa-globe",
+ "query": "సామాజిక కథ"
+},
+{
+ "label": "SMB స్టోరీ",
+ "icon": "fa fa-bolt",
+ "query": "SMB కథ"
+},
+{
+ "label": "నా కథ",
+ "icon": "fa fa-user-circle-o",
+ "query": "నా కథ"
+},
+{
+ "label": "బిజినెస్ స్టోరీ",
+ "icon": "fa fa-briefcase",
+ "query": "వ్యాపార కథ"
+},
+{
+ "label": "ప్రారంభ కథ",
+ "icon": "fa fa-rocket",
+ "query": "ప్రారంభ కథ"
+},
+{
+ "label": "వీకెండ్స్",
+ "icon": "fa fa-sun-o",
+ "query": "వీకెండ్స్"
+},
+{
+ "label": "జర్నల్",
+ "icon": "fa fa-book",
+ "query": "జర్నల్"
+}],
+"tamil": 
+[{
+ "label": "உங்கள் கதை",
+ "icon": "fa fa-laptop",
+ "query": "உங்கள் கதை"
+},
+{
+ "label": "அவரது கதை",
+ "icon": "fa fa-female",
+ "query": "அவரது கதை"
+},
+{
+ "label": "சமூக கதை",
+ "icon": "fa fa-globe",
+ "query": "சமூக கதை"
+},
+{
+ "label": "SMB கதை",
+ "icon": "fa fa-bolt",
+ "query": "SMB கதை"
+},
+{
+ "label": "என் கதை",
+ "icon": "fa fa-user-circle-o",
+ "query": "எனது கதை"
+},
+{
+ "label": "வணிக கதை",
+ "icon": "fa fa-briefcase",
+ "query": "வணிக கதை"
+},
+{
+ "label": "தொடக்க கதை",
+ "icon": "fa fa-rocket",
+ "query": "தொடக்க கதை"
+},
+{
+ "label": "வார இறுதி நாட்கள்",
+ "icon": "fa fa-sun-o",
+ "query": "வார இறுதி நாட்கள்"
+},
+{
+ "label": "ஜர்னல்",
+ "icon": "fa fa-book",
+ "query": "ஜர்னல்"
+}]
+}]

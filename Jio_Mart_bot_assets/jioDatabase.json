@@ -1,0 +1,443 @@
+{
+  "en": [
+    {
+      "reply": "What product are you looking for?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/1_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Product",
+      "placeHolder": "Product"
+    },
+    {
+      "reply": "What product are you looking for?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/1_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Product",
+      "placeHolder": "Product"
+    },
+    {
+      "reply": "Please choose one of the products.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/27_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Product",
+      "invetory": true,
+      "placeHolder": "Choose product"
+    },
+    {
+      "reply": "Please tell me quantity",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/3_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Quantity",
+      "filter": "nospace",
+      "placeHolder": "1,2.."
+    },
+    {
+      "reply": "Please tell me your full name.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/4_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Name",
+      "placeHolder": "Enter full name"
+    },
+    {
+      "reply": "Please tell me your Email address",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/40_jiomart.mp3",
+      "query": "",
+      "form": false,
+
+      "notCapital": true,
+      "filter": "email",
+      "name": "Email Id",
+      "placeHolder": "email@address.com"
+    },
+    {
+      "reply": "Can you please tell me your <i class=\"fa fa-mobile\"></i> phone number, with <i class=\"fa fa-globe\"></i> country code<br><br>Eg: +91 9988XXXXXX",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/41_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "Mobile Number",
+      "placeHolder": "eg. +91 9988XXXXXX"
+    },
+    {
+      "reply": "Please tell me your Shipping Address.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/5_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Shipping Address",
+      "placeHolder": "Enter your address"
+    },
+
+    {
+      "reply": "Please tell me your Pincode",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/42_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "Pincode",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "Please tell me your State.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/6_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "State",
+      "placeHolder": "eg. Haryana, Rajasthan..."
+    },
+
+    {
+      "reply": "Do you want to update or add anything?",
+      "form": true,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/35_jiomart.mp3"
+    },
+    {
+      "reply": "Do you want to pay by your registered credit card, ending with 8157.",
+      "form": false,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/23_jiomart.mp3",
+      "query": "",
+      "options": ["Yes", "No"],
+      "name": "Credit card info",
+      "placeHolder": "Yes / No"
+    },
+    {
+      "reply": "Please tell me six digit code sent to your registered mobile number.",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/24_jiomart.mp3",
+      "query": "",
+      "filter": "nospace",
+      "form": false,
+      "name": "crditcard",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "Your purchase was successful.\nYour order number is 4123454\nIt would be delivered by tomorrow.\n\nDo you want to buy any thing more? May be Bread, where you can get 5% discount.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/25_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "options": ["Yes", "No"],
+
+      "name": "crditcard",
+      "placeHolder": "Yes / No"
+    },
+    {
+      "reply": "Thank you for shopping with iRA.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/26_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "keyboard": false,
+      "name": "crditcard",
+      "placeHolder": "",
+      "end": true
+    }
+  ],
+  "hi": [
+    {
+      "reply": "What product are you looking for?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/1_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Product",
+      "placeHolder": "Product"
+    },
+    {
+      "reply": "आप किस उत्पाद की तलाश कर रहे हैं?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/8_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "उत्पाद",
+      "placeHolder": "उत्पाद"
+    },
+    {
+      "reply": "कृपया उत्पाद में से एक चुनें।",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/9_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "उत्पाद",
+      "invetory": true,
+      "placeHolder": "उत्पाद चुनें"
+    },
+    {
+      "reply": "कृपया मुझे मात्रा बताएं",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/10_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "मात्रा",
+      "filter": "nospace",
+      "placeHolder": "1,2 .."
+    },
+    {
+      "reply": "कृपया मुझे अपना पूरा नाम बताइए।",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/11_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "नाम",
+      "speech": true,
+      "placeHolder": "पूरा नाम दर्ज करें"
+    },
+    {
+      "reply": "कृपया मुझे अपना ईमेल आईडी बताएं",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/22_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "notCapital": true,
+      "filter": "email",
+      "name": "ईमेल आईडी",
+      "placeHolder": "email@address.com"
+    },
+    {
+      "reply": "क्या आप मुझे अपना <i class=\"fa fa-mobile\"></i>फ़ोन नंबर बता सकते हैं, <i class=\"fa fa-globe\"></i> देश कोड के साथ <br><br> उदा: +91 9988XXXXXX",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/21_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "मोबाइल नंबर",
+      "placeHolder": "उदा। +91 9988XXXXXX"
+    },
+    {
+      "reply": "कृपया मुझे अपना शिपिंग पता बताएं।",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/14_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "शिपिंग पता",
+      "placeHolder": "अपना पता दर्ज करें"
+    },
+
+    {
+      "reply": "कृपया मुझे अपना पिनकोड बताएं",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/15_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "पिनकोड",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "कृपया मुझे अपना राज्य बताएं।",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/16_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "राज्य",
+      "placeHolder": "उदा। हरियाणा, राजस्थान ..."
+    },
+    {
+      "reply": "क्या आप कुछ भी अपडेट या जोड़ना चाहते हैं?",
+      "form": true,
+
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/36_jiomart.mp3"
+    },
+    {
+      "reply": "क्या आप अपने पंजीकृत क्रेडिट कार्ड से भुगतान करना चाहते हैं, जो 8157 के साथ समाप्त हो रहा है।",
+      "form": false,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/17_jiomart.mp3",
+      "query": "",
+      "options": ["हाँ", "नहीं"],
+      "name": "Credit card info",
+      "placeHolder": "हाँ / नहीं"
+    },
+    {
+      "reply": "कृपया मुझे अपने पंजीकृत मोबाइल नंबर पर भेजे गए छह अंकों का कोड बताएं।",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/20_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "crditcard",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "आपकी खरीदारी सफल रही।\nआपका ऑर्डर क्रमांक 4123454 है।\nइसे कल तक डिलीवर कर दिया जाएगा।\n\nक्या आप किसी भी चीज़ को और खरीदना चाहते हैं? ब्रेड हो सकती है, जहाँ आप 5% की छूट पा सकते हैं।",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/18_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "options": ["हाँ", "नहीं"],
+
+      "name": "crditcard",
+      "placeHolder": "हाँ / नहीं"
+    },
+    {
+      "reply": "iRA के साथ खरीदारी के लिए धन्यवाद।",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/19_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "कीबोर्ड": false,
+      "name": "crditcard",
+      "placeHolder": "",
+      "end": true
+    }
+  ],
+  "mr": [
+    {
+      "reply": "What product are you looking for?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/1_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Product",
+      "placeHolder": "Product"
+    },
+    {
+      "reply": "आपण कोणते उत्पादन शोधत आहात?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/31_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "उत्पादन",
+      "placeHolder": ""
+    },
+    {
+      "reply": "कृपया उत्पादनांपैकी एक निवडा.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/32_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "उत्पादन",
+      "invetory": true,
+      "placeHolder": "उत्पादन निवडा"
+    },
+    {
+      "reply": "कृपया प्रमाण प्रविष्ट करा",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/33_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "प्रमाण",
+      "filter": "nospace",
+      "placeHolder": "1,2.."
+    },
+    {
+      "reply": "कृपया आपले पूर्ण नाव प्रविष्ट करा.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/34_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "नाव",
+      "placeHolder": "पूर्ण नाव प्रविष्ट करा"
+    },
+    {
+      "reply": "Please tell me your Email address",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/40_jiomart.mp3",
+      "query": "",
+      "form": false,
+
+      "notCapital": true,
+      "filter": "email",
+      "name": "Email Id",
+      "placeHolder": "email@address.com"
+    },
+    {
+      "reply": "Can you please tell me your <i class=\"fa fa-mobile\"></i> phone number, with <i class=\"fa fa-globe\"></i> country code<br><br>Eg: +91 9988XXXXXX",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/41_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "Mobile Number",
+      "placeHolder": "eg. +91 9988XXXXXX"
+    },
+    {
+      "reply": "Please tell me your Shipping Address.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/5_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Shipping Address",
+      "placeHolder": "Enter your address"
+    },
+
+    {
+      "reply": "Please tell me your Pincode",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/42_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "Pincode",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "Please tell me your State.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/6_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "State",
+      "placeHolder": "eg. Haryana, Rajasthan..."
+    },
+
+    {
+      "reply": "Do you want to update or add anything?",
+      "form": true,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/35_jiomart.mp3"
+    },
+    {
+      "reply": "Do you want to pay by your registered credit card, ending with 8157.",
+      "form": false,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/23_jiomart.mp3",
+      "query": "",
+      "options": ["Yes", "No"],
+      "name": "Credit card info",
+      "placeHolder": "Yes / No"
+    },
+    {
+      "reply": "Please tell me six digit code sent to your registered mobile number.",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/24_jiomart.mp3",
+      "query": "",
+      "filter": "nospace",
+      "form": false,
+      "name": "crditcard",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "Your purchase was successful.\nYour order number is 4123454\nIt would be delivered by tomorrow.\n\nDo you want to buy any thing more? May be Bread, where you can get 5% discount.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/25_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "options": ["Yes", "No"],
+
+      "name": "crditcard",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "Thank you for shopping with iRA.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/26_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "keyboard": false,
+      "name": "crditcard",
+      "placeHolder": "",
+      "end": true
+    }
+  ]
+}

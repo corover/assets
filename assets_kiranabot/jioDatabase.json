@@ -1,0 +1,410 @@
+{
+  "en": [
+    {
+      "reply": "What product are you looking for?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/1_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Full Name",
+      "placeHolder": "Name should be as per your Aadhar"
+    },
+    {
+      "reply": "Namaste, what do you want to order for your store.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana2_en.mp3",
+      "query": "",
+      "form": false,
+      "name": "Product",
+      "placeHolder": "Product"
+    },
+    {
+      "reply": "Ok, which brand?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana3_en.mp3",
+      "query": "",
+      "form": false,
+      "invetory": true,
+      "name": "Brand",
+      "placeHolder": "Brand"
+    },
+    {
+      "reply": "Ok, how many bags?",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana4_en.mp3",
+      "query": "",
+      "form": false,
+      "name": "Quantity",
+      "filter": "nospace",
+      "placeHolder": "1,2.."
+    },
+    {
+      "reply": "Do you want to change or add anything more?",
+      "form": true,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana6_en.mp3"
+    },
+    {
+      "reply": "Do you want to pay by your registered credit card, ending with 8157.",
+      "form": false,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/23_jiomart.mp3",
+      "query": "",
+      "options": ["Yes", "No"],
+      "name": "Credit card info",
+      "placeHolder": "Yes / No"
+    },
+    {
+      "reply": "Please tell me six digit code sent to your registered mobile number.",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/24_jiomart.mp3",
+      "query": "",
+      "filter": "nospace",
+      "form": false,
+      "name": "crditcard",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "Your purchase was successful.\nYour order number is 9182454\nIt would be delivered by tomorrow to your store.\n\nRakesh,\nDo you want to start any campaign for your customer?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana7_en.mp3",
+      "query": "",
+      "filter": "nospace",
+      "options": ["Yes", "No"],
+      "form": false,
+      "name": "crditcard",
+      "placeHolder": "Yes / No"
+    },
+    {
+      "reply": "Okay, How much discount?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana11_en.mp3",
+      "query": "",
+      "form": false,
+      "name": "discount",
+      "placeHolder": "5% 10%..."
+    },
+    {
+      "reply": "Okay, From when?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana12_en.mp3",
+      "query": "",
+      "form": false,
+      "name": "time",
+      "placeHolder": "Yesterday, Tomorrow.. "
+    },
+    {
+      "reply": "Okay, For how many days?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana13_en.mp3",
+      "query": "",
+      "form": false,
+      "name": "days",
+      "placeHolder": "1,2,3.. "
+    },
+
+    {
+      "reply": "Sure, thanks. we will start the campaign from tomorrow.\n\nDo you want to add this entry in Khata/Ledger",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana8_en.mp3",
+      "query": "",
+      "form": false,
+      "options": ["Yes", "No"],
+
+      "name": "crditcard",
+      "placeHolder": "Yes / No"
+    },
+    {
+      "reply": "Sure, this entry is added in your Khata.\n\nIs there anything else which you need?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana9_en.mp3",
+      "query": "",
+      "form": false,
+
+      "name": "crditcard",
+      "options": ["Yes", "No"],
+      "placeHolder": "Yes / No"
+    },
+    {
+      "reply": "Thanks, have a good day.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana10_en.mp3",
+      "query": "",
+      "form": false,
+
+      "name": "crditcard",
+      "placeHolder": "",
+      "end": true
+    }
+  ],
+  "hi": [
+    {
+      "reply": "आप किस उत्पाद की तलाश कर रहे हैं?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/1_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "पूरा नाम",
+      "placeHolder": "नाम आपके आधार के अनुसार होना चाहिए"
+    },
+    {
+      "reply": "नमस्ते, आप अपने स्टोर के लिए क्या ऑर्डर करना चाहते हैं।",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana1_hi.mp3",
+      "query": "",
+      "form": false,
+      "name": "उत्पाद",
+      "placeHolder": "उत्पाद"
+    },
+    {
+      "reply": "ठीक है, कौन सा ब्रांड?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana2_hi.mp3",
+      "query": "",
+      "form": false,
+      "name": "ब्रांड",
+      "invetory": true,
+      "placeHolder": "ब्रांड"
+    },
+    {
+      "reply": "ठीक है, कितने बैग?",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana3_hi.mp3",
+      "query": "",
+      "form": false,
+      "name": "मात्रा",
+      "filter": "nospace",
+      "placeHolder": "1,2 .."
+    },
+    {
+      "reply": "क्या आप किसी भी चीज़ को बदलना / ऑर्डर करना चाहते हैं?",
+      "form": true,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana5_hi.mp3"
+    },
+    {
+      "reply": "क्या आप अपने पंजीकृत क्रेडिट कार्ड से भुगतान करना चाहते हैं, जो 8157 के साथ समाप्त हो रहा है।",
+      "form": false,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/17_jiomart.mp3",
+      "query": "",
+      "options": ["हाँ", "नहीं"],
+      "name": "Credit card info",
+      "placeHolder": "हाँ / नहीं"
+    },
+    {
+      "reply": "कृपया मुझे अपने पंजीकृत मोबाइल नंबर पर भेजे गए छह अंकों का कोड बताएं।",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/20_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "crditcard",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "आपकी खरीदारी सफल रही।\nआपका ऑर्डर नंबर 9192454 है।\nयह कल तक आपके स्टोर तक पहुंचा दिया जाएगा।\n\nराकेश,\nक्या आप अपने ग्राहक के लिए कोई अभियान शुरू करना चाहते हैं?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana6_hi.mp3",
+      "query": "",
+      "filter": "nospace",
+      "options": ["हाँ", "नहीं"],
+      "form": false,
+      "name": "crditcard",
+      "placeHolder": "हाँ / नहीं"
+    },
+    {
+      "reply": "ठीक है, कितना डिस्काउंट?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana10_hi.mp3",
+      "query": "",
+      "filter": false,
+      "name": "छूट",
+      "placeHolder": "5% 10% ..."
+    },
+    {
+      "reply": "ठीक है, कब से?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana11_hi.mp3",
+      "query": "",
+      "filter": false,
+      "name": "समय",
+      "placeHolder": "कब से"
+    },
+    {
+      "reply": "ठीक है, कितने दिनों के लिए?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana12_hi.mp3",
+      "query": "",
+      "filter": false,
+      "name": "दिन",
+      "placeHolder": "1,2,3..."
+    },
+    {
+      "reply": "ठीक है, शुक्रिया। हम कल से अभियान शुरू करेंगे।\n\nक्या आप इस एंट्री को खाता / लेजर में जोड़ना चाहते हैं?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana7_hi.mp3",
+      "query": "",
+      "form": false,
+      "options": ["हाँ", "नहीं"],
+
+      "name": "crditcard",
+      "placeHolder": "हाँ / नहीं"
+    },
+    {
+      "reply": "ठीक है, यह एंट्री आपके खाता में जोड़ी गई है।\n\nक्या कुछ और है जो आपको चाहीये?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana8_hi.mp3",
+      "query": "",
+      "form": false,
+
+      "name": "crditcard",
+      "options": ["हाँ", "नहीं"],
+      "placeHolder": "हाँ / नहीं"
+    },
+    {
+      "reply": "शुक्रिया, आपका दिन शुभ हो।",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/kirana9_hi.mp3",
+      "query": "",
+      "form": false,
+      "name": "crditcard",
+      "placeHolder": "",
+      "end": true
+    }
+  ],
+  "mr": [
+    {
+      "reply": "What product are you looking for?",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/1_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Full Name",
+      "placeHolder": "Name should be as per your Aadhar"
+    },
+    {
+      "reply": "कृपया उत्पादनांपैकी एक निवडा.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/32_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "उत्पादन",
+      "invetory": true,
+      "placeHolder": "उत्पादन निवडा"
+    },
+    {
+      "reply": "कृपया प्रमाण प्रविष्ट करा",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/33_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "प्रमाण",
+      "filter": "nospace",
+      "placeHolder": "1,2.."
+    },
+    {
+      "reply": "कृपया आपले पूर्ण नाव प्रविष्ट करा.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/34_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "नाव",
+      "placeHolder": "पूर्ण नाव प्रविष्ट करा"
+    },
+    {
+      "reply": "Please enter your Email address",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/email_skill_en.mp3",
+      "query": "",
+      "form": false,
+
+      "notCapital": true,
+      "filter": "email",
+      "name": "Email Id",
+      "placeHolder": "email@address.com"
+    },
+    {
+      "reply": "Can you please provide your <i class=\"fa fa-mobile\"></i> phone number, with <i class=\"fa fa-globe\"></i> country code<br><br>Eg: +91 9988XXXXXX",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/phonenumber_en.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "Mobile Number",
+      "placeHolder": "eg. +91 9988XXXXXX"
+    },
+    {
+      "reply": "Please enter your Shipping Address.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/5_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "Shipping Address",
+      "placeHolder": "Enter your address"
+    },
+
+    {
+      "reply": "Please enter your Pincode",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/pincode_skill_en.mp3",
+      "query": "",
+      "form": false,
+      "filter": "nospace",
+      "name": "Pincode",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "Please enter your State.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/6_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "name": "State",
+      "placeHolder": "eg. Haryana, Rajasthan..."
+    },
+
+    {
+      "reply": "Do you want to update or add anything?",
+      "form": true,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/35_jiomart.mp3"
+    },
+    {
+      "reply": "Do you want to pay by your registered credit card, ending with 8157.",
+      "form": false,
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/23_jiomart.mp3",
+      "query": "",
+      "options": ["Yes", "No"],
+      "name": "Credit card info",
+      "placeHolder": "Yes / No"
+    },
+    {
+      "reply": "Please enter the six digit code sent to your registered mobile number.",
+      "inputType": "number",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/24_jiomart.mp3",
+      "query": "",
+      "filter": "nospace",
+      "form": false,
+      "name": "crditcard",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "Your purchase was successful.\nYour order number is 4123454\nIt would be delivered by tomorrow.\n\nDo you want to buy any thing more? May be Bread, where you can get 5% discount.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/25_jiomart.mp3",
+      "query": "",
+      "form": false,
+      "options": ["Yes", "No"],
+
+      "name": "crditcard",
+      "placeHolder": "xxxxxx"
+    },
+    {
+      "reply": "Thank you for shopping with iRA.",
+      "inputType": "text",
+      "audio": "https://uiresource.blob.core.windows.net/chatbot-res/26_jiomart.mp3",
+      "query": "",
+      "form": false,
+
+      "name": "crditcard",
+      "placeHolder": "",
+      "end": true
+    }
+  ]
+}
