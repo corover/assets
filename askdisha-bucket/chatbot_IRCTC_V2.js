@@ -792,12 +792,11 @@ const setPlaceholderMaxHeight = () => {
     };
 
     const add320 = () => {
-      document.body.appendChild(adDownIframe);
-      reloadADs(false);
+      adDownIframe.style.display = "block";
     };
 
     const remove320 = () => {
-      document.body.removeChild(adDownIframe);
+      adDownIframe.style.display = "none";
     };
 
     if (isMobile) {
