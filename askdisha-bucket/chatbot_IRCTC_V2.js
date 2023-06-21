@@ -851,6 +851,17 @@ const setPlaceholderMaxHeight = () => {
     dealOfDay.target = "_blank";
     dealOfDay.innerHTML = `
          <img width="156px" src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png" decoding="async"/>
+         <p style="
+    position: absolute;
+    background: white;
+    top: 7px;
+    left: -33px;
+    text-decoration: none;
+    color: black;
+    padding: 0px 7px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+">Ad</p>
          `;
 
     if (isMobile)
@@ -1329,7 +1340,17 @@ const setPlaceholderMaxHeight = () => {
           min-height: ${mediaObj.scrollHeight};
           max-height:${mediaObj.scrollHeight};
           overflow:auto;
+          position:relative;
           ">
+
+          <p style="
+    position: absolute;
+    background: white;
+    top: 0px;
+    left: 21px;
+    padding: 0px 10px;
+    border-bottom-right-radius: 4px;
+">Ad</p>
            
           <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
           width: 100%;
