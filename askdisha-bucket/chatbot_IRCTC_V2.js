@@ -854,7 +854,7 @@ const setPlaceholderMaxHeight = () => {
          <p style="
     position: absolute;
     background: white;
-    top: 7px;
+    top: 28px;
     left: -33px;
     text-decoration: none;
     color: black;
