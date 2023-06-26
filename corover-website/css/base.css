@@ -6,10 +6,29 @@ html {
   overflow-x: hidden;
 }
 
-html > body p {
+html > body > section p {
   font-family: "Ubuntu", sans-serif !important;
   color: black !important;
   font-size: 1rem !important;
+}
+
+html > body > section a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html > body > section h1,
+html > body > section h2,
+html > body > section h3,
+html > body > section h4,
+html > body > section h5,
+html > body > section h6,
+html > body > section p,
+html > body > section a,
+html > body > section span,
+html > body > section div {
+  margin: 0;
+  padding: 0;
 }
 
 * {
