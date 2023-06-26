@@ -475,4 +475,5 @@ const headerText = `
 </div>
 </header>
 `;
+
 document.body.innerHTML = headerText + document.body.innerHTML;
