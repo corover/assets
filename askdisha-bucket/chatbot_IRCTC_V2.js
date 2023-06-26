@@ -844,9 +844,10 @@ const setPlaceholderMaxHeight = () => {
     document.body.appendChild(adDownIframe2);
     const dealOfDay = document.createElement("a");
     // https://bit.ly/3gBANx7 PLUTOS
+    //https://amzn.to/34WK1uY last
     dealOfDay.style.display = `inline`;
-    if (isMobile) dealOfDay.href = "https://amzn.to/34WK1uY";
-    else dealOfDay.href = "https://amzn.to/34WK1uY";
+    if (isMobile) dealOfDay.href = "https://amzn.to/3ps6U6O";
+    else dealOfDay.href = "https://amzn.to/3ps6U6O";
 
     dealOfDay.target = "_blank";
     dealOfDay.innerHTML = `
