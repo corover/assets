@@ -3,7 +3,7 @@ const footer = document.createElement("footer");
 // https://cdn.jsdelivr.net/gh/corover/assets@main/corover-website/images
 const headerText = `
 <header>
-<div class="container">
+<div class="container2">
   <a href=""><img src="https://cdn.jsdelivr.net/gh/corover/assets@main/corover-website/images/logo-white.png" alt="" class="logo" /></a>
 
   <nav class="desktop">

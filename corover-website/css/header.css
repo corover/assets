@@ -7,14 +7,14 @@ header {
   z-index: 99;
 }
 
-header .container {
-  max-width: var(--max-width);
+header .container2 {
+  max-width: var(--max-width) !important;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  padding: 0px 30px;
+  padding: 0px 30px !important;
 }
 
 .hamburger-close {
@@ -211,7 +211,7 @@ header .hamburger {
     border-bottom: 1px solid gainsboro;
   }
 
-  header .container {
+  header .container2 {
     height: 60px;
   }
 
