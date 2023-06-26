@@ -1,10 +1,10 @@
 const header = document.createElement("header");
 const footer = document.createElement("footer");
-
+// https://cdn.jsdelivr.net/gh/corover/assets@main/corover-website/images
 const headerText = `
 <header>
 <div class="container">
-  <a href=""><img src="Assets/logo-white.png" alt="" class="logo" /></a>
+  <a href=""><img src="https://cdn.jsdelivr.net/gh/corover/assets@main/corover-website/images/logo-white.png" alt="" class="logo" /></a>
 
   <nav class="desktop">
     <ul>
@@ -466,9 +466,9 @@ const headerText = `
       <li><button class="primary-button">Get a Demo</button></li>
     </ul>
   </nav>
-  <img src="./Assets/hamburger.png" alt="" class="hamburger" />
+  <img src="https://cdn.jsdelivr.net/gh/corover/assets@main/corover-website/images/hamburger.png" alt="" class="hamburger" />
   <img
-    src="./Assets/hamburger-close.png"
+    src="https://cdn.jsdelivr.net/gh/corover/assets@main/corover-website/images/hamburger-close.png"
     alt=""
     class="hamburger-close"
   />

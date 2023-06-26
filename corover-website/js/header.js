@@ -35,9 +35,9 @@ desktopLinks.forEach((link) => {
   link.addEventListener("click", () => handleMobileLinkClick(link));
 });
 
-const header = document.getElementsByTagName("header")[0];
+const header100 = document.getElementsByTagName("header")[0];
 
-header.addEventListener("mouseleave", () => {
+header100.addEventListener("mouseleave", () => {
   navMenus.forEach((menu) => {
     if (window.innerWidth > 1100) menu.style.display = "none";
   });
