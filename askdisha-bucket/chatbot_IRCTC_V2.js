@@ -852,17 +852,6 @@ const setPlaceholderMaxHeight = () => {
     dealOfDay.target = "_blank";
     dealOfDay.innerHTML = `
          <img width="156px" src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png" decoding="async"/>
-         <p style="
-    position: absolute;
-    background: white;
-    top: 28px;
-    left: -33px;
-    text-decoration: none;
-    color: black;
-    padding: 0px 7px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-">Ad</p>
          `;
 
     if (isMobile)
