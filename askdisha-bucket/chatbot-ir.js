@@ -739,7 +739,7 @@
         z-index:1;
       `;
 
-    document.body.appendChild(adDownIframe);
+    // document.body.appendChild(adDownIframe);
     // document.body.appendChild(adDownIframe2);
 
     const dealOfDay = document.createElement("a");
@@ -771,7 +771,7 @@
               left:150px;
               `;
     dealOfDay.style.zIndex = "99";
-    document.body.appendChild(dealOfDay);
+    // document.body.appendChild(dealOfDay);
 
     setDishaWrapper();
 
@@ -1579,7 +1579,7 @@
       }
     };
 
-    if (window.location.href.includes("indianrail")) {
+    if (false) {
       let divRail = document.createElement("div");
       divRail.id = "div-ub-indianrail";
       if (isMobile) document.body.appendChild(divRail);
