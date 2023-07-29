@@ -766,12 +766,11 @@ const setPlaceholderMaxHeight = () => {
 
     defineGPTslots(true);
 
-    const adDownIframe2 = document.createElement("a");
-    adDownIframe2.innerHTML = `
-     <span></span>
-     `;
-    adDownIframe2.href = "https://irctc.corover.ai/";
-    adDownIframe2.target = "_blank";
+    const adDownIframe2 = document.createElement("iframe");
+    adDownIframe2.src =
+      "https://storage.googleapis.com/corover-prod-bucket/disha-eticket/320x50/index.html";
+    // adDownIframe2.href = "https://irctc.corover.ai/";
+    // adDownIframe2.target = "_blank";
     const adDownIframe = document.createElement("div");
     // adDownIframe.src = "https://assistant.corover.mobi/320x50_placeholder.html";
     adDownIframe.id = "div_ub_320x50";
@@ -1361,7 +1360,7 @@ const setPlaceholderMaxHeight = () => {
           display:none;
           "></iframe>  
  
-          <div id='div_ub_chatbot_300x250'>
+          <div id='div_ub_chatbot_300x250' style="display:none;">
          </div> 
          <img src="https://cdn.jsdelivr.net/gh/corover/assets@main/askdisha-bucket/300X250.gif" width="300px" height="250px"/>     
        </div>
