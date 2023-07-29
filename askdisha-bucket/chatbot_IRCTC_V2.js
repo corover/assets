@@ -1,12 +1,12 @@
 let cdnScript3 = document.createElement("script");
 cdnScript3.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
 cdnScript3.async = true;
-document.head.appendChild(cdnScript3);
+// document.head.appendChild(cdnScript3);
 
 let newCDN = document.createElement("script");
 newCDN.src = "https://cdn.unibots.in/headerbidding/common/hb.js";
 newCDN.async = true;
-document.head.appendChild(newCDN);
+// document.head.appendChild(newCDN);
 
 window.unibots = window.unibots || { cmd: [] };
 // var IR_UB;
