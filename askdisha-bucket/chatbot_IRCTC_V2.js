@@ -185,7 +185,7 @@ const setPlaceholderMaxHeight = () => {
     }
   };
 
-  // addAutoAdd();
+  addAutoAdd();
 
   function getMediaobject() {
     let mediaObj = {
@@ -1362,7 +1362,8 @@ const setPlaceholderMaxHeight = () => {
           "></iframe>  
  
           <div id='div_ub_chatbot_300x250'>
-         </div>      
+         </div> 
+         <img src="https://cdn.jsdelivr.net/gh/corover/assets@main/askdisha-bucket/300X250.gif" width="300px" height="250px"/>     
        </div>
            </div>
          `;
