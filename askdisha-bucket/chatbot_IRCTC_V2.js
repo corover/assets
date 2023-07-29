@@ -185,7 +185,7 @@ const setPlaceholderMaxHeight = () => {
     }
   };
 
-  addAutoAdd();
+  // addAutoAdd();
 
   function getMediaobject() {
     let mediaObj = {
