@@ -185,7 +185,7 @@ const setPlaceholderMaxHeight = () => {
     }
   };
 
-  addAutoAdd();
+  // addAutoAdd();
 
   function getMediaobject() {
     let mediaObj = {
@@ -2180,7 +2180,7 @@ const setPlaceholderMaxHeight = () => {
     }
   }
 
-  setVideoAd(true);
+  // setVideoAd(true);
   // setYoutubeAd();
 
   // /////////////////
@@ -2380,17 +2380,17 @@ const setPlaceholderMaxHeight = () => {
       if (window.location.href != oldUrl) {
         let s = !isMob();
         if (window.location.href.includes("train-search")) {
-          setVideoAd();
+          // setVideoAd();
           // const iframe = document.getElementById("book-ticket-iframe");
           // if (iframe) iframe.style.display = "none";
         } else if (window.location.href.includes("enquiry/pnr-enquiry")) {
-          setVideoAd2(true);
+          // setVideoAd2(true);
           // const iframe = document.getElementById("book-ticket-iframe");
           // if (iframe) iframe.style.display = "none";
         } else if (window.location.href.includes("booking/train-list")) {
-          setVideoAdTrains();
+          // setVideoAdTrains();
         } else {
-          setVideoAd2(false);
+          // setVideoAd2(false);
           // const iframe = document.getElementById("book-ticket-iframe");
           // if (iframe) iframe.style.display = "none";
         }
