@@ -831,7 +831,7 @@
     //Append iFrame inside Div
     d.appendChild(ad);
     dishaWrapper.appendChild(launcher);
-    dishaWrapper.appendChild(messageWrapper);
+    // dishaWrapper.appendChild(messageWrapper);
     d.appendChild(n);
     // n.contentWindow.postMessage("botClosed", "*");
     let crossClose = document.createElement("img");
