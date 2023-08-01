@@ -1,4 +1,6 @@
 (() => {
+  if (window.screen.width < 600) return;
+
   let isMobile = false,
     isFirstTime = false;
 
