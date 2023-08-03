@@ -766,9 +766,9 @@ const setPlaceholderMaxHeight = () => {
 
     defineGPTslots(true);
 
-    const adDownIframe2 = document.createElement("iframe");
-    adDownIframe2.src =
-      "https://storage.googleapis.com/corover-prod-bucket/disha-eticket/320x50/index.html";
+    const adDownIframe2 = document.createElement("div");
+    adDownIframe2.innerHTML = `<iframe scrolling="no" style="pointer-events: none; width:100%; cursor:pointer; border:none;" src="https://storage.googleapis.com/corover-prod-bucket/disha-eticket/320x50/index.html"></iframe>`;
+
     // adDownIframe2.href = "https://irctc.corover.ai/";
     // adDownIframe2.target = "_blank";
     const adDownIframe = document.createElement("div");
@@ -814,6 +814,7 @@ const setPlaceholderMaxHeight = () => {
    width:320px;
    height:50px;
    border:2px;
+  
    `;
       adDownIframe2.style.cssText = `
    position:fixed;
@@ -823,6 +824,7 @@ const setPlaceholderMaxHeight = () => {
    height:50px;
    border:2px;
    cursor:pointer
+ 
    `;
     } else {
       adDownIframe.style.cssText = `
@@ -847,8 +849,9 @@ const setPlaceholderMaxHeight = () => {
     adDownIframe.scrolling = "no";
 
     adDownIframe2.scrolling = "no";
-    document.body.appendChild(adDownIframe);
+    // document.body.appendChild(adDownIframe);
     document.body.appendChild(adDownIframe2);
+
     const dealOfDay = document.createElement("a");
     // https://bit.ly/3gBANx7 PLUTOS
     //https://amzn.to/34WK1uY last
@@ -1362,7 +1365,7 @@ const setPlaceholderMaxHeight = () => {
  
           <div id='div_ub_chatbot_300x250' style="display:none;">
          </div> 
-         <img src="https://cdn.jsdelivr.net/gh/corover/assets@main/askdisha-bucket/300X250.gif" width="300px" height="250px"/>     
+         <img style="cursor:pointer;" id="disha-300x250" src="https://cdn.jsdelivr.net/gh/corover/assets@main/askdisha-bucket/300X250.gif" width="300px" height="250px"/>     
        </div>
            </div>
          `;
@@ -1931,6 +1934,13 @@ const setPlaceholderMaxHeight = () => {
     window.top.addEventListener("keypress", resetTimer, false);
     window.top.addEventListener("DOMMouseScroll", resetTimer, false);
     window.top.addEventListener("mousewheel", resetTimer, false);
+
+    adDownIframe2.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      botOpen();
+    });
+    document.getElementById("disha-300x250").addEventListener("click", botOpen);
 
     const runNewDisplayAd = () => {
       //   if (!isMob()) {
