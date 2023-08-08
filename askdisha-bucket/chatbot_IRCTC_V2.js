@@ -1,29 +1,16 @@
 let cdnScript3 = document.createElement("script");
 cdnScript3.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
 cdnScript3.async = true;
-// document.head.appendChild(cdnScript3);
-
-let newCDN = document.createElement("script");
-newCDN.src = "https://cdn.unibots.in/headerbidding/common/hb.js";
-newCDN.async = true;
-// document.head.appendChild(newCDN);
+document.head.appendChild(cdnScript3);
 
 window.unibots = window.unibots || { cmd: [] };
-// var IR_UB;
-// var IR_UB_300x250;
-// var IR_UB_300x250_2;
-// var IR_UB_NEW;
-// var IR_STICKY;
-// var IR_300x250_IFRAME;
-
+var IR_UB;
+var IR_UB_300x250;
+var IR_UB_300x250_2;
+var IR_UB_NEW;
+var IR_STICKY;
+var IR_300x250_IFRAME;
 var isSplashScreenOpen = false;
-
-function runNewNewDisplayAds() {
-  window.unibotshb = window.unibotshb || { cmd: [] };
-  unibotshb.cmd.push(() => {
-    ubHB("irctc");
-  });
-}
 
 const isMob = () => {
   if (
@@ -87,48 +74,51 @@ loader.innerHTML = `
     `;
 
 const defineGPTslots = (all) => {
-  //   googletag.cmd.push(function () {
-  //     if (all && !isMob()) {
-  //       IR_UB_NEW = googletag
-  //         .defineSlot(
-  //           "/22686085093/irctc_chatbot_300x250",
-  //           [300, 250],
-  //           "div-gpt-ad-1677756304492-0"
-  //         )
-  //         .addService(googletag.pubads());
-  //     }
-  //     IR_UB = googletag
-  //       .defineSlot(
-  //         "/22686085093/irctc_320x50",
-  //         [320, 50],
-  //         "div-gpt-ad-1686031619172-0"
-  //       )
-  //       .addService(googletag.pubads());
-  //   .addService(googletag.pubads());
-  // IR_UB_300x250 = googletag
-  //   .defineSlot(
-  //     "/22686085093/irctc_banner_300x250",
-  //     [300, 250],
-  //     "div-gpt-ad-1664429992698-0"
-  //   )
-  //   .addService(googletag.pubads());
-  // IR_UB_300x250_2 = googletag
-  //   .defineSlot(
-  //     "/22686085093/irctc_banner1_300x250",
-  //     [300, 250],
-  //     "div-gpt-ad-1664430029564-0"
-  //   )
-  //   .addService(googletag.pubads());
-  // IR_300x250_IFRAME = googletag
-  //   .defineSlot(
-  //     "/21748009408/IRCTC_300x250",
-  //     [300, 250],
-  //     "div-gpt-ad-1601563234445-0"
-  //   )
-  //   .addService(googletag.pubads());
-  //     googletag.pubads().enableSingleRequest();
-  //     googletag.enableServices();
-  //   });
+  googletag.cmd.push(function () {
+    if (all && !isMob()) {
+      IR_UB_NEW = googletag
+        .defineSlot(
+          "/22686085093/irctc_chatbot_300x250",
+          [300, 250],
+          "div-gpt-ad-1691478066574-0"
+        )
+        .addService(googletag.pubads());
+    }
+
+    IR_UB = googletag
+      .defineSlot(
+        "/22686085093/irctc_320x50",
+        [320, 50],
+        "div-gpt-ad-1691477930019-0"
+      )
+      .addService(googletag.pubads());
+    //   .addService(googletag.pubads());
+    // IR_UB_300x250 = googletag
+    //   .defineSlot(
+    //     "/22686085093/irctc_banner_300x250",
+    //     [300, 250],
+    //     "div-gpt-ad-1664429992698-0"
+    //   )
+    //   .addService(googletag.pubads());
+    // IR_UB_300x250_2 = googletag
+    //   .defineSlot(
+    //     "/22686085093/irctc_banner1_300x250",
+    //     [300, 250],
+    //     "div-gpt-ad-1664430029564-0"
+    //   )
+    //   .addService(googletag.pubads());
+
+    // IR_300x250_IFRAME = googletag
+    //   .defineSlot(
+    //     "/21748009408/IRCTC_300x250",
+    //     [300, 250],
+    //     "div-gpt-ad-1601563234445-0"
+    //   )
+    //   .addService(googletag.pubads());
+
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
 };
 
 const setPlaceholderMaxHeight = () => {
@@ -766,14 +756,15 @@ const setPlaceholderMaxHeight = () => {
 
     defineGPTslots(true);
 
-    const adDownIframe2 = document.createElement("div");
-    adDownIframe2.innerHTML = `<iframe scrolling="no" style="pointer-events: none; width:100%; cursor:pointer; border:none;" src="https://storage.googleapis.com/corover-prod-bucket/disha-eticket/320x50/index.html"></iframe>`;
-
-    // adDownIframe2.href = "https://irctc.corover.ai/";
-    // adDownIframe2.target = "_blank";
+    const adDownIframe2 = document.createElement("a");
+    adDownIframe2.innerHTML = `
+     <span></span>
+     `;
+    adDownIframe2.href = "https://irctc.corover.ai/";
+    adDownIframe2.target = "_blank";
     const adDownIframe = document.createElement("div");
     // adDownIframe.src = "https://assistant.corover.mobi/320x50_placeholder.html";
-    adDownIframe.id = "div_ub_320x50";
+    adDownIframe.id = "div-gpt-ad-1691477930019-0";
     const adDownScript = document.createElement("script");
     // adDownIframe.id = "div-gpt-ad-1654160819405-0";
 
@@ -784,18 +775,20 @@ const setPlaceholderMaxHeight = () => {
     //  `;
 
     const reloadADs = (all) => {
-      //   defineGPTslots(all);
-      //   googletag.cmd.push(function () {
-      //     googletag.display("div-gpt-ad-1654160819405-0");
-      //   });
-      //   googletag.cmd.push(function () {
-      //     googletag.display("div-gpt-ad-1686031619172-0");
-      //   });
-      //   if (all && !isMob()) {
-      //     googletag.cmd.push(function () {
-      //       googletag.display("div-gpt-ad-1677756304492-0");
-      //     });
-      //   }
+      defineGPTslots(all);
+      googletag.cmd.push(function () {
+        googletag.display("div-gpt-ad-1654160819405-0");
+      });
+
+      googletag.cmd.push(function () {
+        googletag.display("div-gpt-ad-1691477930019-0");
+      });
+
+      if (all && !isMob()) {
+        googletag.cmd.push(function () {
+          googletag.display("div-gpt-ad-1691478066574-0");
+        });
+      }
     };
 
     const add320 = () => {
@@ -814,7 +807,6 @@ const setPlaceholderMaxHeight = () => {
    width:320px;
    height:50px;
    border:2px;
-  
    `;
       adDownIframe2.style.cssText = `
    position:fixed;
@@ -824,7 +816,6 @@ const setPlaceholderMaxHeight = () => {
    height:50px;
    border:2px;
    cursor:pointer
- 
    `;
     } else {
       adDownIframe.style.cssText = `
@@ -849,9 +840,8 @@ const setPlaceholderMaxHeight = () => {
     adDownIframe.scrolling = "no";
 
     adDownIframe2.scrolling = "no";
-    // document.body.appendChild(adDownIframe);
+    document.body.appendChild(adDownIframe);
     document.body.appendChild(adDownIframe2);
-
     const dealOfDay = document.createElement("a");
     // https://bit.ly/3gBANx7 PLUTOS
     //https://amzn.to/34WK1uY last
@@ -862,6 +852,17 @@ const setPlaceholderMaxHeight = () => {
     dealOfDay.target = "_blank";
     dealOfDay.innerHTML = `
          <img width="156px" src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png" decoding="async"/>
+         <p style="
+    position: absolute;
+    background: white;
+    top: 28px;
+    left: -33px;
+    text-decoration: none;
+    color: black;
+    padding: 0px 7px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+">Ad</p>
          `;
 
     if (isMobile)
@@ -1363,9 +1364,8 @@ const setPlaceholderMaxHeight = () => {
           display:none;
           "></iframe>  
  
-          <div id='div_ub_chatbot_300x250' style="display:none;">
-         </div> 
-         <img style="cursor:pointer;" id="disha-300x250" src="https://cdn.jsdelivr.net/gh/corover/assets@main/askdisha-bucket/300X250.gif" width="300px" height="250px"/>     
+          <div id='div-gpt-ad-1691478066574-0'>
+         </div>      
        </div>
            </div>
          `;
@@ -1935,19 +1935,12 @@ const setPlaceholderMaxHeight = () => {
     window.top.addEventListener("DOMMouseScroll", resetTimer, false);
     window.top.addEventListener("mousewheel", resetTimer, false);
 
-    adDownIframe2.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      botOpen();
-    });
-    document.getElementById("disha-300x250").addEventListener("click", botOpen);
-
     const runNewDisplayAd = () => {
-      //   if (!isMob()) {
-      //     googletag.cmd.push(function () {
-      //       googletag.display("div-gpt-ad-1677756304492-0");
-      //     });
-      //   }
+      if (!isMob()) {
+        googletag.cmd.push(function () {
+          googletag.display("div-gpt-ad-1691478066574-0");
+        });
+      }
     };
 
     setTimeout(() => {
@@ -1967,37 +1960,41 @@ const setPlaceholderMaxHeight = () => {
     }
 
     function refreshHomeAdWindow() {
-      //   if (isOpen) {
-      //     document.getElementById("adIframeContainer").removeChild(adIframe);
-      //     setTimeout(() => {
-      //       document.getElementById("adIframeContainer").appendChild(adIframe);
-      //     }, 500);
-      //   } else {
-      //     googletag.cmd.push(function () {
-      //       if (!isMob()) {
-      //         googletag.pubads().refresh([IR_UB_NEW]);
-      //       }
-      //       googletag.pubads().refresh([IR_UB]);
-      //     });
-      //     if (!isSplashScreenOpen) {
-      //       remove320();
-      //       setTimeout(() => {
-      //         add320();
-      //       }, 500);
-      //     }
-      //   }
-      //   if (!isOpen && !isMobile) {
-      //     splashMagic2();
-      //     // if (document.getElementById("scrollIframeContainer"))
-      //     //   document
-      //     //     .getElementById("scrollIframeContainer")
-      //     //     .removeChild(adIframescroll);
-      //     // setTimeout(() => {
-      //     //   document
-      //     //     .getElementById("scrollIframeContainer")
-      //     //     .appendChild(adIframescroll);
-      //     // }, 500);
-      //   }
+      if (isOpen) {
+        document.getElementById("adIframeContainer").removeChild(adIframe);
+        setTimeout(() => {
+          document.getElementById("adIframeContainer").appendChild(adIframe);
+        }, 500);
+      } else {
+        googletag.cmd.push(function () {
+          //   googletag.pubads().refresh([IR_UB]);
+          // googletag.pubads().refresh([IR_UB_300x250]);
+          // googletag.pubads().refresh([IR_UB_300x250_2]);
+          if (!isMob()) {
+            googletag.pubads().refresh([IR_UB_NEW]);
+          }
+          googletag.pubads().refresh([IR_UB]);
+        });
+
+        if (!isSplashScreenOpen) {
+          remove320();
+          setTimeout(() => {
+            add320();
+          }, 500);
+        }
+      }
+      if (!isOpen && !isMobile) {
+        splashMagic2();
+        // if (document.getElementById("scrollIframeContainer"))
+        //   document
+        //     .getElementById("scrollIframeContainer")
+        //     .removeChild(adIframescroll);
+        // setTimeout(() => {
+        //   document
+        //     .getElementById("scrollIframeContainer")
+        //     .appendChild(adIframescroll);
+        // }, 500);
+      }
     }
   }
 
@@ -2190,7 +2187,7 @@ const setPlaceholderMaxHeight = () => {
     }
   }
 
-  // setVideoAd(true);
+  setVideoAd(true);
   // setYoutubeAd();
 
   // /////////////////
@@ -2369,18 +2366,20 @@ const setPlaceholderMaxHeight = () => {
   }
 
   const reloadADs = (all) => {
-    // defineGPTslots(all);
-    // googletag.cmd.push(function () {
-    //   googletag.display("div-gpt-ad-1654160819405-0");
-    // });
-    // googletag.cmd.push(function () {
-    //   googletag.display("div-gpt-ad-1686031619172-0");
-    // });
-    // if (all && !isMob()) {
-    //   googletag.cmd.push(function () {
-    //     googletag.display("div-gpt-ad-1677756304492-0");
-    //   });
-    // }
+    defineGPTslots(all);
+    googletag.cmd.push(function () {
+      googletag.display("div-gpt-ad-1654160819405-0");
+    });
+
+    googletag.cmd.push(function () {
+      googletag.display("div-gpt-ad-1691477930019-0");
+    });
+
+    if (all && !isMob()) {
+      googletag.cmd.push(function () {
+        googletag.display("div-gpt-ad-1691478066574-0");
+      });
+    }
   };
 
   let oldUrl = window.location.href;
@@ -2390,17 +2389,17 @@ const setPlaceholderMaxHeight = () => {
       if (window.location.href != oldUrl) {
         let s = !isMob();
         if (window.location.href.includes("train-search")) {
-          // setVideoAd();
+          setVideoAd();
           // const iframe = document.getElementById("book-ticket-iframe");
           // if (iframe) iframe.style.display = "none";
         } else if (window.location.href.includes("enquiry/pnr-enquiry")) {
-          // setVideoAd2(true);
+          setVideoAd2(true);
           // const iframe = document.getElementById("book-ticket-iframe");
           // if (iframe) iframe.style.display = "none";
         } else if (window.location.href.includes("booking/train-list")) {
-          // setVideoAdTrains();
+          setVideoAdTrains();
         } else {
-          // setVideoAd2(false);
+          setVideoAd2(false);
           // const iframe = document.getElementById("book-ticket-iframe");
           // if (iframe) iframe.style.display = "none";
         }
@@ -2472,13 +2471,11 @@ const setPlaceholderMaxHeight = () => {
 
   // setSecondVideoAdinIframe();
 
-  runNewNewDisplayAds();
-
   document.head.insertAdjacentHTML(
     "beforeend",
     `<style type="text/css">
-       #div-gpt-ad-1686031619172-0{position:fixed !important;}
-       #div_ub_chatbot_300x250{
+       #div-gpt-ad-1691477930019-0{position:fixed !important;}
+       #div-gpt-ad-1691478066574-0{
         min-width: 300px; min-height: 250px;
        }
 
