@@ -1,6 +1,4 @@
 (() => {
-  if (window.screen.width < 600) return;
-
   let isMobile = false,
     isFirstTime = false;
 
@@ -121,7 +119,7 @@
     // `;
 
     document.head.appendChild(cdnScript3);
-    document.head.appendChild(cdnScript6);
+    // document.head.appendChild(cdnScript6);
     // document.head.appendChild(cdnScript4);
   }
 
@@ -352,7 +350,7 @@
 
     function setDishaWrapper() {
       // if (!isMobile || window.location.href.includes("indianrail"))
-      if (true) {
+      if (!isMobile) {
         dishaWrapper.style.cssText = `
              position: fixed;
              z-index: 999;
@@ -360,25 +358,25 @@
              display: flex;
              justify-content: flex-end;
              align-items: center;
-             bottom: 54px;
-             left: 20px;
+             bottom: 36px;
+             left: 38px;
              width: fit-content;
              max-width: 95%;
              z-index:99999;
              `;
       } else {
         dishaWrapper.style.cssText = `
-             position: fixed;
-             z-index: 999999999;
-             background-color: transparent;
-             display: flex;
-             justify-content: flex-end;
-             align-items: center;
-             bottom: 8px;
-             right: 8px;
-             width: fit-content;
-             max-width: 95%;
-             z-index:9999999999999;
+        position: fixed;
+        z-index: 999;
+        background-color: transparent;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        bottom: 18px;
+        left: 0px;
+        width: fit-content;
+        max-width: 95%;
+        z-index:99999;
              `;
       }
     }
@@ -413,8 +411,12 @@
     // messageWrapper.style.display = "none";
     let launcher = document.createElement("div");
     launcher.id = "askDishaLuncher";
+
     launcher.style.cssText =
       "background-size: cover;background-position: 6px -3px;background-repeat: no-repeat;background-color: transparent; width: 120px; height: 120px; border-radius: 100%; -webkit-box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%); box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);  -webkit-backface-visibility: hidden; -webkit-transition: all 0.5s; transition: all 0.5s; cursor: pointer; z-index: 9; border-radius: 50%;";
+
+    if (isMobile) launcher.style.transform = "scale(0.7)";
+    else launcher.style.transform = "scale(0.8)";
     checkMobile();
     if (isMobile) {
       // launcher.style.backgroundImage = `url("https://sdk.irctc.corover.ai/askdisha-bucket/disha.svg")`;
@@ -422,6 +424,7 @@
       launcher.style.backgroundPosition = "center";
       messageWrapper.style.display = "none";
     } else {
+      messageWrapper.style.display = "none";
       // launcher.style.backgroundImage = `url(
       //        "https://sdk.irctc.corover.ai/askdisha-bucket/disha.svg"
       //      )`;
@@ -741,7 +744,7 @@
         z-index:1;
       `;
 
-    // document.body.appendChild(adDownIframe);
+    document.body.appendChild(adDownIframe);
     // document.body.appendChild(adDownIframe2);
 
     const dealOfDay = document.createElement("a");
@@ -767,13 +770,22 @@
               `;
     }
 
-    dealOfDay.style.cssText = `
+    if (isMobile)
+      dealOfDay.style.cssText = `
+    position: fixed;
+    bottom:18px;
+    left:90px;
+    transform: scale(0.8);
+    `;
+    else
+      dealOfDay.style.cssText = `
               position: fixed;
-              bottom:40px;
+              bottom:25px;
               left:150px;
+              transform: scale(0.8);
               `;
     dealOfDay.style.zIndex = "99";
-    // document.body.appendChild(dealOfDay);
+    document.body.appendChild(dealOfDay);
 
     setDishaWrapper();
 
@@ -833,7 +845,7 @@
     //Append iFrame inside Div
     d.appendChild(ad);
     dishaWrapper.appendChild(launcher);
-    // dishaWrapper.appendChild(messageWrapper);
+    dishaWrapper.appendChild(messageWrapper);
     d.appendChild(n);
     // n.contentWindow.postMessage("botClosed", "*");
     let crossClose = document.createElement("img");
@@ -1245,9 +1257,9 @@
     };
     openBanner(false);
 
-    // setTimeout(() => {
-    //   if (!isOpen) openBanner(true);
-    // }, 6000);
+    setTimeout(() => {
+      // if (!isOpen) openBanner(true);
+    }, 6000);
 
     document.getElementById("disha-banner-close").onclick = () =>
       openBanner(false);
@@ -1581,7 +1593,7 @@
       }
     };
 
-    if (false) {
+    if (window.location.href.includes("indianrail")) {
       let divRail = document.createElement("div");
       divRail.id = "div-ub-indianrail";
       if (isMobile) document.body.appendChild(divRail);
@@ -1725,18 +1737,79 @@
   };
 
   setSecondVideoAdinIframe();
-  document.head.insertAdjacentHTML(
-    "beforeend",
-    `<style type="text/css">
+
+  if (isMobile)
+    document.head.insertAdjacentHTML(
+      "beforeend",
+      `<style type="text/css">
          
           #div-gpt-ad-1654676845166-0{
         position: fixed !important;
-        bottom: 0px !important;
-        left: 10px !important;
+        bottom: -10px !important;
+        left: -30px !important;
         border: none !important;
         min-width: 320px !important;
         min-height:50px !important;
         z-index:2 !important;
+        transform: scale(0.7);
+        }
+  
+        .gpt320--show{
+          display:block;
+        }
+  
+        .gpt320--hide{
+          display:none;
+        }
+       
+
+        @media screen and (max-width:635px) {
+          // #div-gpt-ad-1654676845166-0
+          // {
+          //   left: unset !important;
+          // }
+          }
+
+
+
+       .disha-loader {
+        border: 10px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 10px solid #3498db;
+        width: 60px;
+        height: 60px;
+        -webkit-animation: disha-spin 1s linear infinite; /* Safari */
+        animation: disha-spin 1s linear infinite;
+        margin-bottom:20px
+      }
+      
+      /* Safari */
+      @-webkit-keyframes disha-spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes disha-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+        </style>`
+    );
+  else
+    document.head.insertAdjacentHTML(
+      "beforeend",
+      `<style type="text/css">
+         
+          #div-gpt-ad-1654676845166-0{
+            position: fixed !important;
+            bottom: -5px !important;
+            left: 10px !important;
+            border: none !important;
+            min-width: 320px !important;
+            min-height: 50px !important;
+            z-index: 2 !important;
+            transform: scale(0.8);
         }
   
         .gpt320--show{
@@ -1780,5 +1853,5 @@
       }
 
         </style>`
-  );
+    );
 })();
