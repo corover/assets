@@ -2,36 +2,28 @@
   {
     "name": "NEW DELHI",
     "code": "NDLS",
-    "utterances": [
-      "naya delhi",
-      "nai dilli",
-      "nayi delhi",
-      "nai dilli"
-    ],
+    "utterances": ["naya delhi", "nai dilli", "nayi delhi", "nai dilli"],
     "name_hi": "नई दिल्ली",
     "latitude": 28.642314,
     "longitude": 77.22000399999999,
     "district": "Central",
     "state": "Delhi",
     "trainCount": "244",
-    "address": "Pedestrian Opas, Ratan Lal Market, Railway Colony, Paharganj, New Delhi, Delhi 110006"
+    "address": "Pedestrian Opas, Ratan Lal Market, Railway Colony, Paharganj, New Delhi, Delhi 110006",
+    "name_gu": "નવી દિલ્હી"
   },
   {
     "name": "MGR CHENNAI CTL",
     "code": "MAS",
-    "utterances": [
-      "chennai",
-      "medras",
-      "madras",
-      "channie"
-    ],
+    "utterances": ["chennai", "medras", "madras", "channie"],
     "name_hi": "मगर चेन्नै कत्ल",
     "latitude": 13.0847613,
     "longitude": 80.27485630000001,
     "district": "Chennai",
     "state": "Tamil Nadu",
     "trainCount": "179",
-    "address": "General Hospital Rd, Kannappar Thidal, Periyamet, Chennai, Tamil Nadu 600003"
+    "address": "General Hospital Rd, Kannappar Thidal, Periyamet, Chennai, Tamil Nadu 600003",
+    "name_gu": "એમજીઆર ચેન્નાઈ સીટીએલ"
   },
   {
     "name": "V LAKSHMIBAIJHS",
@@ -41,7 +33,8 @@
       "jhansi",
       "lakshmibai",
       "rani",
-      "virangana"
+      "virangana",
+      "jhansi"
     ],
     "name_hi": "वीरांगना लक्ष्मीबाई",
     "latitude": 25.444543958881482,
@@ -49,119 +42,112 @@
     "district": "",
     "state": "Uttar Pradesh",
     "trainCount": "",
-    "address": "Pedestrian Opas, Rani Laxmi Nagar, Jhansi, Uttar Pradesh 284003"
+    "address": "Pedestrian Opas, Rani Laxmi Nagar, Jhansi, Uttar Pradesh 284003",
+    "name_gu": "વી લક્ષ્મીબાઇઝ"
   },
   {
     "name": "HOWRAH JN",
     "code": "HWH",
-    "utterances": [
-      "howda"
-    ],
+    "utterances": ["howda"],
     "name_hi": "होरह जन",
     "latitude": 22.584077999999998,
     "longitude": 88.34099900000001,
     "district": "Howrah",
     "state": "West Bengal",
     "trainCount": "231",
-    "address": "station, platform 9, Old Cab Rd, 711101, Howrah Railway Station, Howrah, West Bengal"
+    "address": "station, platform 9, Old Cab Rd, 711101, Howrah Railway Station, Howrah, West Bengal",
+    "name_gu": "હાવરા જે. એન"
   },
   {
     "name": "SECUNDERABAD JN",
     "code": "SC",
-    "utterances": [
-      "Secukerabad"
-    ],
+    "utterances": ["Secukerabad"],
     "name_hi": "सिकंदराबाद जं",
     "latitude": 17.433146999999998,
     "longitude": 78.50148100000001,
     "district": "Hyderabad",
     "state": "Telangana",
     "trainCount": "203",
-    "address": "Platform 4 &amp; 5, Railway Officer Colony, Botiguda, Bhoiguda, Secunderabad, Telangana 500003"
+    "address": "Platform 4 &amp; 5, Railway Officer Colony, Botiguda, Bhoiguda, Secunderabad, Telangana 500003",
+    "name_gu": "એસ. ઈ. સી. યુ. એન. હૈદરાબાદ"
   },
   {
     "name": "PUNE JN",
     "code": "PUNE",
-    "utterances": [
-      "puna"
-    ],
+    "utterances": ["puna"],
     "name_hi": "पुणे जं",
     "latitude": 18.529378,
     "longitude": 73.873086,
     "district": "Pune",
     "state": "Maharashtra",
     "trainCount": "234",
-    "address": "Sangamvadi, Pune, Maharashtra 411001"
+    "address": "Sangamvadi, Pune, Maharashtra 411001",
+    "name_gu": "પુણે જેએન"
   },
   {
     "name": "KSR BENGALURU",
     "code": "SBC",
-    "utterances": [
-      "Bangalore"
-    ],
+    "utterances": ["Bangalore"],
     "name_hi": "कस्र बेंगलुरु",
     "latitude": 12.977595,
     "longitude": 77.56808299999999,
     "district": "Bangalore",
     "state": "Karnataka",
     "trainCount": "127",
-    "address": "Bengaluru, Karnataka"
+    "address": "Bengaluru, Karnataka",
+    "name_gu": "કેએસઆર બેંગલુરુ"
   },
   {
     "name": "AHMEDABAD JN",
     "code": "ADI",
-    "utterances": [
-      "adamdabad"
-    ],
+    "utterances": ["adamdabad"],
     "name_hi": "अहमदाबाद जं",
     "latitude": 23.025515,
     "longitude": 72.601516,
     "district": "Ahmadabad",
     "state": "Gujarat",
     "trainCount": "281",
-    "address": "2JG2+5HF, Saraspur, Ahmedabad, Gujarat 380002"
+    "address": "2JG2+5HF, Saraspur, Ahmedabad, Gujarat 380002",
+    "name_gu": "અમદાવાદ જે. એન"
   },
   {
     "name": "LOKMANYATILAK T",
     "code": "LTT",
-    "utterances": [
-      "lokmayatilak"
-    ],
+    "utterances": ["lokmayatilak"],
     "name_hi": "लोकमान्यतिलक टी",
     "latitude": 19.070320000000002,
     "longitude": 72.89173899999999,
     "district": "Mumbai Suburban",
     "state": "Maharashtra",
     "trainCount": "153",
-    "address": "Lokmanya Tilak Terminus Railway Station, Mumbai, Maharashtra 400089"
+    "address": "Lokmanya Tilak Terminus Railway Station, Mumbai, Maharashtra 400089",
+    "name_gu": "લોકમાન્યતા ટી"
   },
   {
     "name": "H NIZAMUDDIN",
     "code": "NZM",
-    "utterances": [
-      "Hazrat nizamuddin"
-    ],
+    "utterances": ["Hazrat nizamuddin"],
     "name_hi": "ः निजामुद्दीन",
     "latitude": 28.587329999999998,
     "longitude": 77.254249,
     "district": "South",
     "state": "Delhi",
     "trainCount": "191",
-    "address": "Nizamuddin East, New Delhi, Delhi 110013"
+    "address": "Nizamuddin East, New Delhi, Delhi 110013",
+    "name_gu": "એચ. નિઝામુદ્દીન"
   },
   {
     "name": "C SHIVAJI MAH T",
     "code": "CSTM",
-    "utterances": [
-      "Shivaji"
-    ],
+    "utterances": ["Shivaji"],
     "name_hi": "स शिवजी मह त",
     "latitude": 18.941002233498335,
     "longitude": 72.83463833978938,
     "district": "",
     "state": "Maharashtra",
     "trainCount": "103",
-    "address": "Chhatrapati Shivaji Terminus Area, Fort, Mumbai, Maharashtra 400001"
+    "address": "Chhatrapati Shivaji Terminus Area, Fort, Mumbai, Maharashtra 400001",
+    "name_gu": "સી. શિવાજી માહ ટી."
   },
   {
     "name": "JAIPUR",
@@ -173,7 +159,8 @@
     "district": "Jaipur",
     "state": "Rajasthan",
     "trainCount": "190",
-    "address": "Cold Drinking Water, Hasanpura, Jaipur, Rajasthan 302006"
+    "address": "Cold Drinking Water, Hasanpura, Jaipur, Rajasthan 302006",
+    "name_gu": "જયપુર"
   },
   {
     "name": "ANAND VIHAR TRM",
@@ -185,7 +172,8 @@
     "district": "",
     "state": "Delhi",
     "trainCount": "102",
-    "address": "Footover Bridge, Plot Alpha, Isbt Anand Vihar, Anand Vihar, Delhi, 110092"
+    "address": "Footover Bridge, Plot Alpha, Isbt Anand Vihar, Anand Vihar, Delhi, 110092",
+    "name_gu": "આનંદ વિહાર TRM"
   },
   {
     "name": "CHENNAI EGMORE",
@@ -197,22 +185,21 @@
     "district": "Chennai",
     "state": "Tamil Nadu",
     "trainCount": "107",
-    "address": "Egmore, Chennai, Tamil Nadu 600008"
+    "address": "Egmore, Chennai, Tamil Nadu 600008",
+    "name_gu": "ચેન્નાઈ એગ્મોર"
   },
   {
     "name": "DELHI",
     "code": "DAZ",
-    "utterances": [
-      "Dili",
-      "dilli"
-    ],
+    "utterances": ["Dili", "dilli"],
     "name_hi": "दिल्ली",
     "latitude": 28.661815999999998,
     "longitude": 77.228356,
     "district": "Central",
     "state": "Delhi NCT",
     "trainCount": "105",
-    "address": "Shyama Prasad Mukherji Marg, Delhi NCT"
+    "address": "Shyama Prasad Mukherji Marg, Delhi NCT",
+    "name_gu": "દિલ્હી"
   },
   {
     "name": "SURAT",
@@ -224,7 +211,8 @@
     "district": "Surat",
     "state": "Gujarat",
     "trainCount": "313",
-    "address": "5R5C+MWF, Govalak, Pandesara, Udhana, Surat, Gujarat 394220"
+    "address": "5R5C+MWF, Govalak, Pandesara, Udhana, Surat, Gujarat 394220",
+    "name_gu": "સુરાત"
   },
   {
     "name": "BANDRA TERMINUS",
@@ -236,7 +224,8 @@
     "district": "Mumbai Suburban",
     "state": "Maharashtra",
     "trainCount": "111",
-    "address": "Mumbai, Maharashtra"
+    "address": "Mumbai, Maharashtra",
+    "name_gu": "બાંદ્રા ટર્મિનસ"
   },
   {
     "name": "VIJAYAWADA JN",
@@ -248,21 +237,21 @@
     "district": "Krishna",
     "state": "Andhra Pradesh",
     "trainCount": "350",
-    "address": "Hanumanpet, Vijayawada, Andhra Pradesh 520001"
+    "address": "Hanumanpet, Vijayawada, Andhra Pradesh 520001",
+    "name_gu": "વિજયવાડા જે. એન"
   },
   {
     "name": "VISAKHAPATNAM",
     "code": "VSKP",
-    "utterances": [
-      "vizagapatam"
-    ],
+    "utterances": ["vizagapatam"],
     "name_hi": "विशाखापट्नम",
     "latitude": 17.72159,
     "longitude": 83.289514,
     "district": "Visakhapatnam",
     "state": "Andhra Pradesh",
     "trainCount": "201",
-    "address": "P7CQ+RP9, Waltair Station Approach Rd, Railway Quarters, Railway New Colony, Visakhapatnam, Andhra Pradesh 530004"
+    "address": "P7CQ+RP9, Waltair Station Approach Rd, Railway Quarters, Railway New Colony, Visakhapatnam, Andhra Pradesh 530004",
+    "name_gu": "વિશાખાપટ્ટનમ"
   },
   {
     "name": "YESVANTPUR JN",
@@ -274,7 +263,8 @@
     "district": "Bangalore",
     "state": "Karnataka",
     "trainCount": "162",
-    "address": "Yeshwanthpur - Tumkur Railway Station Rd, Yeshwanthpur Industrial Area, Phase 1, Yeswanthpur, Bengaluru, Karnataka 560022"
+    "address": "Yeshwanthpur - Tumkur Railway Station Rd, Yeshwanthpur Industrial Area, Phase 1, Yeswanthpur, Bengaluru, Karnataka 560022",
+    "name_gu": "યશ્વંતપુર જે. એન."
   },
   {
     "name": "PATNA JN",
@@ -286,22 +276,21 @@
     "district": "Patna",
     "state": "Bihar",
     "trainCount": "179",
-    "address": "NO.34, New Dak Bunglow Rd, Mithapur Farm Area, Mithapur, Patna, Bihar 800001"
+    "address": "NO.34, New Dak Bunglow Rd, Mithapur Farm Area, Mithapur, Patna, Bihar 800001",
+    "name_gu": "પટના જે. એન."
   },
   {
     "name": "MUMBAI CENTRAL",
     "code": "BCT",
-    "utterances": [
-      "Bombay",
-      "Mumbai"
-    ],
+    "utterances": ["Bombay", "Mumbai"],
     "name_hi": "मुंबई सेंट्रल",
     "latitude": 18.969879041061084,
     "longitude": 72.81926508143442,
     "district": "",
     "state": "Maharashtra",
     "trainCount": "43",
-    "address": "Nathani Heights Commercial,B'Wing,Shop no 57 Ground Floor, Mumbai Central, Mumbai, Maharashtra 400008"
+    "address": "Nathani Heights Commercial,B'Wing,Shop no 57 Ground Floor, Mumbai Central, Mumbai, Maharashtra 400008",
+    "name_gu": "મુંબઈ કેન્દ્ર"
   },
   {
     "name": "BHOPAL  JN",
@@ -313,7 +302,8 @@
     "district": "Bhopal",
     "state": "Madhya Pradesh",
     "trainCount": "257",
-    "address": "Navbahar Colony, Bhopal, Madhya Pradesh 462001"
+    "address": "Navbahar Colony, Bhopal, Madhya Pradesh 462001",
+    "name_gu": "ભોપાલ જે. એન"
   },
   {
     "name": "NAGPUR",
@@ -325,7 +315,8 @@
     "district": "Nagpur",
     "state": "Maharashtra",
     "trainCount": "253",
-    "address": "533Q+FH2, Mohan Nagar, Nagpur, Maharashtra 440001"
+    "address": "533Q+FH2, Mohan Nagar, Nagpur, Maharashtra 440001",
+    "name_gu": "નાગપુર"
   },
   {
     "name": "LUCKNOW NR",
@@ -337,7 +328,8 @@
     "district": "Lucknow",
     "state": "Uttar Pradesh",
     "trainCount": "255",
-    "address": "Railway Colony, Charbagh, Lucknow, Uttar Pradesh 226001"
+    "address": "Railway Colony, Charbagh, Lucknow, Uttar Pradesh 226001",
+    "name_gu": "લખનઉ એનઆર"
   },
   {
     "name": "BORIVALI",
@@ -349,21 +341,21 @@
     "district": "Mumbai Suburban",
     "state": "Maharashtra",
     "trainCount": "150",
-    "address": "Mumbai, Maharashtra"
+    "address": "Mumbai, Maharashtra",
+    "name_gu": "બોરિવલી"
   },
   {
     "name": "VARANASI JN",
     "code": "BSB",
-    "utterances": [
-      "banaras"
-    ],
+    "utterances": ["banaras", "kashi"],
     "name_hi": "वाराणसी जं",
     "latitude": 25.327281,
     "longitude": 82.986468,
     "district": "Varanasi",
     "state": "Uttar Pradesh",
     "trainCount": "221",
-    "address": "Railwayganj Colony, Varanasi, Uttar Pradesh 221002"
+    "address": "Railwayganj Colony, Varanasi, Uttar Pradesh 221002",
+    "name_gu": "વારણાસી જે. એન."
   },
   {
     "name": "KALYAN JN",
@@ -375,7 +367,8 @@
     "district": "Thane",
     "state": "Maharashtra",
     "trainCount": "263",
-    "address": "Kalyan Building, Pathe Bapurao Marg, Grant Road East, Bharat Nagar, Grant Road, Mumbai, Maharashtra 400007"
+    "address": "Kalyan Building, Pathe Bapurao Marg, Grant Road East, Bharat Nagar, Grant Road, Mumbai, Maharashtra 400007",
+    "name_gu": "કલ્યાણ જે. એન"
   },
   {
     "name": "KANPUR CENTRAL",
@@ -387,7 +380,8 @@
     "district": "Kanpur Nagar",
     "state": "Uttar Pradesh",
     "trainCount": "343",
-    "address": "F932+M9Q, Kanpur Central Railyway Station Flyover, Moti Mohal, Mirpur, Kanpur, Uttar Pradesh"
+    "address": "F932+M9Q, Kanpur Central Railyway Station Flyover, Moti Mohal, Mirpur, Kanpur, Uttar Pradesh",
+    "name_gu": "કાનપુર કેન્દ્ર"
   },
   {
     "name": "BHUBANESWAR",
@@ -399,7 +393,8 @@
     "district": "Khordha",
     "state": "Odisha",
     "trainCount": "237",
-    "address": "Master Canteen Chowk, Ashok Nagar, Bhubaneswar, Odisha 751009"
+    "address": "Master Canteen Chowk, Ashok Nagar, Bhubaneswar, Odisha 751009",
+    "name_gu": "ભુવનેશ્વર"
   },
   {
     "name": "COIMBATORE JN",
@@ -411,7 +406,8 @@
     "district": "Coimbatore",
     "state": "Tamil Nadu",
     "trainCount": "148",
-    "address": "50, Dr Nanjappa Road, 1st Floor, Raja Street, Coimbatore Junction, Dr Nanjappa Road, Coimbatore, Tamil Nadu 641018"
+    "address": "50, Dr Nanjappa Road, 1st Floor, Raja Street, Coimbatore Junction, Dr Nanjappa Road, Coimbatore, Tamil Nadu 641018",
+    "name_gu": "કોયંબટૂર જેએન"
   },
   {
     "name": "SEALDAH",
@@ -423,7 +419,8 @@
     "district": "Howrah",
     "state": "West Bengal",
     "trainCount": "54",
-    "address": "Sealdah Train Yard, Sealdah, Raja Bazar, Kolkata, West Bengal 700014"
+    "address": "Sealdah Train Yard, Sealdah, Raja Bazar, Kolkata, West Bengal 700014",
+    "name_gu": "સીલદાહ"
   },
   {
     "name": "TRIVANDRUM CNTL",
@@ -435,7 +432,8 @@
     "district": "Thiruvananthapuram",
     "state": "Kerala",
     "trainCount": "87",
-    "address": "Chalai Bazaar, Chalai, Thiruvananthapuram, Kerala 695001"
+    "address": "Chalai Bazaar, Chalai, Thiruvananthapuram, Kerala 695001",
+    "name_gu": "TRIVANDRUM CNTL"
   },
   {
     "name": "VADODARA JN",
@@ -447,7 +445,8 @@
     "district": "Vadodara",
     "state": "Gujarat",
     "trainCount": "354",
-    "address": "Vadodara Railway Station, Maharaja Sayajirao University, Sayajiganj, Vadodara, Gujarat 390005"
+    "address": "Vadodara Railway Station, Maharaja Sayajirao University, Sayajiganj, Vadodara, Gujarat 390005",
+    "name_gu": "વડોદરા જે. એન"
   },
   {
     "name": "GORAKHPUR JN",
@@ -459,21 +458,21 @@
     "district": "Gorakhpur",
     "state": "Uttar Pradesh",
     "trainCount": "177",
-    "address": "Bilandpur, Gorakhpur, Uttar Pradesh 273012"
+    "address": "Bilandpur, Gorakhpur, Uttar Pradesh 273012",
+    "name_gu": "ગોરખપુર જે. એન."
   },
   {
     "name": "JAMMU TAWI",
     "code": "JAT",
-    "utterances": [
-      "jammu"
-    ],
+    "utterances": ["jammu", "vaishno devi"],
     "name_hi": "जम्मू तवी",
     "latitude": 32.706975,
     "longitude": 74.880117,
     "district": "Jammu",
     "state": "Jammu and Kashmir",
     "trainCount": "107",
-    "address": "Jammu Cantt, Jammu and Kashmir"
+    "address": "Jammu Cantt, Jammu and Kashmir",
+    "name_gu": "જમ્મુ તાવી"
   },
   {
     "name": "JABALPUR",
@@ -485,21 +484,21 @@
     "district": "Jabalpur",
     "state": "Madhya Pradesh",
     "trainCount": "191",
-    "address": "Jabalpur, Madhya Pradesh"
+    "address": "Jabalpur, Madhya Pradesh",
+    "name_gu": "જબલપુર"
   },
   {
     "name": "INDORE JN BG",
     "code": "INDB",
-    "utterances": [
-      "Indore"
-    ],
+    "utterances": ["Indore"],
     "name_hi": "इंदौर जं बग",
     "latitude": 22.71757,
     "longitude": 75.868429,
     "district": "Indore",
     "state": "Madhya Pradesh",
     "trainCount": "84",
-    "address": "Indore, Madhya Pradesh"
+    "address": "Indore, Madhya Pradesh",
+    "name_gu": "ઈન્દોર જે. એન. બીજી"
   },
   {
     "name": "THANE",
@@ -511,19 +510,21 @@
     "district": "Thane",
     "state": "Maharashtra",
     "trainCount": "171",
-    "address": "Kopri Railway Bridge, Shivaji Nagar, Thane East, Thane, Maharashtra 400603"
+    "address": "Kopri Railway Bridge, Shivaji Nagar, Thane East, Thane, Maharashtra 400603",
+    "name_gu": "ઠાણે"
   },
   {
     "name": "PRAYAGRAJ JN.",
     "code": "PRYJ",
-    "utterances": [],
+    "utterances": ["allahabad"],
     "name_hi": "प्रयागराज जन.",
     "latitude": 25.451013816413738,
     "longitude": 81.82636135958182,
     "district": "",
     "state": "Uttar Pradesh",
     "trainCount": "0",
-    "address": "Civil Lines, Prayagraj, Uttar Pradesh 211001"
+    "address": "Civil Lines, Prayagraj, Uttar Pradesh 211001",
+    "name_gu": "પ્રયાગરાજ જે. એન."
   },
   {
     "name": "LUCKNOW NE",
@@ -535,7 +536,8 @@
     "district": "Lucknow",
     "state": "Uttar Pradesh",
     "trainCount": "58",
-    "address": "Blunt Square, Cash and Pay Colony, Charbagh, Lucknow, Uttar Pradesh 226004"
+    "address": "Blunt Square, Cash and Pay Colony, Charbagh, Lucknow, Uttar Pradesh 226004",
+    "name_gu": "નસીબજોગે નહીં"
   },
   {
     "name": "KOTA JN",
@@ -547,7 +549,8 @@
     "district": "Kota",
     "state": "Rajasthan",
     "trainCount": "183",
-    "address": "New Railway Colony, Railway Station Area, Kota, Rajasthan 324002"
+    "address": "New Railway Colony, Railway Station Area, Kota, Rajasthan 324002",
+    "name_gu": "કોટા જેએન"
   },
   {
     "name": "JODHPUR JN",
@@ -559,7 +562,8 @@
     "district": "Jodhpur",
     "state": "Rajasthan",
     "trainCount": "93",
-    "address": "Ratanada, Jodhpur, Rajasthan 342001"
+    "address": "Ratanada, Jodhpur, Rajasthan 342001",
+    "name_gu": "જોધપુર જે. એન"
   },
   {
     "name": "DELHI S ROHILLA",
@@ -571,7 +575,8 @@
     "district": "North West",
     "state": "Delhi NCT",
     "trainCount": "68",
-    "address": "New Rohtak road, Delhi NCT"
+    "address": "New Rohtak road, Delhi NCT",
+    "name_gu": "દિલ્હી એસ. રોહિલા"
   },
   {
     "name": "TAMBARAM",
@@ -583,7 +588,8 @@
     "district": "Chengalpattu",
     "state": "Tamil Nadu",
     "trainCount": "91",
-    "address": "W4G9+CJ7, Tambaram Railway Bridge, Railway Colony, East Tambaram, Tambaram, Chennai, Tamil Nadu 600059"
+    "address": "W4G9+CJ7, Tambaram Railway Bridge, Railway Colony, East Tambaram, Tambaram, Chennai, Tamil Nadu 600059",
+    "name_gu": "તાંબરમ"
   },
   {
     "name": "TIRUPATI",
@@ -595,7 +601,8 @@
     "district": "Chittoor",
     "state": "Andhra Pradesh",
     "trainCount": "122",
-    "address": "Royal Nagar, Tirupati, Andhra Pradesh 517501"
+    "address": "Royal Nagar, Tirupati, Andhra Pradesh 517501",
+    "name_gu": "તિરુપતિ"
   },
   {
     "name": "GWALIOR",
@@ -607,7 +614,8 @@
     "district": "Gwalior",
     "state": "Madhya Pradesh",
     "trainCount": "167",
-    "address": "Railway Colony, Gwalior, Madhya Pradesh 474002"
+    "address": "Railway Colony, Gwalior, Madhya Pradesh 474002",
+    "name_gu": "ગેલિયર"
   },
   {
     "name": "RAIPUR JN",
@@ -619,7 +627,8 @@
     "district": "Raipur",
     "state": "Chhattisgarh",
     "trainCount": "150",
-    "address": "7J4H+JJ9, Gudhiyari, Chhattisgarh 492009"
+    "address": "7J4H+JJ9, Gudhiyari, Chhattisgarh 492009",
+    "name_gu": "રાયપુર જેએન"
   },
   {
     "name": "DADAR",
@@ -631,7 +640,8 @@
     "district": "Mumbai Suburban",
     "state": "Maharashtra",
     "trainCount": "109",
-    "address": "2R8V+R67, Railway Bridge, Priyadarshini Society, Dadar, Mumbai, Maharashtra 400014"
+    "address": "2R8V+R67, Railway Bridge, Priyadarshini Society, Dadar, Mumbai, Maharashtra 400014",
+    "name_gu": "દાદાર"
   },
   {
     "name": "CHANDIGARH",
@@ -643,7 +653,8 @@
     "district": "Chandigarh",
     "state": "Chandigarh",
     "trainCount": "66",
-    "address": "Darua, Chandigarh"
+    "address": "Darua, Chandigarh",
+    "name_gu": "ચંદીગઢ"
   },
   {
     "name": "ERNAKULAM JN",
@@ -655,22 +666,21 @@
     "district": "Ernakulam",
     "state": "Kerala",
     "trainCount": "107",
-    "address": "Ernakulam South Parking Lot, Kadavanthara, Ernakulam South, Ernakulam, Kerala 682011"
+    "address": "Ernakulam South Parking Lot, Kadavanthara, Ernakulam South, Ernakulam, Kerala 682011",
+    "name_gu": "ERNAKULAM JN"
   },
   {
     "name": "GUWAHATI",
     "code": "GHY",
-    "utterances": [
-      "gauhati",
-      "gawhati"
-    ],
+    "utterances": ["gauhati", "gawhati"],
     "name_hi": "गुवाहाटी",
     "latitude": 26.182635,
     "longitude": 91.751851,
     "district": "Kamrup Metropolitan",
     "state": "Assam",
     "trainCount": "106",
-    "address": "Guwahati, Assam 781001"
+    "address": "Guwahati, Assam 781001",
+    "name_gu": "ગુવાહાટી"
   },
   {
     "name": "TATANAGAR JN",
@@ -682,7 +692,8 @@
     "district": "Purbi Singhbhum",
     "state": "Jharkhand",
     "trainCount": "104",
-    "address": "Khasmahal, Jugsalai, Jamshedpur, Jharkhand 831007"
+    "address": "Khasmahal, Jugsalai, Jamshedpur, Jharkhand 831007",
+    "name_gu": "ટાટાનગર જે. એન"
   },
   {
     "name": "KACHEGUDA",
@@ -694,7 +705,8 @@
     "district": "Hyderabad",
     "state": "Telangana",
     "trainCount": "63",
-    "address": "Nimboliadda, Kachiguda, Hyderabad, Telangana 500027"
+    "address": "Nimboliadda, Kachiguda, Hyderabad, Telangana 500027",
+    "name_gu": "કાચેગુડા"
   },
   {
     "name": "KOZHIKKODE",
@@ -706,7 +718,8 @@
     "district": "Kozhikode",
     "state": "Kerala",
     "trainCount": "107",
-    "address": "Calicut, Kerala"
+    "address": "Calicut, Kerala",
+    "name_gu": "કોઝિકોડ"
   },
   {
     "name": "MADURAI JN",
@@ -718,7 +731,8 @@
     "district": "Madurai",
     "state": "Tamil Nadu",
     "trainCount": "93",
-    "address": "Railway Junction Road, Southern Railway Colony, Tamil Nadu 625016"
+    "address": "Railway Junction Road, Southern Railway Colony, Tamil Nadu 625016",
+    "name_gu": "મદુરાઈ જે. એન."
   },
   {
     "name": "TIRUCHCHIRAPALI",
@@ -730,7 +744,8 @@
     "district": "Tiruchirappalli",
     "state": "Tamil Nadu",
     "trainCount": "124",
-    "address": "Bharathiyar Salai, Sangillyandapuram, Tiruchirappalli, Tamil Nadu 620001"
+    "address": "Bharathiyar Salai, Sangillyandapuram, Tiruchirappalli, Tamil Nadu 620001",
+    "name_gu": "તિરુચીરાપાલી"
   },
   {
     "name": "RANCHI",
@@ -742,7 +757,8 @@
     "district": "Ranchi",
     "state": "Jharkhand",
     "trainCount": "72",
-    "address": "Ranchi, Jharkhand 834001"
+    "address": "Ranchi, Jharkhand 834001",
+    "name_gu": "રાંચી"
   },
   {
     "name": "KRISHNARAJAPURM",
@@ -754,7 +770,8 @@
     "district": "Bangalore",
     "state": "Karnataka",
     "trainCount": "98",
-    "address": "Jyothi Puram, Dooravani Nagar, Bengaluru, Karnataka 560016"
+    "address": "Jyothi Puram, Dooravani Nagar, Bengaluru, Karnataka 560016",
+    "name_gu": "કૃષ્ણરાજપુરમ"
   },
   {
     "name": "GHAZIABAD",
@@ -766,7 +783,8 @@
     "district": "Ghaziabad",
     "state": "Uttar Pradesh",
     "trainCount": "176",
-    "address": "Bhur Bharat Nagar, Railway Colony, Madhopura, Ghaziabad, Uttar Pradesh 201009"
+    "address": "Bhur Bharat Nagar, Railway Colony, Madhopura, Ghaziabad, Uttar Pradesh 201009",
+    "name_gu": "ગાઝિયાબાદ"
   },
   {
     "name": "AMRITSAR JN",
@@ -778,7 +796,8 @@
     "district": "",
     "state": "Punjab",
     "trainCount": "100",
-    "address": "Guru Arjun Nagar, Amritsar, Punjab 143001"
+    "address": "Guru Arjun Nagar, Amritsar, Punjab 143001",
+    "name_gu": "અમૃતસાર જેએન"
   },
   {
     "name": "LUDHIANA JN",
@@ -790,7 +809,8 @@
     "district": "Ludhiana",
     "state": "Punjab",
     "trainCount": "205",
-    "address": "Gandhi Nagar, Civil Lines, Ludhiana, Punjab 141001"
+    "address": "Gandhi Nagar, Civil Lines, Ludhiana, Punjab 141001",
+    "name_gu": "લુધિયાના જે. એન."
   },
   {
     "name": "AJMER JN",
@@ -802,7 +822,8 @@
     "district": "Ajmer",
     "state": "Rajasthan",
     "trainCount": "139",
-    "address": "Ajmer, Rajasthan"
+    "address": "Ajmer, Rajasthan",
+    "name_gu": "AJMER JN"
   },
   {
     "name": "THRISUR",
@@ -814,7 +835,8 @@
     "district": "Thrissur",
     "state": "Kerala",
     "trainCount": "165",
-    "address": "R.S Road, Veliyannur, Thrissur, Kerala 680021"
+    "address": "R.S Road, Veliyannur, Thrissur, Kerala 680021",
+    "name_gu": "થ્રીસુર"
   },
   {
     "name": "KOLKATA",
@@ -826,7 +848,8 @@
     "district": "Kolkata",
     "state": "West Bengal",
     "trainCount": "72",
-    "address": "Belgachia, Kolkata, West Bengal"
+    "address": "Belgachia, Kolkata, West Bengal",
+    "name_gu": "કોલકાતા"
   },
   {
     "name": "SOLAPUR JN",
@@ -838,7 +861,8 @@
     "district": "Solapur",
     "state": "Maharashtra",
     "trainCount": "104",
-    "address": "Sidheshwar Peth, Solapur, Maharashtra 413002"
+    "address": "Sidheshwar Peth, Solapur, Maharashtra 413002",
+    "name_gu": "સોલાપુર જેએન"
   },
   {
     "name": "AGRA CANTT",
@@ -850,7 +874,8 @@
     "district": "Agra",
     "state": "Uttar Pradesh",
     "trainCount": "177",
-    "address": "Agra Cantt, Idgah Colony, Agra, Uttar Pradesh 282001"
+    "address": "Agra Cantt, Idgah Colony, Agra, Uttar Pradesh 282001",
+    "name_gu": "એગ્રા કેન્ટ"
   },
   {
     "name": "NEW JALPAIGURI",
@@ -862,7 +887,8 @@
     "district": "Jalpaiguri",
     "state": "West Bengal",
     "trainCount": "147",
-    "address": "Platform No. 1 NJP Railway Station, New, West Bengal 734007"
+    "address": "Platform No. 1 NJP Railway Station, New, West Bengal 734007",
+    "name_gu": "નવી જલપાઈગુડી"
   },
   {
     "name": "MATHURA JN",
@@ -874,7 +900,8 @@
     "district": "Mathura",
     "state": "Uttar Pradesh",
     "trainCount": "189",
-    "address": "FMJF+HMG Station Parking, Mayur Vihar, Mathura, Uttar Pradesh 281001"
+    "address": "FMJF+HMG Station Parking, Mayur Vihar, Mathura, Uttar Pradesh 281001",
+    "name_gu": "મથુરા જે. એન"
   },
   {
     "name": "AMBALA CANT JN",
@@ -886,23 +913,21 @@
     "district": "Ambala",
     "state": "Haryana",
     "trainCount": "230",
-    "address": "Ambala Cantt, Haryana 134003"
+    "address": "Ambala Cantt, Haryana 134003",
+    "name_gu": "અંબાલા કેન્ટ જેએન"
   },
   {
     "name": "MYSURU JN",
     "code": "MYS",
-    "utterances": [
-      "mysore",
-      "mysori",
-      "mysuri"
-    ],
+    "utterances": ["mysore", "mysori", "mysuri"],
     "name_hi": "मैसुरु जन",
     "latitude": 12.318946,
     "longitude": 76.646013,
     "district": "Mysuru",
     "state": "Karnataka",
     "trainCount": "66",
-    "address": "JLB Road Mysore, Karnataka"
+    "address": "JLB Road Mysore, Karnataka",
+    "name_gu": "માયસુરુ જે. એન."
   },
   {
     "name": "HYDERABAD DECAN",
@@ -914,7 +939,8 @@
     "district": "Hyderabad",
     "state": "Telangana",
     "trainCount": "48",
-    "address": "Hyderabad, Andhra Pradesh"
+    "address": "Hyderabad, Andhra Pradesh",
+    "name_gu": "હૈદરાબાદ DECAN"
   },
   {
     "name": "NASHIK ROAD",
@@ -926,36 +952,34 @@
     "district": "Nashik",
     "state": "Maharashtra",
     "trainCount": "135",
-    "address": "Ticket counter nasik road railway station, P&amp;T Colony, Rajwada Nagar, Deolali Gaon, Nashik, Maharashtra 422214"
+    "address": "Ticket counter nasik road railway station, P&amp;T Colony, Rajwada Nagar, Deolali Gaon, Nashik, Maharashtra 422214",
+    "name_gu": "નાસિક રોડ"
   },
   {
     "name": "RANI KAMALAPATI",
     "code": "RKMP",
-    "utterances": [
-      "RANI KAMLAPATI",
-      "HABIBGANJ"
-    ],
+    "utterances": ["RANI KAMLAPATI", "HABIBGANJ"],
     "name_hi": "रानी कमलापति",
     "district": "Bhopal",
     "state": "Madhya Pradesh",
     "trainCount": "110",
     "latitude": 23.221979,
     "longitude": 77.43942899999999,
-    "address": "6CCQ+QP8, Habibganj Pedestrian Opas, Zone-II, Habib Ganj, Bhopal, Madhya Pradesh 462023"
+    "address": "6CCQ+QP8, Habibganj Pedestrian Opas, Zone-II, Habib Ganj, Bhopal, Madhya Pradesh 462023",
+    "name_gu": "રાની કમલાપતિ"
   },
   {
     "name": "HUBBALLI JN",
     "code": "UBL",
-    "utterances": [
-      "hubli"
-    ],
+    "utterances": ["hubli"],
     "name_hi": "हुब्बल्ली जन",
     "latitude": 15.350302000000001,
     "longitude": 75.148104,
     "district": "Dharwad",
     "state": "Karnataka",
     "trainCount": "91",
-    "address": "Hubli, Karnataka"
+    "address": "Hubli, Karnataka",
+    "name_gu": "હુબલી જે. એન"
   },
   {
     "name": "RAJAHMUNDRY",
@@ -967,7 +991,8 @@
     "district": "East Godavari",
     "state": "Andhra Pradesh",
     "trainCount": "210",
-    "address": "Navabharat Nagar, Rajamahendravaram, Andhra Pradesh 533101"
+    "address": "Navabharat Nagar, Rajamahendravaram, Andhra Pradesh 533101",
+    "name_gu": "રાજમુંદરી"
   },
   {
     "name": "ERODE JN",
@@ -979,7 +1004,8 @@
     "district": "Erode",
     "state": "Tamil Nadu",
     "trainCount": "169",
-    "address": "Platform Number 2, Erode, Tamil Nadu 638002"
+    "address": "Platform Number 2, Erode, Tamil Nadu 638002",
+    "name_gu": "ERODE JN"
   },
   {
     "name": "BILASPUR JN",
@@ -991,7 +1017,8 @@
     "district": "Bilaspur",
     "state": "Chhattisgarh",
     "trainCount": "133",
-    "address": "Railway Colony, Bilaspur, Chhattisgarh 495004"
+    "address": "Railway Colony, Bilaspur, Chhattisgarh 495004",
+    "name_gu": "બાલાસપુર જે. એન."
   },
   {
     "name": "KATPADI JN",
@@ -1003,7 +1030,8 @@
     "district": "Vellore",
     "state": "Tamil Nadu",
     "trainCount": "217",
-    "address": "Vellore, Tamil Nadu 632007"
+    "address": "Vellore, Tamil Nadu 632007",
+    "name_gu": "કાટપાડી જેએન"
   },
   {
     "name": "SALEM JN",
@@ -1015,19 +1043,21 @@
     "district": "Salem",
     "state": "Tamil Nadu",
     "trainCount": "170",
-    "address": "31, Post Office Rd, Azad Nagar, Suramangalam, Salem, Tamil Nadu 636005"
+    "address": "31, Post Office Rd, Azad Nagar, Suramangalam, Salem, Tamil Nadu 636005",
+    "name_gu": "સાલેમ જેએન"
   },
   {
     "name": "MADGAON",
     "code": "MAO",
-    "utterances": [],
+    "utterances": ["goa"],
     "name_hi": "मडगाओं",
     "latitude": 15.267911000000002,
     "longitude": 73.97072399999999,
     "district": "South Goa",
     "state": "Goa",
     "trainCount": "109",
-    "address": "Madgaon. Ph:- 0832-2712790., Goa"
+    "address": "Madgaon. Ph:- 0832-2712790., Goa",
+    "name_gu": "મેડગાંવ"
   },
   {
     "name": "MUZAFFARPUR JN",
@@ -1039,7 +1069,8 @@
     "district": "Muzaffarpur",
     "state": "Bihar",
     "trainCount": "126",
-    "address": "Motijheel, RF COMPLEX PURANI DHARMSHALA ROAD, near Railway Station, Muzaffarpur, Bihar 842001"
+    "address": "Motijheel, RF COMPLEX PURANI DHARMSHALA ROAD, near Railway Station, Muzaffarpur, Bihar 842001",
+    "name_gu": "મુઝફ્ફરપુર જેએન"
   },
   {
     "name": "AURANGABAD",
@@ -1051,7 +1082,8 @@
     "district": "Aurangabad",
     "state": "Maharashtra",
     "trainCount": "52",
-    "address": "Aurangabad, Maharashtra"
+    "address": "Aurangabad, Maharashtra",
+    "name_gu": "ઔરંગાબાદ"
   },
   {
     "name": "GUNTUR JN",
@@ -1063,7 +1095,8 @@
     "district": "Guntur",
     "state": "Andhra Pradesh",
     "trainCount": "79",
-    "address": "4th Platform, Railway Station, Sambasiva Pet, Guntur, Andhra Pradesh"
+    "address": "4th Platform, Railway Station, Sambasiva Pet, Guntur, Andhra Pradesh",
+    "name_gu": "ગુંટર જે. એન."
   },
   {
     "name": "RAJENDRANAGAR T",
@@ -1075,7 +1108,8 @@
     "district": "Patna",
     "state": "Bihar",
     "trainCount": "67",
-    "address": "Rajendra Nagar, Patna, Bihar 800016"
+    "address": "Rajendra Nagar, Patna, Bihar 800016",
+    "name_gu": "રાજેન્દ્રનગર ટી."
   },
   {
     "name": "H SAHIB NANDED",
@@ -1087,34 +1121,34 @@
     "district": "Nanded",
     "state": "Maharashtra",
     "trainCount": "88",
-    "address": "Nanded, Maharashtra"
+    "address": "Nanded, Maharashtra",
+    "name_gu": "એચ. સાહિબ નંદેડ"
   },
   {
     "name": "HARIDWAR JN",
     "code": "HW",
-    "utterances": [],
+    "utterances": ["badrinath", "kadarnath"],
     "name_hi": "हरिद्वार जं",
     "latitude": 29.947787,
     "longitude": 78.15489899999999,
     "district": "Haridwar",
     "state": "Uttarakhand",
     "trainCount": "72",
-    "address": "Haridwar, Uttarakhand"
+    "address": "Haridwar, Uttarakhand",
+    "name_gu": "હરિદ્વાર જે. એન"
   },
   {
     "name": "BANARAS",
     "code": "BSBS",
-    "utterances": [
-      "MANDUADIH",
-      "BANARAS"
-    ],
+    "utterances": ["MANDUADIH", "BANARAS"],
     "name_hi": "बनारस",
     "district": "Varanasi",
     "state": "Uttar Pradesh",
     "trainCount": "32",
     "latitude": 25.300001,
     "longitude": 82.972079,
-    "address": "Varanasi, Uttar Pradesh"
+    "address": "Varanasi, Uttar Pradesh",
+    "name_gu": "બનારસ"
   },
   {
     "name": "ERNAKULAM TOWN",
@@ -1126,7 +1160,8 @@
     "district": "Ernakulam",
     "state": "Kerala",
     "trainCount": "84",
-    "address": "Xavier Arakkal Rd, Ernakulam North, Kacheripady, Ernakulam, Kerala 682018"
+    "address": "Xavier Arakkal Rd, Ernakulam North, Kacheripady, Ernakulam, Kerala 682018",
+    "name_gu": "એર્નાકુલમ ટાઉન"
   },
   {
     "name": "PANVEL",
@@ -1138,7 +1173,8 @@
     "district": "Raigad",
     "state": "Maharashtra",
     "trainCount": "147",
-    "address": "Panvel, Maharashtra"
+    "address": "Panvel, Maharashtra",
+    "name_gu": "પાનવેલ"
   },
   {
     "name": "VAPI",
@@ -1150,19 +1186,21 @@
     "district": "Valsad",
     "state": "Gujarat",
     "trainCount": "171",
-    "address": "Valsad, Gujarat"
+    "address": "Valsad, Gujarat",
+    "name_gu": "વીએપીઆઈ"
   },
   {
     "name": "DD UPADHYAYA JN",
     "code": "DDU",
-    "utterances": [],
+    "utterances": ["mughalsarai"],
     "name_hi": "दद उपाध्याय जन",
     "latitude": 25.280669815278,
     "longitude": 83.12069395272243,
     "district": "",
     "state": "Uttar Pradesh",
     "trainCount": "278",
-    "address": "232101 Pandit Dindayal Upadhyaya Marg Pandit Dindayal Upadhyay Nagar Uttaresh, 276001"
+    "address": "232101 Pandit Dindayal Upadhyaya Marg Pandit Dindayal Upadhyay Nagar Uttaresh, 276001",
+    "name_gu": "ડીડી ઉપાધ્યાય જે. એન."
   },
   {
     "name": "BIKANER JN",
@@ -1174,7 +1212,8 @@
     "district": "Bikaner",
     "state": "Rajasthan",
     "trainCount": "60",
-    "address": "2878+VCP, Bikaner, Rajasthan 334001"
+    "address": "2878+VCP, Bikaner, Rajasthan 334001",
+    "name_gu": "બીકાનર જે. એન"
   },
   {
     "name": "UJJAIN JN",
@@ -1186,7 +1225,8 @@
     "district": "Ujjain",
     "state": "Madhya Pradesh",
     "trainCount": "122",
-    "address": "Dewas gate bus stand shop No 2, near prakash book Dipo, Ujjain, Madhya Pradesh 456010"
+    "address": "Dewas gate bus stand shop No 2, near prakash book Dipo, Ujjain, Madhya Pradesh 456010",
+    "name_gu": "ઉજૈન જે. એન."
   },
   {
     "name": "PURI",
@@ -1198,7 +1238,8 @@
     "district": "Puri",
     "state": "Odisha",
     "trainCount": "86",
-    "address": "Ramachandi, Puri, Odisha 752002"
+    "address": "Ramachandi, Puri, Odisha 752002",
+    "name_gu": "પુરી"
   },
   {
     "name": "UDAIPUR CITY",
@@ -1210,7 +1251,8 @@
     "district": "Udaipur",
     "state": "Rajasthan",
     "trainCount": "34",
-    "address": "Udaipur, Rajasthan"
+    "address": "Udaipur, Rajasthan",
+    "name_gu": "ઉદયપુર શહેર"
   },
   {
     "name": "BAREILLY",
@@ -1222,7 +1264,8 @@
     "district": "Bareilly",
     "state": "Uttar Pradesh",
     "trainCount": "171",
-    "address": "Station Rd, Civil Lines, Bareilly, Uttar Pradesh 243001"
+    "address": "Station Rd, Civil Lines, Bareilly, Uttar Pradesh 243001",
+    "name_gu": "બેરેલી"
   },
   {
     "name": "KHARAGPUR JN",
@@ -1234,7 +1277,8 @@
     "district": "Paschim Medinipur",
     "state": "West Bengal",
     "trainCount": "201",
-    "address": "Kharagpur, West Bengal 721301"
+    "address": "Kharagpur, West Bengal 721301",
+    "name_gu": "ખરગપુર જેએન"
   },
   {
     "name": "KANNUR",
@@ -1246,7 +1290,8 @@
     "district": "Kannur",
     "state": "Kerala",
     "trainCount": "103",
-    "address": "Kannur, Kerala"
+    "address": "Kannur, Kerala",
+    "name_gu": "કન્નૂર"
   },
   {
     "name": "TIRUNELVELI",
@@ -1258,6 +1303,7 @@
     "district": "Tirunelveli",
     "state": "Tamil Nadu",
     "trainCount": "62",
-    "address": "Tirunelveli, Tamil Nadu"
+    "address": "Tirunelveli, Tamil Nadu",
+    "name_gu": "તિરુનેલવેલી"
   }
 ]
