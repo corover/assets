@@ -518,7 +518,8 @@
           //   launcher.style.backgroundPosition = "6px -3px";
           maxIcon.src =
             "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
-          launcher.style.transform = "none";
+          if (isMobile) launcher.style.transform = "scale(0.7)";
+          else launcher.style.transform = "scale(0.8)";
           maxIcon.style.cssText = `
                    position: absolute;
                    left: 98px;
@@ -526,9 +527,9 @@
                    top: -2px;
                  `;
 
-          if (!isMobile) {
-            messageWrapper.style.display = "block";
-          }
+          // if (!isMobile) {
+          //   messageWrapper.style.display = "block";
+          // }
         }
         if (ch) isSmall = !isSmall;
         else
@@ -1266,7 +1267,7 @@
       openBanner(false);
 
     function botOpen() {
-      if (true) {
+      if (isMobile) {
         // window.open("https://irctc.corover.ai/#webIR", "_blank");
         openMock();
         return;
