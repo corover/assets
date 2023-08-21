@@ -1,5 +1,4 @@
 (() => {
-  if (window.screen.width < 600) return;
   let isMobile = false,
     isFirstTime = false;
 
@@ -787,7 +786,7 @@
               transform: scale(0.8);
               `;
     dealOfDay.style.zIndex = "99";
-    document.body.appendChild(dealOfDay);
+    if (!isMobile) document.body.appendChild(dealOfDay);
 
     setDishaWrapper();
 
@@ -1595,7 +1594,7 @@
       }
     };
 
-    if (window.location.href.includes("indianrail")) {
+    if (window.location.href.includes("indianrail") && !isMobile) {
       let divRail = document.createElement("div");
       divRail.id = "div-ub-indianrail";
       if (isMobile) document.body.appendChild(divRail);
