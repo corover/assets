@@ -358,8 +358,8 @@
              display: flex;
              justify-content: flex-end;
              align-items: center;
-             bottom: 36px;
-             left: 38px;
+             bottom: 44px;
+             left: 10px;
              width: fit-content;
              max-width: 95%;
              z-index:99999;
@@ -372,7 +372,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        bottom: 18px;
+        bottom: 36px;
         left: 0px;
         width: fit-content;
         max-width: 95%;
@@ -517,8 +517,13 @@
           //   launcher.style.backgroundPosition = "6px -3px";
           maxIcon.src =
             "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
-          if (isMobile) launcher.style.transform = "scale(0.7)";
-          else launcher.style.transform = "scale(0.8)";
+
+          if (isMobile) {
+            launcher.style.transform = "scale(0.7)";
+          } else {
+            launcher.style.transform = "scale(0.8)";
+          }
+
           maxIcon.style.cssText = `
                    position: absolute;
                    left: 98px;
@@ -781,7 +786,7 @@
     else
       dealOfDay.style.cssText = `
               position: fixed;
-              bottom:25px;
+              bottom:35px;
               left:150px;
               transform: scale(0.8);
               `;
@@ -1746,13 +1751,13 @@
          
           #div-gpt-ad-1654676845166-0{
         position: fixed !important;
-        bottom: -10px !important;
-        left: -30px !important;
+        bottom: 0px !important;
+        left: 0px !important;
         border: none !important;
         min-width: 320px !important;
         min-height:50px !important;
         z-index:2 !important;
-        transform: scale(0.7);
+        background:black;
         }
   
         .gpt320--show{
@@ -1804,13 +1809,14 @@
          
           #div-gpt-ad-1654676845166-0{
             position: fixed !important;
-            bottom: -5px !important;
-            left: 10px !important;
+            bottom: 0px !important;
+            left: 0px !important;
             border: none !important;
             min-width: 320px !important;
             min-height: 50px !important;
             z-index: 2 !important;
-            transform: scale(0.8);
+            background:black;
+         
         }
   
         .gpt320--show{
