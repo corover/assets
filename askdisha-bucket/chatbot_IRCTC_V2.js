@@ -1434,9 +1434,9 @@ const setPlaceholderMaxHeight = () => {
     };
     openBanner(false);
 
-    setTimeout(() => {
-      if (!isOpen) openBanner(true);
-    }, 4000);
+    // setTimeout(() => {
+    //   if (!isOpen) openBanner(true);
+    // }, 4000);
 
     document.getElementById("disha-banner-close").onclick = () => {
       openBanner(false);
