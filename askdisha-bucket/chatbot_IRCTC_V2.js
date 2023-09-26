@@ -764,7 +764,7 @@ const setPlaceholderMaxHeight = () => {
     adDownIframe2.target = "_blank";
     const adDownIframe = document.createElement("div");
     // adDownIframe.src = "https://assistant.corover.mobi/320x50_placeholder.html";
-    adDownIframe.id = "div-gpt-ad-1691477930019-0";
+    adDownIframe.id = "div-gpt-ad-1695628181945-0";
     const adDownScript = document.createElement("script");
     // adDownIframe.id = "div-gpt-ad-1695628181945-0";
 
@@ -2474,7 +2474,7 @@ const setPlaceholderMaxHeight = () => {
   document.head.insertAdjacentHTML(
     "beforeend",
     `<style type="text/css">
-       #div-gpt-ad-1691477930019-0{position:fixed !important;}
+       #div-gpt-ad-1695628181945-0{position:fixed !important;}
        #div-gpt-ad-1691478066574-0{
         min-width: 300px; min-height: 250px;
        }
