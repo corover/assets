@@ -78,18 +78,18 @@ const defineGPTslots = (all) => {
     if (all && !isMob()) {
       IR_UB_NEW = googletag
         .defineSlot(
-          "/22686085093/irctc_chatbot_300x250",
+          "/21928950349,21748009408/irctc_chatbot_300x250",
           [300, 250],
-          "div-gpt-ad-1691478066574-0"
+          "div-gpt-ad-1695628300486-0"
         )
         .addService(googletag.pubads());
     }
 
     IR_UB = googletag
       .defineSlot(
-        "/22686085093/irctc_320x50",
+        "/21928950349,21748009408/irctc_320x50",
         [320, 50],
-        "div-gpt-ad-1691477930019-0"
+        "div-gpt-ad-1695628181945-0"
       )
       .addService(googletag.pubads());
     //   .addService(googletag.pubads());
@@ -547,7 +547,7 @@ const setPlaceholderMaxHeight = () => {
           //       .defineSlot(
           //         "/21748009408/irctc.co.in_320x50_corover",
           //         [320, 50],
-          //         "div-gpt-ad-1654160819405-0"
+          //         "div-gpt-ad-1695628181945-0"
           //       )
           //       .addService(googletag.pubads());
 
@@ -556,7 +556,7 @@ const setPlaceholderMaxHeight = () => {
           //   });
 
           //   googletag.cmd.push(function () {
-          //     googletag.display("div-gpt-ad-1654160819405-0");
+          //     googletag.display("div-gpt-ad-1695628181945-0");
           //   });
 
           s = false;
@@ -766,27 +766,27 @@ const setPlaceholderMaxHeight = () => {
     // adDownIframe.src = "https://assistant.corover.mobi/320x50_placeholder.html";
     adDownIframe.id = "div-gpt-ad-1691477930019-0";
     const adDownScript = document.createElement("script");
-    // adDownIframe.id = "div-gpt-ad-1654160819405-0";
+    // adDownIframe.id = "div-gpt-ad-1695628181945-0";
 
     //   adDownScript.innerHTML = `
     //        googletag.cmd.push(function () {
-    //          googletag.display("div-gpt-ad-1654160819405-0");
+    //          googletag.display("div-gpt-ad-1695628181945-0");
     //        });
     //  `;
 
     const reloadADs = (all) => {
       defineGPTslots(all);
       googletag.cmd.push(function () {
-        googletag.display("div-gpt-ad-1654160819405-0");
+        googletag.display("div-gpt-ad-1695628181945-0");
       });
 
       googletag.cmd.push(function () {
-        googletag.display("div-gpt-ad-1691477930019-0");
+        googletag.display("div-gpt-ad-1695628181945-0");
       });
 
       if (all && !isMob()) {
         googletag.cmd.push(function () {
-          googletag.display("div-gpt-ad-1691478066574-0");
+          googletag.display("div-gpt-ad-1695628300486-0");
         });
       }
     };
@@ -1938,7 +1938,7 @@ const setPlaceholderMaxHeight = () => {
     const runNewDisplayAd = () => {
       if (!isMob()) {
         googletag.cmd.push(function () {
-          googletag.display("div-gpt-ad-1691478066574-0");
+          googletag.display("div-gpt-ad-1695628300486-0");
         });
       }
     };
@@ -2368,16 +2368,16 @@ const setPlaceholderMaxHeight = () => {
   const reloadADs = (all) => {
     defineGPTslots(all);
     googletag.cmd.push(function () {
-      googletag.display("div-gpt-ad-1654160819405-0");
+      googletag.display("div-gpt-ad-1695628181945-0");
     });
 
     googletag.cmd.push(function () {
-      googletag.display("div-gpt-ad-1691477930019-0");
+      googletag.display("div-gpt-ad-1695628181945-0");
     });
 
     if (all && !isMob()) {
       googletag.cmd.push(function () {
-        googletag.display("div-gpt-ad-1691478066574-0");
+        googletag.display("div-gpt-ad-1695628300486-0");
       });
     }
   };
