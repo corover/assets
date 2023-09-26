@@ -1757,7 +1757,6 @@
         min-width: 320px !important;
         min-height:50px !important;
         z-index:2 !important;
-        background:black;
         }
   
         .gpt320--show{
@@ -1815,7 +1814,6 @@
             min-width: 320px !important;
             min-height: 50px !important;
             z-index: 2 !important;
-            background:black;
          
         }
   
