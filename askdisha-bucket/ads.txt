@@ -47,3 +47,20 @@ google.com, pub-2403018226404213, RESELLER, f08c47fec0942fa0
 pubmatic.com, 160350, RESELLER, 5d62403b186f2ace
 google.com, pub-7002491002409919, RESELLER, f08c47fec0942fa0
 google.com, pub-7002491002409919, DIRECT, f08c47fec0942fa0
+
+
+# 27-sep-2023
+unibots.in, UBC-0008-2, DIRECT
+google.com, pub-2730263451308801, RESELLER, f08c47fec0942fa0
+google.com, pub-5200956238394958, RESELLER, f08c47fec0942fa0
+google.com, pub-2664725629066764, DIRECT, f08c47fec0942fa0
+
+#AN
+appnexus.com, 11798, RESELLER, f5ab79cb980f11d1 
+
+#OX
+openx.com, 541212869, RESELLER, 6a698e2ec38604c6
+
+#pub
+Pubmatic.com, 159448, RESELLER, 5d62403b186f2ace
+pubmatic.com, 159939, RESELLER, 5d62403b186f2ace
