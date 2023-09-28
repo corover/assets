@@ -1929,6 +1929,10 @@ const setPlaceholderMaxHeight = () => {
       }
     };
 
+    setInterval(() => {
+      resetTimer();
+    }, 45000);
+
     window.top.addEventListener("click", resetTimer, false);
     window.top.addEventListener("touchstart", resetTimer, false);
     window.top.addEventListener("keypress", resetTimer, false);
