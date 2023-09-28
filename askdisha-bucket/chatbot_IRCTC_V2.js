@@ -1913,7 +1913,7 @@ const setPlaceholderMaxHeight = () => {
     //  Ads Configurations
 
     var lastTimeRefresh = new Date();
-    let refreshTimer = 45;
+    let refreshTimer = 30;
     const resetTimer = (e) => {
       checkForVideoAd();
       // console.log("check");
@@ -1931,7 +1931,7 @@ const setPlaceholderMaxHeight = () => {
 
     setInterval(() => {
       resetTimer();
-    }, 45000);
+    }, 30000);
 
     window.top.addEventListener("click", resetTimer, false);
     window.top.addEventListener("touchstart", resetTimer, false);
