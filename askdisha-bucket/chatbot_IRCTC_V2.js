@@ -87,7 +87,7 @@ const defineGPTslots = (all) => {
 
     IR_UB = googletag
       .defineSlot(
-        "/21928950349,21748009408/irctc_320x50",
+        "/22686085093/irctc_320x50",
         [320, 50],
         "div-gpt-ad-1695628181945-0"
       )
