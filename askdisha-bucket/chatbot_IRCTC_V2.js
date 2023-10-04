@@ -1364,7 +1364,7 @@ const setPlaceholderMaxHeight = () => {
           display:none;
           "></iframe>  
  
-          <div id='div-gpt-ad-1691478066574-0'>
+          <div id='div-gpt-ad-1695628300486-0'>
          </div>      
        </div>
            </div>
@@ -2486,7 +2486,7 @@ const setPlaceholderMaxHeight = () => {
     "beforeend",
     `<style type="text/css">
        #div-gpt-ad-1695628181945-0{position:fixed !important;}
-       #div-gpt-ad-1691478066574-0{
+       #div-gpt-ad-1695628300486-0{
         min-width: 300px; min-height: 250px;
        }
 
@@ -2515,3 +2515,5 @@ const setPlaceholderMaxHeight = () => {
    </style>`
   );
 })();
+
+// div-gpt-ad-1691478066574-0
