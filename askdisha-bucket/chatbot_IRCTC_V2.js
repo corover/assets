@@ -1434,9 +1434,16 @@ const setPlaceholderMaxHeight = () => {
     };
     openBanner(false);
 
-    // setTimeout(() => {
-    //   if (!isOpen) openBanner(true);
-    // }, 4000);
+    setTimeout(() => {
+      if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
+        openBanner(true);
+    }, 4000);
+
+    setInterval(() => {
+      if (window.location.href.includes("nget/booking/train-list")) {
+        openBanner(false);
+      }
+    }, 500);
 
     document.getElementById("disha-banner-close").onclick = () => {
       openBanner(false);
