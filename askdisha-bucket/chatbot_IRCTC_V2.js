@@ -2485,7 +2485,7 @@ const setPlaceholderMaxHeight = () => {
   document.head.insertAdjacentHTML(
     "beforeend",
     `<style type="text/css">
-       #div-gpt-ad-1695628181945-0{position:fixed !important;}
+       #div-gpt-ad-1695628181945-0{position:fixed !important;background-image: url(https://storage.googleapis.com/corover-prod-bucket/disha-eticket/ads.svg);background-origin: content-box;background-repeat: no-repeat;background-size: contain;}
        #div-gpt-ad-1695628300486-0{
         min-width: 300px; min-height: 250px;
        }
