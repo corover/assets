@@ -1599,7 +1599,7 @@
       }
     };
 
-    if (window.location.href.includes("indianrail") && !isMobile) {
+    if (window.location.href.includes("indianrail")) {
       let divRail = document.createElement("div");
       divRail.id = "div-ub-indianrail";
       if (isMobile) document.body.appendChild(divRail);
