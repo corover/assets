@@ -841,7 +841,7 @@ const setPlaceholderMaxHeight = () => {
 
     adDownIframe2.scrolling = "no";
     document.body.appendChild(adDownIframe);
-    document.body.appendChild(adDownIframe2);
+    //document.body.appendChild(adDownIframe2);
     const dealOfDay = document.createElement("a");
     // https://bit.ly/3gBANx7 PLUTOS
     //https://amzn.to/34WK1uY last
