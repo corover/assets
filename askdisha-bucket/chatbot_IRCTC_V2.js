@@ -36,7 +36,7 @@ inset: 0px;
 background-color: #ffffff26;
 z-index: 99999;
 -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+backdrop-filter: blur(8px);
 `;
 document.body.appendChild(overlayDiv);
 let loading = true;
@@ -61,17 +61,17 @@ border: none;
 overflow: hidden;
 border-radius: 8px;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 7px 6px 1px;
-    `;
+`;
 loader.innerHTML = `
 <div class="disha-loader"></div>
-    <p style="        font-size: 25px;
-    font-weight: 600;
-    color: #535d66;
-    width: 100%;
-  
-    margin-top: 10px;
-    margin-bottom: 0px;">Please Wait...</p>    
-    `;
+<p style="        font-size: 25px;
+font-weight: 600;
+color: #535d66;
+width: 100%;
+
+margin-top: 10px;
+margin-bottom: 0px;">Please Wait...</p>    
+`;
 
 const defineGPTslots = (all) => {
   googletag.cmd.push(function () {
@@ -388,59 +388,59 @@ const setPlaceholderMaxHeight = () => {
 
     let dishaWrapper = document.createElement("div");
     dishaWrapper.style.cssText = `
-        position: fixed;
-        z-index: 999999999;
-        background-color: transparent;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        bottom: 54px;
-        right: 20px;
-        width: fit-content;
-        max-width: 95%;
-        `;
+  position: fixed;
+  z-index: 999999999;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: 54px;
+  right: 20px;
+  width: fit-content;
+  max-width: 95%;
+  `;
     dishaWrapper.id = "askDishaSdk";
 
     function setDishaWrapper() {
       // if (!isMobile || window.location.href.includes("indianrail"))
       if (true) {
         dishaWrapper.style.cssText = `
-        position: fixed;
-        z-index: 999999999;
-        background-color: transparent;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        bottom: 54px;
-        right: 20px;
-        width: fit-content;
-        max-width: 95%;
-        `;
+  position: fixed;
+  z-index: 999999999;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: 54px;
+  right: 20px;
+  width: fit-content;
+  max-width: 95%;
+  `;
       } else {
         dishaWrapper.style.cssText = `
-        position: fixed;
-        z-index: 999999999;
-        background-color: transparent;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        bottom: 8px;
-        right: 8px;
-        width: fit-content;
-        max-width: 95%;
-        z-index:9999999999999;
-        `;
+  position: fixed;
+  z-index: 999999999;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: 8px;
+  right: 8px;
+  width: fit-content;
+  max-width: 95%;
+  z-index:9999999999999;
+  `;
       }
     }
 
     // dishaWrapper.draggable = true;
     let messageWrapper = document.createElement("div");
     messageWrapper.style.cssText = `
-        position: relative;
-        max-width: 256px;
-        margin-right: 10px;
-        margin-bottom: 32px;
-        `;
+  position: relative;
+  max-width: 256px;
+  margin-right: 10px;
+  margin-bottom: 32px;
+  `;
     let messageDialog = document.createElement("img");
     messageDialog.id = "messageDialog";
     messageDialog.decoding = "async";
@@ -488,12 +488,12 @@ const setPlaceholderMaxHeight = () => {
     maxIcon.decoding = "async";
     maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
     maxIcon.style.cssText = `
-        position: absolute;
-        right: 100px;
-        width: 16px;
-        top: 0px;
-        display: block;
-       `;
+  position: absolute;
+  right: 100px;
+  width: 16px;
+  top: 0px;
+  display: block;
+ `;
     function switchIcon(ch) {
       let s;
       if (true) {
@@ -511,12 +511,12 @@ const setPlaceholderMaxHeight = () => {
           dishaWrapper.style.right = "-18px";
           launcher.style.transform = "rotate(-12deg)";
           maxIcon.style.cssText = `
-              position: absolute;
-              right: 14px;
-              width: 14px;
-              top: -18px;
-              transform: rotate(-168deg);
-            `;
+        position: absolute;
+        right: 14px;
+        width: 14px;
+        top: -18px;
+        transform: rotate(-168deg);
+      `;
 
           //   else {
           //     dishaWrapper.style.left = "-6px";
@@ -579,11 +579,11 @@ const setPlaceholderMaxHeight = () => {
             "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
           launcher.style.transform = "none";
           maxIcon.style.cssText = `
-              position: absolute;
-              right: 98px;
-              width: 16px;
-              top: -2px;
-            `;
+        position: absolute;
+        right: 98px;
+        width: 16px;
+        top: -2px;
+      `;
 
           if (!isMobile) {
             messageWrapper.style.display = "block";
@@ -634,74 +634,74 @@ const setPlaceholderMaxHeight = () => {
     ad.style.height = "fit-content";
     // ad.style.height = "100%";
     ad.innerHTML += `
-     <div
-         style="
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-           align-items: center;
-           row-gap: 10px;
-           height:100%;
-         "
-       >
-         <div
-           id="adContainer"
-           style="
-             width: 100%;
-             position: relative;
-             margin: 0 auto;
-             display: flex;
-             justify-content: center;
-             flex-direction:column;
-             align-items: center;
-   
-           "
-         >
-   
-   <iframe id="feedBackIframe" src="about:blank" scrolling="no" style="margin-top:-10px;width:98%; height:253px; border:none; display:none"></iframe>
-   
-   <div id="adIframeContainer"  style="width:100%; height:310px; max-height:310px; overflow:hidden; display:flex; justify-content:center;">
-   
+<div
+   style="
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     row-gap: 10px;
+     height:100%;
+   "
+ >
+   <div
+     id="adContainer"
+     style="
+       width: 100%;
+       position: relative;
+       margin: 0 auto;
+       display: flex;
+       justify-content: center;
+       flex-direction:column;
+       align-items: center;
+
+     "
+   >
+
+<iframe id="feedBackIframe" src="about:blank" scrolling="no" style="margin-top:-10px;width:98%; height:253px; border:none; display:none"></iframe>
+
+<div id="adIframeContainer"  style="width:100%; height:310px; max-height:310px; overflow:hidden; display:flex; justify-content:center;">
+
+</div>
+
+<div style="display: flex;
+justify-content: space-between;
+align-items: center;width:90%;
+margin-top:15px;
+">
+<a
+       style="
+
+       text-decoration: none;
+       color: #1066b0;
+       font-family: sans-serif;
+       background-color: white;
+       font-size: 20px;
+       font-weight: 600;
+       "
+       href="https://youtu.be/gQcqoZvIieg"
+       target="_blank"
+       >Watch a Demo</a
+     >
+
+     <a
+       style="
+       text-decoration: none;
+       color: #1066b0;
+       font-family: sans-serif;
+       background-color: white;
+       font-size: 20px;
+       font-weight: 600;
+
+       "
+       href="https://corover.ai/advertise/"
+       target="_blank"
+       >Advertise with us!</a
+     >
+</div>
    </div>
-   
-   <div style="display: flex;
-   justify-content: space-between;
-   align-items: center;width:90%;
-   margin-top:15px;
-   ">
-   <a
-             style="
-   
-             text-decoration: none;
-             color: #1066b0;
-             font-family: sans-serif;
-             background-color: white;
-             font-size: 20px;
-             font-weight: 600;
-             "
-             href="https://youtu.be/gQcqoZvIieg"
-             target="_blank"
-             >Watch a Demo</a
-           >
-   
-           <a
-             style="
-             text-decoration: none;
-             color: #1066b0;
-             font-family: sans-serif;
-             background-color: white;
-             font-size: 20px;
-             font-weight: 600;
-   
-             "
-             href="https://corover.ai/advertise/"
-             target="_blank"
-             >Advertise with us!</a
-           >
-   </div>
-         </div>
-       </div>
-       `;
+ </div>
+ `;
 
     let adCross = document.createElement("img");
     adCross.decoding = "async";
@@ -758,8 +758,8 @@ const setPlaceholderMaxHeight = () => {
 
     const adDownIframe2 = document.createElement("a");
     adDownIframe2.innerHTML = `
-     <span></span>
-     `;
+<span></span>
+`;
     adDownIframe2.href = "https://irctc.corover.ai/";
     adDownIframe2.target = "_blank";
     const adDownIframe = document.createElement("div");
@@ -801,40 +801,40 @@ const setPlaceholderMaxHeight = () => {
 
     if (isMobile) {
       adDownIframe.style.cssText = `
-   position:fixed;
-   bottom:0px;
-   right:5px;
-   width:320px;
-   height:50px;
-   border:2px;
-   `;
+position:fixed;
+bottom:0px;
+right:5px;
+width:320px;
+height:50px;
+border:2px;
+`;
       adDownIframe2.style.cssText = `
-   position:fixed;
-   bottom:0px;
-   right:5px;
-   width:320px;
-   height:50px;
-   border:2px;
-   cursor:pointer
-   `;
+position:fixed;
+bottom:0px;
+right:5px;
+width:320px;
+height:50px;
+border:2px;
+cursor:pointer
+`;
     } else {
       adDownIframe.style.cssText = `
-       position:fixed;
-       bottom:0px;
-       right:20px;
-       width:320px;
-       height:50px;
-       border:2px;
-       `;
+ position:fixed;
+ bottom:0px;
+ right:20px;
+ width:320px;
+ height:50px;
+ border:2px;
+ `;
       adDownIframe2.style.cssText = `
-       position:fixed;
-       bottom:0px;
-       right:20px;
-       width:320px;
-       height:50px;
-       border:2px;
-       
-       `;
+ position:fixed;
+ bottom:0px;
+ right:20px;
+ width:320px;
+ height:50px;
+ border:2px;
+ 
+ `;
     }
 
     adDownIframe.scrolling = "no";
@@ -846,37 +846,38 @@ const setPlaceholderMaxHeight = () => {
     // https://bit.ly/3gBANx7 PLUTOS
     //https://amzn.to/34WK1uY last
     dealOfDay.style.display = `inline`;
+    dealOfDay.id = "dod";
     if (isMobile) dealOfDay.href = "https://amzn.to/3ps6U6O";
     else dealOfDay.href = "https://amzn.to/3ps6U6O";
 
     dealOfDay.target = "_blank";
     dealOfDay.innerHTML = `
-         <img width="156px" src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png" decoding="async"/>
-         <p style="
-    position: absolute;
-    background: white;
-    top: 28px;
-    left: -33px;
-    text-decoration: none;
-    color: black;
-    padding: 0px 7px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+   <img width="156px" src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png" decoding="async"/>
+   <p style="
+position: absolute;
+background: white;
+top: 28px;
+left: -33px;
+text-decoration: none;
+color: black;
+padding: 0px 7px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
 ">Ad</p>
-         `;
+   `;
 
     if (isMobile)
       dealOfDay.style.cssText = `
-         position: fixed;
-         bottom:42px;
-         right:150px;
-         `;
+   position: fixed;
+   bottom:42px;
+   right:150px;
+   `;
     else
       dealOfDay.style.cssText = `
-         position: fixed;
-         bottom:40px;
-         right:150px;
-         `;
+   position: fixed;
+   bottom:40px;
+   right:150px;
+   `;
     dealOfDay.style.zIndex = "9";
     document.body.appendChild(dealOfDay);
 
@@ -1140,243 +1141,243 @@ const setPlaceholderMaxHeight = () => {
     const placeholderCard = document.createElement("div");
     placeholderCard.id = "disha-placeholder-card";
     placeholderCard.style.cssText = `
-       width: ${mediaObj.placeholderWidth};
-       position: fixed;
-       bottom: 0px;
-       border-top-left-radius: 23px;
-       border-top-right-radius: 23px;
-       right: 15px;
-       z-index: 2147483647;
-       background-color: white;
-      height:auto;
-       display: block;
-       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-       overflow-y:hidden;
-       max-height:100vh;
-           `;
+ width: ${mediaObj.placeholderWidth};
+ position: fixed;
+ bottom: 0px;
+ border-top-left-radius: 23px;
+ border-top-right-radius: 23px;
+ right: 15px;
+ z-index: 2147483647;
+ background-color: white;
+height:auto;
+ display: block;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ overflow-y:hidden;
+ max-height:100vh;
+     `;
     placeholderCard.innerHTML = `
-         
-    <a href="https://amzn.to/3i4lgCr" target="_blank" style=" 
-    display: none;
-    padding: 6px 20px;
-    position: absolute;
-    left: 0px;
-    top: 75%;
-    background-color: white;
-    text-decoration: none;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    min-width: 68px;
-    z-index: 999;
-    border-top-right-radius: 18px;
-    border-bottom-right-radius: 18px;
-    ">
-    
-    <img style="    width: 40px;
-    display: block;
-    margin: 0 auto;" src="https://dishav3.ap-south-1.linodeobjects.com/amazon.png" alt="AmazonNudge" loading="lazy">
-    <p style="    font: 700 10px Montserrat,Verdana;
-    font-weight: 700;
-    text-align: center;
-    color: #ed193b;
-    margin-top: 1px;
-    margin-bottom: -2px;">SALE
-    </p>
-    </a>
-           <img decoding="async" src="https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png" id="disha-banner-close" style="    z-index: 9;
-           background: #8181815e;
-           width: ${mediaObj.cross.size};
-           height: ${mediaObj.cross.size};
-           cursor: pointer;
-           display: block;
+   
+<a href="https://amzn.to/3i4lgCr" target="_blank" style=" 
+display: none;
+padding: 6px 20px;
+position: absolute;
+left: 0px;
+top: 75%;
+background-color: white;
+text-decoration: none;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+min-width: 68px;
+z-index: 999;
+border-top-right-radius: 18px;
+border-bottom-right-radius: 18px;
+">
+
+<img style="    width: 40px;
+display: block;
+margin: 0 auto;" src="https://dishav3.ap-south-1.linodeobjects.com/amazon.png" alt="AmazonNudge" loading="lazy">
+<p style="    font: 700 10px Montserrat,Verdana;
+font-weight: 700;
+text-align: center;
+color: #ed193b;
+margin-top: 1px;
+margin-bottom: -2px;">SALE
+</p>
+</a>
+     <img decoding="async" src="https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png" id="disha-banner-close" style="    z-index: 9;
+     background: #8181815e;
+     width: ${mediaObj.cross.size};
+     height: ${mediaObj.cross.size};
+     cursor: pointer;
+     display: block;
+     border-radius: 50%;
+     right: ${mediaObj.cross.right};
+     top: ${mediaObj.cross.top};
+     position: absolute;
+     padding: ${mediaObj.cross.padding};">
+ 
+     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}" id="disha-image">
+       <img
+         src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-1.gif"
+         style="width: 100%; height: 100%; border-radius: 8px"
+         alt=""
+         decoding = "async"
+       />
+     </div>
+     <div style="    display: flex;
+     justify-content: center;
+     align-items: center;
+     column-gap: 6px;
+     width:96%;
+     margin: 0px auto;
+     ">
+     <div
+       style="
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #0068ff;
+         width: 50%;
+         margin: 0 auto;
+         border-radius: 10px;
+         padding: ${mediaObj.button.padding} 0px;
+         cursor: pointer;
+       "
+       id="disha-banner-button"
+     >
+       <div
+         style="
+           width: ${mediaObj.button.icon};
+           height: ${mediaObj.button.icon};
            border-radius: 50%;
-           right: ${mediaObj.cross.right};
-           top: ${mediaObj.cross.top};
-           position: absolute;
-           padding: ${mediaObj.cross.padding};">
-       
-           <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}" id="disha-image">
-             <img
-               src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-1.gif"
-               style="width: 100%; height: 100%; border-radius: 8px"
-               alt=""
-               decoding = "async"
-             />
-           </div>
-           <div style="    display: flex;
+           background: white;
+           display: flex;
            justify-content: center;
            align-items: center;
-           column-gap: 6px;
-           width:96%;
-           margin: 0px auto;
-           ">
-           <div
-             style="
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               background: #0068ff;
-               width: 50%;
-               margin: 0 auto;
-               border-radius: 10px;
-               padding: ${mediaObj.button.padding} 0px;
-               cursor: pointer;
-             "
-             id="disha-banner-button"
-           >
-             <div
-               style="
-                 width: ${mediaObj.button.icon};
-                 height: ${mediaObj.button.icon};
-                 border-radius: 50%;
-                 background: white;
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
-               "
-             >
-               <img
-                 src="https://sdk.irctc.corover.ai/askdisha-bucket/train-blue.svg"
-                 alt=""
-                 style="width: 46%"
-                 decoding = "async"
-               />
-             </div>
-             <p
-               style="
-                 margin: 0;
-                 margin-left: ${mediaObj.button.marginLeft};
-                 font-family: sans-serif;
-                 font-size: ${mediaObj.button.font};
-                 color: white;
-               "
-             >
-               Book Ticket
-             </p>
-           </div>
-           <div
-             style="
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               background: #0068ff;
-               width: 50%;
-               margin: 0 auto;
-               border-radius: 10px;
-               padding: ${mediaObj.button.padding} 0px;
-               cursor: pointer;
-             "
-             id="disha-banner-button2"
-           >
-             <div
-               style="
-                 width: ${mediaObj.button.icon};
-                 height: ${mediaObj.button.icon};
-                 border-radius: 50%;
-                 background: transparent;
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
-               "
-             >
-               <img
-                 src="https://sdk.irctc.corover.ai/askdisha-bucket/disha-support.png"
-                 alt=""
-                 style="width: 80%"
-                 decoding = "async"
-               />
-             </div>
-             <p
-               style="
-                 margin: 0;
-                 margin-left: ${mediaObj.button.marginLeft};
-                 font-family: sans-serif;
-                 font-size: ${mediaObj.button.font};
-                 color: white;
-               "
-             >
-               Support
-             </p>
-           </div>
-           </div>
-           <div style=" text-align: center;
-           font-family: sans-serif;">
-           
-           <p style="    margin: 0;
-           font-size: 11px;
-           margin-top: 5px;
-           font-weight: 600;
-           color: #555555;">...in a <span style="color: #4c84ea;">fast</span>, <span style="color: #4c84ea;">easy</span> and <span style="color: #4c84ea;">secure</span> way   <span style="    font-size: 9px;
-           margin: 0;
-           color: slategray;
-           margin-top: 0px;">(Without your IRCTC password)</span></p>
-         
-           </div>
-           <div
-             style="
-               width: 100%;
-               background-color: #eaeaea;
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               align-items: center;
-               margin-top: ${mediaObj.WhiteMarginTop};
-             "
-           >
-             <a
-               href="https://amzn.to/34WK1uY"
-               target="_blank"
-               style="display: none; margin-bottom: -10px"
-             >
-               <img
-                 width="156px"
-                 src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png"
-                 decoding="async"
-               />
-             </a>
-          <div id="splash-scrollable" style="    width: 100%;
-          display: flex;
-          justify-content: flex-start;
-          flex-direction:column;
-          align-items: center;
-          min-height: ${mediaObj.scrollHeight};
-          max-height:${mediaObj.scrollHeight};
-          overflow:auto;
-          position:relative;
-          ">
-
-          <p style="
-    position: absolute;
-    background: white;
-    top: 0px;
-    left: 21px;
-    padding: 0px 10px;
-    border-bottom-right-radius: 4px;
-">Ad</p>
-           
-          <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
-          width: 100%;
-          min-height: ${mediaObj.videoAd.height};
-          justify-content: center;
-          align-items: center;
-          border: 0px;
-          transform: scale(${mediaObj.videoAd.scale});
-          margin-top: ${mediaObj.videoAd.margin};
-          display:none;
-          "></iframe>  
- 
-          <div id='div-gpt-ad-1695628300486-0'>
-         </div>      
+         "
+       >
+         <img
+           src="https://sdk.irctc.corover.ai/askdisha-bucket/train-blue.svg"
+           alt=""
+           style="width: 46%"
+           decoding = "async"
+         />
        </div>
-           </div>
-         `;
+       <p
+         style="
+           margin: 0;
+           margin-left: ${mediaObj.button.marginLeft};
+           font-family: sans-serif;
+           font-size: ${mediaObj.button.font};
+           color: white;
+         "
+       >
+         Book Ticket
+       </p>
+     </div>
+     <div
+       style="
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #0068ff;
+         width: 50%;
+         margin: 0 auto;
+         border-radius: 10px;
+         padding: ${mediaObj.button.padding} 0px;
+         cursor: pointer;
+       "
+       id="disha-banner-button2"
+     >
+       <div
+         style="
+           width: ${mediaObj.button.icon};
+           height: ${mediaObj.button.icon};
+           border-radius: 50%;
+           background: transparent;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+         "
+       >
+         <img
+           src="https://sdk.irctc.corover.ai/askdisha-bucket/disha-support.png"
+           alt=""
+           style="width: 80%"
+           decoding = "async"
+         />
+       </div>
+       <p
+         style="
+           margin: 0;
+           margin-left: ${mediaObj.button.marginLeft};
+           font-family: sans-serif;
+           font-size: ${mediaObj.button.font};
+           color: white;
+         "
+       >
+         Support
+       </p>
+     </div>
+     </div>
+     <div style=" text-align: center;
+     font-family: sans-serif;">
+     
+     <p style="    margin: 0;
+     font-size: 11px;
+     margin-top: 5px;
+     font-weight: 600;
+     color: #555555;">...in a <span style="color: #4c84ea;">fast</span>, <span style="color: #4c84ea;">easy</span> and <span style="color: #4c84ea;">secure</span> way   <span style="    font-size: 9px;
+     margin: 0;
+     color: slategray;
+     margin-top: 0px;">(Without your IRCTC password)</span></p>
+   
+     </div>
+     <div
+       style="
+         width: 100%;
+         background-color: #eaeaea;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin-top: ${mediaObj.WhiteMarginTop};
+       "
+     >
+       <a
+         href="https://amzn.to/34WK1uY"
+         target="_blank"
+         style="display: none; margin-bottom: -10px"
+       >
+         <img
+           width="156px"
+           src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png"
+           decoding="async"
+         />
+       </a>
+    <div id="splash-scrollable" style="    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:column;
+    align-items: center;
+    min-height: ${mediaObj.scrollHeight};
+    max-height:${mediaObj.scrollHeight};
+    overflow:auto;
+    position:relative;
+    ">
+
+    <p style="
+position: absolute;
+background: white;
+top: 0px;
+left: 21px;
+padding: 0px 10px;
+border-bottom-right-radius: 4px;
+">Ad</p>
+     
+    <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
+    width: 100%;
+    min-height: ${mediaObj.videoAd.height};
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    transform: scale(${mediaObj.videoAd.scale});
+    margin-top: ${mediaObj.videoAd.margin};
+    display:none;
+    "></iframe>  
+
+    <div id='div-gpt-ad-1695628300486-0'>
+   </div>      
+ </div>
+     </div>
+   `;
     let adIframescroll = document.createElement("iframe");
     adIframescroll.scrolling = "no";
     adIframescroll.frameborder = "0";
     adIframescroll.src =
       "https://d38k9a6ldw9syu.cloudfront.net/irctc/coroversdsm/adchatbot.html";
     adIframescroll.style.cssText = `
-         height: ${mediaObj.belowAD.height}; ${mediaObj.belowAD.width}; margin: 0 auto; overflow-y:hidden; border:none
-         `;
+   height: ${mediaObj.belowAD.height}; ${mediaObj.belowAD.width}; margin: 0 auto; overflow-y:hidden; border:none
+   `;
 
     // <div style="width: 320px; height: 50px; background-color: #dfdfdf;">
     //   <iframe
@@ -1440,10 +1441,19 @@ const setPlaceholderMaxHeight = () => {
     }, 4000);
 
     setInterval(() => {
-      if (window.location.href.includes("nget/booking/train-list")) {
+      if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
+        document.getElementById("askDishaSdk").style.display = "none";
+        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+          "none";
+        document.getElementById("dod").style.display = "none";
+      } else {
+        document.getElementById("askDishaSdk").style.display = "flex";
+        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+          "block";
+        document.getElementById("dod").style.display = "inline";
       }
-    }, 500);
+    }, 200);
 
     document.getElementById("disha-banner-close").onclick = () => {
       openBanner(false);
@@ -1871,16 +1881,16 @@ const setPlaceholderMaxHeight = () => {
     overlayWidget.src =
       "https://sdk.irctc.corover.ai/askdisha-bucket/launcher.gif";
     overlayWidget.style.cssText = `
-     height: 110px;
-     width: 103px;
-     border-radius: 50%;
-     position: fixed;
-     bottom: 35px;
-     right: 25px;
-    
-     z-index: 9999;
-     display:none;
-     `;
+height: 110px;
+width: 103px;
+border-radius: 50%;
+position: fixed;
+bottom: 35px;
+right: 25px;
+
+z-index: 9999;
+display:none;
+`;
     document.body.appendChild(overlayWidget);
     overlayWidget.onclick = () => {
       if (iOS()) window.location.assign("https://irctc.corover.ai/#web");
@@ -2141,17 +2151,17 @@ const setPlaceholderMaxHeight = () => {
         let adContainer = document.createElement("div");
         adContainer.id = "adContainer1";
         adContainer.style.cssText = `
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             width: fit-content;
-             border: 1px solid gainsboro;
-             padding: 12px 12px;
-             border-radius: 10px;
-             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-             column-gap: 30px;
-             margin: 25px auto;
-             `;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: fit-content;
+       border: 1px solid gainsboro;
+       padding: 12px 12px;
+       border-radius: 10px;
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+       column-gap: 30px;
+       margin: 25px auto;
+       `;
         document
           .querySelectorAll("div.container")[3]
           .insertBefore(
@@ -2159,16 +2169,16 @@ const setPlaceholderMaxHeight = () => {
             document.querySelectorAll("div.container")[3].childNodes[0]
           );
         adContainer.innerHTML = `
-             <span
-           >
-           </span>
-              
-               <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
-             
-               <span
-             >
-             </span>
-               `;
+       <span
+     >
+     </span>
+        
+         <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+       
+         <span
+       >
+       </span>
+         `;
         unibots.cmd.push(() => {
           unibotsPlayer("irctc");
         });
@@ -2180,11 +2190,11 @@ const setPlaceholderMaxHeight = () => {
         let videoDiv = document.createElement("div");
         videoDiv.id = "div-ub-irctc";
         videoDiv.style.cssText = `
-             width:100%;
-             max-width: 100%;
-             margin:10px auto;
-             overflow-x:hidden;
-             `;
+       width:100%;
+       max-width: 100%;
+       margin:10px auto;
+       overflow-x:hidden;
+       `;
         // document.body.appendChild(videoDiv)
         document
           .querySelectorAll(".clearfix")[3]
@@ -2209,9 +2219,9 @@ const setPlaceholderMaxHeight = () => {
       let videoDiv = document.createElement("div");
       videoDiv.id = "div-ub-irctc";
       videoDiv.style.cssText = `
-       width:fit-content;
-       margin:10px auto
-       `;
+ width:fit-content;
+ margin:10px auto
+ `;
       if (isMobile) {
         if (isPnr) {
           document
@@ -2243,17 +2253,17 @@ const setPlaceholderMaxHeight = () => {
         let adContainer = document.createElement("div");
         adContainer.id = "adContainer1";
         adContainer.style.cssText = `
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         width: fit-content;
-         border: 1px solid gainsboro;
-         padding: 12px 12px;
-         border-radius: 10px;
-         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-         column-gap: 30px;
-         margin: 25px auto;
-         `;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: fit-content;
+   border: 1px solid gainsboro;
+   padding: 12px 12px;
+   border-radius: 10px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   column-gap: 30px;
+   margin: 25px auto;
+   `;
         if (isPnr)
           document
             .querySelectorAll(".pnrbox")[0]
@@ -2264,22 +2274,22 @@ const setPlaceholderMaxHeight = () => {
             .insertAdjacentElement("beforebegin", adContainer);
 
         adContainer.innerHTML = `
- 
-         <span
-       >
-         
-       </span>
- 
-          
-           <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
-           
- 
-           <span
-         >
-           
-         </span>
- 
-           `;
+
+   <span
+ >
+   
+ </span>
+
+    
+     <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+     
+
+     <span
+   >
+     
+   </span>
+
+     `;
       }
 
       unibots.cmd.push(() => {
@@ -2302,9 +2312,9 @@ const setPlaceholderMaxHeight = () => {
       let videoDiv = document.createElement("div");
       videoDiv.id = "div-ub-irctc";
       videoDiv.style.cssText = `
-       width:fit-content;
-       margin:10px auto
-       `;
+ width:fit-content;
+ margin:10px auto
+ `;
       if (isMobile) {
         document.body.appendChild(videoDiv);
       } else {
@@ -2333,37 +2343,37 @@ const setPlaceholderMaxHeight = () => {
         let adContainer = document.createElement("div");
         adContainer.id = "adContainer1";
         adContainer.style.cssText = `
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         width: fit-content;
-         border: 1px solid gainsboro;
-         padding: 12px 12px;
-         border-radius: 10px;
-         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-         column-gap: 30px;
-         margin: 25px auto;
-         `;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: fit-content;
+   border: 1px solid gainsboro;
+   padding: 12px 12px;
+   border-radius: 10px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   column-gap: 30px;
+   margin: 25px auto;
+   `;
 
         trainsDiv.insertAdjacentElement("beforeend", adContainer);
 
         adContainer.innerHTML = `
- 
-         <span
-       >
-         
-       </span>
- 
-         
-           <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
 
- 
-           <span
-         >
-           
-         </span>
- 
-           `;
+   <span
+ >
+   
+ </span>
+
+   
+     <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+
+
+     <span
+   >
+     
+   </span>
+
+     `;
 
         // ///////////
       }
@@ -2448,21 +2458,21 @@ const setPlaceholderMaxHeight = () => {
       const videoDiv = document.createElement("div");
       videoDiv.id = "div-ub-irctc_chatbot1";
       videoDiv.style.cssText = `
-     
-       width: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       `;
+
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ `;
 
       const videoScript = document.createElement("script");
 
       videoScript.innerHTML = `
-     window.unibots = window.unibots || { cmd: [] };
-     unibots.cmd.push(() => {
-       unibotsPlayer("irctc_chatbot1");
-     });
-     `;
+window.unibots = window.unibots || { cmd: [] };
+unibots.cmd.push(() => {
+ unibotsPlayer("irctc_chatbot1");
+});
+`;
 
       videoDiv.appendChild(videoScript);
       const headScript = document.createElement("script");
@@ -2485,34 +2495,34 @@ const setPlaceholderMaxHeight = () => {
   document.head.insertAdjacentHTML(
     "beforeend",
     `<style type="text/css">
-       #div-gpt-ad-1695628181945-0{position:fixed !important;background-image: url(https://storage.googleapis.com/corover-prod-bucket/disha-eticket/ads.svg);background-origin: content-box;background-repeat: no-repeat;background-size: contain;}
-       #div-gpt-ad-1695628300486-0{
-        min-width: 300px; min-height: 250px;
-       }
+ #div-gpt-ad-1695628181945-0{position:fixed !important;background-image: url(https://storage.googleapis.com/corover-prod-bucket/disha-eticket/ads.svg);background-origin: content-box;background-repeat: no-repeat;background-size: contain;}
+ #div-gpt-ad-1695628300486-0{
+  min-width: 300px; min-height: 250px;
+ }
 
-       .disha-loader {
-        border: 10px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 10px solid rgb(52, 109, 179);
-        width: 60px;
-        height: 60px;
-        -webkit-animation: disha-spin 1s linear infinite; /* Safari */
-        animation: disha-spin 1s linear infinite;
-        margin-bottom:20px
-      }
-      
-      /* Safari */
-      @-webkit-keyframes disha-spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
-      }
-      
-      @keyframes disha-spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      
-   </style>`
+ .disha-loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid rgb(52, 109, 179);
+  width: 60px;
+  height: 60px;
+  -webkit-animation: disha-spin 1s linear infinite; /* Safari */
+  animation: disha-spin 1s linear infinite;
+  margin-bottom:20px
+}
+
+/* Safari */
+@-webkit-keyframes disha-spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes disha-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+</style>`
   );
 })();
 
