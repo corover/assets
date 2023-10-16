@@ -10212,9 +10212,9 @@
     "address": "F8C4+2HG, Bhitaura, Fatehganj Pashchimi, Uttar Pradesh 243508"
   },
   {
-    "name": "BABATPUR",
-    "code": "BTP",
-    "utterances": [],
+    "name": "SHANIDEV D SBTJ",
+    "code": "SBTJ",
+    "utterances": ["BABATPUR"],
     "name_hi": "बाबतपुर",
     "district": "Varanasi",
     "state": "Uttar Pradesh",
@@ -17762,10 +17762,7 @@
   {
     "name": "AYODHYA",
     "code": "AY",
-    "utterances": [
-      "faizabad",
-      "ayodhya"
-    ],
+    "utterances": ["faizabad", "ayodhya"],
     "name_hi": "अयोध्या",
     "district": "Ayodhya",
     "state": "Uttar Pradesh",
@@ -33257,10 +33254,7 @@
   {
     "name": "RANI KAMALAPATI",
     "code": "RKMP",
-    "utterances": [
-      "RANI KAMLAPATI",
-      "HABIBGANJ"
-    ],
+    "utterances": ["RANI KAMLAPATI", "HABIBGANJ"],
     "name_hi": "रानी कमलापति",
     "district": "Bhopal",
     "state": "Madhya Pradesh",
@@ -46064,10 +46058,7 @@
   {
     "name": "MAA BARAHI D DH",
     "code": "MBDD",
-    "utterances": [
-      "MAA BARAHI",
-      "Dandupur"
-    ],
+    "utterances": ["MAA BARAHI", "Dandupur"],
     "name_hi": "माँ बाराही",
     "district": "Prayagraj",
     "state": "Uttar Pradesh",
@@ -49907,13 +49898,7 @@
   {
     "name": "V LAKSHMIBAIJHS",
     "code": "VGLJ",
-    "utterances": [
-      "virangna",
-      "jhansi",
-      "lakshmibai",
-      "rani",
-      "virangana"
-    ],
+    "utterances": ["virangna", "jhansi", "lakshmibai", "rani", "virangana"],
     "name_hi": "वीरांगना लक्ष्मीबाई",
     "district": "",
     "state": "Uttar Pradesh",
@@ -50871,9 +50856,9 @@
     "address": "Railway Station Road, Nai Abadi, Anandpur Sahib, Punjab 140118"
   },
   {
-    "name": "ANTU",
-    "code": "ANTU",
-    "utterances": [],
+    "name": "MA CHANDIKA D D",
+    "code": "MCDA",
+    "utterances": ["ANTU"],
     "name_hi": "अंतु",
     "district": "Pratapgarh",
     "state": "Uttar Pradesh",
@@ -57257,10 +57242,7 @@
   {
     "name": "SONBHADRA",
     "code": "SBDR",
-    "utterances": [
-      "SONBHADRA",
-      "ROBERTSGANJ"
-    ],
+    "utterances": ["SONBHADRA", "ROBERTSGANJ"],
     "name_hi": "सोनभद्र",
     "district": "Sonbhadra",
     "state": "Uttar Pradesh",
@@ -75996,9 +75978,9 @@
     "address": "Pilibhit, Uttar Pradesh"
   },
   {
-    "name": "PARTAPGARH JN",
-    "code": "PBH",
-    "utterances": [],
+    "name": "MA BELHADEVI DP",
+    "code": "MBDP",
+    "utterances": ["PARTAPGARH JN"],
     "name_hi": "प्रतापगढ़ जं",
     "district": "Pratapgarh",
     "state": "Uttar Pradesh",
@@ -90362,10 +90344,7 @@
   {
     "name": "PRAYAG",
     "code": "PRG",
-    "utterances": [
-      "PRAYAG",
-      "ALLAHABAD"
-    ],
+    "utterances": ["PRAYAG", "ALLAHABAD"],
     "name_hi": "प्रयाग",
     "district": "Prayagraj",
     "state": "Uttar Pradesh",
@@ -91889,10 +91868,7 @@
   {
     "name": "BANARAS",
     "code": "BSBS",
-    "utterances": [
-      "MANDUADIH",
-      "BANARAS"
-    ],
+    "utterances": ["MANDUADIH", "BANARAS"],
     "name_hi": "बनारस",
     "district": "Varanasi",
     "state": "Uttar Pradesh",
@@ -97784,10 +97760,7 @@
   {
     "name": "EKTA NAGAR",
     "code": "EKNR",
-    "utterances": [
-      "EKTA NAGAR",
-      "KEVADIYA"
-    ],
+    "utterances": ["EKTA NAGAR", "KEVADIYA"],
     "name_hi": "एकता नगर",
     "district": "",
     "state": "Gujarat",
@@ -99635,10 +99608,7 @@
   {
     "name": "SAINAGAR SHIRDI",
     "code": "SNSI",
-    "utterances": [
-      "Shirdi",
-      "sainagar"
-    ],
+    "utterances": ["Shirdi", "sainagar"],
     "name_hi": "सैनागर शिरडी",
     "district": "Ahmednagar",
     "state": "Maharashtra",
