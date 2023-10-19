@@ -92,30 +92,6 @@ const defineGPTslots = (all) => {
         "div-gpt-ad-1695628181945-0"
       )
       .addService(googletag.pubads());
-    //   .addService(googletag.pubads());
-    // IR_UB_300x250 = googletag
-    //   .defineSlot(
-    //     "/22686085093/irctc_banner_300x250",
-    //     [300, 250],
-    //     "div-gpt-ad-1664429992698-0"
-    //   )
-    //   .addService(googletag.pubads());
-    // IR_UB_300x250_2 = googletag
-    //   .defineSlot(
-    //     "/22686085093/irctc_banner1_300x250",
-    //     [300, 250],
-    //     "div-gpt-ad-1664430029564-0"
-    //   )
-    //   .addService(googletag.pubads());
-
-    // IR_300x250_IFRAME = googletag
-    //   .defineSlot(
-    //     "/21748009408/IRCTC_300x250",
-    //     [300, 250],
-    //     "div-gpt-ad-1601563234445-0"
-    //   )
-    //   .addService(googletag.pubads());
-
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
   });
@@ -170,8 +146,6 @@ const setPlaceholderMaxHeight = () => {
 
     if (!am && !pm) {
       document.head.appendChild(autoAdScript1);
-      // document.head.appendChild(autoAdScript2);
-      // document.head.appendChild(autoAdScript3);
     }
   };
 
@@ -497,6 +471,7 @@ const setPlaceholderMaxHeight = () => {
     function switchIcon(ch) {
       let s;
       if (true) {
+        console.log(isSmall);
         if (!isSmall) {
           s = true;
 
@@ -518,47 +493,15 @@ const setPlaceholderMaxHeight = () => {
         transform: rotate(-168deg);
       `;
 
-          //   else {
-          //     dishaWrapper.style.left = "-6px";
-          //     launcher.style.transform = "rotate(12deg)";
-          //     maxIcon.style.cssText = `
-          //    position: absolute;
-          //    left: 6px;
-          //    width: 14px;
-          //    top: -18px;
-          //    transform: rotate(-102deg);
-          //  `;
-          //   }
-
           launcher.style.width = "50px";
           launcher.style.height = "50px";
           launcher.style.minWidth = "50px";
-          // launcher.style.borderWidth = "0px";
-          // launcher.style.backgroundImage = `url("https://sdk.irctc.corover.ai/askdisha-bucket/disha.svg")`;
-          // launcher.style.backgroundPosition = "1px -3px";
 
           if (!isMobile) {
             messageWrapper.style.display = "none";
           }
           //   googletag.destroySlots([IR_UB]);
         } else {
-          //   googletag.cmd.push(function () {
-          //     IR_UB = googletag
-          //       .defineSlot(
-          //         "/21748009408/irctc.co.in_320x50_corover",
-          //         [320, 50],
-          //         "div-gpt-ad-1695628181945-0"
-          //       )
-          //       .addService(googletag.pubads());
-
-          //     googletag.pubads().enableSingleRequest();
-          //     googletag.enableServices();
-          //   });
-
-          //   googletag.cmd.push(function () {
-          //     googletag.display("div-gpt-ad-1695628181945-0");
-          //   });
-
           s = false;
           // messageDialog.style.display = "block";
           // messageDialogClose.style.display = "block";
@@ -570,11 +513,7 @@ const setPlaceholderMaxHeight = () => {
           launcher.style.width = "120px";
           launcher.style.height = "120px";
           launcher.style.minWidth = "120px";
-          // launcher.style.borderWidth = "6px";
-          //   launcher.style.backgroundImage = `url(
-          //   "https://sdk.irctc.corover.ai/askdisha-bucket/disha.svg"
-          // )`;
-          //   launcher.style.backgroundPosition = "6px -3px";
+
           maxIcon.src =
             "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
           launcher.style.transform = "none";
@@ -879,7 +818,7 @@ border-top-right-radius: 4px;
    right:150px;
    `;
     dealOfDay.style.zIndex = "9";
-    document.body.appendChild(dealOfDay);
+    // document.body.appendChild(dealOfDay);
 
     if (isMobile) {
       adDownIframe.style.zIndex = "9";
@@ -1360,6 +1299,7 @@ border-bottom-right-radius: 4px;
     justify-content: center;
     align-items: center;
     border: 0px;
+    background-color:#ece5db;
     transform: scale(${mediaObj.videoAd.scale});
     margin-top: ${mediaObj.videoAd.margin};
     display:none;
@@ -1447,7 +1387,8 @@ border-bottom-right-radius: 4px;
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
           "none";
         document.getElementById("dod").style.display = "none";
-      } else {
+      } else if (!isSmall) {
+        console.log("HIT");
         document.getElementById("askDishaSdk").style.display = "flex";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
           "block";
@@ -2006,107 +1947,9 @@ display:none;
       }
       if (!isOpen && !isMobile) {
         splashMagic2();
-        // if (document.getElementById("scrollIframeContainer"))
-        //   document
-        //     .getElementById("scrollIframeContainer")
-        //     .removeChild(adIframescroll);
-        // setTimeout(() => {
-        //   document
-        //     .getElementById("scrollIframeContainer")
-        //     .appendChild(adIframescroll);
-        // }, 500);
       }
     }
   }
-
-  // function setAd() {
-  //   const videoAddElement = document.getElementById("div-ub-irctc");
-  //   if (!videoAddElement) {
-  //     let cdnScript3 = document.createElement("script");
-  //     cdnScript3.src = "https://cdn.unibots.in/ubplayer/player.js";
-  //     cdnScript3.id = "videoAdCdn";
-  //     cdnScript3.async = true;
-
-  //     document.head.appendChild(cdnScript3);
-  //     if (isMobile) {
-  //       let adDiv = document.createElement("div");
-  //       adDiv.id = "div-ub-irctc";
-  //       adDiv.style.alignItems = "center";
-  //       adDiv.style.justifyContent = "center";
-  //       adDiv.style.width = "100%";
-
-  //       //append Ad here!
-  //       let script3 = document.createElement("script");
-
-  //       script3.async = true;
-
-  //       adDiv.appendChild(script3);
-
-  //       script3.innerHTML = `
-  //         window.unibots = window.unibots || { cmd: [] };
-  //         unibots.cmd.push(()=>{ unibotsPlayer("irctc"); });
-  //       `;
-  //       // getElementsByClassName("clearfix")[2];
-  //       document.body.appendChild(adDiv);
-  //     } else {
-  //       let adDiv = document.createElement("div");
-  //       adDiv.id = "div-ub-irctc";
-  //       adDiv.style.display = "flex";
-  //       adDiv.style.alignItems = "center";
-  //       adDiv.style.justifyContent = "center";
-  //       adDiv.style.width = "100%";
-  //       adDiv.style.marginTop = "20px";
-
-  //       //append Ad here!
-  //       let script3 = document.createElement("script");
-
-  //       script3.async = true;
-
-  //       adDiv.appendChild(script3);
-
-  //       script3.innerHTML = `
-  //         window.unibots = window.unibots || { cmd: [] };
-  //         unibots.cmd.push(()=>{ unibotsPlayer("irctc"); });
-  //       `;
-
-  //       document.getElementsByClassName("clearfix")[5].appendChild(adDiv);
-  //     }
-  //   }
-  // }
-
-  // function setAd() {
-  //   const videoAddElement = document.getElementById("div-ub-irctc");
-  //   if (!videoAddElement) {
-  //     let cdnScript3 = document.createElement("script");
-  //     cdnScript3.src = "https://cdn.unibots.in/ubplayer/player.js";
-  //     cdnScript3.id = "videoAdCdn";
-  //     cdnScript3.async = true;
-
-  //     document.head.appendChild(cdnScript3);
-  //     if (isMobile) {
-  //       //append Ad here!
-  //       // parentVideoAdDiv.insertAdjacentHTML(
-  //       //   "afterend",
-  //       //   "<div id = 'div-ub-irctc'>"
-  //       // );
-  //       // window.unibots = window.unibots || { cmd: [] };
-  //       // unibots.cmd.push(() => {
-  //       //   unibotsPlayer("irctc");
-  //       // });
-  //     } else {
-  //       let adDiv = document.createElement("div");
-  //       adDiv.id = "div-ub-irctc";
-  //       adDiv.style.alignItems = "center";
-  //       adDiv.style.justifyContent = "center";
-  //       adDiv.style.width = "100%";
-  //       document.getElementsByClassName("clearfix")[4].appendChild(adDiv);
-  //       window.unibots = window.unibots || { cmd: [] };
-  //       unibots.cmd.push(() => {
-  //         unibotsPlayer("irctc");
-  //       });
-  //     }
-  //   }
-  // }
 
   function removeAd() {
     const videoAddElement = document.getElementById("div-ub-irctc");
@@ -2318,19 +2161,6 @@ display:none;
       if (isMobile) {
         document.body.appendChild(videoDiv);
       } else {
-        // let lastTrain = document.querySelectorAll(
-        //   "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
-        // )[0];
-
-        // if (lastTrain) lastTrain.insertAdjacentElement("afterend", videoDiv);
-        // else
-        //   setTimeout(() => {
-        //     lastTrain = document.querySelectorAll(
-        //       "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
-        //     )[0];
-        //     lastTrain.insertAdjacentElement("afterend", videoDiv);
-        //   }, 6000);
-
         try {
           let leftover = document.querySelectorAll("#adContainer1")[0];
 
@@ -2495,7 +2325,7 @@ unibots.cmd.push(() => {
   document.head.insertAdjacentHTML(
     "beforeend",
     `<style type="text/css">
- #div-gpt-ad-1695628181945-0{position:fixed !important;background-image: url(https://storage.googleapis.com/corover-prod-bucket/disha-eticket/ads.svg);background-origin: content-box;background-repeat: no-repeat;background-size: contain;}
+ #div-gpt-ad-1695628181945-0{position:fixed !important;background-image: url(https://storage.googleapis.com/corover-prod-bucket/disha-eticket/ads.svg);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;}
  #div-gpt-ad-1695628300486-0{
   min-width: 300px; min-height: 250px;
  }
@@ -2525,5 +2355,3 @@ unibots.cmd.push(() => {
 </style>`
   );
 })();
-
-// div-gpt-ad-1691478066574-0
