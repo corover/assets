@@ -1441,10 +1441,7 @@ border-bottom-right-radius: 4px;
     }, 4000);
 
     setInterval(() => {
-      if (
-        !window.location.href.includes("irctc.co.in/nget/train-search") ||
-        isMob()
-      ) {
+      if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
