@@ -818,7 +818,7 @@ border-top-right-radius: 4px;
    right:150px;
    `;
     dealOfDay.style.zIndex = "9";
-    // document.body.appendChild(dealOfDay);
+    document.body.appendChild(dealOfDay);
 
     if (isMobile) {
       adDownIframe.style.zIndex = "9";
