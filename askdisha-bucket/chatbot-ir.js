@@ -1264,8 +1264,8 @@
     openBanner(false);
 
     setTimeout(() => {
-      // if (!isOpen) openBanner(true);
-    }, 6000);
+      if (!isOpen && window.innerWidth > 992) openBanner(true);
+    }, 4000);
 
     document.getElementById("disha-banner-close").onclick = () =>
       openBanner(false);
