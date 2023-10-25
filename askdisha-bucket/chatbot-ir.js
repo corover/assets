@@ -1757,6 +1757,7 @@
         min-width: 320px !important;
         min-height:50px !important;
         z-index:2 !important;
+        background-image: url(https://storage.googleapis.com/corover-prod-bucket/disha-eticket/ads.svg);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
         }
   
         .gpt320--show{
@@ -1809,11 +1810,12 @@
           #div-gpt-ad-1654676845166-0{
             position: fixed !important;
             bottom: 0px !important;
-            left: 0px !important;
+            // left: 0px !important;
             border: none !important;
             min-width: 320px !important;
             min-height: 50px !important;
             z-index: 2 !important;
+            background-image: url(https://storage.googleapis.com/corover-prod-bucket/disha-eticket/ads.svg);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
          
         }
   
