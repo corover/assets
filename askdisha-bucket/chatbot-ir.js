@@ -750,7 +750,7 @@
         z-index:1;
       `;
 
-    document.body.appendChild(adDownIframe);
+    // document.body.appendChild(adDownIframe);
     // document.body.appendChild(adDownIframe2);
 
     const dealOfDay = document.createElement("a");
@@ -1204,7 +1204,7 @@
         
       
                 
-                <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width};margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale});">
+                <!-- <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width};margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale});"> -->
               
                 </div>
             </div>
