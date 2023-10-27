@@ -11,6 +11,8 @@ var IR_UB_NEW;
 var IR_STICKY;
 var IR_300x250_IFRAME;
 var isSplashScreenOpen = false;
+var isTrainList = false;
+var isInnerAdPushed = false;
 
 const isMob = () => {
   if (
@@ -27,6 +29,32 @@ const isMob = () => {
     return false;
   }
 };
+
+function pushInnerAd(){
+  if(window.location.href.includes("nget/booking/train-list") && !isMob){
+    isTrainList=true;
+    isInnerAdPushed=true;
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+    googletag.defineSlot('/21928950349,21748009408/irctc_300x250', [300, 250], 'div-gpt-ad-1698143516599-0').setTargeting("test", "responsive").setCollapseEmptyDiv(true).addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+  //Element creation for inner Ad
+    var filterDiv = document.querySelector(".filter-div");
+    let innerAd = document.createElement('div');
+    innerAd.style.width='300px';
+    innerAd.style.height='250px';
+    innerAd.id='div-gpt-ad-1698143516599-0';
+    filterDiv.appendChild(innerAd);
+    setTimeout(() => {
+      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1698143516599-0'); });
+    }, 100);
+  }
+  else{
+    isTrainList=false;
+  }
+}
 
 let overlayDiv = document.createElement("div");
 overlayDiv.style.cssText = `
@@ -1381,6 +1409,9 @@ border-bottom-right-radius: 4px;
     }, 4000);
 
     setInterval(() => {
+      if(isTrainList && !isInnerAdPushed){
+        pushInnerAd();
+      }
       if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
