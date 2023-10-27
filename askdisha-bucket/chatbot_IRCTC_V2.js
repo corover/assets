@@ -30,12 +30,12 @@ const isMob = () => {
   }
 };
 
-const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 
 function pushInnerAd(){
+  const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   console.log('2nd condition: ',window.location.href.includes("nget/booking/train-list") && !isMobileCheck);
   console.log('3: ',isTrainList,' 4: ',isInnerAdPushed);
-  console.log('//',isMob);
   if(window.location.href.includes("nget/booking/train-list") && !isMobileCheck){
     isTrainList=true;
     isInnerAdPushed=true;
