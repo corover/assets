@@ -1411,7 +1411,6 @@ border-bottom-right-radius: 4px;
     setInterval(() => {
       if(isTrainList && isInnerAdPushed){
         pushInnerAd();
-        isTrainList = false;
       }
       if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
