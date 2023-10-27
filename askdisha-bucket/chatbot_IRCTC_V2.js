@@ -45,6 +45,7 @@ function pushInnerAd(){
     let innerAd = document.createElement('div');
     innerAd.style.width='300px';
     innerAd.style.height='250px';
+    innerAd.style.background='red';
     innerAd.id='div-gpt-ad-1698143516599-0';
     filterDiv.appendChild(innerAd);
     setTimeout(() => {
@@ -1411,7 +1412,7 @@ border-bottom-right-radius: 4px;
     setInterval(() => {
       if(!isTrainList && !isInnerAdPushed){
         pushInnerAd();
-        isInnerAdPushed = false;
+        isTrainList = false;
       }
       if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
