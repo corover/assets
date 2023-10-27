@@ -50,7 +50,6 @@ function pushInnerAd(){
     let innerAd = document.createElement('div');
     innerAd.style.width='300px';
     innerAd.style.height='250px';
-    innerAd.style.background='red';
     innerAd.id='div-gpt-ad-1698143516599-0';
     filterDiv.appendChild(innerAd);
     setTimeout(() => {
