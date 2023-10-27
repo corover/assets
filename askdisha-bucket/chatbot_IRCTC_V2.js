@@ -31,10 +31,9 @@ const isMob = () => {
 };
 
 function pushInnerAd(){
-  console.log('2nd condition: ',window.location.href.includes("nget/booking/train-list") && !isMobile);
+  console.log('2nd condition: ',window.location.href.includes("nget/booking/train-list") && !isMob);
   console.log('3: ',isTrainList,' 4: ',isInnerAdPushed);
-  console.log('//',isMob);
-  if(window.location.href.includes("nget/booking/train-list") && !isMobile){
+  if(window.location.href.includes("nget/booking/train-list") && !isMob){
     isTrainList=true;
     isInnerAdPushed=true;
     window.googletag = window.googletag || {cmd: []};
