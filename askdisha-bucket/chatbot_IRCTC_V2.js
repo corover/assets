@@ -1409,8 +1409,9 @@ border-bottom-right-radius: 4px;
     }, 4000);
 
     setInterval(() => {
-      if(isTrainList && isInnerAdPushed){
+      if(!isTrainList && !isInnerAdPushed){
         pushInnerAd();
+        isInnerAdPushed = false;
       }
       if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
