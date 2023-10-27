@@ -1409,7 +1409,7 @@ border-bottom-right-radius: 4px;
     }, 4000);
 
     setInterval(() => {
-      if(!isTrainList && !isInnerAdPushed){
+      if(isTrainList && isInnerAdPushed){
         pushInnerAd();
         isTrainList = false;
       }
