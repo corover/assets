@@ -30,10 +30,13 @@ const isMob = () => {
   }
 };
 
+const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 function pushInnerAd(){
-  console.log('2nd condition: ',window.location.href.includes("nget/booking/train-list") && !isMob);
+  console.log('2nd condition: ',window.location.href.includes("nget/booking/train-list") && !isMobileCheck);
   console.log('3: ',isTrainList,' 4: ',isInnerAdPushed);
-  if(window.location.href.includes("nget/booking/train-list") && !isMob){
+  console.log('//',isMob);
+  if(window.location.href.includes("nget/booking/train-list") && !isMobileCheck){
     isTrainList=true;
     isInnerAdPushed=true;
     window.googletag = window.googletag || {cmd: []};
