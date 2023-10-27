@@ -31,7 +31,10 @@ const isMob = () => {
 };
 
 function pushInnerAd(){
-  if(window.location.href.includes("nget/booking/train-list") && !isMob){
+  console.log('2nd condition: ',window.location.href.includes("nget/booking/train-list") && !isMobile);
+  console.log('3: ',isTrainList,' 4: ',isInnerAdPushed);
+  console.log('//',isMob);
+  if(window.location.href.includes("nget/booking/train-list") && !isMobile){
     isTrainList=true;
     isInnerAdPushed=true;
     window.googletag = window.googletag || {cmd: []};
@@ -51,6 +54,7 @@ function pushInnerAd(){
     setTimeout(() => {
       googletag.cmd.push(function() { googletag.display('div-gpt-ad-1698143516599-0'); });
     }, 100);
+    console.log('5: ',isTrainList,' 6: ',isInnerAdPushed)
   }
   else{
     isTrainList=false;
@@ -1410,9 +1414,12 @@ border-bottom-right-radius: 4px;
     }, 4000);
 
     setInterval(() => {
+      console.log(!isTrainList && !isInnerAdPushed);
+      console.log('1: ',isTrainList,' 2: ',isInnerAdPushed);
       if(!isTrainList && !isInnerAdPushed){
         pushInnerAd();
         isTrainList = false;
+        console.log('7: ',isTrainList,' 8: ',isInnerAdPushed)
       }
       if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
