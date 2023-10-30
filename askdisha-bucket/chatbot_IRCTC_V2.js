@@ -30,35 +30,55 @@ const isMob = () => {
   }
 };
 
-
-
-function pushInnerAd(){
+function pushInnerAd() {
   const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  console.log('2nd condition: ',window.location.href.includes("nget/booking/train-list") && !isMobileCheck);
-  console.log('3: ',isTrainList,' 4: ',isInnerAdPushed);
-  if(window.location.href.includes("nget/booking/train-list") && !isMobileCheck){
-    isTrainList=true;
-    isInnerAdPushed=true;
-    window.googletag = window.googletag || {cmd: []};
-    googletag.cmd.push(function() {
-    googletag.defineSlot('/21928950349,21748009408/irctc_300x250', [300, 250], 'div-gpt-ad-1698143516599-0').setTargeting("test", "responsive").setCollapseEmptyDiv(true).addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-  //Element creation for inner Ad
+  //   5500 / index.html;
+  //   nget/booking/train-list
+  if (
+    window.location.href.includes("nget/booking/train-list") &&
+    !isMobileCheck
+  ) {
+    isTrainList = true;
+    isInnerAdPushed = true;
+    coInnerSlot;
+    window.googletag = window.googletag || { cmd: [] };
+    googletag.cmd.push(function () {
+      coInnerSlot = googletag
+        .defineSlot(
+          "/21928950349,21748009408/irctc_300x250",
+          [300, 250],
+          "div-gpt-ad-1698143516599-0"
+        )
+        .setTargeting("test", "responsive")
+        .setCollapseEmptyDiv(true)
+        .addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+    //Element creation for inner Ad
     var filterDiv = document.querySelector(".filter-div");
-    let innerAd = document.createElement('div');
-    innerAd.style.width='300px';
-    innerAd.style.height='250px';
-    innerAd.id='div-gpt-ad-1698143516599-0';
+    let innerAd = document.createElement("div");
+    innerAd.style.width = "300px";
+    innerAd.style.height = "250px";
+    innerAd.style.margin = "auto";
+    innerAd.id = "div-gpt-ad-1698143516599-0";
     filterDiv.appendChild(innerAd);
     setTimeout(() => {
-      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1698143516599-0'); });
+      googletag.cmd.push(function () {
+        googletag.display("div-gpt-ad-1698143516599-0");
+      });
+
+      setInterval(function () {
+        if (document.getElementsByClassName("loginCloseBtn").length == 0) {
+          return;
+        }
+        googletag.pubads().refresh([coInnerSlot]);
+      }, 60000);
     }, 100);
-    console.log('5: ',isTrainList,' 6: ',isInnerAdPushed)
-  }
-  else{
-    isTrainList=false;
+
+    console.log("5: ", isTrainList, " 6: ", isInnerAdPushed);
+  } else {
+    isTrainList = false;
   }
 }
 
@@ -1406,6 +1426,11 @@ border-bottom-right-radius: 4px;
         adDownIframe2.style.display = "block";
         placeholderCard.style.display = "none";
       }
+      if (isSmall) {
+        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+          "none";
+        document.getElementById("dod").style.display = "none";
+      }
     };
     openBanner(false);
 
@@ -1414,14 +1439,45 @@ border-bottom-right-radius: 4px;
         openBanner(true);
     }, 4000);
 
+    function minim() {
+      isSmall = true;
+      if (true) dealOfDay.style.display = `none`;
+
+      remove320();
+      adDownIframe2.style.display = `none`;
+      maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
+      dishaWrapper.style.bottom = "200px";
+
+      dishaWrapper.style.right = "-18px";
+      launcher.style.transform = "rotate(-12deg)";
+      maxIcon.style.cssText = `
+        position: absolute;
+        right: 14px;
+        width: 14px;
+        top: -18px;
+        transform: rotate(-168deg);
+      `;
+
+      launcher.style.width = "50px";
+      launcher.style.height = "50px";
+      launcher.style.minWidth = "50px";
+
+      if (!isMobile) {
+        messageWrapper.style.display = "none";
+      }
+      s = true;
+      document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+        "none";
+      document.getElementById("dod").style.display = "none";
+    }
     setInterval(() => {
-      console.log(!isTrainList && !isInnerAdPushed);
-      console.log('1: ',isTrainList,' 2: ',isInnerAdPushed);
-      if(!isTrainList && !isInnerAdPushed){
+      if (!isTrainList && !isInnerAdPushed) {
+        //   console.log(!isTrainList && !isInnerAdPushed);
+        //   console.log('1: ',isTrainList,' 2: ',isInnerAdPushed);
         pushInnerAd();
         isTrainList = false;
-        console.log('7: ',isTrainList,' 8: ',isInnerAdPushed)
       }
+      //   irctc.co.in/nget/train-search
       if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
@@ -1429,7 +1485,7 @@ border-bottom-right-radius: 4px;
           "none";
         document.getElementById("dod").style.display = "none";
       } else if (!isSmall) {
-        console.log("HIT");
+        // console.log("HIT");
         document.getElementById("askDishaSdk").style.display = "flex";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
           "block";
@@ -1788,6 +1844,13 @@ border-bottom-right-radius: 4px;
       launcher.style.position = "relative";
     }
     document.addEventListener("click", function (event) {
+      let checkIsLogin = document.getElementsByClassName("loginCloseBtn");
+
+      if (checkIsLogin.length != 0) {
+        if (isMobile) {
+          minim();
+        }
+      }
       if (event.target.className == "launchAskDisha") {
         const inputs = document.querySelectorAll(".ui-inputtext");
 
