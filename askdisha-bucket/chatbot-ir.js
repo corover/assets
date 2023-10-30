@@ -108,15 +108,15 @@
     cdnScript6.src = "https://cdn.unibots.in/headerbidding/common/hb.js";
     cdnScript6.async = true;
 
-    //     let cdnScript4 = document.createElement("script");
-    //     cdnScript4.innerHTML = `
-    // window.googletag = window.googletag || {cmd: []};
-    // googletag.cmd.push(function() {
-    //   googletag.defineSlot('/22689425978/indianrail.gov.in_ub_320x50', [320, 50], 'div-gpt-ad-1654676845166-0').addService(googletag.pubads());
-    //   googletag.pubads().enableSingleRequest();
-    //   googletag.enableServices();
-    // });
-    // `;
+        let cdnScript4 = document.createElement("script");
+        cdnScript4.innerHTML = `
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/21748009408/indianrail.gov.in_ub_320x50', [320, 50], 'div-gpt-ad-1654676845166-0').addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+    `;
 
     document.head.appendChild(cdnScript3);
     document.head.appendChild(cdnScript6);
@@ -652,20 +652,20 @@
             `;
 
     const addDownAd = () => {
-      // googletag.cmd.push(function () {
-      //   IR_UB = googletag
-      //     .defineSlot(
-      //       "/22689425978/indianrail.gov.in_ub_320x50",
-      //       [320, 50],
-      //       "div-gpt-ad-1654676845166-0"
-      //     )
-      //     .addService(googletag.pubads());
-      //   googletag.pubads().enableSingleRequest();
-      //   googletag.enableServices();
-      // });
-      // googletag.cmd.push(function () {
-      //   googletag.display("div-gpt-ad-1654676845166-0");
-      // });
+      googletag.cmd.push(function () {
+        IR_UB = googletag
+          .defineSlot(
+            "/21748009408/indianrail.gov.in_ub_320x50",
+            [320, 50],
+            "div-gpt-ad-1654676845166-0"
+          )
+          .addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+      googletag.cmd.push(function () {
+        googletag.display("div-gpt-ad-1654676845166-0");
+      });
       toggle320x50(true);
     };
 
