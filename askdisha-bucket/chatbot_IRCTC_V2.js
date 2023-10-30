@@ -40,10 +40,9 @@ function pushInnerAd() {
   ) {
     isTrainList = true;
     isInnerAdPushed = true;
-    coInnerSlot;
     window.googletag = window.googletag || { cmd: [] };
     googletag.cmd.push(function () {
-      coInnerSlot = googletag
+    googletag
         .defineSlot(
           "/21928950349,21748009408/irctc_300x250",
           [300, 250],
@@ -61,19 +60,13 @@ function pushInnerAd() {
     innerAd.style.width = "300px";
     innerAd.style.height = "250px";
     innerAd.style.margin = "auto";
+    innerAd.style.background = "#E6E6E6"
     innerAd.id = "div-gpt-ad-1698143516599-0";
     filterDiv.appendChild(innerAd);
     setTimeout(() => {
       googletag.cmd.push(function () {
         googletag.display("div-gpt-ad-1698143516599-0");
       });
-
-      setInterval(function () {
-        if (document.getElementsByClassName("loginCloseBtn").length == 0) {
-          return;
-        }
-        googletag.pubads().refresh([coInnerSlot]);
-      }, 60000);
     }, 100);
 
     console.log("5: ", isTrainList, " 6: ", isInnerAdPushed);
@@ -1471,12 +1464,7 @@ border-bottom-right-radius: 4px;
       document.getElementById("dod").style.display = "none";
     }
     setInterval(() => {
-      if (!isTrainList && !isInnerAdPushed) {
-        //   console.log(!isTrainList && !isInnerAdPushed);
-        //   console.log('1: ',isTrainList,' 2: ',isInnerAdPushed);
-        pushInnerAd();
-        isTrainList = false;
-      }
+     
       //   irctc.co.in/nget/train-search
       if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
@@ -1844,6 +1832,11 @@ border-bottom-right-radius: 4px;
       launcher.style.position = "relative";
     }
     document.addEventListener("click", function (event) {
+
+       if (!isTrainList && !isInnerAdPushed) {
+        pushInnerAd();
+        isTrainList = false;
+      }
       let checkIsLogin = document.getElementsByClassName("loginCloseBtn");
 
       if (checkIsLogin.length != 0) {
