@@ -60,7 +60,6 @@ function pushInnerAd() {
     innerAd.style.width = "300px";
     innerAd.style.height = "250px";
     innerAd.style.margin = "auto";
-    innerAd.style.background = "#E6E6E6"
     innerAd.id = "div-gpt-ad-1698143516599-0";
     filterDiv.appendChild(innerAd);
     setTimeout(() => {
