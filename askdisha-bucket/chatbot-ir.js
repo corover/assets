@@ -86,7 +86,7 @@
   addAutoAdd();
   const adDownIframe = document.createElement("div");
   const toggle320x50 = (show) => {
-    // adDownIframe.style.display = show ? "block" : "none";
+    adDownIframe.style.display = show ? "block" : "none";
     adDownIframe.className = show ? "gpt320--show" : "gpt320--hide";
   };
 
@@ -104,12 +104,22 @@
     cdnScript3.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
     cdnScript3.async = true;
 
-    let cdnScript6 = document.createElement("script");
-    cdnScript6.src = "https://cdn.unibots.in/headerbidding/common/hb.js";
-    cdnScript6.async = true;
+    // let cdnScript6 = document.createElement("script");
+    // cdnScript6.src = "https://cdn.unibots.in/headerbidding/common/hb.js";
+    // cdnScript6.async = true;
 
-        let cdnScript4 = document.createElement("script");
-        cdnScript4.innerHTML = `
+    let script320 = document.createElement("script");
+    script320.innerHTML = `
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/21928950349,22623900910/indianrail_300x250', [300, 250], 'div-gpt-ad-1698143839353-0').addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+    `;
+
+    let cdnScript4 = document.createElement("script");
+    cdnScript4.innerHTML = `
     window.googletag = window.googletag || {cmd: []};
     googletag.cmd.push(function() {
       googletag.defineSlot('/21748009408/indianrail.gov.in_ub_320x50', [320, 50], 'div-gpt-ad-1654676845166-0').addService(googletag.pubads());
@@ -119,8 +129,9 @@
     `;
 
     document.head.appendChild(cdnScript3);
-    document.head.appendChild(cdnScript6);
-    // document.head.appendChild(cdnScript4);
+    // document.head.appendChild(cdnScript6);
+    document.head.appendChild(cdnScript4);
+    document.head.appendChild(script320);
   }
 
   function getMediaQuery(maxHeight) {
@@ -151,7 +162,7 @@
         height: "250px",
         width: "320px",
         margin: "24px",
-        scale: "0.8",
+        scale: "1",
       },
       button: {
         font: "22px",
@@ -185,7 +196,7 @@
           height: "250px",
           width: "320px",
           margin: "24px",
-          scale: "0.8",
+          scale: "1",
         },
         button: {
           font: "14px",
@@ -222,7 +233,7 @@
           height: "250px",
           width: "320px",
           margin: "24px",
-          scale: "0.8",
+          scale: "1",
         },
         button: {
           font: "22px",
@@ -259,7 +270,7 @@
           height: "250px",
           width: "320px",
           margin: "24px",
-          scale: "0.8",
+          scale: "1",
         },
         button: {
           font: "22px",
@@ -750,7 +761,7 @@
         z-index:1;
       `;
 
-    // document.body.appendChild(adDownIframe);
+    document.body.appendChild(adDownIframe);
     // document.body.appendChild(adDownIframe2);
 
     const dealOfDay = document.createElement("a");
@@ -1190,6 +1201,7 @@
                min-height: ${mediaObj.scrollHeight};
                max-height:${mediaObj.scrollHeight};
                overflow:auto;
+               
                ">
                 <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
                 width: 100%;
@@ -1201,10 +1213,7 @@
                 transform: scale(${mediaObj.videoAd.scale});
                 margin-top: ${mediaObj.videoAd.margin};
                 "></iframe>  
-        
-      
-                
-                <!-- <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width};margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale});"> -->
+                <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width};margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale});background:url('https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/300_250.png');background-repeat:no-repeat;background-size:contain !important"> 
               
                 </div>
             </div>
@@ -1213,13 +1222,16 @@
               
               `;
 
-    let adIframescroll = document.createElement("iframe");
-    adIframescroll.scrolling = "no";
-    adIframescroll.frameborder = "0";
-    adIframescroll.src =
-      "https://assistant.corover.mobi/irctc/coroversdsm/adchatbot.html";
+    let adIframescroll = document.createElement("div");
+    adIframescroll.id = "div-gpt-ad-1698143839353-0";
+
+    // adIframescroll.scrolling = "no";
+    // adIframescroll.frameborder = "0";
+    // adIframescroll.src =
+    //   "https://assistant.corover.mobi/irctc/coroversdsm/adchatbot.html";
     adIframescroll.style.cssText = `
-                   height: ${mediaObj.belowAD.height}; ${mediaObj.belowAD.width}; margin: 0 auto; overflow-y:hidden
+                   
+                   height: ${mediaObj.belowAD.height}; ${mediaObj.belowAD.width}; margin: 0 auto; overflow-y:hidden;";
                    `;
 
     // <div style="width: 320px; height: 50px; background-color: #dfdfdf;">
@@ -1253,6 +1265,12 @@
         document
           .getElementById("scrollIframeContainer")
           .appendChild(adIframescroll);
+
+        setTimeout(() => {
+          googletag.cmd.push(function () {
+            googletag.display("div-gpt-ad-1698143839353-0");
+          });
+        }, 100);
       } else {
         dishaWrapper.style.display = "flex";
         dealOfDay.style.display = "inline";
@@ -1261,12 +1279,21 @@
         placeholderCard.style.display = "none";
       }
     };
+
+    //ankur
     openBanner(false);
 
     setTimeout(() => {
-      if (!isOpen && window.innerWidth > 992) openBanner(true);
+      console.log("AAA", isOpen);
+      if (!isOpen && window.innerWidth > 992) {
+        console.log(isOpen);
+        openBanner(true);
+      }
     }, 4000);
 
+
+
+    
     document.getElementById("disha-banner-close").onclick = () =>
       openBanner(false);
 
