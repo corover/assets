@@ -122,7 +122,7 @@
     cdnScript4.innerHTML = `
     window.googletag = window.googletag || {cmd: []};
     googletag.cmd.push(function() {
-      googletag.defineSlot('/22689425978/indianrail.gov.in_ub_320x50', [320, 50], 'div-gpt-ad-1654676845166-0').addService(googletag.pubads());
+      googletag.defineSlot('/22689425978/indianrail.gov.in_ub_320x50', [320, 50], 'div-gpt-ad-1699617760427-0').addService(googletag.pubads());
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });
@@ -668,7 +668,7 @@
           .defineSlot(
             "/22689425978/indianrail.gov.in_ub_320x50",
             [320, 50],
-            "div-gpt-ad-1654676845166-0"
+            "div-gpt-ad-1699617760427-0"
           )
           .addService(googletag.pubads());
         googletag.pubads().enableSingleRequest();
