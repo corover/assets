@@ -124,7 +124,7 @@ const defineGPTslots = (all) => {
     if (all && !isMob()) {
       IR_UB_NEW = googletag
         .defineSlot(
-          "/22667711881/irctc_chatbot_300x250",
+          "/22686085093/irctc_chatbot_300x250",
           [300, 250],
           "div-gpt-ad-1695628300486-0"
         )
@@ -133,7 +133,7 @@ const defineGPTslots = (all) => {
 
     IR_UB = googletag
       .defineSlot(
-        "/22667711881/irctc_320x50",
+        "/22686085093/irctc_320x50",
         [320, 50],
         "div-gpt-ad-1695628181945-0"
       )
