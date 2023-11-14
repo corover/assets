@@ -675,7 +675,7 @@
         googletag.enableServices();
       });
       googletag.cmd.push(function () {
-        googletag.display("div-gpt-ad-1654676845166-0");
+        googletag.display("div-gpt-ad-1699617760427-0");
       });
       toggle320x50(true);
     };
@@ -735,7 +735,7 @@
     adDownIframe2.target = "_blank";
 
     const adDownScript = document.createElement("script");
-    adDownIframe.id = "div-gpt-ad-1654676845166-0";
+    adDownIframe.id = "div-gpt-ad-1699617760427-0";
 
     adDownScript.innerHTML = `
        
@@ -1776,7 +1776,7 @@
       "beforeend",
       `<style type="text/css">
          
-          #div-gpt-ad-1654676845166-0{
+          #div-gpt-ad-1699617760427-0{
         position: fixed !important;
         bottom: 0px !important;
         left: 0px !important;
@@ -1797,7 +1797,7 @@
        
 
         @media screen and (max-width:635px) {
-          // #div-gpt-ad-1654676845166-0
+          // #div-gpt-ad-1699617760427-0
           // {
           //   left: unset !important;
           // }
@@ -1834,7 +1834,7 @@
       "beforeend",
       `<style type="text/css">
          
-          #div-gpt-ad-1654676845166-0{
+          #div-gpt-ad-1699617760427-0{
             position: fixed !important;
             bottom: 0px !important;
             // left: 0px !important;
@@ -1856,7 +1856,7 @@
        
 
         @media screen and (max-width:635px) {
-          #div-gpt-ad-1654676845166-0
+          #div-gpt-ad-1699617760427-0
           {
             left: unset !important;
           }
