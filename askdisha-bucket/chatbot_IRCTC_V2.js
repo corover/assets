@@ -61,7 +61,7 @@ function pushInnerAd() {
     innerAd.style.height = "250px";
     innerAd.style.margin = "auto";
     innerAd.style.cssText =
-      "display: block !important; background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/300_250.png);background-origin: content-box;background-repeat: no-repeat;background-size: contain !important;";
+      "display: block !important; background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/300_250.png);background-origin: content-box;background-repeat: no-repeat;background-size: contain !important;width:300px;height:250px; margin-top:20px";
     innerAd.id = "div-gpt-ad-1698143516599-0";
     filterDiv.appendChild(innerAd);
     setTimeout(() => {
