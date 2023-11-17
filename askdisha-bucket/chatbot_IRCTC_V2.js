@@ -5,11 +5,13 @@ document.head.appendChild(cdnScript3);
 
 window.unibots = window.unibots || { cmd: [] };
 var IR_UB;
-var IR_UB_300x250;
-var IR_UB_300x250_2;
+var IR_UB_300x250; //FROM UB this should be removed
+var IR_UB_300x250_2; //FROM UB this should be removed
 var IR_UB_NEW;
-var IR_STICKY;
-var IR_300x250_IFRAME;
+var IR_STICKY; //FROM UB this should be removed
+var IR_300x250_IFRAME; //FROM UB this should be removed
+var Adunit_IR_UB_320x50 = "/22686085093/irctc_320x50"; //FROM UB: This value should be changed as instructed by the UB team
+var Adunit_IR_UB_300x250 = "/22686085093/irctc_chatbot_300x250"; //FROM UB: This value should be changed as instructed by the UB team
 var isSplashScreenOpen = false;
 var isTrainList = false;
 var isInnerAdPushed = false;
@@ -42,14 +44,12 @@ function pushInnerAd() {
     isInnerAdPushed = true;
     window.googletag = window.googletag || { cmd: [] };
     googletag.cmd.push(function () {
-    googletag
+      googletag
         .defineSlot(
           "/21928950349,21748009408/irctc_300x250",
           [300, 250],
           "div-gpt-ad-1698143516599-0"
         )
-        .setTargeting("test", "responsive")
-        .setCollapseEmptyDiv(true)
         .addService(googletag.pubads());
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
@@ -60,6 +60,8 @@ function pushInnerAd() {
     innerAd.style.width = "300px";
     innerAd.style.height = "250px";
     innerAd.style.margin = "auto";
+    innerAd.style.cssText =
+      "display: block !important; background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/300_250.png);background-origin: content-box;background-repeat: no-repeat;background-size: contain !important;";
     innerAd.id = "div-gpt-ad-1698143516599-0";
     filterDiv.appendChild(innerAd);
     setTimeout(() => {
@@ -124,7 +126,7 @@ const defineGPTslots = (all) => {
     if (all && !isMob()) {
       IR_UB_NEW = googletag
         .defineSlot(
-          "/22686085093/irctc_chatbot_300x250",
+          Adunit_IR_UB_300x250,
           [300, 250],
           "div-gpt-ad-1695628300486-0"
         )
@@ -132,11 +134,7 @@ const defineGPTslots = (all) => {
     }
 
     IR_UB = googletag
-      .defineSlot(
-        "/22686085093/irctc_320x50",
-        [320, 50],
-        "div-gpt-ad-1695628181945-0"
-      )
+      .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1695628181945-0")
       .addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
@@ -1463,7 +1461,6 @@ border-bottom-right-radius: 4px;
       document.getElementById("dod").style.display = "none";
     }
     setInterval(() => {
-     
       //   irctc.co.in/nget/train-search
       if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
@@ -1830,9 +1827,19 @@ border-bottom-right-radius: 4px;
       launcher.style.bottom = "0px";
       launcher.style.position = "relative";
     }
-    document.addEventListener("click", function (event) {
+    // Function to handle the scroll event
+    function handleScroll(event) {
+      // Your scroll event handling logic here
+      if (!isTrainList && !isInnerAdPushed) {
+        pushInnerAd();
+        isTrainList = false;
+      }
+    }
 
-       if (!isTrainList && !isInnerAdPushed) {
+    // Adding a scroll event listener to the document
+    document.addEventListener("scroll", handleScroll);
+    document.addEventListener("click", function (event) {
+      if (!isTrainList && !isInnerAdPushed) {
         pushInnerAd();
         isTrainList = false;
       }
