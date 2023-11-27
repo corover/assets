@@ -2,7 +2,7 @@
     var IR_UB;  //FROM UB: This should be added
     var IR_UB_300x250; //FROM UB: This should be added
     var Adunit_IR_UB_320x50 = "/22689425978/indianrail.gov.in_ub_320x50";  //FROM UB: This value should be changed as instructed by the UB team
-    var Adunit_IR_UB_300x250 = "/21928950349,22623900910/indianrail_300x250"; //FROM UB: This value should be changed as instructed by the UB team
+    var Adunit_IR_UB_300x250 = "/22689425978/indianrail_300x250"; //FROM UB: This value should be changed as instructed by the UB team
     let isMobile = false,
     isFirstTime = false;
   
@@ -148,7 +148,7 @@
     //   script320.innerHTML = `
     //   window.googletag = window.googletag || {cmd: []};
     //   googletag.cmd.push(function() {
-    //     googletag.defineSlot('/21928950349,22623900910/indianrail_300x250', [300, 250], 'div-gpt-ad-1698143839353-0').addService(googletag.pubads());
+    //     googletag.defineSlot('/22689425978/indianrail_300x250', [300, 250], 'div-gpt-ad-1698143839353-0').addService(googletag.pubads());
     //     googletag.pubads().enableSingleRequest();
     //     googletag.enableServices();
     //   });
