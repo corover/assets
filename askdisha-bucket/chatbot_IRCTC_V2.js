@@ -1472,16 +1472,19 @@ border-bottom-right-radius: 4px;
     setInterval(() => {
       //   irctc.co.in/nget/train-search
       if (
-        (!window.location.href.includes("irctc.co.in/nget/train-search") &&
-        !window.location.href.includes("irctc.co.in/nget/booking/train-list")) ||
-        (!window.location.href.includes("irctc.co.in/nget/train-search") &&!isMob)
+        (!window.location.href.includes("irctc.co.in/nget/train-search") && isMob)
       ) {
-      
-        openBanner(false);
-        document.getElementById("askDishaSdk").style.display = "none";
-        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "none";
-        document.getElementById("dod").style.display = "none";
+        if(
+          !window.location.href.includes("irctc.co.in/nget/booking/train-list")
+        )
+        {
+          openBanner(false);
+          document.getElementById("askDishaSdk").style.display = "none";
+          document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+            "none";
+          document.getElementById("dod").style.display = "none";
+        }
+
       } else if (!isSmall) {
     
         document.getElementById("askDishaSdk").style.display = "flex";
