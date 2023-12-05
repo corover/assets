@@ -32,21 +32,6 @@ const isMob = () => {
   }
 };
 
-const ifMobile = () => {
-  if (
-    navigator.userAgent.includes("Android") ||
-    navigator.userAgent.includes("webOS") ||
-    navigator.userAgent.includes("iPhone") ||
-    navigator.userAgent.includes("iPad") ||
-    navigator.userAgent.includes("iPod") ||
-    navigator.userAgent.includes("BlackBerry") ||
-    navigator.userAgent.includes("Windows Phone")
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-};
 
 function pushInnerAd() {
   const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -1487,7 +1472,15 @@ border-bottom-right-radius: 4px;
       if (
         (!window.location.href.includes("irctc.co.in/nget/train-search") &&
         (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
-        ifMobile
+        (
+          navigator.userAgent.includes("Android") ||
+    navigator.userAgent.includes("webOS") ||
+    navigator.userAgent.includes("iPhone") ||
+    navigator.userAgent.includes("iPad") ||
+    navigator.userAgent.includes("iPod") ||
+    navigator.userAgent.includes("BlackBerry") ||
+    navigator.userAgent.includes("Windows Phone")
+        )
         )) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
