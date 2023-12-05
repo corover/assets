@@ -1431,7 +1431,7 @@ border-bottom-right-radius: 4px;
     setTimeout(() => {
       if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
         openBanner(true);
-      else if(!isOpenTrainList && window.location.href.includes("nget/booking/train-list"))
+      else if(isOpenTrainList && window.location.href.includes("nget/booking/train-list"))
         openBanner(true);
         isOpenTrainList = true;
     }, 4000);
