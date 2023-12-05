@@ -383,6 +383,7 @@ const setPlaceholderMaxHeight = () => {
 
   if (true) {
     let isOpen = false,
+        isOpenTrainList = false,
       initialized = false;
     isSmall = false;
     let adActive = false;
@@ -1101,6 +1102,7 @@ border-top-right-radius: 4px;
       }
 
       isOpen = false;
+      isOpenTrainList = false;
       overlayDiv.style.display = "none";
       n.style.borderRadius = "50%";
       n.style.width = "1px";
@@ -1428,8 +1430,9 @@ border-bottom-right-radius: 4px;
     setTimeout(() => {
       if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
         openBanner(true);
-      else if(!isOpen && window.location.href.includes("nget/booking/train-list"))
+      else if(!isOpenTrainList && window.location.href.includes("nget/booking/train-list"))
         openBanner(true);
+        isOpenTrainList = false;
     }, 4000);
 
     function minim() {
@@ -1466,16 +1469,18 @@ border-bottom-right-radius: 4px;
     setInterval(() => {
       //   irctc.co.in/nget/train-search
       if (
+        window.location.href.includes("irctc.co.in/nget/booking/train-list" && isMobile)
+        ) {
+        openBanner(false);
+        document.getElementById("askDishaSdk").style.display = "none";
+        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+          "none";
+        document.getElementById("dod").style.display = "none";
+       } 
+      else if (
         !window.location.href.includes("irctc.co.in/nget/train-search") &&
         !window.location.href.includes("irctc.co.in/nget/booking/train-list")
         ) {
-          if (window.location.href.includes("irctc.co.in/nget/booking/train-list") && isMobile) {
-            openBanner(false);
-            document.getElementById("askDishaSdk").style.display = "none";
-            document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-              "none";
-            document.getElementById("dod").style.display = "none";
-           }
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
