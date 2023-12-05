@@ -1472,8 +1472,8 @@ border-bottom-right-radius: 4px;
     setInterval(() => {
       //   irctc.co.in/nget/train-search
       if (
-        !window.location.href.includes("irctc.co.in/nget/train-search") &&
-        !window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
+        (!window.location.href.includes("irctc.co.in/nget/train-search") &&
+        !window.location.href.includes("irctc.co.in/nget/booking/train-list")) ||
         !isMob
       ) {
       
