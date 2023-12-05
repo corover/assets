@@ -32,6 +32,22 @@ const isMob = () => {
   }
 };
 
+const ifMobile = () => {
+  if (
+    navigator.userAgent.includes("Android") ||
+    navigator.userAgent.includes("webOS") ||
+    navigator.userAgent.includes("iPhone") ||
+    navigator.userAgent.includes("iPad") ||
+    navigator.userAgent.includes("iPod") ||
+    navigator.userAgent.includes("BlackBerry") ||
+    navigator.userAgent.includes("Windows Phone")
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 function pushInnerAd() {
   const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //   5500 / index.html;
@@ -1432,7 +1448,7 @@ border-bottom-right-radius: 4px;
         openBanner(true);
       else if(!isOpenTrainList && window.location.href.includes("nget/booking/train-list"))
         openBanner(true);
-        isOpenTrainList = false;
+        isOpenTrainList = true;
     }, 4000);
 
     function minim() {
@@ -1469,7 +1485,7 @@ border-bottom-right-radius: 4px;
     setInterval(() => {
       //   irctc.co.in/nget/train-search
       if (
-        window.location.href.includes("irctc.co.in/nget/booking/train-list" && isMob)
+        window.location.href.includes("irctc.co.in/nget/booking/train-list" && ifMobile)
         ) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
