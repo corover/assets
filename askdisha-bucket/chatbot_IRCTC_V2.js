@@ -1428,6 +1428,8 @@ border-bottom-right-radius: 4px;
     setTimeout(() => {
       if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
         openBanner(true);
+      else if(window.location.href.includes("nget/booking/train-list"))
+        openBanner(true);
     }, 4000);
 
     function minim() {
@@ -1473,13 +1475,14 @@ border-bottom-right-radius: 4px;
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
           "none";
         document.getElementById("dod").style.display = "none";
-      } else if (window.location.href.includes("irctc.co.in/nget/booking/train-list") && !isMobile) {
-        openBanner(true);
-        document.getElementById("askDishaSdk").style.display = "flex";
-        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "block";
-        document.getElementById("dod").style.display = "inline";
-      } 
+       } 
+      //else if (window.location.href.includes("irctc.co.in/nget/booking/train-list") && !isMobile) {
+      //   openBanner(true);
+      //   document.getElementById("askDishaSdk").style.display = "flex";
+      //   document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+      //     "block";
+      //   document.getElementById("dod").style.display = "inline";
+      // } 
       else if (!isSmall) {
         // console.log("HIT");
         document.getElementById("askDishaSdk").style.display = "flex";
