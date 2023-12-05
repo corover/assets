@@ -1474,7 +1474,7 @@ border-bottom-right-radius: 4px;
       if (
         (!window.location.href.includes("irctc.co.in/nget/train-search") &&
         !window.location.href.includes("irctc.co.in/nget/booking/train-list")) ||
-        !isMob
+        (!window.location.href.includes("irctc.co.in/nget/train-search") &&!isMob)
       ) {
       
         openBanner(false);
