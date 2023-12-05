@@ -157,6 +157,14 @@ const setPlaceholderMaxHeight = () => {
   }
 };
 
+const setTrainList = () => {
+
+  if (window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
+  !isMob) {
+      let pla = document.getElementById("disha-placeholder-card");
+  }
+};
+
 (() => {
   let isMobile = false,
     isFirstTime = false;
@@ -1465,7 +1473,8 @@ border-bottom-right-radius: 4px;
       //   irctc.co.in/nget/train-search
       if (
         !window.location.href.includes("irctc.co.in/nget/train-search") &&
-        !window.location.href.includes("irctc.co.in/nget/booking/train-list")
+        !window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
+        !isMob
       ) {
       
         openBanner(false);
@@ -1922,6 +1931,7 @@ border-bottom-right-radius: 4px;
     setInterval(() => {
       checkLoginModel();
       setPlaceholderMaxHeight();
+      setTrainList();
     }, 1000);
 
     const overlayWidget = document.createElement("img");
