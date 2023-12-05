@@ -60,7 +60,7 @@ function pushInnerAd() {
     innerAd.style.width = "300px";
     innerAd.style.height = "250px";
     innerAd.style.margin = "auto";
-    innerAd.style.display = "block !important"
+    innerAd.style.display = "block !important";
     innerAd.style.cssText =
       "display: block !important; background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/300_250.png);background-origin: content-box;background-repeat: no-repeat;background-size: contain !important;display:block !important; width:300px;height:250px; margin-top:20px";
     innerAd.id = "div-gpt-ad-1698143516599-0";
@@ -1463,14 +1463,18 @@ border-bottom-right-radius: 4px;
     }
     setInterval(() => {
       //   irctc.co.in/nget/train-search
-      if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
+      if (
+        !window.location.href.includes("irctc.co.in/nget/train-search") ||
+        !window.location.href.includes("irctc.co.in/nget/booking/train-list")
+      ) {
+      
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
           "none";
         document.getElementById("dod").style.display = "none";
       } else if (!isSmall) {
-        // console.log("HIT");
+    
         document.getElementById("askDishaSdk").style.display = "flex";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
           "block";
