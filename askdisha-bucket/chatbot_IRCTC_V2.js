@@ -1486,9 +1486,7 @@ border-bottom-right-radius: 4px;
       //   irctc.co.in/nget/train-search
       if (
         (!window.location.href.includes("irctc.co.in/nget/train-search") &&
-        !window.location.href.includes("irctc.co.in/nget/booking/train-list")) ||
-        (
-          window.location.href.includes("irctc.co.in/nget/booking/train-list") && ifMobile)
+        !window.location.href.includes("irctc.co.in/nget/booking/train-list")) 
         ) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
