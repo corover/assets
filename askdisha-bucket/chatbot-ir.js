@@ -10,7 +10,7 @@
       let a = document.createElement("a");
       document.body.appendChild(a);
       a.style.display = "none";
-      a.href = "https://irctc.corover.ai/#webIR";
+      a.href = "https://askdisha.irctc.co.in/#webIR";
       a.target = "_blank";
       a.click();
       document.body.removeChild(a);
@@ -771,7 +771,7 @@
       const adDownIframe2 = document.createElement("a");
       adDownIframe2.innerHTML = `
            `;
-      adDownIframe2.href = "https://irctc.corover.ai/";
+      adDownIframe2.href = "https://askdisha.irctc.co.in/";
       adDownIframe2.target = "_blank";
   
       const adDownScript = document.createElement("script");
@@ -876,7 +876,7 @@
       n.id = "Disha-Bot";
       n.setAttribute(
         "allow",
-        "geolocation https://irctc.corover.ai/; microphone https://irctc.corover.ai/; camera; otp-credentials; midi; accelerometer; gyroscope; payment"
+        "geolocation https://askdisha.irctc.co.in/; microphone https://askdisha.irctc.co.in/; camera; otp-credentials; midi; accelerometer; gyroscope; payment"
       );
       n.style.width = "100%";
       n.style.height = "85%";
@@ -1340,7 +1340,7 @@
   
       function botOpen() {
         if (isMobile) {
-          // window.open("https://irctc.corover.ai/#webIR", "_blank");
+          // window.open("https://askdisha.irctc.co.in/#webIR", "_blank");
           openMock();
           return;
         }
@@ -1377,7 +1377,7 @@
   
         if (!initialized && n.src == "about:blank") {
           // n.src = `https://assistant.corover.mobi/eticket/`;
-          n.contentWindow.location.replace(`https://irctc.corover.ai/`);
+          n.contentWindow.location.replace(`https://askdisha.irctc.co.in/`);
           // console.log("Fresh Load");
           initialized = true;
           // document.getElementById("feedBackIframe").src =
