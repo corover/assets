@@ -1332,6 +1332,14 @@
         }
       }, 4000);
   
+      if(isMobile){
+        let ubInt_320x50 = setInterval(()=>{
+          if(document.getElementById("div-gpt-ad-1699617760427-0")){
+          clearInterval(ubInt_320x50); 
+          googletag.pubads().refresh([IR_UB])
+          }
+        },1000)
+    }
   
   
       
