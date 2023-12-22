@@ -10,8 +10,8 @@ var IR_UB_300x250_2; //FROM UB this should be removed
 var IR_UB_NEW;
 var IR_STICKY; //FROM UB this should be removed
 var IR_300x250_IFRAME; //FROM UB this should be removed
-var Adunit_IR_UB_320x50 = "/22667711881/irctc_320x50"; //FROM UB: This value should be changed as instructed by the UB team
-var Adunit_IR_UB_300x250 = "/22667711881/irctc_chatbot_300x250"; //FROM UB: This value should be changed as instructed by the UB team
+var Adunit_IR_UB_320x50 = "/22686085093/irctc_320x50"; //FROM UB: This value should be changed as instructed by the UB team
+var Adunit_IR_UB_300x250 = "/22686085093/irctc_chatbot_300x250"; //FROM UB: This value should be changed as instructed by the UB team
 var isSplashScreenOpen = false;
 var isTrainList = false;
 var isInnerAdPushed = false;
@@ -47,7 +47,7 @@ function pushInnerAd() {
     googletag.cmd.push(function () {
       googletag
         .defineSlot(
-          "/22667711881/irctc_300x250",
+          "/22686085093/irctc_300x250",
           [300, 250],
           "div-gpt-ad-1698143516599-0"
         )
