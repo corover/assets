@@ -36,6 +36,18 @@
     "address": "Mandi Bamora, Madhya Pradesh 464224"
   },
   {
+    "name": "AYODHYA DHAM JN",
+    "code": "AY",
+    "utterances": ["AYODHYA", "AYODHYA DHAM","Ram mandir"],
+    "name_hi": "अयोध्या धाम जंक्शन",
+    "district": "Ayodhya",
+    "state": "Uttar Pradesh",
+    "trainCount": "46",
+    "latitude": 26.78999944049032,
+    "longitude": 82.20022469747603,
+    "address": "Ayodhya, Uttar Pradesh 224123"
+  },
+  {
     "name": "MAHBUBABAD",
     "code": "MABD",
     "utterances": [],
