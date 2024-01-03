@@ -46968,6 +46968,18 @@
     "address": "Jammu Cantt, Jammu and Kashmir"
   },
   {
+    "name": "JAMMU TAWI",
+    "code": "JAT",
+    "utterances": [],
+    "name_hi": "जम्मू तवी",
+    "district": "Jammu",
+    "state": "Jammu and Kashmir",
+    "trainCount": "107",
+    "latitude": 32.706975,
+    "longitude": 74.880117,
+    "address": "Jammu Cantt, Jammu and Kashmir"
+  },
+  {
     "name": "JHAUA",
     "code": "JAU",
     "utterances": [],
