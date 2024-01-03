@@ -17760,10 +17760,10 @@
     "address": "Sri Potti Sriramulu Nellore District, Andhra Pradesh 524152"
   },
   {
-    "name": "AYODHYA",
+    "name": "AYODHYA DHAM JN",
     "code": "AY",
-    "utterances": ["faizabad", "ayodhya"],
-    "name_hi": "अयोध्या",
+    "utterances": ["faizabad", "ayodhya","AYODHYA", "AYODHYA DHAM","Ram mandir"],
+    "name_hi": "अयोध्या धाम जंक्शन",
     "district": "Ayodhya",
     "state": "Uttar Pradesh",
     "trainCount": "46",
@@ -46954,18 +46954,6 @@
     "latitude": 22.03337555,
     "longitude": 71.2041375,
     "address": "Kailashnagar Rd, Kailash Nagar, Jasdan, Gujarat 360050"
-  },
-  {
-    "name": "JAMMU TAWI",
-    "code": "JAT",
-    "utterances": [],
-    "name_hi": "जम्मू तवी",
-    "district": "Jammu",
-    "state": "Jammu and Kashmir",
-    "trainCount": "107",
-    "latitude": 32.706975,
-    "longitude": 74.880117,
-    "address": "Jammu Cantt, Jammu and Kashmir"
   },
   {
     "name": "JAMMU TAWI",
