@@ -19240,15 +19240,15 @@
     "name_gu": "અલરુરુ રોડ"
   },
   {
-    "name": "AYODHYA",
+    "name": "AYODHYA DHAM JN",
     "code": "AY",
-    "utterances": ["faizabad", "ayodhya"],
-    "name_hi": "अयोध्या",
+    "utterances": ["faizabad", "ayodhya","AYODHYA", "AYODHYA DHAM","Ram mandir"],
+    "name_hi": "अयोध्या धाम जंक्शन",
     "district": "Ayodhya",
     "state": "Uttar Pradesh",
     "trainCount": "46",
-    "latitude": 26.787784,
-    "longitude": 82.200604,
+    "latitude": 26.78999944049032,
+    "longitude": 82.20022469747603,
     "address": "Dharmakata, Ayodhya, Uttar Pradesh 224123",
     "name_gu": "અયોધ્યા"
   },
