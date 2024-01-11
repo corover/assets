@@ -1466,24 +1466,25 @@ border-bottom-right-radius: 4px;
     }
     setInterval(() => {
       //   irctc.co.in/nget/train-search
-      if (
-        (!window.location.href.includes("irctc.co.in/nget/train-search") ) &&
-        (
-          navigator.userAgent.includes("Android") ||
-    navigator.userAgent.includes("webOS") ||
-    navigator.userAgent.includes("iPhone") ||
-    navigator.userAgent.includes("iPad") ||
-    navigator.userAgent.includes("iPod") ||
-    navigator.userAgent.includes("BlackBerry") ||
-    navigator.userAgent.includes("Windows Phone")
-        )
-        ) {
-        openBanner(false);
-        document.getElementById("askDishaSdk").style.display = "none";
-        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "none";
-        document.getElementById("dod").style.display = "none";
-       } 
+  //     if (
+  //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
+  //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
+  //       (
+  //         navigator.userAgent.includes("Android") ||
+  //   navigator.userAgent.includes("webOS") ||
+  //   navigator.userAgent.includes("iPhone") ||
+  //   navigator.userAgent.includes("iPad") ||
+  //   navigator.userAgent.includes("iPod") ||
+  //   navigator.userAgent.includes("BlackBerry") ||
+  //   navigator.userAgent.includes("Windows Phone")
+  //       )
+  //       )) {
+  //       openBanner(false);
+  //       document.getElementById("askDishaSdk").style.display = "none";
+  //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+  //         "none";
+  //       document.getElementById("dod").style.display = "none";
+  //      } 
   //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") && 
   //      !isOpenTrainList &&
   //      (
@@ -1502,7 +1503,14 @@ border-bottom-right-radius: 4px;
   //       document.getElementById("dod").style.display = "inline";
   //       isOpenTrainList=true;
   //      }
-      else if (!isSmall) {
+  //     else if (!isSmall) {
+    if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
+        openBanner(false);
+        document.getElementById("askDishaSdk").style.display = "none";
+        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+          "none";
+        document.getElementById("dod").style.display = "none";
+      } else if (!isSmall) {
         // console.log("HIT");
         document.getElementById("askDishaSdk").style.display = "flex";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
