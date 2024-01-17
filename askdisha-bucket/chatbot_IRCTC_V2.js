@@ -408,7 +408,8 @@ const setPlaceholderMaxHeight = () => {
     let actionTimerFlag = false;
 
     let dishaWrapper = document.createElement("div");
-    dishaWrapper.style.cssText = `
+    if(!window.location.href.includes("nget/booking/train-list")){
+      dishaWrapper.style.cssText = `
   position: fixed;
   z-index: 999999999;
   background-color: transparent;
@@ -420,38 +421,84 @@ const setPlaceholderMaxHeight = () => {
   width: fit-content;
   max-width: 95%;
   `;
+    }
+    else{
+      dishaWrapper.style.cssText = `
+  position: fixed;
+  z-index: 999999999;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  bottom: 54px;
+  width: fit-content;
+  max-width: 95%;
+  `;
+    }
+    
     dishaWrapper.id = "askDishaSdk";
 
     function setDishaWrapper() {
       // if (!isMobile || window.location.href.includes("indianrail"))
-      if (true) {
-        dishaWrapper.style.cssText = `
-  position: fixed;
-  z-index: 999999999;
-  background-color: transparent;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  bottom: 54px;
-  right: 20px;
-  width: fit-content;
-  max-width: 95%;
-  `;
-      } else {
-        dishaWrapper.style.cssText = `
-  position: fixed;
-  z-index: 999999999;
-  background-color: transparent;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  bottom: 8px;
-  right: 8px;
-  width: fit-content;
-  max-width: 95%;
-  z-index:9999999999999;
-  `;
+      if(!window.location.href.includes("nget/booking/train-list")){
+        if (true) {
+          dishaWrapper.style.cssText = `
+    position: fixed;
+    z-index: 999999999;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 54px;
+    right: 20px;
+    width: fit-content;
+    max-width: 95%;
+    `;
+        } else {
+          dishaWrapper.style.cssText = `
+    position: fixed;
+    z-index: 999999999;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 8px;
+    right: 8px;
+    width: fit-content;
+    max-width: 95%;
+    z-index:9999999999999;
+    `;
+        }
       }
+      else{
+        if (true) {
+          dishaWrapper.style.cssText = `
+    position: fixed;
+    z-index: 999999999;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    bottom: 54px;
+    width: fit-content;
+    max-width: 95%;
+    `;
+        } else {
+          dishaWrapper.style.cssText = `
+    position: fixed;
+    z-index: 999999999;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    bottom: 8px;
+    width: fit-content;
+    max-width: 95%;
+    z-index:9999999999999;
+    `;
+        }
+      }
+      
     }
 
     // dishaWrapper.draggable = true;
@@ -803,7 +850,26 @@ height:50px;
 border:2px;
 cursor:pointer
 `;
-    } else {
+    }
+    else if (window.location.href.includes("nget/booking/train-list")) 
+    {
+      adDownIframe.style.cssText = `
+      position:fixed;
+      bottom:0px;
+      width:320px;
+      height:50px;
+      border:2px;
+      `;
+           adDownIframe2.style.cssText = `
+      position:fixed;
+      bottom:0px;
+      width:320px;
+      height:50px;
+      border:2px;
+      
+      `;
+    }
+    else {
       adDownIframe.style.cssText = `
  position:fixed;
  bottom:0px;
@@ -857,6 +923,12 @@ border-top-right-radius: 4px;
    position: fixed;
    bottom:42px;
    right:150px;
+   `;
+   else if(window.location.href.includes("nget/booking/train-list"))
+      dealOfDay.style.cssText = `
+   position: fixed;
+   bottom:40px;
+   left:124px;
    `;
     else
       dealOfDay.style.cssText = `
@@ -1127,7 +1199,8 @@ border-top-right-radius: 4px;
 
     const placeholderCard = document.createElement("div");
     placeholderCard.id = "disha-placeholder-card";
-    placeholderCard.style.cssText = `
+    if(!window.location.href.includes("nget/booking/train-list")){
+      placeholderCard.style.cssText = `
  width: ${mediaObj.placeholderWidth};
  position: fixed;
  bottom: 0px;
@@ -1142,7 +1215,26 @@ height:auto;
  overflow-y:hidden;
  max-height:100vh;
      `;
-    placeholderCard.innerHTML = `
+    }
+    else{
+      placeholderCard.style.cssText = `
+ width: ${mediaObj.placeholderWidth};
+ position: fixed;
+ bottom: 0px;
+ border-top-left-radius: 23px;
+ border-top-right-radius: 23px;
+ z-index: 2147483647;
+ background-color: white;
+height:auto;
+ display: block;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ overflow-y:hidden;
+ max-height:100vh;
+     `;
+    }
+    
+    if(!window.location.href.includes("nget/booking/train-list")){
+      placeholderCard.innerHTML = `
    
 <a href="https://amzn.to/3i4lgCr" target="_blank" style=" 
 display: none;
@@ -1358,6 +1450,227 @@ border-bottom-right-radius: 4px;
  </div>
      </div>
    `;
+    }
+    else{
+      placeholderCard.innerHTML = `
+   
+<a href="https://amzn.to/3i4lgCr" target="_blank" style=" 
+display: none;
+padding: 6px 20px;
+position: absolute;
+left: 0px;
+top: 75%;
+background-color: white;
+text-decoration: none;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+min-width: 68px;
+z-index: 999;
+border-top-right-radius: 18px;
+border-bottom-right-radius: 18px;
+">
+
+<img style="    width: 40px;
+display: block;
+margin: 0 auto;" src="https://dishav3.ap-south-1.linodeobjects.com/amazon.png" alt="AmazonNudge" loading="lazy">
+<p style="    font: 700 10px Montserrat,Verdana;
+font-weight: 700;
+text-align: center;
+color: #ed193b;
+margin-top: 1px;
+margin-bottom: -2px;">SALE
+</p>
+</a>
+     <img decoding="async" src="https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png" id="disha-banner-close" style="    z-index: 9;
+     background: #8181815e;
+     width: ${mediaObj.cross.size};
+     height: ${mediaObj.cross.size};
+     cursor: pointer;
+     display: block;
+     border-radius: 50%;
+     right: ${mediaObj.cross.right};
+     top: ${mediaObj.cross.top};
+     position: absolute;
+     padding: ${mediaObj.cross.padding};">
+ 
+     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}" id="disha-image">
+       <img
+         src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-1.gif"
+         style="width: 100%; height: 100%; border-radius: 8px"
+         alt=""
+         decoding = "async"
+       />
+     </div>
+     <div style="    display: flex;
+     justify-content: center;
+     align-items: center;
+     column-gap: 6px;
+     width:96%;
+     margin: 0px auto;
+     ">
+     <div
+       style="
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #0068ff;
+         width: 50%;
+         margin: 0 auto;
+         border-radius: 10px;
+         padding: ${mediaObj.button.padding} 0px;
+         cursor: pointer;
+       "
+       id="disha-banner-button"
+     >
+       <div
+         style="
+           width: ${mediaObj.button.icon};
+           height: ${mediaObj.button.icon};
+           border-radius: 50%;
+           background: white;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+         "
+       >
+         <img
+           src="https://sdk.irctc.corover.ai/askdisha-bucket/train-blue.svg"
+           alt=""
+           style="width: 46%"
+           decoding = "async"
+         />
+       </div>
+       <p
+         style="
+           margin: 0;
+           margin-left: ${mediaObj.button.marginLeft};
+           font-family: sans-serif;
+           font-size: ${mediaObj.button.font};
+           color: white;
+         "
+       >
+         Book Ticket
+       </p>
+     </div>
+     <div
+       style="
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #0068ff;
+         width: 50%;
+         margin: 0 auto;
+         border-radius: 10px;
+         padding: ${mediaObj.button.padding} 0px;
+         cursor: pointer;
+       "
+       id="disha-banner-button2"
+     >
+       <div
+         style="
+           width: ${mediaObj.button.icon};
+           height: ${mediaObj.button.icon};
+           border-radius: 50%;
+           background: transparent;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+         "
+       >
+         <img
+           src="https://sdk.irctc.corover.ai/askdisha-bucket/disha-support.png"
+           alt=""
+           style="width: 80%"
+           decoding = "async"
+         />
+       </div>
+       <p
+         style="
+           margin: 0;
+           margin-left: ${mediaObj.button.marginLeft};
+           font-family: sans-serif;
+           font-size: ${mediaObj.button.font};
+           color: white;
+         "
+       >
+         Support
+       </p>
+     </div>
+     </div>
+     <div style=" text-align: center;
+     font-family: sans-serif;">
+     
+     <p style="    margin: 0;
+     font-size: 11px;
+     margin-top: 5px;
+     font-weight: 600;
+     color: #555555;">...in a <span style="color: #4c84ea;">fast</span>, <span style="color: #4c84ea;">easy</span> and <span style="color: #4c84ea;">secure</span> way   <span style="    font-size: 9px;
+     margin: 0;
+     color: slategray;
+     margin-top: 0px;">(Without your IRCTC password)</span></p>
+   
+     </div>
+     <div
+       style="
+         width: 100%;
+         background-color: #eaeaea;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin-top: ${mediaObj.WhiteMarginTop};
+       "
+     >
+       <a
+         href="https://amzn.to/34WK1uY"
+         target="_blank"
+         style="display: none; margin-bottom: -10px"
+       >
+         <img
+           width="156px"
+           src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png"
+           decoding="async"
+         />
+       </a>
+    <div id="splash-scrollable" style="    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:column;
+    align-items: center;
+    min-height: ${mediaObj.scrollHeight};
+    max-height:${mediaObj.scrollHeight};
+    overflow:auto;
+    position:relative;
+    ">
+
+    <p style="
+    display: none;
+position: absolute;
+background: white;
+top: 0px;
+left: 21px;
+padding: 0px 10px;
+border-bottom-right-radius: 4px;
+">Ad</p>
+     
+    <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
+    width: 100%;
+    min-height: ${mediaObj.videoAd.height};
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    background-color:#ece5db;
+    transform: scale(${mediaObj.videoAd.scale});
+    margin-top: ${mediaObj.videoAd.margin};
+    display:none;
+    "></iframe>  
+
+    <div id='div-gpt-ad-1695628300486-0'>
+   </div>      
+ </div>
+     </div>
+   `;
+    }
+    
     let adIframescroll = document.createElement("iframe");
     adIframescroll.scrolling = "no";
     adIframescroll.frameborder = "0";
@@ -1465,52 +1778,45 @@ border-bottom-right-radius: 4px;
       document.getElementById("dod").style.display = "none";
     }
     setInterval(() => {
-      //   irctc.co.in/nget/train-search
-  //     if (
-  //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
-  //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
-  //       (
-  //         navigator.userAgent.includes("Android") ||
-  //   navigator.userAgent.includes("webOS") ||
-  //   navigator.userAgent.includes("iPhone") ||
-  //   navigator.userAgent.includes("iPad") ||
-  //   navigator.userAgent.includes("iPod") ||
-  //   navigator.userAgent.includes("BlackBerry") ||
-  //   navigator.userAgent.includes("Windows Phone")
-  //       )
-  //       )) {
-  //       openBanner(false);
-  //       document.getElementById("askDishaSdk").style.display = "none";
-  //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-  //         "none";
-  //       document.getElementById("dod").style.display = "none";
-  //      } 
-  //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") && 
-  //      !isOpenTrainList &&
-  //      (
-  //       !navigator.userAgent.includes("Android") ||
-  // !navigator.userAgent.includes("webOS") ||
-  // !navigator.userAgent.includes("iPhone") ||
-  // !navigator.userAgent.includes("iPad") ||
-  // !navigator.userAgent.includes("iPod") ||
-  // !navigator.userAgent.includes("BlackBerry") ||
-  // !navigator.userAgent.includes("Windows Phone")
-  //     )){
-  //       openBanner(true);
-  //       document.getElementById("askDishaSdk").style.display = "flex";
-  //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-  //         "block";
-  //       document.getElementById("dod").style.display = "inline";
-  //       isOpenTrainList=true;
-  //      }
-  //     else if (!isSmall) {
-    if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
+        irctc.co.in/nget/train-search
+      if (
+        (!window.location.href.includes("irctc.co.in/nget/train-search") &&
+        (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
+        (
+          navigator.userAgent.includes("Android") ||
+    navigator.userAgent.includes("webOS") ||
+    navigator.userAgent.includes("iPhone") ||
+    navigator.userAgent.includes("iPad") ||
+    navigator.userAgent.includes("iPod") ||
+    navigator.userAgent.includes("BlackBerry") ||
+    navigator.userAgent.includes("Windows Phone")
+        )
+        )) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
           "none";
         document.getElementById("dod").style.display = "none";
-      } else if (!isSmall) {
+       } 
+       else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") && 
+       !isOpenTrainList &&
+       (
+        !navigator.userAgent.includes("Android") ||
+  !navigator.userAgent.includes("webOS") ||
+  !navigator.userAgent.includes("iPhone") ||
+  !navigator.userAgent.includes("iPad") ||
+  !navigator.userAgent.includes("iPod") ||
+  !navigator.userAgent.includes("BlackBerry") ||
+  !navigator.userAgent.includes("Windows Phone")
+      )){
+        openBanner(true);
+        document.getElementById("askDishaSdk").style.display = "flex";
+        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+          "block";
+        document.getElementById("dod").style.display = "inline";
+        isOpenTrainList=true;
+       }
+      else if (!isSmall) {
         // console.log("HIT");
         document.getElementById("askDishaSdk").style.display = "flex";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
