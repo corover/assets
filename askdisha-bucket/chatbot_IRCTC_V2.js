@@ -2360,7 +2360,7 @@ display:none;
       console.log(err);
     }
   }
-
+removeAd()
   const reloadADs = (all) => {
     defineGPTslots(all);
     googletag.cmd.push(function () {
