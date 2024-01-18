@@ -2126,8 +2126,10 @@ display:none;
 
     document.head.appendChild(videoScript);
   }
-
-  function setVideoAd(setHeader) {
+function setVideoAd(setHeader) {
+console.log(setHeader);
+}
+  function setVideoAd1(setHeader) {
     setVideoAdHeader();
     try {
       let leftover = document.querySelectorAll("#adContainer1")[0];
