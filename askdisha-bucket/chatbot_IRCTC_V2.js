@@ -1873,7 +1873,7 @@ border-bottom-right-radius: 4px;
     function handleScroll(event) {
       // Your scroll event handling logic here
       if (!isTrainList && !isInnerAdPushed) {
-        pushInnerAd();
+        // pushInnerAd();
         isTrainList = false;
       }
     }
@@ -1882,7 +1882,7 @@ border-bottom-right-radius: 4px;
     document.addEventListener("scroll", handleScroll);
     document.addEventListener("click", function (event) {
       if (!isTrainList && !isInnerAdPushed) {
-        pushInnerAd();
+        // pushInnerAd();
         isTrainList = false;
       }
       let checkIsLogin = document.getElementsByClassName("loginCloseBtn");
