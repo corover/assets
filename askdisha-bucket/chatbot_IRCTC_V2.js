@@ -1,82 +1,82 @@
-let cdnScript3 = document.createElement("script");
-cdnScript3.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-cdnScript3.async = true;
-document.head.appendChild(cdnScript3);
+// let cdnScript3 = document.createElement("script");
+// cdnScript3.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+// cdnScript3.async = true;
+// document.head.appendChild(cdnScript3);
 
-window.unibots = window.unibots || { cmd: [] };
-var IR_UB;
-var IR_UB_300x250; //FROM UB this should be removed
-var IR_UB_300x250_2; //FROM UB this should be removed
-var IR_UB_NEW;
-var IR_STICKY; //FROM UB this should be removed
-var IR_300x250_IFRAME; //FROM UB this should be removed
-var Adunit_IR_UB_320x50 = "/21928950349,21748009408/irctc_320x50"; //FROM UB: This value should be changed as instructed by the UB team
-var Adunit_IR_UB_300x250 = "/21928950349,21748009408/irctc_chatbot_300x250"; //FROM UB: This value should be changed as instructed by the UB team
-var isSplashScreenOpen = false;
-var isTrainList = false;
-var isInnerAdPushed = false;
+// window.unibots = window.unibots || { cmd: [] };
+// var IR_UB;
+// var IR_UB_300x250; //FROM UB this should be removed
+// var IR_UB_300x250_2; //FROM UB this should be removed
+// var IR_UB_NEW;
+// var IR_STICKY; //FROM UB this should be removed
+// var IR_300x250_IFRAME; //FROM UB this should be removed
+// var Adunit_IR_UB_320x50 = "/21928950349,21748009408/irctc_320x50"; //FROM UB: This value should be changed as instructed by the UB team
+// var Adunit_IR_UB_300x250 = "/21928950349,21748009408/irctc_chatbot_300x250"; //FROM UB: This value should be changed as instructed by the UB team
+// var isSplashScreenOpen = false;
+// var isTrainList = false;
+// var isInnerAdPushed = false;
 
-const isMob = () => {
-  if (
-    navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/webOS/i) ||
-    navigator.userAgent.match(/iPhone/i) ||
-    navigator.userAgent.match(/iPad/i) ||
-    navigator.userAgent.match(/iPod/i) ||
-    navigator.userAgent.match(/BlackBerry/i) ||
-    navigator.userAgent.match(/Windows Phone/i)
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-};
+// const isMob = () => {
+//   if (
+//     navigator.userAgent.match(/Android/i) ||
+//     navigator.userAgent.match(/webOS/i) ||
+//     navigator.userAgent.match(/iPhone/i) ||
+//     navigator.userAgent.match(/iPad/i) ||
+//     navigator.userAgent.match(/iPod/i) ||
+//     navigator.userAgent.match(/BlackBerry/i) ||
+//     navigator.userAgent.match(/Windows Phone/i)
+//   ) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
 
 
-function pushInnerAd() {
-  const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  //   5500 / index.html;
-  //   nget/booking/train-list
-  if (
-    window.location.href.includes("nget/booking/train-list") &&
-    !isMobileCheck
-  ) {
-    isTrainList = true;
-    isInnerAdPushed = true;
-    window.googletag = window.googletag || { cmd: [] };
-    googletag.cmd.push(function () {
-      googletag
-        .defineSlot(
-          "/21928950349,21748009408/irctc_300x250",
-          [300, 250],
-          "div-gpt-ad-1698143516599-0"
-        )
-        .addService(googletag.pubads());
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-    });
-    //Element creation for inner Ad
-    var filterDiv = document.querySelector(".filter-div");
-    let innerAd = document.createElement("div");
-    innerAd.style.width = "300px";
-    innerAd.style.height = "250px";
-    innerAd.style.margin = "auto";
-    innerAd.style.display = "block !important"
-    innerAd.style.cssText =
-      "display: block !important;background-origin: content-box;background-repeat: no-repeat;background-size: contain !important;display:block !important; width:300px;height:250px; margin-top:20px";
-    innerAd.id = "div-gpt-ad-1698143516599-0";
-    filterDiv.appendChild(innerAd);
-    setTimeout(() => {
-      googletag.cmd.push(function () {
-        googletag.display("div-gpt-ad-1698143516599-0");
-      });
-    }, 100);
+// function pushInnerAd() {
+//   const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+//   //   5500 / index.html;
+//   //   nget/booking/train-list
+//   if (
+//     window.location.href.includes("nget/booking/train-list") &&
+//     !isMobileCheck
+//   ) {
+//     isTrainList = true;
+//     isInnerAdPushed = true;
+//     window.googletag = window.googletag || { cmd: [] };
+//     googletag.cmd.push(function () {
+//       googletag
+//         .defineSlot(
+//           "/21928950349,21748009408/irctc_300x250",
+//           [300, 250],
+//           "div-gpt-ad-1698143516599-0"
+//         )
+//         .addService(googletag.pubads());
+//       googletag.pubads().enableSingleRequest();
+//       googletag.enableServices();
+//     });
+//     //Element creation for inner Ad
+//     var filterDiv = document.querySelector(".filter-div");
+//     let innerAd = document.createElement("div");
+//     innerAd.style.width = "300px";
+//     innerAd.style.height = "250px";
+//     innerAd.style.margin = "auto";
+//     innerAd.style.display = "block !important"
+//     innerAd.style.cssText =
+//       "display: block !important;background-origin: content-box;background-repeat: no-repeat;background-size: contain !important;display:block !important; width:300px;height:250px; margin-top:20px";
+//     innerAd.id = "div-gpt-ad-1698143516599-0";
+//     filterDiv.appendChild(innerAd);
+//     setTimeout(() => {
+//       googletag.cmd.push(function () {
+//         googletag.display("div-gpt-ad-1698143516599-0");
+//       });
+//     }, 100);
 
-    console.log("5: ", isTrainList, " 6: ", isInnerAdPushed);
-  } else {
-    isTrainList = false;
-  }
-}
+//     console.log("5: ", isTrainList, " 6: ", isInnerAdPushed);
+//   } else {
+//     isTrainList = false;
+//   }
+// }
 
 let overlayDiv = document.createElement("div");
 overlayDiv.style.cssText = `
@@ -123,25 +123,25 @@ margin-top: 10px;
 margin-bottom: 0px;">Please Wait...</p>    
 `;
 
-const defineGPTslots = (all) => {
-  googletag.cmd.push(function () {
-    if (all && !isMob()) {
-      IR_UB_NEW = googletag
-        .defineSlot(
-          Adunit_IR_UB_300x250,
-          [300, 250],
-          "div-gpt-ad-1695628300486-0"
-        )
-        .addService(googletag.pubads());
-    }
+// const defineGPTslots = (all) => {
+//   googletag.cmd.push(function () {
+//     if (all && !isMob()) {
+//       IR_UB_NEW = googletag
+//         .defineSlot(
+//           Adunit_IR_UB_300x250,
+//           [300, 250],
+//           "div-gpt-ad-1695628300486-0"
+//         )
+//         .addService(googletag.pubads());
+//     }
 
-    IR_UB = googletag
-      .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1695628181945-0")
-      .addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-};
+//     IR_UB = googletag
+//       .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1695628181945-0")
+//       .addService(googletag.pubads());
+//     googletag.pubads().enableSingleRequest();
+//     googletag.enableServices();
+//   });
+// };
 
 const setPlaceholderMaxHeight = () => {
   let cubeDisha = document.querySelector("#cube")?.firstChild;
@@ -740,7 +740,7 @@ margin-top:15px;
     // adDownIframe.src =
     //   "https://assistant.corover.mobi/irctc/coroversdsm/320x50_v2.html";
 
-    defineGPTslots(true);
+    // defineGPTslots(true);
 
     const adDownIframe2 = document.createElement("a");
     adDownIframe2.innerHTML = `
@@ -760,22 +760,22 @@ margin-top:15px;
     //        });
     //  `;
 
-    const reloadADs = (all) => {
-      defineGPTslots(all);
-      googletag.cmd.push(function () {
-        googletag.display("div-gpt-ad-1695628181945-0");
-      });
+    // const reloadADs = (all) => {
+    //   // defineGPTslots(all);
+    //   googletag.cmd.push(function () {
+    //     googletag.display("div-gpt-ad-1695628181945-0");
+    //   });
 
-      googletag.cmd.push(function () {
-        googletag.display("div-gpt-ad-1695628181945-0");
-      });
+    //   googletag.cmd.push(function () {
+    //     googletag.display("div-gpt-ad-1695628181945-0");
+    //   });
 
-      if (all && !isMob()) {
-        googletag.cmd.push(function () {
-          googletag.display("div-gpt-ad-1695628300486-0");
-        });
-      }
-    };
+    //   if (all && !isMob()) {
+    //     googletag.cmd.push(function () {
+    //       googletag.display("div-gpt-ad-1695628300486-0");
+    //     });
+    //   }
+    // };
 
     const add320 = () => {
       adDownIframe.style.display = "block";
@@ -1870,91 +1870,91 @@ border-bottom-right-radius: 4px;
       launcher.style.position = "relative";
     }
     // Function to handle the scroll event
-    function handleScroll(event) {
-      // Your scroll event handling logic here
-      if (!isTrainList && !isInnerAdPushed) {
-        // pushInnerAd();
-        isTrainList = false;
-      }
-    }
+    // function handleScroll(event) {
+    //   // Your scroll event handling logic here
+    //   if (!isTrainList && !isInnerAdPushed) {
+    //     // pushInnerAd();
+    //     isTrainList = false;
+    //   }
+    // }
 
     // Adding a scroll event listener to the document
-    document.addEventListener("scroll", handleScroll);
-    document.addEventListener("click", function (event) {
-      if (!isTrainList && !isInnerAdPushed) {
-        // pushInnerAd();
-        isTrainList = false;
-      }
-      let checkIsLogin = document.getElementsByClassName("loginCloseBtn");
+    // document.addEventListener("scroll", handleScroll);
+    // document.addEventListener("click", function (event) {
+    //   if (!isTrainList && !isInnerAdPushed) {
+    //     // pushInnerAd();
+    //     isTrainList = false;
+    //   }
+    //   let checkIsLogin = document.getElementsByClassName("loginCloseBtn");
 
-      if (checkIsLogin.length != 0) {
-        if (isMobile) {
-          minim();
-        }
-      }
-      if (event.target.className == "launchAskDisha") {
-        const inputs = document.querySelectorAll(".ui-inputtext");
+    //   if (checkIsLogin.length != 0) {
+    //     if (isMobile) {
+    //       minim();
+    //     }
+    //   }
+    //   if (event.target.className == "launchAskDisha") {
+    //     const inputs = document.querySelectorAll(".ui-inputtext");
 
-        if (inputs.length > 0) {
-          const source = inputs[0].value.split(" - ")[1];
-          const destination = inputs[1].value.split(" - ")[1];
-          const quota = inputs[4].innerText;
-          const date = inputs[2].value;
+    //     if (inputs.length > 0) {
+    //       const source = inputs[0].value.split(" - ")[1];
+    //       const destination = inputs[1].value.split(" - ")[1];
+    //       const quota = inputs[4].innerText;
+    //       const date = inputs[2].value;
 
-          if (source && destination) {
-            let urlDeskTop = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}`;
-            let urlMobile = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}/#web`;
-            let url = "";
-            if (isMobile) url = urlMobile;
-            else url = urlDeskTop;
+    //       if (source && destination) {
+    //         let urlDeskTop = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}`;
+    //         let urlMobile = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}/#web`;
+    //         let url = "";
+    //         if (isMobile) url = urlMobile;
+    //         else url = urlDeskTop;
 
-            if (!isOpen && !initialized) {
-              botOpenWithURL(url);
-            } else {
-              if (!isOpen) botOpen();
+    //         if (!isOpen && !initialized) {
+    //           botOpenWithURL(url);
+    //         } else {
+    //           if (!isOpen) botOpen();
 
-              n.contentWindow.postMessage(
-                { source, destination, quota, date },
-                "*"
-              );
-            }
-          } else {
-            let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
-            let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
-            let url = "";
-            if (isMobile) url = urlMobile;
-            else url = urlDeskTop;
-            if (!isOpen && !initialized) {
-              botOpenWithURL(url);
-            } else {
-              if (!isOpen) botOpen();
-            }
-          }
-        } else {
-          //   botOpen();
-          let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
-          let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
-          let url = "";
-          if (isMobile) url = urlMobile;
-          else url = urlDeskTop;
-          if (!isOpen && !initialized) {
-            botOpenWithURL(url);
-          } else {
-            if (!isOpen) botOpen();
-          }
-        }
+    //           n.contentWindow.postMessage(
+    //             { source, destination, quota, date },
+    //             "*"
+    //           );
+    //         }
+    //       } else {
+    //         let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
+    //         let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
+    //         let url = "";
+    //         if (isMobile) url = urlMobile;
+    //         else url = urlDeskTop;
+    //         if (!isOpen && !initialized) {
+    //           botOpenWithURL(url);
+    //         } else {
+    //           if (!isOpen) botOpen();
+    //         }
+    //       }
+    //     } else {
+    //       //   botOpen();
+    //       let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
+    //       let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
+    //       let url = "";
+    //       if (isMobile) url = urlMobile;
+    //       else url = urlDeskTop;
+    //       if (!isOpen && !initialized) {
+    //         botOpenWithURL(url);
+    //       } else {
+    //         if (!isOpen) botOpen();
+    //       }
+    //     }
 
-        // DD/MM/yyyy
-      }
-      // if (event.target.id == "launchAskDisha") {
-      //   botOpen();
-      // }
-      if (event.target.innerText) {
-        if (event.target.innerText.trim() == "ASK DISHA") {
-          botOpen();
-        }
-      }
-    });
+    //     // DD/MM/yyyy
+    //   }
+    //   // if (event.target.id == "launchAskDisha") {
+    //   //   botOpen();
+    //   // }
+    //   if (event.target.innerText) {
+    //     if (event.target.innerText.trim() == "ASK DISHA") {
+    //       botOpen();
+    //     }
+    //   }
+    // });
 
     setInterval(() => {
       checkLoginModel();
@@ -2026,7 +2026,7 @@ display:none;
       // console.log(1);
       if ((current - lastTimeRefresh) / 1000 > refreshTimer) {
         if (!isSmall) {
-          refreshHomeAdWindow();
+          // refreshHomeAdWindow();
           lastTimeRefresh = current;
         }
       }
@@ -2042,17 +2042,17 @@ display:none;
     window.top.addEventListener("DOMMouseScroll", resetTimer, false);
     window.top.addEventListener("mousewheel", resetTimer, false);
 
-    const runNewDisplayAd = () => {
-      if (!isMob()) {
-        googletag.cmd.push(function () {
-          googletag.display("div-gpt-ad-1695628300486-0");
-        });
-      }
-    };
+    // const runNewDisplayAd = () => {
+    //   if (!isMob()) {
+    //     googletag.cmd.push(function () {
+    //       googletag.display("div-gpt-ad-1695628300486-0");
+    //     });
+    //   }
+    // };
 
-    setTimeout(() => {
-      runNewDisplayAd();
-    }, 2000);
+    // setTimeout(() => {
+    //   runNewDisplayAd();
+    // }, 2000);
 
     function splashMagic2() {
       // if (!window.location.href.includes("booking/train-list")) {
@@ -2066,34 +2066,34 @@ display:none;
       // }
     }
 
-    function refreshHomeAdWindow() {
-      if (isOpen) {
-        document.getElementById("adIframeContainer").removeChild(adIframe);
-        setTimeout(() => {
-          document.getElementById("adIframeContainer").appendChild(adIframe);
-        }, 500);
-      } else {
-        googletag.cmd.push(function () {
-          //   googletag.pubads().refresh([IR_UB]);
-          // googletag.pubads().refresh([IR_UB_300x250]);
-          // googletag.pubads().refresh([IR_UB_300x250_2]);
-          if (!isMob()) {
-            googletag.pubads().refresh([IR_UB_NEW]);
-          }
-          googletag.pubads().refresh([IR_UB]);
-        });
+  //   function refreshHomeAdWindow() {
+  //     if (isOpen) {
+  //       document.getElementById("adIframeContainer").removeChild(adIframe);
+  //       setTimeout(() => {
+  //         document.getElementById("adIframeContainer").appendChild(adIframe);
+  //       }, 500);
+  //     } else {
+  //       googletag.cmd.push(function () {
+  //         //   googletag.pubads().refresh([IR_UB]);
+  //         // googletag.pubads().refresh([IR_UB_300x250]);
+  //         // googletag.pubads().refresh([IR_UB_300x250_2]);
+  //         if (!isMob()) {
+  //           googletag.pubads().refresh([IR_UB_NEW]);
+  //         }
+  //         googletag.pubads().refresh([IR_UB]);
+  //       });
 
-        if (!isSplashScreenOpen) {
-          remove320();
-          setTimeout(() => {
-            add320();
-          }, 500);
-        }
-      }
-      if (!isOpen && !isMobile) {
-        splashMagic2();
-      }
-    }
+  //       if (!isSplashScreenOpen) {
+  //         remove320();
+  //         setTimeout(() => {
+  //           add320();
+  //         }, 500);
+  //       }
+  //     }
+  //     if (!isOpen && !isMobile) {
+  //       splashMagic2();
+  //     }
+  //   }
   }
 
   function removeAd() {
@@ -2365,51 +2365,51 @@ display:none;
     }
   }
 
-  const reloadADs = (all) => {
-    defineGPTslots(all);
-    googletag.cmd.push(function () {
-      googletag.display("div-gpt-ad-1695628181945-0");
-    });
+  // const reloadADs = (all) => {
+  //   // defineGPTslots(all);
+  //   googletag.cmd.push(function () {
+  //     googletag.display("div-gpt-ad-1695628181945-0");
+  //   });
 
-    googletag.cmd.push(function () {
-      googletag.display("div-gpt-ad-1695628181945-0");
-    });
+  //   googletag.cmd.push(function () {
+  //     googletag.display("div-gpt-ad-1695628181945-0");
+  //   });
 
-    if (all && !isMob()) {
-      googletag.cmd.push(function () {
-        googletag.display("div-gpt-ad-1695628300486-0");
-      });
-    }
-  };
+  //   if (all && !isMob()) {
+  //     googletag.cmd.push(function () {
+  //       googletag.display("div-gpt-ad-1695628300486-0");
+  //     });
+  //   }
+  // };
 
   let oldUrl = window.location.href;
 
-  window.addEventListener("click", function () {
-    setTimeout(() => {
-      if (window.location.href != oldUrl) {
-        let s = !isMob();
-        if (window.location.href.includes("train-search")) {
-          setVideoAd();
-          // const iframe = document.getElementById("book-ticket-iframe");
-          // if (iframe) iframe.style.display = "none";
-        } else if (window.location.href.includes("enquiry/pnr-enquiry")) {
-          setVideoAd2(true);
-          // const iframe = document.getElementById("book-ticket-iframe");
-          // if (iframe) iframe.style.display = "none";
-        } else if (window.location.href.includes("booking/train-list")) {
-          setVideoAdTrains();
-        } else {
-          setVideoAd2(false);
-          // const iframe = document.getElementById("book-ticket-iframe");
-          // if (iframe) iframe.style.display = "none";
-        }
+  // window.addEventListener("click", function () {
+  //   setTimeout(() => {
+  //     if (window.location.href != oldUrl) {
+  //       let s = !isMob();
+  //       if (window.location.href.includes("train-search")) {
+  //         setVideoAd();
+  //         // const iframe = document.getElementById("book-ticket-iframe");
+  //         // if (iframe) iframe.style.display = "none";
+  //       } else if (window.location.href.includes("enquiry/pnr-enquiry")) {
+  //         setVideoAd2(true);
+  //         // const iframe = document.getElementById("book-ticket-iframe");
+  //         // if (iframe) iframe.style.display = "none";
+  //       } else if (window.location.href.includes("booking/train-list")) {
+  //         setVideoAdTrains();
+  //       } else {
+  //         setVideoAd2(false);
+  //         // const iframe = document.getElementById("book-ticket-iframe");
+  //         // if (iframe) iframe.style.display = "none";
+  //       }
 
-        if (!isSmall) reloadADs(s);
+  //       // if (!isSmall) reloadADs(s);
 
-        oldUrl = window.location.href;
-      }
-    }, 2000);
-  });
+  //       // oldUrl = window.location.href;
+  //     }
+  //   }, 2000);
+  // });
 
   function splashMagic() {
     // let scrollingDiv = document.getElementById("splash-scrollable");
