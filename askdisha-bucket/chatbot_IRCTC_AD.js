@@ -10,11 +10,12 @@ var IR_UB_300x250_2; //FROM UB this should be removed
 var IR_UB_NEW;
 var IR_STICKY; //FROM UB this should be removed
 var IR_300x250_IFRAME; //FROM UB this should be removed
-var Adunit_IR_UB_320x50; //FROM UB: This value should be changed as instructed by the UB team
-var Adunit_IR_UB_300x250; //FROM UB: This value should be changed as instructed by the UB team
+var Adunit_IR_UB_320x50 = "/21928950349,21748009408/irctc_320x50"; //FROM UB: This value should be changed as instructed by the UB team
+var Adunit_IR_UB_300x250 = "/21928950349,21748009408/irctc_chatbot_300x250";  //FROM UB: This value should be changed as instructed by the UB team
 var isSplashScreenOpen = false;
 var isTrainList = false;
 var isInnerAdPushed = false;
+var Adunit_IR_UB_TS_300x250="/21928950349,21748009408/irctc_300x250";
 
 //Fetches the latest ad units for convenient updates without modifying the live code; uses a fetch request to retrieve the JSON
 
@@ -65,7 +66,7 @@ function pushInnerAd(Adunit_IR_UB_TS_300x250) {
     googletag.cmd.push(function () {
       googletag
         .defineSlot(
-          Adunit_IR_UB_TS_300x250,
+            "/21928950349,21748009408/irctc_300x250",
           [300, 250],
           "div-gpt-ad-1698143516599-0"
         )
@@ -182,7 +183,7 @@ function handleScroll(event) {
   if (!isTrainList && !isInnerAdPushed && !isPushed) {
     getAdunitNames()
       .then((adunitData) => {
-        pushInnerAd(adunitData["Adunit_IR_UB_TS_300x250"]);
+        pushInnerAd(adunitData[ "/21928950349,21748009408/irctc_300x250"]);
         isPushed = true; // Set the flag to true after calling pushInnerAd
       })
       .catch((err) => {
@@ -223,7 +224,7 @@ document.addEventListener("click", function (event) {
   if (!isTrainList && !isInnerAdPushed) {
     getAdunitNames()
       .then((adunitData) => {
-        pushInnerAd(adunitData["Adunit_IR_UB_TS_300x250"]);
+        pushInnerAd(adunitData[ "/21928950349,21748009408/irctc_300x250"]);
       })
       .catch((err) => {
         console.log(err);
