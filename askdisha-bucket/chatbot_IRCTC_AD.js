@@ -1,9 +1,33 @@
-let cdnScript3 = document.createElement("script");
-cdnScript3.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-cdnScript3.async = true;
-document.head.appendChild(cdnScript3);
+// let cdnScript3 = document.createElement("script");
+// cdnScript3.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+// cdnScript3.async = true;
+// document.head.appendChild(cdnScript3);
 
-window.unibots = window.unibots || { cmd: [] };
+let gptjsurl = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";  
+
+injectHeadCodeOnPage =(e)=> {
+  let n = document.createElement("script");
+  n.type = "text/javascript";
+  n.async = true;
+  n.src = e;
+  document.getElementsByTagName("head")[0].appendChild(n);
+}
+
+loadGA = (code) => {
+  let ga_url = `https://www.googletagmanager.com/gtag/js?id=${code}`;
+  injectHeadCodeOnPage(ga_url);
+  (window.dataLayer = window.dataLayer || []),
+  (window.gtag = function () {
+    window.dataLayer.push(arguments);
+  });
+  window.gtag("js", new Date());
+  window.gtag("config", code);
+}
+
+injectHeadCodeOnPage(gptjsurl); //addded gps.js
+loadGA("G-NFN218243Z");  //to load GA code and count pageviews
+
+window.unibots = window.unibots || { cmd: [] }; // defining googletag fun
 var IR_UB;
 var IR_UB_300x250; //FROM UB this should be removed
 var IR_UB_300x250_2; //FROM UB this should be removed
@@ -15,7 +39,7 @@ var Adunit_IR_UB_300x250; //FROM UB: This value should be changed as instructed 
 var isSplashScreenOpen = false;
 var isTrainList = false;
 var isInnerAdPushed = false;
-
+var adunitData; // variable to store adunits
 //Fetches the latest ad units for convenient updates without modifying the live code; uses a fetch request to retrieve the JSON
 
 function getAdunitNames() {
@@ -29,12 +53,15 @@ function getAdunitNames() {
       return response.json();
     })
     .then((data) => {
-      return data;
+      adunitData = data;
+      return adunitData;
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
     });
 }
+
+getAdunitNames();
 
 const isMob = () => {
   if (
@@ -53,6 +80,49 @@ const isMob = () => {
 };
 let isMobile = isMob();
 
+// below fun to define homepage adunts
+const defineGPTslots = (all, Adunit_IR_UB_300x250, Adunit_IR_UB_320x50) => {
+  window.googletag = window.googletag || { cmd: [] };
+  googletag.cmd.push(function () {
+    if (all && !isMobile) {
+      IR_UB_NEW = googletag
+        .defineSlot(
+          Adunit_IR_UB_300x250,
+          [300, 250],
+          "div-gpt-ad-1695628300486-0"
+        )
+        .addService(googletag.pubads());
+    }
+
+    IR_UB = googletag
+      .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1695628181945-0")
+      .addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+};
+//to display homepage adunits
+if (!adunitData && adunitData == undefined) {
+  getAdunitNames()
+    .then((adunitData) => {
+      defineGPTslots(
+        true,
+        adunitData["Adunit_IR_UB_300x250"],
+        adunitData["Adunit_IR_UB_320x50"]
+      );
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+} else {
+  defineGPTslots(
+    true,
+    adunitData["Adunit_IR_UB_300x250"],
+    adunitData["Adunit_IR_UB_320x50"]
+  );
+}
+
+//function for train-list page adunit
 function pushInnerAd(Adunit_IR_UB_TS_300x250) {
   const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if (
@@ -61,7 +131,7 @@ function pushInnerAd(Adunit_IR_UB_TS_300x250) {
   ) {
     isTrainList = true;
     isInnerAdPushed = true;
-    window.googletag = window.googletag || { cmd: [] };
+
     googletag.cmd.push(function () {
       googletag
         .defineSlot(
@@ -93,7 +163,7 @@ function pushInnerAd(Adunit_IR_UB_TS_300x250) {
         googletag.cmd.push(function () {
           googletag.display("div-gpt-ad-1698143516599-0");
         });
-      } else console.log("Div "+targetDivId+" not found yet...");
+      } else console.log("Div " + targetDivId + " not found yet...");
     }, 100);
 
     // Start checking for the div when the script runs
@@ -104,44 +174,31 @@ function pushInnerAd(Adunit_IR_UB_TS_300x250) {
   }
 }
 
-const defineGPTslots = (all, Adunit_IR_UB_300x250, Adunit_IR_UB_320x50) => {
-  googletag.cmd.push(function () {
-    if (all && !isMobile) {
-      IR_UB_NEW = googletag
-        .defineSlot(
-          Adunit_IR_UB_300x250,
-          [300, 250],
-          "div-gpt-ad-1695628300486-0"
-        )
-        .addService(googletag.pubads());
-    }
-
-    IR_UB = googletag
-      .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1695628181945-0")
-      .addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-};
-
 const reloadADs = (all) => {
-  getAdunitNames()
-    .then((adunitData) => {
-      defineGPTslots(
-        all,
-        adunitData["Adunit_IR_UB_300x250"],
-        adunitData["Adunit_IR_UB_320x50"]
-      );
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  if (!adunitData && adunitData !== undefined) {
+    getAdunitNames()
+      .then((adunitData) => {
+        defineGPTslots(
+          all,
+          adunitData["Adunit_IR_UB_300x250"],
+          adunitData["Adunit_IR_UB_320x50"]
+        );
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  } else {
+    defineGPTslots(
+      all,
+      adunitData["Adunit_IR_UB_300x250"],
+      adunitData["Adunit_IR_UB_320x50"]
+    );
+  }
 
   googletag.cmd.push(function () {
     googletag.display("div-gpt-ad-1695628181945-0");
   });
   //display sticky ad
-
   if (all && !isMobile) {
     googletag.cmd.push(function () {
       googletag.display("div-gpt-ad-1695628300486-0");
@@ -152,52 +209,40 @@ const reloadADs = (all) => {
 
 let oldUrl = window.location.href;
 
+//sending request and call fun for train-list adunits
 window.addEventListener("click", function () {
   setTimeout(() => {
     if (window.location.href != oldUrl) {
       let s = !isMobile;
-      if (!isSmall) reloadADs(s);
+      if (!window.location.href.includes("nget/booking/train-list")) {
+        reloadADs(s);
+      } 
+      // else {
+      //   if (!adunitData && adunitData !== undefined) {
+      //     fetchAdunitData()
+      //       .then(() => {
+      //         pushInnerAd(adunitData["Adunit_IR_UB_TS_300x250"]);
+      //       })
+      //       .catch((err) => {
+      //         console.error(err);
+      //       });
+      //   } else {
+      //     pushInnerAd(adunitData["Adunit_IR_UB_TS_300x250"]);
+      //   }
+      // }
+      isTrainList = false;
       oldUrl = window.location.href;
     }
   }, 2000);
 });
-
-getAdunitNames()
-  .then((adunitData) => {
-    defineGPTslots(
-      true,
-      adunitData["Adunit_IR_UB_300x250"],
-      adunitData["Adunit_IR_UB_320x50"]
-    );
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-// Function to handle the scroll event
-let isPushed = false; // Flag to track whether pushInnerAd has been called
-
-function handleScroll(event) {
-  // Your scroll event handling logic here
-  if (!isTrainList && !isInnerAdPushed && !isPushed) {
-    getAdunitNames()
-      .then((adunitData) => {
-        pushInnerAd(adunitData["Adunit_IR_UB_TS_300x250"]);
-        isPushed = true; // Set the flag to true after calling pushInnerAd
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    isTrainList = false;
-  }
-}
-
-function refreshHomeAdWindow() {
+//function to refresh  ads
+function refreshHomeAdWindow(ub_slot) {
   googletag.cmd.push(function () {
-    if (!isMobile) {
-      googletag.pubads().refresh([IR_UB_NEW]);
-    }
-    googletag.pubads().refresh([IR_UB]);
+    // if (!isMobile) {
+    //   googletag.pubads().refresh([IR_UB_NEW]);
+    // }
+    // googletag.pubads().refresh([IR_UB]);
+    googletag.pubads().refresh([ub_slot]);
   });
 }
 
@@ -216,22 +261,22 @@ setTimeout(() => {
   runNewDisplayAd();
 }, 2000);
 
-// Adding a scroll event listener to the document
-document.addEventListener("scroll", handleScroll);
 
-document.addEventListener("click", function (event) {
-  if (!isTrainList && !isInnerAdPushed) {
-    getAdunitNames()
-      .then((adunitData) => {
-        pushInnerAd(adunitData["Adunit_IR_UB_TS_300x250"]);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    isTrainList = false;
-  }
-});
+let irctcDivIds = ["div-gpt-ad-1695628181945-0","div-gpt-ad-1695628300486-0","div-gpt-ad-1698143516599-0"]
 
+// sending requests only if ad is in view
 setInterval(() => {
-  refreshHomeAdWindow();
-}, 45000);
+  googletag.cmd.push(() => {
+    googletag.pubads().addEventListener("impressionViewable", (event) => {
+      irctcDivIds.forEach(item => {
+        if ((item == event.slot.getSlotId().getDomId())) {
+          ub_adunit = event.slot.getAdUnitPath();
+          ub_adId = event.slot.getSlotId().getDomId();
+          ub_slot = event.slot;  
+          f(ub_slot);
+        }
+      });
+      
+    });
+  });
+},45000);
