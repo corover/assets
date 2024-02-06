@@ -1870,13 +1870,13 @@ border-bottom-right-radius: 4px;
       launcher.style.position = "relative";
     }
     // Function to handle the scroll event
-    // function handleScroll(event) {
-    //   // Your scroll event handling logic here
-    //   if (!isTrainList && !isInnerAdPushed) {
-    //     // pushInnerAd();
-    //     isTrainList = false;
-    //   }
-    // }
+    function handleScroll(event) {
+      // Your scroll event handling logic here
+      if (!isTrainList && !isInnerAdPushed) {
+        // pushInnerAd();
+        isTrainList = false;
+      }
+    }
 
     // Adding a scroll event listener to the document
     document.addEventListener("scroll", handleScroll);
