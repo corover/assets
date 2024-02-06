@@ -1879,82 +1879,82 @@ border-bottom-right-radius: 4px;
     // }
 
     // Adding a scroll event listener to the document
-    // document.addEventListener("scroll", handleScroll);
-    // document.addEventListener("click", function (event) {
-    //   if (!isTrainList && !isInnerAdPushed) {
-    //     // pushInnerAd();
-    //     isTrainList = false;
-    //   }
-    //   let checkIsLogin = document.getElementsByClassName("loginCloseBtn");
+    document.addEventListener("scroll", handleScroll);
+    document.addEventListener("click", function (event) {
+      // if (!isTrainList && !isInnerAdPushed) {
+      //   // pushInnerAd();
+      //   isTrainList = false;
+      // }
+      // let checkIsLogin = document.getElementsByClassName("loginCloseBtn");
 
-    //   if (checkIsLogin.length != 0) {
-    //     if (isMobile) {
-    //       minim();
-    //     }
-    //   }
-    //   if (event.target.className == "launchAskDisha") {
-    //     const inputs = document.querySelectorAll(".ui-inputtext");
+      // if (checkIsLogin.length != 0) {
+      //   if (isMobile) {
+      //     minim();
+      //   }
+      // }
+      if (event.target.className == "launchAskDisha") {
+        const inputs = document.querySelectorAll(".ui-inputtext");
 
-    //     if (inputs.length > 0) {
-    //       const source = inputs[0].value.split(" - ")[1];
-    //       const destination = inputs[1].value.split(" - ")[1];
-    //       const quota = inputs[4].innerText;
-    //       const date = inputs[2].value;
+        if (inputs.length > 0) {
+          const source = inputs[0].value.split(" - ")[1];
+          const destination = inputs[1].value.split(" - ")[1];
+          const quota = inputs[4].innerText;
+          const date = inputs[2].value;
 
-    //       if (source && destination) {
-    //         let urlDeskTop = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}`;
-    //         let urlMobile = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}/#web`;
-    //         let url = "";
-    //         if (isMobile) url = urlMobile;
-    //         else url = urlDeskTop;
+          if (source && destination) {
+            let urlDeskTop = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}`;
+            let urlMobile = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}/#web`;
+            let url = "";
+            if (isMobile) url = urlMobile;
+            else url = urlDeskTop;
 
-    //         if (!isOpen && !initialized) {
-    //           botOpenWithURL(url);
-    //         } else {
-    //           if (!isOpen) botOpen();
+            if (!isOpen && !initialized) {
+              botOpenWithURL(url);
+            } else {
+              if (!isOpen) botOpen();
 
-    //           n.contentWindow.postMessage(
-    //             { source, destination, quota, date },
-    //             "*"
-    //           );
-    //         }
-    //       } else {
-    //         let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
-    //         let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
-    //         let url = "";
-    //         if (isMobile) url = urlMobile;
-    //         else url = urlDeskTop;
-    //         if (!isOpen && !initialized) {
-    //           botOpenWithURL(url);
-    //         } else {
-    //           if (!isOpen) botOpen();
-    //         }
-    //       }
-    //     } else {
-    //       //   botOpen();
-    //       let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
-    //       let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
-    //       let url = "";
-    //       if (isMobile) url = urlMobile;
-    //       else url = urlDeskTop;
-    //       if (!isOpen && !initialized) {
-    //         botOpenWithURL(url);
-    //       } else {
-    //         if (!isOpen) botOpen();
-    //       }
-    //     }
+              n.contentWindow.postMessage(
+                { source, destination, quota, date },
+                "*"
+              );
+            }
+          } else {
+            let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
+            let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
+            let url = "";
+            if (isMobile) url = urlMobile;
+            else url = urlDeskTop;
+            if (!isOpen && !initialized) {
+              botOpenWithURL(url);
+            } else {
+              if (!isOpen) botOpen();
+            }
+          }
+        } else {
+          //   botOpen();
+          let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
+          let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
+          let url = "";
+          if (isMobile) url = urlMobile;
+          else url = urlDeskTop;
+          if (!isOpen && !initialized) {
+            botOpenWithURL(url);
+          } else {
+            if (!isOpen) botOpen();
+          }
+        }
 
-    //     // DD/MM/yyyy
-    //   }
-    //   // if (event.target.id == "launchAskDisha") {
-    //   //   botOpen();
-    //   // }
-    //   if (event.target.innerText) {
-    //     if (event.target.innerText.trim() == "ASK DISHA") {
-    //       botOpen();
-    //     }
-    //   }
-    // });
+        // DD/MM/yyyy
+      }
+      // if (event.target.id == "launchAskDisha") {
+      //   botOpen();
+      // }
+      if (event.target.innerText) {
+        if (event.target.innerText.trim() == "ASK DISHA") {
+          botOpen();
+        }
+      }
+    });
 
     setInterval(() => {
       checkLoginModel();
