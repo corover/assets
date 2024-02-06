@@ -1,8 +1,3 @@
-// let cdnScript3 = document.createElement("script");
-// cdnScript3.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-// cdnScript3.async = true;
-// document.head.appendChild(cdnScript3);
-
 let gptjsurl = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";  
 
 injectHeadCodeOnPage =(e)=> {
@@ -236,13 +231,12 @@ window.addEventListener("click", function () {
   }, 2000);
 });
 //function to refresh  ads
-function refreshHomeAdWindow(ub_slot) {
+function refreshHomeAdWindow() {
   googletag.cmd.push(function () {
-    // if (!isMobile) {
-    //   googletag.pubads().refresh([IR_UB_NEW]);
-    // }
-    // googletag.pubads().refresh([IR_UB]);
-    googletag.pubads().refresh([ub_slot]);
+    if (!isMobile) {
+      googletag.pubads().refresh([IR_UB_NEW]);
+    }
+    googletag.pubads().refresh([IR_UB]);
   });
 }
 
@@ -261,22 +255,8 @@ setTimeout(() => {
   runNewDisplayAd();
 }, 2000);
 
-
-let irctcDivIds = ["div-gpt-ad-1695628181945-0","div-gpt-ad-1695628300486-0","div-gpt-ad-1698143516599-0"]
-
-// sending requests only if ad is in view
 setInterval(() => {
-  googletag.cmd.push(() => {
-    googletag.pubads().addEventListener("impressionViewable", (event) => {
-      irctcDivIds.forEach(item => {
-        if ((item == event.slot.getSlotId().getDomId())) {
-          ub_adunit = event.slot.getAdUnitPath();
-          ub_adId = event.slot.getSlotId().getDomId();
-          ub_slot = event.slot;  
-          f(ub_slot);
-        }
-      });
-      
-    });
-  });
-},45000);
+  if(!window.location.href.includes("nget/booking/train-list")){
+    refreshHomeAdWindow();
+  }
+}, 35000);
