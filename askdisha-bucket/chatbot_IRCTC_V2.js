@@ -1946,9 +1946,9 @@ border-bottom-right-radius: 4px;
 
         // DD/MM/yyyy
       }
-      // if (event.target.id == "launchAskDisha") {
-      //   botOpen();
-      // }
+      if (event.target.id == "launchAskDisha") {
+        botOpen();
+      }
       if (event.target.innerText) {
         if (event.target.innerText.trim() == "ASK DISHA") {
           botOpen();
