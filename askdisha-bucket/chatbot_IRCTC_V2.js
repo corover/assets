@@ -2129,9 +2129,9 @@ display:none;
 
 
 
-  function setVideoAd(setHeader){
-  }
-  function setVideoAd1(setHeader) {
+  // function setVideoAd(setHeader){
+  // }
+  function setVideoAd(setHeader) {
     setVideoAdHeader();
     try {
       let leftover = document.querySelectorAll("#adContainer1")[0];
@@ -2155,10 +2155,10 @@ display:none;
        margin: 25px auto;
        `;
         document
-          .querySelectorAll("div.container")[3]
+          .querySelectorAll("div.container")[4]
           .insertBefore(
             adContainer,
-            document.querySelectorAll("div.container")[3].childNodes[0]
+            document.querySelectorAll("div.container")[4].childNodes[0]
           );
         adContainer.innerHTML = `
        <span
