@@ -2129,9 +2129,9 @@ display:none;
 
 
 
-  function setVideoAd(setHeader){
-  }
-  function setVideoAd1(setHeader) {
+  // function setVideoAd(setHeader){
+  // }
+  function setVideoAd(setHeader) {
     setVideoAdHeader();
     try {
       let leftover = document.querySelectorAll("#adContainer1")[0];
@@ -2178,25 +2178,25 @@ display:none;
         console.log(err);
       }
     } else {
-      try {
-        let videoDiv = document.createElement("div");
-        videoDiv.id = "div-ub-irctc";
-        videoDiv.style.cssText = `
-       width:100%;
-       max-width: 100%;
-       margin:10px auto;
-       overflow-x:hidden;
-       `;
-        // document.body.appendChild(videoDiv)
-        document
-          .querySelectorAll(".clearfix")[3]
-          .insertAdjacentElement("afterend", videoDiv);
-        unibots.cmd.push(() => {
-          unibotsPlayer("irctc");
-        });
-      } catch (err) {
-        console.log(err);
-      }
+      // try {
+      //   let videoDiv = document.createElement("div");
+      //   videoDiv.id = "div-ub-irctc";
+      //   videoDiv.style.cssText = `
+      //  width:100%;
+      //  max-width: 100%;
+      //  margin:10px auto;
+      //  overflow-x:hidden;
+      //  `;
+      //   // document.body.appendChild(videoDiv)
+      //   document
+      //     .querySelectorAll(".clearfix")[3]
+      //     .insertAdjacentElement("afterend", videoDiv);
+      //   unibots.cmd.push(() => {
+      //     unibotsPlayer("irctc");
+      //   });
+      // } catch (err) {
+      //   console.log(err);
+      // }
     }
   }
 
