@@ -1434,7 +1434,7 @@ border-bottom-right-radius: 4px;
     }, 4000);
 
     setTimeout(() => {
-      if (checkMobile)
+      if (window.screen.width < 600)
         switchIcon(true);
     }, 50);
 
