@@ -365,7 +365,11 @@ const setPlaceholderMaxHeight = () => {
     //   isMobile = false;
     // }
 
-    if (window.screen.width < 600) return (isMobile = true);
+    if (window.screen.width < 600){
+      isSmall=true;
+      return (isMobile = true);
+    }
+     
     else isMobile = false;
   }
   const isTime = () => {
