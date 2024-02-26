@@ -366,7 +366,30 @@ const setPlaceholderMaxHeight = () => {
     // }
 
     if (window.screen.width < 600){
-      isSmall=true;
+      remove320();
+          adDownIframe2.style.display = `none`;
+          maxIcon.src =
+            "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
+          dishaWrapper.style.bottom = "200px";
+
+          dishaWrapper.style.right = "-18px";
+          launcher.style.transform = "rotate(-12deg)";
+          maxIcon.style.cssText = `
+        position: absolute;
+        right: 14px;
+        width: 14px;
+        top: -18px;
+        transform: rotate(-168deg);
+      `;
+
+          launcher.style.width = "50px";
+          launcher.style.height = "50px";
+          launcher.style.minWidth = "50px";
+
+          if (!isMobile) {
+            messageWrapper.style.display = "none";
+          }
+          isSmall = !isSmall;
       return (isMobile = true);
     }
      
