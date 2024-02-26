@@ -1430,13 +1430,13 @@ border-bottom-right-radius: 4px;
 
     setTimeout(() => {
       if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
-        openBanner(true);
+        openBanner(false);
     }, 4000);
 
     setTimeout(() => {
       if (checkMobile)
         switchIcon(true);
-    }, 500);
+    }, 50);
 
     function minim() {
       isSmall = true;
