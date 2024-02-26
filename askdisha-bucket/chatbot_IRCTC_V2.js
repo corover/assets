@@ -1433,6 +1433,11 @@ border-bottom-right-radius: 4px;
         openBanner(true);
     }, 4000);
 
+    setTimeout(() => {
+      if (checkMobile)
+        switchIcon(true);
+    }, 500);
+
     function minim() {
       isSmall = true;
       if (true) dealOfDay.style.display = `none`;
