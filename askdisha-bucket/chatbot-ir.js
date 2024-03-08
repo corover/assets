@@ -1626,45 +1626,45 @@
       }
     };
 
-    if (window.location.href.includes("indianrail")) {
-      let divRail = document.createElement("div");
-      divRail.id = "div-ub-indianrail";
-      if (isMobile) document.body.appendChild(divRail);
-      else {
-        const sidebar = document.querySelectorAll("div.panel-group")[0];
+    // if (window.location.href.includes("indianrail")) {
+    //   let divRail = document.createElement("div");
+    //   divRail.id = "div-ub-indianrail";
+    //   if (isMobile) document.body.appendChild(divRail);
+    //   else {
+    //     const sidebar = document.querySelectorAll("div.panel-group")[0];
 
-        if (sidebar) {
-          // document
-          //   .getElementsByClassName("panel-group")[0]
-          //   .appendChild(divRail);
-          // let secondMenuItem = document.querySelectorAll(
-          //   "div.panel.panel-default"
-          // )[1];
-          sidebar.appendChild(divRail);
-          // if (secondMenuItem) {
-          // secondMenuItem.insertAdjacentHTML("afterEnd", divRail.outerHTML);
-          // secondMenuItem.insertAdjacentHTML(
-          //   "afterEnd",
-          //   `<div id = "div-ub-indianrail"></div>`
-          // );
+    //     if (sidebar) {
+    //       // document
+    //       //   .getElementsByClassName("panel-group")[0]
+    //       //   .appendChild(divRail);
+    //       // let secondMenuItem = document.querySelectorAll(
+    //       //   "div.panel.panel-default"
+    //       // )[1];
+    //       sidebar.appendChild(divRail);
+    //       // if (secondMenuItem) {
+    //       // secondMenuItem.insertAdjacentHTML("afterEnd", divRail.outerHTML);
+    //       // secondMenuItem.insertAdjacentHTML(
+    //       //   "afterEnd",
+    //       //   `<div id = "div-ub-indianrail"></div>`
+    //       // );
 
-          // } else document.body.appendChild(divRail);
-        } else {
-          console.log(false);
-          document.body.appendChild(divRail);
-        }
-      }
+    //       // } else document.body.appendChild(divRail);
+    //     } else {
+    //       console.log(false);
+    //       document.body.appendChild(divRail);
+    //     }
+    //   }
 
-      let script3 = document.createElement("script");
-      script3.async = true;
-      document.body.appendChild(script3);
-      script3.innerHTML = `
-           window.unibots = window.unibots || { cmd: [] };
-           unibots.cmd.push(() => {
-             unibotsPlayer("indianrail");
-           });
-           `;
-    }
+    //   let script3 = document.createElement("script");
+    //   script3.async = true;
+    //   document.body.appendChild(script3);
+    //   script3.innerHTML = `
+    //        window.unibots = window.unibots || { cmd: [] };
+    //        unibots.cmd.push(() => {
+    //          unibotsPlayer("indianrail");
+    //        });
+    //        `;
+    // }
 
     window.top.addEventListener("click", resetTimer, false);
     window.top.addEventListener("touchstart", resetTimer, false);
@@ -1737,6 +1737,8 @@
   splashMagic();
 
   const setSecondVideoAdinIframe = () => {
+  };
+  const setSecondVideoAdinIframe1 = () => {
     const iframe = document.getElementById("book-ticket-iframe");
     if (iframe) {
       const videoDiv = document.createElement("div");
