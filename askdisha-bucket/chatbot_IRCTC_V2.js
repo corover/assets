@@ -1,5 +1,3 @@
-
-// THIS IS A TEST STATEMENT!!!!
 // let cdnScript3 = document.createElement("script");
 // cdnScript3.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
 // cdnScript3.async = true;
