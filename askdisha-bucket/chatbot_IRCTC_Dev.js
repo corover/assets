@@ -838,7 +838,7 @@ cursor:pointer
 
     dealOfDay.target = "_blank";
     dealOfDay.innerHTML = `
-   <img width="156px" src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png" decoding="async"/>
+   <img width="156px" src="https://sdk.irctc.corover.ai/askdisha-bucket/DEALS....png" decoding="async"/>
    <p style="
 position: absolute;
 background: white;

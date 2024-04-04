@@ -772,18 +772,18 @@
       if (isMobile) {
         dealOfDay.href = "https://amzn.to/34WK1uY";
         dealOfDay.innerHTML = `
-          <img width="156px" src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png"/>
+          <img width="156px" src="https://sdk.irctc.corover.ai/askdisha-bucket/DEALS....png"/>
           `;
       } else {
         dealOfDay.href = "http://amzn.to/2LcCuBJ";
         dealOfDay.innerHTML = `
-          <img width="156px" src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png"/>
+          <img width="156px" src="https://sdk.irctc.corover.ai/askdisha-bucket/DEALS....png"/>
           `;
       }
     } else {
       dealOfDay.href = "https://amzn.to/34WK1uY";
       dealOfDay.innerHTML = `
-              <img width="156px" src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png" decoding="async"/>
+              <img width="156px" src="https://sdk.irctc.corover.ai/askdisha-bucket/DEALS....png" decoding="async"/>
               `;
     }
 
