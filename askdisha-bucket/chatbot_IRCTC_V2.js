@@ -2102,7 +2102,7 @@ display:none;
   }
 
   function removeAd() {
-    const videoAddElement = document.getElementById("div-ub-irctc");
+    const videoAddElement = document.getElementById("div-ub-irctc.co.in_1712646358600");
     if (videoAddElement) videoAddElement.remove();
   }
 
@@ -2126,7 +2126,7 @@ display:none;
 
   function setVideoAdHeader() {
     let videoScript = document.createElement("script");
-    videoScript.src = "https://cdn.unibotscdn.com/ubplayer/player.js";
+    videoScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
     videoScript.async = true;
 
     document.head.appendChild(videoScript);
@@ -2170,14 +2170,14 @@ display:none;
      >
      </span>
         
-         <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+         <div id="div-ub-irctc.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
        
          <span
        >
        </span>
          `;
         unibots.cmd.push(() => {
-          unibotsPlayer("irctc");
+          unibotsPlayer("irctc.co.in_1712646358600")
         });
       } catch (err) {
         console.log(err);
@@ -2185,7 +2185,7 @@ display:none;
     } else {
       // try {
       //   let videoDiv = document.createElement("div");
-      //   videoDiv.id = "div-ub-irctc";
+      //   videoDiv.id = "div-ub-irctc.co.in_1712646358600";
       //   videoDiv.style.cssText = `
       //  width:100%;
       //  max-width: 100%;
@@ -2197,7 +2197,7 @@ display:none;
       //     .querySelectorAll(".clearfix")[3]
       //     .insertAdjacentElement("afterend", videoDiv);
       //   unibots.cmd.push(() => {
-      //     unibotsPlayer("irctc");
+      //     unibotsPlayer("irctc.co.in_1712646358600")
       //   });
       // } catch (err) {
       //   console.log(err);
@@ -2214,7 +2214,7 @@ display:none;
     try {
       setVideoAdHeader();
       let videoDiv = document.createElement("div");
-      videoDiv.id = "div-ub-irctc";
+      videoDiv.id = "div-ub-irctc.co.in_1712646358600";
       videoDiv.style.cssText = `
  width:fit-content;
  margin:10px auto
@@ -2278,7 +2278,7 @@ display:none;
  </span>
 
     
-     <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+     <div id="div-ub-irctc.co.in_1712646358600.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
      
 
      <span
@@ -2290,7 +2290,7 @@ display:none;
       }
 
       unibots.cmd.push(() => {
-        unibotsPlayer("irctc");
+        unibotsPlayer("irctc.co.in_1712646358600")
       });
 
       // let p = document.createElement("p");
@@ -2307,7 +2307,7 @@ display:none;
     try {
       setVideoAdHeader();
       let videoDiv = document.createElement("div");
-      videoDiv.id = "div-ub-irctc";
+      videoDiv.id = "div-ub-irctc.co.in_1712646358600.co.in_1712646358600";
       videoDiv.style.cssText = `
  width:fit-content;
  margin:10px auto
@@ -2349,7 +2349,7 @@ display:none;
  </span>
 
    
-     <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+     <div id="div-ub-irctc.co.in_1712646358600.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
 
 
      <span
@@ -2363,7 +2363,7 @@ display:none;
       }
 
       unibots.cmd.push(() => {
-        unibotsPlayer("irctc");
+        unibotsPlayer("irctc.co.in_1712646358600")
       });
     } catch (err) {
       console.log(err);
@@ -2440,7 +2440,7 @@ display:none;
     if (iframe) {
       iframe.style.display = "flex";
       const videoDiv = document.createElement("div");
-      videoDiv.id = "div-ub-irctc_chatbot1";
+      videoDiv.id = "div-ub-irctc.co.in_1712646358600.co.in_1712646358600_chatbot1";
       videoDiv.style.cssText = `
 
  width: 100%;
@@ -2460,7 +2460,7 @@ unibots.cmd.push(() => {
 
       videoDiv.appendChild(videoScript);
       const headScript = document.createElement("script");
-      headScript.src = "https://cdn.unibotscdn.com/ubplayer/player.js";
+      headScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
       headScript.async = true;
 
       // const doc =
