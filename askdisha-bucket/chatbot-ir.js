@@ -124,7 +124,7 @@
      
     if (true) {
       let cdnScript = document.createElement("script");
-      cdnScript.src = "https://cdn.unibotscdn.com/ubplayer/player.js";
+      cdnScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
       document.head.appendChild(cdnScript);
   
       let cdnScript2 = document.createElement("script");
@@ -1677,7 +1677,7 @@
   
       if (window.location.href.includes("indianrail")) {
         let divRail = document.createElement("div");
-        divRail.id = "div-ub-indianrail";
+        divRail.id = "div-ub-indianrail.gov.in_1689164825698";
         if (isMobile) document.body.appendChild(divRail);
         else {
           const sidebar = document.querySelectorAll("div.panel-group")[0];
@@ -1694,7 +1694,7 @@
             // secondMenuItem.insertAdjacentHTML("afterEnd", divRail.outerHTML);
             // secondMenuItem.insertAdjacentHTML(
             //   "afterEnd",
-            //   `<div id = "div-ub-indianrail"></div>`
+            //   `<div id = "div-ub-indianrail.gov.in_1689164825698"></div>`
             // );
   
             // } else document.body.appendChild(divRail);
@@ -1710,7 +1710,7 @@
         script3.innerHTML = `
              window.unibots = window.unibots || { cmd: [] };
              unibots.cmd.push(() => {
-               unibotsPlayer("indianrail");
+               unibotsPlayer("indianrail.gov.in_1689164825698");
              });
              `;
       }
@@ -1792,7 +1792,7 @@
       const iframe = document.getElementById("book-ticket-iframe");
       if (iframe) {
         const videoDiv = document.createElement("div");
-        videoDiv.id = "div-ub-indianrail_chatbot";
+        videoDiv.id = "div-ub-indianrail.gov.in_1689164825698_chatbot";
         videoDiv.style.cssText = `
               width: 100%;
               margin-left: -8px;
@@ -1807,7 +1807,7 @@
   
         videoDiv.appendChild(videoScript);
         const headScript = document.createElement("script");
-        headScript.src = "https://cdn.unibotscdn.com/ubplayer/player.js";
+        headScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
         headScript.async = true;
   
         // const doc =
