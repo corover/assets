@@ -1788,38 +1788,38 @@
   
     splashMagic();
   
-    const setSecondVideoAdinIframe = () => {
-      const iframe = document.getElementById("book-ticket-iframe");
-      if (iframe) {
-        const videoDiv = document.createElement("div");
-        videoDiv.id = "div-ub-indianrail.gov.in_1689164825698_chatbot";
-        videoDiv.style.cssText = `
-              width: 100%;
-              margin-left: -8px;
-              `;
-        const videoScript = document.createElement("script");
-        videoScript.innerHTML = `
-            window.unibots = window.unibots || { cmd: [] };
-            unibots.cmd.push(() => {
-              unibotsPlayer("indianrail_chatbot");
-            });
-            `;
+    // const setSecondVideoAdinIframe = () => {
+    //   const iframe = document.getElementById("book-ticket-iframe");
+    //   if (iframe) {
+    //     const videoDiv = document.createElement("div");
+    //     videoDiv.id = "div-ub-indianrail.gov.in_1689164825698_chatbot";
+    //     videoDiv.style.cssText = `
+    //           width: 100%;
+    //           margin-left: -8px;
+    //           `;
+    //     const videoScript = document.createElement("script");
+    //     videoScript.innerHTML = `
+    //         window.unibots = window.unibots || { cmd: [] };
+    //         unibots.cmd.push(() => {
+    //           unibotsPlayer("indianrail_chatbot");
+    //         });
+    //         `;
   
-        videoDiv.appendChild(videoScript);
-        const headScript = document.createElement("script");
-        headScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
-        headScript.async = true;
+    //     videoDiv.appendChild(videoScript);
+    //     const headScript = document.createElement("script");
+    //     headScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
+    //     headScript.async = true;
   
-        // const doc =
-        //   iframe.contentDocument.body || iframe.contentWindow.document.body;
-        // doc.innerHTML = `hello`;
+    //     // const doc =
+    //     //   iframe.contentDocument.body || iframe.contentWindow.document.body;
+    //     // doc.innerHTML = `hello`;
   
-        var y = iframe.contentWindow || iframe.contentDocument;
-        if (y.document) y = y.document;
-        y.head.appendChild(headScript);
-        y.body.appendChild(videoDiv);
-      }
-    };
+    //     var y = iframe.contentWindow || iframe.contentDocument;
+    //     if (y.document) y = y.document;
+    //     y.head.appendChild(headScript);
+    //     y.body.appendChild(videoDiv);
+    //   }
+    // };
   
     setSecondVideoAdinIframe();
   
