@@ -2278,7 +2278,7 @@ display:none;
  </span>
 
     
-     <div id="div-ub-irctc.co.in_1712646358600.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+     <div id="div-ub-irctc.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
      
 
      <span
@@ -2307,7 +2307,7 @@ display:none;
     try {
       setVideoAdHeader();
       let videoDiv = document.createElement("div");
-      videoDiv.id = "div-ub-irctc.co.in_1712646358600.co.in_1712646358600";
+      videoDiv.id = "div-ub-irctc.co.in_1712646358600";
       videoDiv.style.cssText = `
  width:fit-content;
  margin:10px auto
@@ -2349,7 +2349,7 @@ display:none;
  </span>
 
    
-     <div id="div-ub-irctc.co.in_1712646358600.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+     <div id="div-ub-irctc.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
 
 
      <span
@@ -2440,7 +2440,7 @@ display:none;
     if (iframe) {
       iframe.style.display = "flex";
       const videoDiv = document.createElement("div");
-      videoDiv.id = "div-ub-irctc.co.in_1712646358600.co.in_1712646358600_chatbot1";
+      videoDiv.id = "div-ub-irctc.co.in_1712646358600_chatbot1";
       videoDiv.style.cssText = `
 
  width: 100%;
