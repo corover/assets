@@ -2176,9 +2176,11 @@ display:none;
        >
        </span>
          `;
-         setTimeout(unibots.cmd.push(() => {
+         setTimeout(()=>{
+         unibots.cmd.push(() => {
           unibotsPlayer("irctc.co.in_1712646358600")
-        }),1500);
+        });
+        },500);
         ;
       } catch (err) {
         console.log(err);
