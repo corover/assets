@@ -2176,9 +2176,10 @@ display:none;
        >
        </span>
          `;
-        unibots.cmd.push(() => {
+         setTimeout(unibots.cmd.push(() => {
           unibotsPlayer("irctc.co.in_1712646358600")
-        });
+        }),500);
+        ;
       } catch (err) {
         console.log(err);
       }
