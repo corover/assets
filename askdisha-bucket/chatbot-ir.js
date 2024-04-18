@@ -1821,7 +1821,7 @@
     //   }
     // };
   
-    setSecondVideoAdinIframe();
+    // setSecondVideoAdinIframe();
   
     if (isMobile)
       document.head.insertAdjacentHTML(
