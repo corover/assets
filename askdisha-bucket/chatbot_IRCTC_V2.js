@@ -1430,7 +1430,7 @@ border-bottom-right-radius: 4px;
 
     setTimeout(() => {
       if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
-        openBanner(false);
+        openBanner(true);
     }, 4000);
 
     setTimeout(() => {
