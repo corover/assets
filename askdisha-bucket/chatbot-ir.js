@@ -1230,7 +1230,7 @@
                     >
                       <img
                         width="156px"
-                        src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png"
+                        src="https://cdn.jsdelivr.net/gh/corover/assets@17-1April/askdisha-bucket/DEALS....png"
                         decoding="async"
                       />
                     </a>
