@@ -1317,7 +1317,7 @@ margin-bottom: -2px;">SALE
        >
          <img
            width="156px"
-           src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png"
+           src=""
            decoding="async"
          />
        </a>
