@@ -195,11 +195,11 @@ const reloadADs = (all) => {
     googletag.display("div-gpt-ad-1695628181945-0");
   });
   //display inbot ad
-  // if (all && !isMobile) {
-  //   googletag.cmd.push(function () {
-  //     googletag.display("div-gpt-ad-1695628300486-0");
-  //   });
-  // }
+  if (all && !isMobile) {
+    googletag.cmd.push(function () {
+      googletag.display("div-gpt-ad-1695628300486-0");
+    });
+  }
 };
 
 let oldUrl = window.location.href;
