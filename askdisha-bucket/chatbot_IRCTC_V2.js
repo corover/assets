@@ -1322,7 +1322,7 @@ margin-bottom: -2px;">SALE
          />
        </a>
     <div id="splash-scrollable" style="    width: 100%;
-    display: contents;
+    display: flex;
     justify-content: flex-start;
     flex-direction:column;
     align-items: center;

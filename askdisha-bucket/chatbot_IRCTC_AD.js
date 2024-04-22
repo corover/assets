@@ -80,15 +80,15 @@ let isMobile = isMob();
 const defineGPTslots = (all, Adunit_IR_UB_300x250, Adunit_IR_UB_320x50) => {
   window.googletag = window.googletag || { cmd: [] };
   googletag.cmd.push(function () {
-  //   if (all && !isMobile) { //comment this if block to remove 300x250_chatbot slot defination
-  //     IR_UB_NEW = googletag
-  //       .defineSlot(
-  //         Adunit_IR_UB_300x250,
-  //         [300, 250],
-  //         "div-gpt-ad-1695628300486-0"
-  //       )
-  //       .addService(googletag.pubads());
-  //   }
+    if (all && !isMobile) { //comment this if block to remove 300x250_chatbot slot defination
+      IR_UB_NEW = googletag
+        .defineSlot(
+          Adunit_IR_UB_300x250,
+          [300, 250],
+          "div-gpt-ad-1695628300486-0"
+        )
+        .addService(googletag.pubads());
+    }
 
     IR_UB = googletag
       .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1695628181945-0")
@@ -235,11 +235,11 @@ const runNewDisplayAd = () => {
   googletag.cmd.push(function () {
     googletag.display("div-gpt-ad-1695628181945-0");
   });
-  // if (!isMobile) {   //comment this if block to stop 300x250_chatbot request
-  //   googletag.cmd.push(function () {
-  //     googletag.display("div-gpt-ad-1695628300486-0");
-  //   });
-  // }
+  if (!isMobile) {   //comment this if block to stop 300x250_chatbot request
+    googletag.cmd.push(function () {
+      googletag.display("div-gpt-ad-1695628300486-0");
+    });
+  }
 };
 //function to refresh  ads
 function refreshHomeAdWindow() {
@@ -267,12 +267,12 @@ setInterval(() => {
 //adsense code starts - COMMENT ALL CODE ABOVE except the loadGA() function to run adsense on the site and remove adx and vice versa
 //adsense head code starts
 
-let ub_script1 = document.createElement("script");
-ub_script1.async = "async";
-ub_script1.src =
-  "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5761017298734489";
-ub_script1.setAttribute("crossorigin", "anonymous");
-document.getElementsByTagName("head")[0].appendChild(ub_script1);
+// let ub_script1 = document.createElement("script");
+// ub_script1.async = "async";
+// ub_script1.src =
+//   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5761017298734489";
+// ub_script1.setAttribute("crossorigin", "anonymous");
+// document.getElementsByTagName("head")[0].appendChild(ub_script1);
 
 //adsense head code ends
 
@@ -292,15 +292,15 @@ document.getElementsByTagName("head")[0].appendChild(ub_script1);
 
 //chatbot_300x250 starts
 
-let ub_chatBotdiv = document.createElement("ins");
-ub_chatBotdiv.setAttribute("class", "adsbygoogle");
-ub_chatBotdiv.setAttribute("data-ad-client", "ca-pub-5761017298734489");
-ub_chatBotdiv.setAttribute("data-ad-slot", "2913012258");
-let tardiv2 = document.querySelector("#div-gpt-ad-1695628300486-0");
-if(tardiv2){
-tardiv2.appendChild(ub_chatBotdiv);
-}
-(adsbygoogle = window.adsbygoogle || []).push({});
+// let ub_chatBotdiv = document.createElement("ins");
+// ub_chatBotdiv.setAttribute("class", "adsbygoogle");
+// ub_chatBotdiv.setAttribute("data-ad-client", "ca-pub-5761017298734489");
+// ub_chatBotdiv.setAttribute("data-ad-slot", "2913012258");
+// let tardiv2 = document.querySelector("#div-gpt-ad-1695628300486-0");
+// if(tardiv2){
+// tardiv2.appendChild(ub_chatBotdiv);
+// }
+// (adsbygoogle = window.adsbygoogle || []).push({});
 
 //chatbot_300x250 ends
 //adsense code ends
