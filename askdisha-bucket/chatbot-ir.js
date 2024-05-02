@@ -1676,7 +1676,7 @@
             let current = new Date();
             // console.log(1);
             if ((current - lastTimeRefresh) / 1000 > refreshTimer) {
-                refreshHomeAdWindow();
+                // refreshHomeAdWindow();
                 lastTimeRefresh = current;
             }
         };
