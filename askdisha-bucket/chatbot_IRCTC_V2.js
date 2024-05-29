@@ -2200,9 +2200,12 @@ display:none;
         document
           .querySelectorAll(".clearfix")[4]
           .insertAdjacentElement("afterend", videoDiv);
+        setTimeout(()=>{
         unibots.cmd.push(() => {
           unibotsPlayer("irctc.co.in_1712646358600")
         });
+      },500);
+      ;
       } catch (err) {
         console.log(err);
       }
