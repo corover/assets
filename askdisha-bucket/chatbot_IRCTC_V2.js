@@ -2198,10 +2198,8 @@ display:none;
        `;
         // document.body.appendChild(videoDiv)
         document
-          .querySelectorAll(".clearfix")[3]
-          .insertBefore(
-            adContainer,
-            document.querySelectorAll("div.container")[3].childNodes[0]);
+          .querySelectorAll(".clearfix")[4]
+          .insertAdjacentElement("afterend", videoDiv);
         unibots.cmd.push(() => {
           unibotsPlayer("irctc.co.in_1712646358600")
         });
