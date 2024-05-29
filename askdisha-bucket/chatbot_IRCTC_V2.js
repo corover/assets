@@ -2186,25 +2186,25 @@ display:none;
         console.log(err);
       }
     } else {
-      // try {
-      //   let videoDiv = document.createElement("div");
-      //   videoDiv.id = "div-ub-irctc.co.in_1712646358600";
-      //   videoDiv.style.cssText = `
-      //  width:100%;
-      //  max-width: 100%;
-      //  margin:10px auto;
-      //  overflow-x:hidden;
-      //  `;
-      //   // document.body.appendChild(videoDiv)
-      //   document
-      //     .querySelectorAll(".clearfix")[3]
-      //     .insertAdjacentElement("afterend", videoDiv);
-      //   unibots.cmd.push(() => {
-      //     unibotsPlayer("irctc.co.in_1712646358600")
-      //   });
-      // } catch (err) {
-      //   console.log(err);
-      // }
+      try {
+        let videoDiv = document.createElement("div");
+        videoDiv.id = "div-ub-irctc.co.in_1712646358600";
+        videoDiv.style.cssText = `
+       width:100%;
+       max-width: 100%;
+       margin:10px auto;
+       overflow-x:hidden;
+       `;
+        // document.body.appendChild(videoDiv)
+        document
+          .querySelectorAll(".clearfix")[3]
+          .insertAdjacentElement("afterend", videoDiv);
+        unibots.cmd.push(() => {
+          unibotsPlayer("irctc.co.in_1712646358600")
+        });
+      } catch (err) {
+        console.log(err);
+      }
     }
   }
 
@@ -2231,18 +2231,18 @@ display:none;
           document.body.appendChild(videoDiv);
         }
       } else {
-        // let lastTrain = document.querySelectorAll(
-        //   "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
-        // )[0];
+        let lastTrain = document.querySelectorAll(
+          "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
+        )[0];
 
-        // if (lastTrain) lastTrain.insertAdjacentElement("afterend", videoDiv);
-        // else
-        //   setTimeout(() => {
-        //     lastTrain = document.querySelectorAll(
-        //       "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
-        //     )[0];
-        //     lastTrain.insertAdjacentElement("afterend", videoDiv);
-        //   }, 6000);
+        if (lastTrain) lastTrain.insertAdjacentElement("afterend", videoDiv);
+        else
+          setTimeout(() => {
+            lastTrain = document.querySelectorAll(
+              "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
+            )[0];
+            lastTrain.insertAdjacentElement("afterend", videoDiv);
+          }, 6000);
         try {
           let leftover = document.querySelectorAll("#adContainer1")[0];
 
