@@ -2193,7 +2193,7 @@ display:none;
         videoDiv.style.cssText = `
        width:100%;
        max-width: 100%;
-       margin:10px auto;
+       margin:10px 10px;
        overflow-x:hidden;
        `;
         // document.body.appendChild(videoDiv)
