@@ -2185,31 +2185,32 @@ display:none;
       } catch (err) {
         console.log(err);
       }
-    } else {
+    } 
+    // else {
       
-      try {
-        let videoDiv = document.createElement("div");
-        videoDiv.id = "div-ub-irctc.co.in_1712646358600";
-        videoDiv.style.cssText = `
-       width:100%;
-       max-width: 100%;
-       margin:10px 10px;
-       overflow-x:hidden;
-       `;
-        // document.body.appendChild(videoDiv)
-        document
-          .querySelectorAll(".clearfix")[4]
-          .insertAdjacentElement("afterend", videoDiv);
-        setTimeout(()=>{
-        unibots.cmd.push(() => {
-          unibotsPlayer("irctc.co.in_1712646358600")
-        });
-      },500);
-      ;
-      } catch (err) {
-        console.log(err);
-      }
-    }
+    //   try {
+    //     let videoDiv = document.createElement("div");
+    //     videoDiv.id = "div-ub-irctc.co.in_1712646358600";
+    //     videoDiv.style.cssText = `
+    //    width:100%;
+    //    max-width: 100%;
+    //    margin:10px 10px;
+    //    overflow-x:hidden;
+    //    `;
+    //     // document.body.appendChild(videoDiv)
+    //     document
+    //       .querySelectorAll(".clearfix")[4]
+    //       .insertAdjacentElement("afterend", videoDiv);
+    //     setTimeout(()=>{
+    //     unibots.cmd.push(() => {
+    //       unibotsPlayer("irctc.co.in_1712646358600")
+    //     });
+    //   },500);
+    //   ;
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // }
   }
 
   setVideoAd(true);
