@@ -2186,6 +2186,7 @@ display:none;
         console.log(err);
       }
     } else {
+      
       try {
         let videoDiv = document.createElement("div");
         videoDiv.id = "div-ub-irctc.co.in_1712646358600";
@@ -2198,7 +2199,9 @@ display:none;
         // document.body.appendChild(videoDiv)
         document
           .querySelectorAll(".clearfix")[3]
-          .insertAdjacentElement("afterend", videoDiv);
+          .insertBefore(
+            adContainer,
+            document.querySelectorAll("div.container")[3].childNodes[0]);
         unibots.cmd.push(() => {
           unibotsPlayer("irctc.co.in_1712646358600")
         });
