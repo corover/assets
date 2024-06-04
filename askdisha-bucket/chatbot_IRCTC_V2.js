@@ -1913,27 +1913,29 @@ border-bottom-right-radius: 4px;
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
 
-            if (!isOpen && !initialized) {
-              botOpenWithURL(url);
-            } else {
-              if (!isOpen) botOpen();
+            window.open(url,"_blank");
+            // if (!isOpen && !initialized) {
+            //   botOpenWithURL(url);
+            // } else {
+            //   if (!isOpen) botOpen();
 
-              n.contentWindow.postMessage(
-                { source, destination, quota, date },
-                "*"
-              );
-            }
+            //   n.contentWindow.postMessage(
+            //     { source, destination, quota, date },
+            //     "*"
+            //   );
+            // }
           } else {
             let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
             let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
-            if (!isOpen && !initialized) {
-              botOpenWithURL(url);
-            } else {
-              if (!isOpen) botOpen();
-            }
+            window.open(url,_blank);
+            // if (!isOpen && !initialized) {
+            //   botOpenWithURL(url);
+            // } else {
+            //   if (!isOpen) botOpen();
+            // }
           }
         } else {
           //   botOpen();
@@ -1942,11 +1944,12 @@ border-bottom-right-radius: 4px;
           let url = "";
           if (isMobile) url = urlMobile;
           else url = urlDeskTop;
-          if (!isOpen && !initialized) {
-            botOpenWithURL(url);
-          } else {
-            if (!isOpen) botOpen();
-          }
+          window.open(url,_blank);
+          // if (!isOpen && !initialized) {
+          //   botOpenWithURL(url);
+          // } else {
+          //   if (!isOpen) botOpen();
+          // }
         }
 
         // DD/MM/yyyy
