@@ -1930,7 +1930,7 @@ border-bottom-right-radius: 4px;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
-            window.open(url,_blank);
+            window.open(url,"_blank");
             // if (!isOpen && !initialized) {
             //   botOpenWithURL(url);
             // } else {
@@ -1944,7 +1944,7 @@ border-bottom-right-radius: 4px;
           let url = "";
           if (isMobile) url = urlMobile;
           else url = urlDeskTop;
-          window.open(url,_blank);
+          window.open(url,"_blank");
           // if (!isOpen && !initialized) {
           //   botOpenWithURL(url);
           // } else {
