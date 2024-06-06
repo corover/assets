@@ -1907,8 +1907,8 @@ border-bottom-right-radius: 4px;
           const date = inputs[2].value;
 
           if (source && destination) {
-            let urlDeskTop = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}`;
-            let urlMobile = `https://askdisha.irctc.co.in/?source=${source}&destination=${destination}&date=${date}&quota=${quota}/#web`;
+            let urlDeskTop = `https://askdisha.irctc.co.in/?FROM=${source}&TO=${destination}&DATE=${date}&QUOTA=${quota}`;
+            let urlMobile = `https://askdisha.irctc.co.in/?FROM=${source}&TO=${destination}&DATE=${date}&QUOTA=${quota}/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
