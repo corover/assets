@@ -1904,7 +1904,7 @@ border-bottom-right-radius: 4px;
           const source = inputs[0].value.split(" - ")[1];
           const destination = inputs[1].value.split(" - ")[1];
           const quota = inputs[4].innerText;
-          const date = inputs[2].value;
+          const date = inputs[2].value.split("/")[2]+inputs[2].value.split("/")[1]+inputs[2].value.split("/")[0];
 
           if (source && destination) {
             let urlDeskTop = `https://askdisha.irctc.co.in/?FROM=${source}&TO=${destination}&DATE=${date}&QUOTA=${quota}`;
@@ -1925,8 +1925,8 @@ border-bottom-right-radius: 4px;
             //   );
             // }
           } else {
-            let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
-            let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
+            let urlDeskTop = `https://askdisha.irctc.co.in/`;
+            let urlMobile = `https://askdisha.irctc.co.in/`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
@@ -1939,8 +1939,8 @@ border-bottom-right-radius: 4px;
           }
         } else {
           //   botOpen();
-          let urlDeskTop = `https://askdisha.irctc.co.in/?clicked=true`;
-          let urlMobile = `https://askdisha.irctc.co.in/?clicked=true/#web`;
+          let urlDeskTop = `https://askdisha.irctc.co.in/`;
+          let urlMobile = `https://askdisha.irctc.co.in/`;
           let url = "";
           if (isMobile) url = urlMobile;
           else url = urlDeskTop;
