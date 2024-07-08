@@ -32,7 +32,6 @@
 //   }
 // };
 
-
 // function pushInnerAd() {
 //   const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 //   //   5500 / index.html;
@@ -384,7 +383,7 @@ const setPlaceholderMaxHeight = () => {
 
   if (true) {
     let isOpen = false,
-        isOpenTrainList = false,
+      isOpenTrainList = false,
       initialized = false;
     isSmall = false;
     let adActive = false;
@@ -1434,8 +1433,7 @@ border-bottom-right-radius: 4px;
     }, 4000);
 
     setTimeout(() => {
-      if (window.screen.width < 600)
-        switchIcon(true);
+      if (window.screen.width < 600) switchIcon(true);
     }, 50);
 
     function minim() {
@@ -1471,45 +1469,45 @@ border-bottom-right-radius: 4px;
     }
     setInterval(() => {
       //   irctc.co.in/nget/train-search
-  //     if (
-  //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
-  //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
-  //       (
-  //         navigator.userAgent.includes("Android") ||
-  //   navigator.userAgent.includes("webOS") ||
-  //   navigator.userAgent.includes("iPhone") ||
-  //   navigator.userAgent.includes("iPad") ||
-  //   navigator.userAgent.includes("iPod") ||
-  //   navigator.userAgent.includes("BlackBerry") ||
-  //   navigator.userAgent.includes("Windows Phone")
-  //       )
-  //       )) {
-  //       openBanner(false);
-  //       document.getElementById("askDishaSdk").style.display = "none";
-  //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-  //         "none";
-  //       document.getElementById("dod").style.display = "none";
-  //      } 
-  //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") && 
-  //      !isOpenTrainList &&
-  //      (
-  //       !navigator.userAgent.includes("Android") ||
-  // !navigator.userAgent.includes("webOS") ||
-  // !navigator.userAgent.includes("iPhone") ||
-  // !navigator.userAgent.includes("iPad") ||
-  // !navigator.userAgent.includes("iPod") ||
-  // !navigator.userAgent.includes("BlackBerry") ||
-  // !navigator.userAgent.includes("Windows Phone")
-  //     )){
-  //       openBanner(true);
-  //       document.getElementById("askDishaSdk").style.display = "flex";
-  //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-  //         "block";
-  //       document.getElementById("dod").style.display = "inline";
-  //       isOpenTrainList=true;
-  //      }
-  //     else if (!isSmall) {
-    if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
+      //     if (
+      //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
+      //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
+      //       (
+      //         navigator.userAgent.includes("Android") ||
+      //   navigator.userAgent.includes("webOS") ||
+      //   navigator.userAgent.includes("iPhone") ||
+      //   navigator.userAgent.includes("iPad") ||
+      //   navigator.userAgent.includes("iPod") ||
+      //   navigator.userAgent.includes("BlackBerry") ||
+      //   navigator.userAgent.includes("Windows Phone")
+      //       )
+      //       )) {
+      //       openBanner(false);
+      //       document.getElementById("askDishaSdk").style.display = "none";
+      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+      //         "none";
+      //       document.getElementById("dod").style.display = "none";
+      //      }
+      //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
+      //      !isOpenTrainList &&
+      //      (
+      //       !navigator.userAgent.includes("Android") ||
+      // !navigator.userAgent.includes("webOS") ||
+      // !navigator.userAgent.includes("iPhone") ||
+      // !navigator.userAgent.includes("iPad") ||
+      // !navigator.userAgent.includes("iPod") ||
+      // !navigator.userAgent.includes("BlackBerry") ||
+      // !navigator.userAgent.includes("Windows Phone")
+      //     )){
+      //       openBanner(true);
+      //       document.getElementById("askDishaSdk").style.display = "flex";
+      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+      //         "block";
+      //       document.getElementById("dod").style.display = "inline";
+      //       isOpenTrainList=true;
+      //      }
+      //     else if (!isSmall) {
+      if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
@@ -1897,23 +1895,31 @@ border-bottom-right-radius: 4px;
       //     minim();
       //   }
       // }
-      if (event.target.className == "launchAskDisha") {
+      if (event.target.innerText == "Easy booking") {
         const inputs = document.querySelectorAll(".ui-inputtext");
 
         if (inputs.length > 0) {
           const source = inputs[0].value.split(" - ")[1];
           const destination = inputs[1].value.split(" - ")[1];
           const quota = inputs[4].innerText;
-          const date = inputs[2].value.split("/")[2]+inputs[2].value.split("/")[1]+inputs[2].value.split("/")[0];
+          const date =
+            inputs[2].value.split("/")[2] +
+            inputs[2].value.split("/")[1] +
+            inputs[2].value.split("/")[0];
 
           if (source && destination) {
-            let urlDeskTop = `https://askdisha.irctc.co.in/?FROM=${source}&TO=${destination}&DATE=${date}&QUOTA=${quota}`;
-            let urlMobile = `https://askdisha.irctc.co.in/?FROM=${source}&TO=${destination}&DATE=${date}&QUOTA=${quota}/#web`;
+            let urlDeskTop = `https://askdisha.irctc.co.in/`;
+            let urlMobile = `https://askdisha.irctc.co.in/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
 
-            window.open(url,"_blank");
+            const ref = window.open(url, "_blank");
+
+            setTimeout(() => {
+              ref.postMessage({ source, destination, quota, date }, "*");
+            }, 800);
+
             // if (!isOpen && !initialized) {
             //   botOpenWithURL(url);
             // } else {
@@ -1926,11 +1932,15 @@ border-bottom-right-radius: 4px;
             // }
           } else {
             let urlDeskTop = `https://askdisha.irctc.co.in/`;
-            let urlMobile = `https://askdisha.irctc.co.in/`;
+            let urlMobile = `https://askdisha.irctc.co.in/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
-            window.open(url,"_blank");
+            const ref = window.open(url, "_blank");
+
+            setTimeout(() => {
+              ref.postMessage("SEND_CLICK", "*");
+            }, 800);
             // if (!isOpen && !initialized) {
             //   botOpenWithURL(url);
             // } else {
@@ -1940,11 +1950,15 @@ border-bottom-right-radius: 4px;
         } else {
           //   botOpen();
           let urlDeskTop = `https://askdisha.irctc.co.in/`;
-          let urlMobile = `https://askdisha.irctc.co.in/`;
+          let urlMobile = `https://askdisha.irctc.co.in/#web`;
           let url = "";
           if (isMobile) url = urlMobile;
           else url = urlDeskTop;
-          window.open(url,"_blank");
+          const ref = window.open(url, "_blank");
+
+          setTimeout(() => {
+            ref.postMessage("SEND_CLICK", "*");
+          }, 800);
           // if (!isOpen && !initialized) {
           //   botOpenWithURL(url);
           // } else {
@@ -1954,14 +1968,14 @@ border-bottom-right-radius: 4px;
 
         // DD/MM/yyyy
       }
-      if (event.target.id == "launchAskDisha") {
-        botOpen();
-      }
-      if (event.target.innerText) {
-        if (event.target.innerText.trim() == "ASK DISHA") {
-          botOpen();
-        }
-      }
+      // if (event.target.id == "launchAskDisha") {
+      //   botOpen();
+      // }
+      // if (event.target.innerText) {
+      //   if (event.target.innerText.trim() == "ASK DISHA") {
+      //     botOpen();
+      //   }
+      // }
     });
 
     setInterval(() => {
@@ -2074,38 +2088,40 @@ display:none;
       // }
     }
 
-  //   function refreshHomeAdWindow() {
-  //     if (isOpen) {
-  //       document.getElementById("adIframeContainer").removeChild(adIframe);
-  //       setTimeout(() => {
-  //         document.getElementById("adIframeContainer").appendChild(adIframe);
-  //       }, 500);
-  //     } else {
-  //       googletag.cmd.push(function () {
-  //         //   googletag.pubads().refresh([IR_UB]);
-  //         // googletag.pubads().refresh([IR_UB_300x250]);
-  //         // googletag.pubads().refresh([IR_UB_300x250_2]);
-  //         if (!isMob()) {
-  //           googletag.pubads().refresh([IR_UB_NEW]);
-  //         }
-  //         googletag.pubads().refresh([IR_UB]);
-  //       });
+    //   function refreshHomeAdWindow() {
+    //     if (isOpen) {
+    //       document.getElementById("adIframeContainer").removeChild(adIframe);
+    //       setTimeout(() => {
+    //         document.getElementById("adIframeContainer").appendChild(adIframe);
+    //       }, 500);
+    //     } else {
+    //       googletag.cmd.push(function () {
+    //         //   googletag.pubads().refresh([IR_UB]);
+    //         // googletag.pubads().refresh([IR_UB_300x250]);
+    //         // googletag.pubads().refresh([IR_UB_300x250_2]);
+    //         if (!isMob()) {
+    //           googletag.pubads().refresh([IR_UB_NEW]);
+    //         }
+    //         googletag.pubads().refresh([IR_UB]);
+    //       });
 
-  //       if (!isSplashScreenOpen) {
-  //         remove320();
-  //         setTimeout(() => {
-  //           add320();
-  //         }, 500);
-  //       }
-  //     }
-  //     if (!isOpen && !isMobile) {
-  //       splashMagic2();
-  //     }
-  //   }
+    //       if (!isSplashScreenOpen) {
+    //         remove320();
+    //         setTimeout(() => {
+    //           add320();
+    //         }, 500);
+    //       }
+    //     }
+    //     if (!isOpen && !isMobile) {
+    //       splashMagic2();
+    //     }
+    //   }
   }
 
   function removeAd() {
-    const videoAddElement = document.getElementById("div-ub-irctc.co.in_1712646358600");
+    const videoAddElement = document.getElementById(
+      "div-ub-irctc.co.in_1712646358600"
+    );
     if (videoAddElement) videoAddElement.remove();
   }
 
@@ -2134,8 +2150,6 @@ display:none;
 
     document.head.appendChild(videoScript);
   }
-
-
 
   // function setVideoAd(setHeader){
   // }
@@ -2179,18 +2193,15 @@ display:none;
        >
        </span>
          `;
-         setTimeout(()=>{
-         unibots.cmd.push(() => {
-          unibotsPlayer("irctc.co.in_1712646358600")
-        });
-        },500);
-        ;
+        setTimeout(() => {
+          unibots.cmd.push(() => {
+            unibotsPlayer("irctc.co.in_1712646358600");
+          });
+        }, 500);
       } catch (err) {
         console.log(err);
       }
-    } 
-    else {
-      
+    } else {
       try {
         let videoDiv = document.createElement("div");
         videoDiv.id = "div-ub-irctc.co.in_1712646358600";
@@ -2204,12 +2215,11 @@ display:none;
         document
           .querySelectorAll(".clearfix")[4]
           .insertAdjacentElement("afterend", videoDiv);
-        setTimeout(()=>{
-        unibots.cmd.push(() => {
-          unibotsPlayer("irctc.co.in_1712646358600")
-        });
-      },500);
-      ;
+        setTimeout(() => {
+          unibots.cmd.push(() => {
+            unibotsPlayer("irctc.co.in_1712646358600");
+          });
+        }, 500);
       } catch (err) {
         console.log(err);
       }
@@ -2301,7 +2311,7 @@ display:none;
       }
 
       unibots.cmd.push(() => {
-        unibotsPlayer("irctc.co.in_1712646358600")
+        unibotsPlayer("irctc.co.in_1712646358600");
       });
 
       // let p = document.createElement("p");
@@ -2374,7 +2384,7 @@ display:none;
       }
 
       unibots.cmd.push(() => {
-        unibotsPlayer("irctc.co.in_1712646358600")
+        unibotsPlayer("irctc.co.in_1712646358600");
       });
     } catch (err) {
       console.log(err);
