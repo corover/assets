@@ -1918,7 +1918,7 @@ border-bottom-right-radius: 4px;
 
             setTimeout(() => {
               ref.postMessage({ source, destination, quota, date }, "*");
-            }, 800);
+            }, 2000);
 
             // if (!isOpen && !initialized) {
             //   botOpenWithURL(url);
@@ -1940,7 +1940,7 @@ border-bottom-right-radius: 4px;
 
             setTimeout(() => {
               ref.postMessage("SEND_CLICK", "*");
-            }, 800);
+            }, 2000);
             // if (!isOpen && !initialized) {
             //   botOpenWithURL(url);
             // } else {
@@ -1958,7 +1958,7 @@ border-bottom-right-radius: 4px;
 
           setTimeout(() => {
             ref.postMessage("SEND_CLICK", "*");
-          }, 800);
+          }, 2000);
           // if (!isOpen && !initialized) {
           //   botOpenWithURL(url);
           // } else {
