@@ -16,6 +16,4 @@ script.src =
   "https://cdn.jsdelivr.net/gh/corover/assets@dmrc-29-07-2024/dmrc-assets/chatbot.lib.main.js?" +
   new Date().getTime();
 
-script.src = "/dmrc-assets/chatbot.lib.main.js?" + new Date().getTime();
-
 document.head.appendChild(script);
