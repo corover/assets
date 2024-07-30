@@ -1,5 +1,5 @@
 const LOGO_URL =
-  "https://cdn.jsdelivr.net/gh/corover/assets@dmrc-29-07-2024/dmrc-assets/dmrc-va-launcher.png";
+  "https://cdn.jsdelivr.net/gh/corover/assets@dmrc-30-07-2024/dmrc-assets/render/dmrc-va-launcher.png";
 const CLOSE_ICON = `<svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-98 -98 686.00 686.00" xml:space="preserve" stroke="#ffffff" stroke-width="24.5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "></polygon> </g></svg>`;
 const LAUNCHER_CSS = `background-size: cover;
 background-position: 6px -3px;
