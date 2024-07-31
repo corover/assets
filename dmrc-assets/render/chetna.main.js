@@ -5,19 +5,22 @@ const CLOSE_ICON_DARK = `<svg fill="#000000" height="20px" width="20px" version=
 const LAUNCHER_CSS = `background-size: cover;
 background-position: 6px -3px;
 background-repeat: no-repeat;
-background-color: transparent;
-width: 120px;
-height: 120px;
-border-radius: 100%;
--webkit-box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);
-box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);
+background-color: white;
+width: 100px;
+height: 100px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 -webkit-backface-visibility: hidden; 
 -webkit-transition: all 0.5s; 
 transition: all 0.5s; 
 cursor: pointer; 
 z-index: 9; 
-border-radius: 50%;
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;`;
+border-top-left-radius: 100%;
+border-top-right-radius: 100%;
+border-bottom-left-radius: 100%;
+display: flex;
+justify-content: center;
+align-items: center;`;
 
 const INIT_CSS = `position: fixed;
 z-index: 999999999;
@@ -61,12 +64,59 @@ box-shadow: 0 7px 6px 1px rgb(0 0 0 / 16%);
 -moz-box-shadow: 0 7px 6px 1px rgba(0,0,0,.16); 
 height: 100%;`;
 
+const BOTTOM_LABEL_CSS = `padding: 8px;
+background: white;
+position: fixed;
+bottom: 10px;
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+border-bottom-right-radius: 8px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+-webkit-backface-visibility: hidden; 
+-webkit-transition: all 0.5s;
+cursor: pointer;`;
+
+const HOVER_CSS = `padding: 8px;
+bottom: 165px;
+background: white;
+position: fixed;
+border-radius: 8px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+-webkit-backface-visibility: hidden; 
+-webkit-transition: all 0.5s;
+display: none;`;
+
+const ANIMATION_CSS = `<style>.shaker {
+  animation: shake 0.2s;
+
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}</style>`;
+
 let isOpen = false;
+let lang = "en";
 
 const iframe = document.createElement("iframe");
 const launcher = document.createElement("div");
 const mainDiv = document.createElement("div");
 const close = document.createElement("div");
+const bottomInfo = document.createElement("div");
+const hoverInfo = document.createElement("div");
 
 const fixCSS = () => {
   if (isOpen) {
@@ -77,7 +127,7 @@ const fixCSS = () => {
     close.style.display = "block";
   } else {
     iframe.style.display = "none";
-    launcher.style.display = "block";
+    launcher.style.display = "flex";
     mainDiv.style.cssText = INIT_CSS;
     close.style.display = "none";
   }
@@ -113,9 +163,42 @@ window.onmessage = (message) => {
   message.data == "home_screen" && (close.innerHTML = CLOSE_ICON);
 };
 
+const setText = () => {
+  bottomInfo.innerHTML =
+    lang == "en"
+      ? `Hi, I am <span style="color: #3061a3;"><b>Chetna</b></span>, your <span style="color: #3061a3;">AI Assistant</span>.`
+      : `नमस्ते, मैं <span style="color: #3061a3;"><b>चेतना</b></span> हूँ, आपकी <span style="color: #3061a3;">एआई असिस्टेंट</span>।`;
+  hoverInfo.innerHTML =
+    lang == "en"
+      ? `<span style="line-height: 1.8rem;">Got a question? Ask <span style="color: #3061a3;"><b>CHETNA</b></span>...</span>`
+      : `<span style="line-height: 1.8rem;">कोई सवाल है? <span style="color: #3061a3;"><b>चेतना</b></span> से पूँछें...</span>`;
+};
+
+setInterval(() => {
+  lang = localStorage.getItem("lang") ?? "en";
+  setText();
+}, 1000);
+
+const onHover = () => {
+  hoverInfo.style.display = "block";
+};
+
+const onHoverLeave = () => {
+  hoverInfo.style.display = "none";
+};
+
+const openBot = () => {
+  isOpen = true;
+  iframe.src = "https://chatbot.delhimetrorail.com/#widget";
+  fixCSS();
+};
+
 (() => {
   setIframe();
   launcher.style.cssText = LAUNCHER_CSS;
+  hoverInfo.style.cssText = HOVER_CSS;
+  bottomInfo.style.cssText = BOTTOM_LABEL_CSS;
+  setText();
   mainDiv.id = "dmrc-chatbot-main";
   mainDiv.style.cssText = INIT_CSS;
   close.innerHTML = CLOSE_ICON;
@@ -134,19 +217,36 @@ window.onmessage = (message) => {
 
   const image = document.createElement("img");
   image.src = LOGO_URL;
-  image.style.width = "100%";
+  image.style.width = "80%";
 
   launcher.appendChild(image);
 
-  launcher.onclick = () => {
-    isOpen = true;
-    iframe.src = "https://chatbot.delhimetrorail.com/#widget";
-    fixCSS();
-  };
+  launcher.onclick = openBot;
+  bottomInfo.onclick = openBot;
+
+  launcher.onmouseover = onHover;
+  launcher.onmouseleave = onHoverLeave;
+  bottomInfo.onmouseover = onHover;
+  bottomInfo.onmouseleave = onHoverLeave;
 
   mainDiv.appendChild(launcher);
+  mainDiv.appendChild(hoverInfo);
+  mainDiv.appendChild(bottomInfo);
   mainDiv.appendChild(iframe);
   mainDiv.appendChild(close);
 
   document.body.appendChild(mainDiv);
 })();
+
+// animation
+document.head.insertAdjacentHTML("beforeend", ANIMATION_CSS);
+setInterval(() => {
+  if (!isOpen) {
+    launcher.classList = ["shaker"];
+    bottomInfo.classList = ["shaker"];
+    setTimeout(() => {
+      launcher.classList = [];
+      bottomInfo.classList = [];
+    }, 500);
+  }
+}, 3000);
