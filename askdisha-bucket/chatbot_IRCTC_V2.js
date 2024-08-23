@@ -2212,7 +2212,8 @@ display:none;
     } else {
       try {
         let videoDiv = document.createElement("div");
-        videoDiv.id = "div-ub-irctc.co.in_1712646358600";
+        // videoDiv.id = "div-ub-irctc.co.in_1712646358600";
+        videoDiv.id="v-irctc-co-in";
         videoDiv.style.cssText = `
        width:100%;
        max-width: 100%;
