@@ -2143,11 +2143,19 @@ display:none;
     // checkForVideoAd();
   }, 2000);
 
+  // function setVideoAdHeader() {
+  //   let videoScript = document.createElement("script");
+  //   videoScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
+  //   videoScript.async = true;
+
+  //   document.head.appendChild(videoScript);
+  // }
+
   function setVideoAdHeader() {
     let videoScript = document.createElement("script");
-    videoScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
-    videoScript.async = true;
-
+    videoScript.innerHTML=`(function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//a.vdo.ai/core/v-irctc-co-in/vdo.ai.js');`;
+    videoScript.setAttribute("data-cfasync", "false");
+  
     document.head.appendChild(videoScript);
   }
 
@@ -2156,14 +2164,14 @@ display:none;
   function setVideoAd(setHeader) {
     setVideoAdHeader();
     try {
-      let leftover = document.querySelectorAll("#adContainer1")[0];
+      let leftover = document.querySelectorAll("#v-irctc-co-in")[0];
       let parent = leftover.parentElement;
       parent.removeChild(leftover);
     } catch (err) {}
     if (!isMobile) {
       try {
         let adContainer = document.createElement("div");
-        adContainer.id = "adContainer1";
+        adContainer.id = "v-irctc-co-in";
         adContainer.style.cssText = `
        display: flex;
        justify-content: center;
@@ -2262,14 +2270,14 @@ display:none;
             lastTrain.insertAdjacentElement("afterend", videoDiv);
           }, 6000);
         try {
-          let leftover = document.querySelectorAll("#adContainer1")[0];
+          let leftover = document.querySelectorAll("#v-irctc-co-in")[0];
 
           let parent = leftover.parentElement;
           parent.removeChild(leftover);
         } catch (err) {}
 
         let adContainer = document.createElement("div");
-        adContainer.id = "adContainer1";
+        adContainer.id = "v-irctc-co-in";
         adContainer.style.cssText = `
    display: flex;
    justify-content: center;
@@ -2337,7 +2345,7 @@ display:none;
         document.body.appendChild(videoDiv);
       } else {
         try {
-          let leftover = document.querySelectorAll("#adContainer1")[0];
+          let leftover = document.querySelectorAll("#v-irctc-co-in")[0];
 
           let parent = leftover.parentElement;
           parent.removeChild(leftover);
@@ -2346,7 +2354,7 @@ display:none;
         let trainsDiv = document.querySelector(".tbis-div ");
 
         let adContainer = document.createElement("div");
-        adContainer.id = "adContainer1";
+        adContainer.id = "v-irctc-co-in";
         adContainer.style.cssText = `
    display: flex;
    justify-content: center;
