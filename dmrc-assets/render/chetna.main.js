@@ -1,15 +1,15 @@
 const LOGO_URL = "https://chatbot.delhimetrorail.com/render/logo-anim.gif";
-const CLOSE_ICON = `<svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-98 -98 686.00 686.00" xml:space="preserve" stroke="#ffffff" stroke-width="24.5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "></polygon> </g></svg>`;
-const CLOSE_ICON_DARK = `<svg fill="#000000" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-98 -98 686.00 686.00" xml:space="preserve" stroke="#000000" stroke-width="24.5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "></polygon> </g></svg>`;
+const CLOSE_ICON = `<svg fill="#ffffff" height="2.0vh" width="2.0vh" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-98 -98 686.00 686.00" xml:space="preserve" stroke="#ffffff" stroke-width="24.5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "></polygon> </g></svg>`;
+const CLOSE_ICON_DARK = `<svg fill="#000000" height="2.0vh" width="2.0vh" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-98 -98 686.00 686.00" xml:space="preserve" stroke="#000000" stroke-width="24.5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "></polygon> </g></svg>`;
 const LAUNCHER_CSS = `background-size: cover;
-background-position: 6px -3px;
+background-position: 0.6vh -0.3vh;
 background-repeat: no-repeat;
 background-color: white;
-width: 100px;
-height: 100px;
+width: 10vh;
+height: 10vh;
 -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
--webkit-backface-visibility: hidden; 
+-webkit-backface-visibility: hidden;
 -webkit-transition: all 0.5s; 
 transition: all 0.5s; 
 cursor: pointer; 
@@ -27,8 +27,8 @@ background-color: transparent;
 display: flex;
 justify-content: flex-end;
 align-items: center;
-bottom: 54px;
-right: 20px;
+bottom: 5.4vh;
+right: 2vh;
 width: fit-content;
 max-width: 95%;
 `;
@@ -36,7 +36,7 @@ max-width: 95%;
 const FULL_DISPLAY_CSS = `border-radius: 8px;
 box-sizing: border-box;
 right: 0; 
-width: 418px !important; 
+width: 41.8vh !important; 
 max-width: none; 
 position: fixed; 
 z-index: 999; 
@@ -46,7 +46,8 @@ opacity: 1;
 box-shadow: 0 7px 6px 1px rgb(0 0 0 / 16%); 
 -webkit-box-shadow: 0 7px 6px 1px rgb(0 0 0 / 16%); 
 -moz-box-shadow: 0 7px 6px 1px rgba(0,0,0,.16); 
-height: 80%; right:32px`;
+height: 80%;
+right: 3.2vh;`;
 
 const MOBILE_CSS = `border-radius: 8px; 
 box-sizing: border-box;
@@ -63,10 +64,10 @@ box-shadow: 0 7px 6px 1px rgb(0 0 0 / 16%);
 -moz-box-shadow: 0 7px 6px 1px rgba(0,0,0,.16); 
 height: 100%;`;
 
-const BOTTOM_LABEL_CSS = `padding: 8px;
+const BOTTOM_LABEL_CSS = `padding: .8vh;
 background: white;
 position: fixed;
-bottom: 10px;
+bottom: 1.0vh;
 border-top-left-radius: 8px;
 border-bottom-left-radius: 8px;
 border-bottom-right-radius: 8px;
@@ -74,18 +75,22 @@ border-bottom-right-radius: 8px;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 -webkit-backface-visibility: hidden; 
 -webkit-transition: all 0.5s;
-cursor: pointer;`;
+cursor: pointer;
+font-size: 1.6vh;
+height: fit-content;`;
 
-const HOVER_CSS = `padding: 8px;
-bottom: 165px;
+const HOVER_CSS = `padding: .8vh;
+bottom: 16.5vh;
 background: white;
 position: fixed;
-border-radius: 8px;
+border-radius: .8vh;
 -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 -webkit-backface-visibility: hidden; 
 -webkit-transition: all 0.5s;
-display: none;`;
+display: none;
+font-size: 1.6vh;
+height: fit-content;`;
 
 const ANIMATION_CSS = `<style>.shaker {
   animation: shake 0.2s;
@@ -169,8 +174,8 @@ const setText = () => {
       : `नमस्ते, मैं <span style="color: #3061a3;"><b>चेतना</b></span> हूँ, आपकी <span style="color: #3061a3;">एआई असिस्टेंट</span>।`;
   hoverInfo.innerHTML =
     lang == "en"
-      ? `<span style="line-height: 1.8rem;">Got a question? Ask <span style="color: #3061a3;"><b>CHETNA</b></span>...</span>`
-      : `<span style="line-height: 1.8rem;">कोई सवाल है? <span style="color: #3061a3;"><b>चेतना</b></span> से पूँछें...</span>`;
+      ? `<span>Got a question? Ask <span style="color: #3061a3;"><b>CHETNA</b></span>...</span>`
+      : `<span>कोई सवाल है? <span style="color: #3061a3;"><b>चेतना</b></span> से पूँछें...</span>`;
 };
 
 setInterval(() => {
@@ -201,11 +206,11 @@ const openBot = () => {
   mainDiv.id = "dmrc-chatbot-main";
   mainDiv.style.cssText = INIT_CSS;
   close.innerHTML = CLOSE_ICON;
-  close.style.width = "20px";
-  close.style.height = "20px";
+  close.style.width = "2vh";
+  close.style.height = "2vh";
   close.style.position = "absolute";
-  close.style.top = "18px";
-  close.style.right = "15px";
+  close.style.top = "1.8vh";
+  close.style.right = "1.5vh";
   close.style.cursor = "pointer";
   close.style.display = "none";
 
