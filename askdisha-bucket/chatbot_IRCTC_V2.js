@@ -2212,8 +2212,7 @@ display:none;
     } else {
       try {
         let videoDiv = document.createElement("div");
-        // videoDiv.id = "div-ub-irctc.co.in_1712646358600";
-        videoDiv.id="v-irctc-co-in";
+        videoDiv.id = "div-ub-irctc.co.in_1712646358600";
         videoDiv.style.cssText = `
        width:100%;
        max-width: 100%;
@@ -2223,7 +2222,8 @@ display:none;
         // document.body.appendChild(videoDiv)
         document
           .querySelectorAll(".clearfix")[4]
-          .insertAdjacentElement("afterend", videoDiv);
+          .appendChild(videoDiv);
+          // .insertAdjacentElement("afterend", videoDiv);
         setTimeout(() => {
           unibots.cmd.push(() => {
             unibotsPlayer("irctc.co.in_1712646358600");
