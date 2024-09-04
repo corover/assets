@@ -1684,6 +1684,7 @@
         if (window.location.href.includes("indianrail")) {
             let divRail = document.createElement("div");
             divRail.id = "v-indianrail-gov-in";
+            divRail.style.padding = "10px";
         
             if (isMobile) document.body.appendChild(divRail);
             else {
