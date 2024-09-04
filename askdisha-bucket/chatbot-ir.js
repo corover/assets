@@ -1688,7 +1688,7 @@
         
             if (isMobile) document.body.appendChild(divRail);
             else {
-                const sidebar = document.querySelectorAll("div.container")[2];
+                const sidebar = document.querySelectorAll("div.container")[1];
 
                 if (sidebar) {
                     // document
