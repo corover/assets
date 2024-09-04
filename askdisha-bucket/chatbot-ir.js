@@ -1691,7 +1691,13 @@
             let referenceElement = document.getElementById("div-gpt-ad-1568023799870-0");
         
             if (isMobile) {
+                if (referenceElement) {
+                    // Insert divRail before the referenceElement
+                    referenceElement.parentNode.insertBefore(divRail, referenceElement);
+                } else {
+                    // If referenceElement is not found, append to body
                     document.body.appendChild(divRail);
+                }
             } else {
                 // Select the sidebar container
                 const sidebar = document.querySelectorAll("div.container")[2];
