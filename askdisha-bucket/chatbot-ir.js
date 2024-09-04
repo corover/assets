@@ -1687,14 +1687,28 @@
             divRail.id = "v-indianrail-gov-in";
         
             // Append the div to the body or the sidebar depending on device type
-            if (typeof isMobile !== 'undefined' && isMobile) {
-                document.body.appendChild(divRail);
-            } else {
-                const sidebar = document.querySelector("div.panel-group");
+            if (isMobile) document.body.appendChild(divRail);
+            else {
+                const sidebar = document.querySelectorAll("div.panel-group")[0];
+
                 if (sidebar) {
+                    // document
+                    //   .getElementsByClassName("panel-group")[0]
+                    //   .appendChild(divRail);
+                    // let secondMenuItem = document.querySelectorAll(
+                    //   "div.panel.panel-default"
+                    // )[1];
                     sidebar.appendChild(divRail);
+                    // if (secondMenuItem) {
+                    // secondMenuItem.insertAdjacentHTML("afterEnd", divRail.outerHTML);
+                    // secondMenuItem.insertAdjacentHTML(
+                    //   "afterEnd",
+                    //   `<div id = "div-ub-indianrail.gov.in_1689164825698"></div>`
+                    // );
+
+                    // } else document.body.appendChild(divRail);
                 } else {
-                    console.log("Sidebar not found, appending to body.");
+                    console.log(false);
                     document.body.appendChild(divRail);
                 }
             }
