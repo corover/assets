@@ -1682,14 +1682,12 @@
         };
 
         if (window.location.href.includes("indianrail")) {
-            // Create the div element
             let divRail = document.createElement("div");
             divRail.id = "v-indianrail-gov-in";
         
-            // Append the div to the body or the sidebar depending on device type
             if (isMobile) document.body.appendChild(divRail);
             else {
-                const sidebar = document.querySelectorAll("div.panel-group")[0];
+                const sidebar = document.querySelectorAll("div.container")[2];
 
                 if (sidebar) {
                     // document
@@ -1713,7 +1711,6 @@
                 }
             }
         
-            // Create and configure the script element
             let script = document.createElement("script");
             script.setAttribute("data-cfasync", "false");
             script.defer = true;
