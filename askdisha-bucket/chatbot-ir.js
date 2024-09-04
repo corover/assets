@@ -1711,7 +1711,7 @@
             }
 
             let script3 = document.createElement("script");
-            script3.async = true;
+            script3.async = false;
             document.body.appendChild(script3);
             script3.innerHTML = `
             (function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//
