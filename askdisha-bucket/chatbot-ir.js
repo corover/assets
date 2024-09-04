@@ -1686,27 +1686,36 @@
             let divRail = document.createElement("div");
             divRail.id = "v-indianrail-gov-in";
             divRail.style.padding = "10px";
-        
+                
             if (isMobile) {
                 // For mobile devices
-                // Assuming that you want to insert divRail after a div.row in the body
-                const rowDiv = document.querySelector("div.row");
-                if (rowDiv) {
-                    rowDiv.insertAdjacentElement("afterend", divRail);
+                const containerElements = document.querySelectorAll("div.container");
+                if (containerElements.length >= 3) {
+                    const targetContainer = containerElements[2]; // Target the third container
+                    if (targetContainer) {
+                        const rowDiv = targetContainer.querySelector("div.row");
+                        if (rowDiv) {
+                            rowDiv.insertAdjacentElement("afterend", divRail);
+                        } else {
+                            console.log("Row div not found in the target container, appending div to target container");
+                            targetContainer.appendChild(divRail);
+                        }
+                    } else {
+                        console.log("Target container not found, appending div to body");
+                        document.body.appendChild(divRail);
+                    }
                 } else {
-                    console.log("Row div not found on mobile, appending div to body");
+                    console.log("Not enough container elements found, appending div to body");
                     document.body.appendChild(divRail);
                 }
             } else {
                 // For desktop devices
                 const containerElements = document.querySelectorAll("div.container");
-                if (containerElements.length > 2) {
-                    const sidebar = containerElements[2];
+                if (containerElements.length >= 3) {
+                    const sidebar = containerElements[2]; // Target the third container
                     if (sidebar) {
-                        // Find the first row div within the sidebar
                         const rowDiv = sidebar.querySelector("div.row");
                         if (rowDiv) {
-                            // Insert divRail after the row div
                             rowDiv.insertAdjacentElement("afterend", divRail);
                         } else {
                             console.log("Row div not found in sidebar, appending div to sidebar");
@@ -1717,7 +1726,7 @@
                         document.body.appendChild(divRail);
                     }
                 } else {
-                    console.log("Container elements not found, appending div to body");
+                    console.log("Not enough container elements found, appending div to body");
                     document.body.appendChild(divRail);
                 }
             }
@@ -1732,6 +1741,7 @@
             // Append the script to the head
             document.head.appendChild(script);
         }
+        
         
         
         
