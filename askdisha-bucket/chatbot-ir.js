@@ -1714,10 +1714,8 @@
             script3.async = true;
             document.body.appendChild(script3);
             script3.innerHTML = `
-             window.unibots = window.unibots || { cmd: [] };
-             unibots.cmd.push(() => {
-               unibotsPlayer("indianrail.gov.in_1689164825698");
-             });
+            (function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//
+            a.vdo.ai/core/v-indianrail-gov-in/vdo.ai.js');
              `;
         }
 
