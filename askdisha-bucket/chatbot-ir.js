@@ -1683,7 +1683,7 @@
 
         if (window.location.href.includes("indianrail")) {
             let divRail = document.createElement("div");
-            divRail.id = "div-ub-indianrail.gov.in_1689164825698";
+            divRail.id = "v-indianrail-gov-in";
             if (isMobile) document.body.appendChild(divRail);
             else {
                 const sidebar = document.querySelectorAll("div.panel-group")[0];
