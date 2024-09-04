@@ -1682,41 +1682,73 @@
         };
 
         if (window.location.href.includes("indianrail")) {
+            // Create the div element
             let divRail = document.createElement("div");
             divRail.id = "v-indianrail-gov-in";
-            if (isMobile) document.body.appendChild(divRail);
-            else {
-                const sidebar = document.querySelectorAll("div.panel-group")[0];
-
+        
+            // Append the div to the body or the sidebar depending on device type
+            if (typeof isMobile !== 'undefined' && isMobile) {
+                document.body.appendChild(divRail);
+            } else {
+                const sidebar = document.querySelector("div.panel-group");
                 if (sidebar) {
-                    // document
-                    //   .getElementsByClassName("panel-group")[0]
-                    //   .appendChild(divRail);
-                    // let secondMenuItem = document.querySelectorAll(
-                    //   "div.panel.panel-default"
-                    // )[1];
                     sidebar.appendChild(divRail);
-                    // if (secondMenuItem) {
-                    // secondMenuItem.insertAdjacentHTML("afterEnd", divRail.outerHTML);
-                    // secondMenuItem.insertAdjacentHTML(
-                    //   "afterEnd",
-                    //   `<div id = "div-ub-indianrail.gov.in_1689164825698"></div>`
-                    // );
-
-                    // } else document.body.appendChild(divRail);
                 } else {
-                    console.log(false);
+                    console.log("Sidebar not found, appending to body.");
                     document.body.appendChild(divRail);
                 }
             }
-
-            let script3 = document.createElement("script");
-            document.body.appendChild(script3);
-            script3.innerHTML = `
-            (function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//
-            a.vdo.ai/core/v-indianrail-gov-in/vdo.ai.js');
-             `;
+        
+            // Create and configure the script element
+            let script = document.createElement("script");
+            script.setAttribute("data-cfasync", "false");
+            script.defer = true;
+            script.async = true;
+            script.src = `${window.location.protocol}//a.vdo.ai/core/v-indianrail-gov-in/vdo.ai.js`;
+        
+            // Append the script to the head
+            document.head.appendChild(script);
         }
+        
+        // if (window.location.href.includes("indianrail")) {
+        //     let divRail = document.createElement("div");
+        //     divRail.id = "div-ub-indianrail.gov.in_1689164825698";
+        //     if (isMobile) document.body.appendChild(divRail);
+        //     else {
+        //         const sidebar = document.querySelectorAll("div.panel-group")[0];
+
+        //         if (sidebar) {
+        //             // document
+        //             //   .getElementsByClassName("panel-group")[0]
+        //             //   .appendChild(divRail);
+        //             // let secondMenuItem = document.querySelectorAll(
+        //             //   "div.panel.panel-default"
+        //             // )[1];
+        //             sidebar.appendChild(divRail);
+        //             // if (secondMenuItem) {
+        //             // secondMenuItem.insertAdjacentHTML("afterEnd", divRail.outerHTML);
+        //             // secondMenuItem.insertAdjacentHTML(
+        //             //   "afterEnd",
+        //             //   `<div id = "div-ub-indianrail.gov.in_1689164825698"></div>`
+        //             // );
+
+        //             // } else document.body.appendChild(divRail);
+        //         } else {
+        //             console.log(false);
+        //             document.body.appendChild(divRail);
+        //         }
+        //     }
+
+        //     let script3 = document.createElement("script");
+        //     script3.async = true;
+        //     document.body.appendChild(script3);
+        //     script3.innerHTML = `
+        //      window.unibots = window.unibots || { cmd: [] };
+        //      unibots.cmd.push(() => {
+        //        unibotsPlayer("indianrail.gov.in_1689164825698");
+        //      });
+        //      `;
+        // }
 
         window.top.addEventListener("click", resetTimer, false);
         window.top.addEventListener("touchstart", resetTimer, false);
