@@ -1682,46 +1682,57 @@
         };
 
         if (window.location.href.includes("indianrail")) {
-            // Create and style the new div
+            // Create and style the div element
             let divRail = document.createElement("div");
             divRail.id = "v-indianrail-gov-in";
             divRail.style.padding = "10px";
         
-            // Determine if the device is mobile
-            let isMobile = /Mobi|Android/i.test(navigator.userAgent);
-        
             if (isMobile) {
-                document.body.appendChild(divRail);
+                // For mobile devices
+                // Assuming that you want to insert divRail after a div.row in the body
+                const rowDiv = document.querySelector("div.row");
+                if (rowDiv) {
+                    rowDiv.insertAdjacentElement("afterend", divRail);
+                } else {
+                    console.log("Row div not found on mobile, appending div to body");
+                    document.body.appendChild(divRail);
+                }
             } else {
-                // Select the container div
-                const containers = document.querySelectorAll("div.container");
-                if (containers.length > 0) {
-                    // Find the first row inside the container
-                    const firstRow = containers[0].querySelector("div.row");
-                    if (firstRow) {
-                        // Insert the new div after the first row
-                        firstRow.insertAdjacentElement("afterend", divRail);
+                // For desktop devices
+                const containerElements = document.querySelectorAll("div.container");
+                if (containerElements.length > 2) {
+                    const sidebar = containerElements[2];
+                    if (sidebar) {
+                        // Find the first row div within the sidebar
+                        const rowDiv = sidebar.querySelector("div.row");
+                        if (rowDiv) {
+                            // Insert divRail after the row div
+                            rowDiv.insertAdjacentElement("afterend", divRail);
+                        } else {
+                            console.log("Row div not found in sidebar, appending div to sidebar");
+                            sidebar.appendChild(divRail);
+                        }
                     } else {
-                        // No row found, log an error and append the div to the body
-                        console.log("No .row div found inside the .container.");
+                        console.log("Sidebar not found, appending div to body");
                         document.body.appendChild(divRail);
                     }
                 } else {
-                    // No container found, log an error and append the div to the body
-                    console.log("No .container div found.");
+                    console.log("Container elements not found, appending div to body");
                     document.body.appendChild(divRail);
                 }
             }
         
-            // Create and append the script element
+            // Create and configure the script element
             let script = document.createElement("script");
             script.setAttribute("data-cfasync", "false");
             script.defer = true;
             script.async = true;
             script.src = `${window.location.protocol}//a.vdo.ai/core/v-indianrail-gov-in/vdo.ai.js`;
         
+            // Append the script to the head
             document.head.appendChild(script);
         }
+        
         
         
         
