@@ -281,7 +281,7 @@ const setPlaceholderMaxHeight = () => {
           top: "18px",
           right: "10px",
         },
-        bannerHeight: "158px",
+        // bannerHeight: "158px",
         WhiteMarginTop: "12px",
         scrollHeight: "223px",
         videoAd: {
@@ -319,7 +319,7 @@ const setPlaceholderMaxHeight = () => {
           top: "18px",
           right: "10px",
         },
-        bannerHeight: "158px",
+        // bannerHeight: "158px",
         WhiteMarginTop: "12px",
         scrollHeight: "223px",
         videoAd: {
@@ -1008,7 +1008,8 @@ border-top-right-radius: 4px;
         // console.log(1000);
         // ev.preventDefault();
         // window.open(`https://assistant.corover.mobi/eticket/`, "_blank").focus();
-        botOpen();
+        // botOpen();
+        openBanner(true);
         // setAdWidth();
       },
       false
@@ -1183,7 +1184,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}" id="disha-image">
        <img
-         src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-1.gif"
+         src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-crop.gif"
          style="width: 100%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
@@ -1290,7 +1291,6 @@ margin-bottom: -2px;">SALE
      
      <p style="    margin: 0;
      font-size: 11px;
-     margin-top: 5px;
      font-weight: 600;
      color: #555555;">...in a <span style="color: #4c84ea;">fast</span>, <span style="color: #4c84ea;">easy</span> and <span style="color: #4c84ea;">secure</span> way   <span style="    font-size: 9px;
      margin: 0;
