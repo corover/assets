@@ -208,7 +208,7 @@ const setPlaceholderMaxHeight = () => {
         top: "25px",
         right: "10px",
       },
-      bannerHeight: "180px",
+      // bannerHeight: "180px",
       WhiteMarginTop: "22px",
       scrollHeight: "223px",
       videoAd: {
@@ -243,7 +243,7 @@ const setPlaceholderMaxHeight = () => {
           top: "13px",
           right: "10px",
         },
-        bannerHeight: "132px",
+        // bannerHeight: "132px",
         WhiteMarginTop: "10px",
         scrollHeight: "223px",
         videoAd: {
@@ -1306,7 +1306,6 @@ margin-bottom: -2px;">SALE
          flex-direction: column;
          justify-content: center;
          align-items: center;
-         margin-top: ${mediaObj.WhiteMarginTop};
        "
      >
        <a
@@ -1427,10 +1426,10 @@ border-bottom-right-radius: 4px;
     };
     openBanner(false);
 
-    setTimeout(() => {
-      if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
-        openBanner(true);
-    }, 4000);
+    // setTimeout(() => {
+    //   if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
+    //     openBanner(true);
+    // }, 4000);
 
     setTimeout(() => {
       if (window.screen.width < 600) switchIcon(true);
