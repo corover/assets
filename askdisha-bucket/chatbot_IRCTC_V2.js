@@ -282,7 +282,7 @@ const setPlaceholderMaxHeight = () => {
           top: "18px",
           right: "10px",
         },
-        bannerHeight: "158px",
+        // bannerHeight: "158px",
         WhiteMarginTop: "12px",
         scrollHeight: "223px",
         videoAd: {
@@ -320,7 +320,7 @@ const setPlaceholderMaxHeight = () => {
           top: "18px",
           right: "10px",
         },
-        bannerHeight: "158px",
+        // bannerHeight: "158px",
         WhiteMarginTop: "12px",
         scrollHeight: "223px",
         videoAd: {
