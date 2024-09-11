@@ -316,7 +316,7 @@ const setPlaceholderMaxHeight = () => {
           size: "25px",
 
           padding: "7px",
-          top: "18px",
+          top: "8px",
           right: "10px",
         },
         // bannerHeight: "158px",
