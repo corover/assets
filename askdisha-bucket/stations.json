@@ -1716,10 +1716,10 @@
     "address": "Station Rd, Musafirkhana, Uttar Pradesh 227813"
   },
   {
-    "name": "MISRAULI",
-    "code": "MFL",
-    "utterances": [],
-    "name_hi": "मिश्रौली",
+    "name": "MA KALIKAN DHAM",
+    "code": "MKDM",
+    "utterances": ["MISRAULI"],
+    "name_hi": "मा कालिकन धाम",
     "district": "Amethi",
     "state": "Uttar Pradesh",
     "trainCount": "3",
@@ -14040,10 +14040,10 @@
     "address": "Indore, Madhya Pradesh"
   },
   {
-    "name": "FURSATGANJ",
-    "code": "FTG",
-    "utterances": [],
-    "name_hi": "फुरसतगंज",
+    "name": "TAPESHWARNATH D",
+    "code": "THWM",
+    "utterances": ["FURSATGANJ"],
+    "name_hi": "तपेश्वरनाथ डी",
     "district": "Amethi",
     "state": "Uttar Pradesh",
     "trainCount": "6",
@@ -18252,10 +18252,10 @@
     "address": "Jodhpur, Rajasthan"
   },
   {
-    "name": "BANI",
-    "code": "BANI",
-    "utterances": [],
-    "name_hi": "बानी",
+    "name": "SWAMI PARAMHANS",
+    "code": "SWPS",
+    "utterances": ["BANI"],
+    "name_hi": "स्वामी परमहंस",
     "district": "Amethi",
     "state": "Uttar Pradesh",
     "trainCount": "2",
@@ -22536,10 +22536,10 @@
     "address": "Punganur Rd, Andhra Pradesh"
   },
   {
-    "name": "KASIMPUR",
-    "code": "KCJ",
-    "utterances": [],
-    "name_hi": "कासिमपुर",
+    "name": "JAIS CITY",
+    "code": "JAIC",
+    "utterances": ["KASIMPUR"],
+    "name_hi": "जैस शहर",
     "district": "Amethi",
     "state": "Uttar Pradesh",
     "trainCount": "6",
@@ -46824,10 +46824,10 @@
     "address": "Mahiarpur, Bihar 854327"
   },
   {
-    "name": "JAIS",
-    "code": "JAIS",
-    "utterances": [],
-    "name_hi": "जैस",
+    "name": "G GORKHNATH DHM",
+    "code": "GUGD",
+    "utterances": ["JAIS"],
+    "name_hi": "जी गोरखनाथ धम्म",
     "district": "Rae Bareli",
     "state": "Uttar Pradesh",
     "trainCount": "19",
@@ -47556,16 +47556,28 @@
     "address": "Akaipur, West Bengal 743710"
   },
   {
-    "name": "AKBARGANJ",
-    "code": "AKJ",
-    "utterances": [],
-    "name_hi": "अकबरगंज",
+    "name": "M AHORWA B DHAM",
+    "code": "MABM",
+    "utterances": ["AKBAR GANJ","AKBARGANJ"],
+    "name_hi": "मह अहोरवा बी धाम",
     "district": "Rae Bareli",
     "state": "Uttar Pradesh",
     "trainCount": "6",
     "latitude": 26.531456000000002,
     "longitude": 81.501628,
     "address": "Amethi, Uttar Pradesh"
+  },
+  {
+    "name": "A S BHALE SULTN",
+    "code": "ASBS",
+    "utterances": ["WARIS GANJ HALT","WARIS GANJ"],
+    "name_hi": "ए एस भाले सुल्तान",
+    "district": "Suntanpur",
+    "state": "Uttar Pradesh",
+    "trainCount": "0",
+    "latitude": 26.43562643410548, 
+    "longitude": 81.69604714932652,
+    "address": "Suntanpur, Uttar Pradesh"
   },
   {
     "name": "AKKIHEBBAIU",
@@ -59808,10 +59820,10 @@
     "address": "State Highway 38, Uttar Pradesh"
   },
   {
-    "name": "NIHALGARH",
-    "code": "NHH",
-    "utterances": [],
-    "name_hi": "निहालगढ़",
+    "name": "MAH BIJLI PASI",
+    "code": "MBLP",
+    "utterances": ["NIHALGARH"],
+    "name_hi": "माह बिजली पासी",
     "district": "Sultanpur",
     "state": "Uttar Pradesh",
     "trainCount": "38",
