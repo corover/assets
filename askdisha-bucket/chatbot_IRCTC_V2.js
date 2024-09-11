@@ -1008,8 +1008,14 @@ border-top-right-radius: 4px;
         // console.log(1000);
         // ev.preventDefault();
         // window.open(`https://assistant.corover.mobi/eticket/`, "_blank").focus();
+        if(!isMobile){
+          openBanner(true);
+        }
+        else{
+          botOpen();
+        }
         // botOpen();
-        openBanner(true);
+
         // setAdWidth();
       },
       false
