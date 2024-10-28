@@ -32,7 +32,6 @@
 //   }
 // };
 
-
 // function pushInnerAd() {
 //   const isMobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 //   //   5500 / index.html;
@@ -209,7 +208,7 @@ const setPlaceholderMaxHeight = () => {
         top: "25px",
         right: "10px",
       },
-      bannerHeight: "180px",
+      // bannerHeight: "180px",
       WhiteMarginTop: "22px",
       scrollHeight: "223px",
       videoAd: {
@@ -244,7 +243,7 @@ const setPlaceholderMaxHeight = () => {
           top: "13px",
           right: "10px",
         },
-        bannerHeight: "132px",
+        // bannerHeight: "132px",
         WhiteMarginTop: "10px",
         scrollHeight: "223px",
         videoAd: {
@@ -276,13 +275,13 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "420px",
         placeholderBottom: "-25px",
         cross: {
-          size: "25px",
+          size: "22px",
 
           padding: "7px",
-          top: "18px",
-          right: "10px",
+          top: "8px",
+          right: "15px",
         },
-        bannerHeight: "158px",
+        // bannerHeight: "158px",
         WhiteMarginTop: "12px",
         scrollHeight: "223px",
         videoAd: {
@@ -314,13 +313,13 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "440px",
         placeholderBottom: "0px",
         cross: {
-          size: "25px",
+          size: "22px",
 
           padding: "7px",
-          top: "18px",
-          right: "10px",
+          top: "8px",
+          right: "15px",
         },
-        bannerHeight: "158px",
+        // bannerHeight: "158px",
         WhiteMarginTop: "12px",
         scrollHeight: "223px",
         videoAd: {
@@ -384,7 +383,7 @@ const setPlaceholderMaxHeight = () => {
 
   if (true) {
     let isOpen = false,
-        isOpenTrainList = false,
+      isOpenTrainList = false,
       initialized = false;
     isSmall = false;
     let adActive = false;
@@ -1009,7 +1008,14 @@ border-top-right-radius: 4px;
         // console.log(1000);
         // ev.preventDefault();
         // window.open(`https://assistant.corover.mobi/eticket/`, "_blank").focus();
-        botOpen();
+        if(!isMobile){
+          openBanner(true);
+        }
+        else{
+          botOpen();
+        }
+        // botOpen();
+
         // setAdWidth();
       },
       false
@@ -1184,7 +1190,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}" id="disha-image">
        <img
-         src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-1.gif"
+         src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-crop.gif"
          style="width: 100%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
@@ -1291,7 +1297,6 @@ margin-bottom: -2px;">SALE
      
      <p style="    margin: 0;
      font-size: 11px;
-     margin-top: 5px;
      font-weight: 600;
      color: #555555;">...in a <span style="color: #4c84ea;">fast</span>, <span style="color: #4c84ea;">easy</span> and <span style="color: #4c84ea;">secure</span> way   <span style="    font-size: 9px;
      margin: 0;
@@ -1307,7 +1312,6 @@ margin-bottom: -2px;">SALE
          flex-direction: column;
          justify-content: center;
          align-items: center;
-         margin-top: ${mediaObj.WhiteMarginTop};
        "
      >
        <a
@@ -1317,7 +1321,7 @@ margin-bottom: -2px;">SALE
        >
          <img
            width="156px"
-           src="https://uiresource.blob.core.windows.net/chatbot-res/irctc/res/DEALS....png"
+           src=""
            decoding="async"
          />
        </a>
@@ -1428,10 +1432,14 @@ border-bottom-right-radius: 4px;
     };
     openBanner(false);
 
+    // setTimeout(() => {
+    //   if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
+    //     openBanner(true);
+    // }, 4000);
+
     setTimeout(() => {
-      if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
-        openBanner(true);
-    }, 4000);
+      if (window.screen.width < 600) switchIcon(true);
+    }, 50);
 
     function minim() {
       isSmall = true;
@@ -1466,45 +1474,45 @@ border-bottom-right-radius: 4px;
     }
     setInterval(() => {
       //   irctc.co.in/nget/train-search
-  //     if (
-  //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
-  //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
-  //       (
-  //         navigator.userAgent.includes("Android") ||
-  //   navigator.userAgent.includes("webOS") ||
-  //   navigator.userAgent.includes("iPhone") ||
-  //   navigator.userAgent.includes("iPad") ||
-  //   navigator.userAgent.includes("iPod") ||
-  //   navigator.userAgent.includes("BlackBerry") ||
-  //   navigator.userAgent.includes("Windows Phone")
-  //       )
-  //       )) {
-  //       openBanner(false);
-  //       document.getElementById("askDishaSdk").style.display = "none";
-  //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-  //         "none";
-  //       document.getElementById("dod").style.display = "none";
-  //      } 
-  //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") && 
-  //      !isOpenTrainList &&
-  //      (
-  //       !navigator.userAgent.includes("Android") ||
-  // !navigator.userAgent.includes("webOS") ||
-  // !navigator.userAgent.includes("iPhone") ||
-  // !navigator.userAgent.includes("iPad") ||
-  // !navigator.userAgent.includes("iPod") ||
-  // !navigator.userAgent.includes("BlackBerry") ||
-  // !navigator.userAgent.includes("Windows Phone")
-  //     )){
-  //       openBanner(true);
-  //       document.getElementById("askDishaSdk").style.display = "flex";
-  //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-  //         "block";
-  //       document.getElementById("dod").style.display = "inline";
-  //       isOpenTrainList=true;
-  //      }
-  //     else if (!isSmall) {
-    if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
+      //     if (
+      //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
+      //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
+      //       (
+      //         navigator.userAgent.includes("Android") ||
+      //   navigator.userAgent.includes("webOS") ||
+      //   navigator.userAgent.includes("iPhone") ||
+      //   navigator.userAgent.includes("iPad") ||
+      //   navigator.userAgent.includes("iPod") ||
+      //   navigator.userAgent.includes("BlackBerry") ||
+      //   navigator.userAgent.includes("Windows Phone")
+      //       )
+      //       )) {
+      //       openBanner(false);
+      //       document.getElementById("askDishaSdk").style.display = "none";
+      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+      //         "none";
+      //       document.getElementById("dod").style.display = "none";
+      //      }
+      //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
+      //      !isOpenTrainList &&
+      //      (
+      //       !navigator.userAgent.includes("Android") ||
+      // !navigator.userAgent.includes("webOS") ||
+      // !navigator.userAgent.includes("iPhone") ||
+      // !navigator.userAgent.includes("iPad") ||
+      // !navigator.userAgent.includes("iPod") ||
+      // !navigator.userAgent.includes("BlackBerry") ||
+      // !navigator.userAgent.includes("Windows Phone")
+      //     )){
+      //       openBanner(true);
+      //       document.getElementById("askDishaSdk").style.display = "flex";
+      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+      //         "block";
+      //       document.getElementById("dod").style.display = "inline";
+      //       isOpenTrainList=true;
+      //      }
+      //     else if (!isSmall) {
+      if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
@@ -1892,68 +1900,87 @@ border-bottom-right-radius: 4px;
       //     minim();
       //   }
       // }
-      if (event.target.className == "launchAskDisha") {
+      if (event.target.innerText == "Easy booking") {
         const inputs = document.querySelectorAll(".ui-inputtext");
 
         if (inputs.length > 0) {
           const source = inputs[0].value.split(" - ")[1];
           const destination = inputs[1].value.split(" - ")[1];
           const quota = inputs[4].innerText;
-          const date = inputs[2].value;
+          const date =
+            inputs[2].value.split("/")[2] +
+            inputs[2].value.split("/")[1] +
+            inputs[2].value.split("/")[0];
 
           if (source && destination) {
-            let urlDeskTop = `https://test.irctc.corover.ai/?source=${source}&destination=${destination}&date=${date}&quota=${quota}`;
-            let urlMobile = `https://test.irctc.corover.ai/?source=${source}&destination=${destination}&date=${date}&quota=${quota}/#web`;
+            let urlDeskTop = `https://test.irctc.corover.ai/`;
+            let urlMobile = `https://test.irctc.corover.ai/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
 
-            if (!isOpen && !initialized) {
-              botOpenWithURL(url);
-            } else {
-              if (!isOpen) botOpen();
+            const ref = window.open(url, "_blank");
 
-              n.contentWindow.postMessage(
-                { source, destination, quota, date },
-                "*"
-              );
-            }
+            setTimeout(() => {
+              ref.postMessage({ source, destination, quota, date }, "*");
+            }, 2000);
+
+            // if (!isOpen && !initialized) {
+            //   botOpenWithURL(url);
+            // } else {
+            //   if (!isOpen) botOpen();
+
+            //   n.contentWindow.postMessage(
+            //     { source, destination, quota, date },
+            //     "*"
+            //   );
+            // }
           } else {
-            let urlDeskTop = `https://test.irctc.corover.ai/?clicked=true`;
-            let urlMobile = `https://test.irctc.corover.ai/?clicked=true/#web`;
+            let urlDeskTop = `https://test.irctc.corover.ai/`;
+            let urlMobile = `https://test.irctc.corover.ai/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
-            if (!isOpen && !initialized) {
-              botOpenWithURL(url);
-            } else {
-              if (!isOpen) botOpen();
-            }
+            const ref = window.open(url, "_blank");
+
+            setTimeout(() => {
+              ref.postMessage("SEND_CLICK", "*");
+            }, 2000);
+            // if (!isOpen && !initialized) {
+            //   botOpenWithURL(url);
+            // } else {
+            //   if (!isOpen) botOpen();
+            // }
           }
         } else {
           //   botOpen();
-          let urlDeskTop = `https://test.irctc.corover.ai/?clicked=true`;
-          let urlMobile = `https://test.irctc.corover.ai/?clicked=true/#web`;
+          let urlDeskTop = `https://test.irctc.corover.ai/`;
+          let urlMobile = `https://test.irctc.corover.ai/#web`;
           let url = "";
           if (isMobile) url = urlMobile;
           else url = urlDeskTop;
-          if (!isOpen && !initialized) {
-            botOpenWithURL(url);
-          } else {
-            if (!isOpen) botOpen();
-          }
+          const ref = window.open(url, "_blank");
+
+          setTimeout(() => {
+            ref.postMessage("SEND_CLICK", "*");
+          }, 2000);
+          // if (!isOpen && !initialized) {
+          //   botOpenWithURL(url);
+          // } else {
+          //   if (!isOpen) botOpen();
+          // }
         }
 
         // DD/MM/yyyy
       }
-      if (event.target.id == "launchAskDisha") {
-        botOpen();
-      }
-      if (event.target.innerText) {
-        if (event.target.innerText.trim() == "ASK DISHA") {
-          botOpen();
-        }
-      }
+      // if (event.target.id == "launchAskDisha") {
+      //   botOpen();
+      // }
+      // if (event.target.innerText) {
+      //   if (event.target.innerText.trim() == "ASK DISHA") {
+      //     botOpen();
+      //   }
+      // }
     });
 
     setInterval(() => {
@@ -2066,38 +2093,40 @@ display:none;
       // }
     }
 
-  //   function refreshHomeAdWindow() {
-  //     if (isOpen) {
-  //       document.getElementById("adIframeContainer").removeChild(adIframe);
-  //       setTimeout(() => {
-  //         document.getElementById("adIframeContainer").appendChild(adIframe);
-  //       }, 500);
-  //     } else {
-  //       googletag.cmd.push(function () {
-  //         //   googletag.pubads().refresh([IR_UB]);
-  //         // googletag.pubads().refresh([IR_UB_300x250]);
-  //         // googletag.pubads().refresh([IR_UB_300x250_2]);
-  //         if (!isMob()) {
-  //           googletag.pubads().refresh([IR_UB_NEW]);
-  //         }
-  //         googletag.pubads().refresh([IR_UB]);
-  //       });
+    //   function refreshHomeAdWindow() {
+    //     if (isOpen) {
+    //       document.getElementById("adIframeContainer").removeChild(adIframe);
+    //       setTimeout(() => {
+    //         document.getElementById("adIframeContainer").appendChild(adIframe);
+    //       }, 500);
+    //     } else {
+    //       googletag.cmd.push(function () {
+    //         //   googletag.pubads().refresh([IR_UB]);
+    //         // googletag.pubads().refresh([IR_UB_300x250]);
+    //         // googletag.pubads().refresh([IR_UB_300x250_2]);
+    //         if (!isMob()) {
+    //           googletag.pubads().refresh([IR_UB_NEW]);
+    //         }
+    //         googletag.pubads().refresh([IR_UB]);
+    //       });
 
-  //       if (!isSplashScreenOpen) {
-  //         remove320();
-  //         setTimeout(() => {
-  //           add320();
-  //         }, 500);
-  //       }
-  //     }
-  //     if (!isOpen && !isMobile) {
-  //       splashMagic2();
-  //     }
-  //   }
+    //       if (!isSplashScreenOpen) {
+    //         remove320();
+    //         setTimeout(() => {
+    //           add320();
+    //         }, 500);
+    //       }
+    //     }
+    //     if (!isOpen && !isMobile) {
+    //       splashMagic2();
+    //     }
+    //   }
   }
 
   function removeAd() {
-    const videoAddElement = document.getElementById("div-ub-irctc");
+    const videoAddElement = document.getElementById(
+      "div-ub-irctc.co.in_1712646358600"
+    );
     if (videoAddElement) videoAddElement.remove();
   }
 
@@ -2119,29 +2148,35 @@ display:none;
     // checkForVideoAd();
   }, 2000);
 
+  // function setVideoAdHeader() {
+  //   let videoScript = document.createElement("script");
+  //   videoScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
+  //   videoScript.async = true;
+
+  //   document.head.appendChild(videoScript);
+  // }
+
   function setVideoAdHeader() {
     let videoScript = document.createElement("script");
-    videoScript.src = "https://cdn.unibotscdn.com/ubplayer/player.js";
-    videoScript.async = true;
-
+    videoScript.innerHTML=`(function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//a.vdo.ai/core/v-irctc-co-in/vdo.ai.js');`;
+    videoScript.setAttribute("data-cfasync", "false");
+  
     document.head.appendChild(videoScript);
   }
 
-
-
-  function setVideoAd(setHeader){
-  }
-  function setVideoAd1(setHeader) {
+  // function setVideoAd(setHeader){
+  // }
+  function setVideoAd(setHeader) {
     setVideoAdHeader();
     try {
-      let leftover = document.querySelectorAll("#adContainer1")[0];
+      let leftover = document.querySelectorAll("#v-irctc-co-in")[0];
       let parent = leftover.parentElement;
       parent.removeChild(leftover);
     } catch (err) {}
     if (!isMobile) {
       try {
         let adContainer = document.createElement("div");
-        adContainer.id = "adContainer1";
+        adContainer.id = "v-irctc-co-in";
         adContainer.style.cssText = `
        display: flex;
        justify-content: center;
@@ -2165,35 +2200,41 @@ display:none;
      >
      </span>
         
-         <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+         <div id="div-ub-irctc.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
        
          <span
        >
        </span>
          `;
-        unibots.cmd.push(() => {
-          unibotsPlayer("irctc");
-        });
+        setTimeout(() => {
+          unibots.cmd.push(() => {
+            unibotsPlayer("irctc.co.in_1712646358600");
+          });
+        }, 500);
       } catch (err) {
         console.log(err);
       }
     } else {
       try {
         let videoDiv = document.createElement("div");
-        videoDiv.id = "div-ub-irctc";
+        videoDiv.id="v-irctc-co-in";
+        // videoDiv.id = "div-ub-irctc.co.in_1712646358600";
         videoDiv.style.cssText = `
        width:100%;
        max-width: 100%;
-       margin:10px auto;
+       margin:10px 10px;
        overflow-x:hidden;
        `;
         // document.body.appendChild(videoDiv)
         document
-          .querySelectorAll(".clearfix")[3]
-          .insertAdjacentElement("afterend", videoDiv);
-        unibots.cmd.push(() => {
-          unibotsPlayer("irctc");
-        });
+          .querySelectorAll(".clearfix")[4]
+          .appendChild(videoDiv);
+          // .insertAdjacentElement("afterend", videoDiv);
+        setTimeout(() => {
+          unibots.cmd.push(() => {
+            unibotsPlayer("irctc.co.in_1712646358600");
+          });
+        }, 500);
       } catch (err) {
         console.log(err);
       }
@@ -2209,7 +2250,7 @@ display:none;
     try {
       setVideoAdHeader();
       let videoDiv = document.createElement("div");
-      videoDiv.id = "div-ub-irctc";
+      videoDiv.id = "div-ub-irctc.co.in_1712646358600";
       videoDiv.style.cssText = `
  width:fit-content;
  margin:10px auto
@@ -2223,27 +2264,27 @@ display:none;
           document.body.appendChild(videoDiv);
         }
       } else {
-        // let lastTrain = document.querySelectorAll(
-        //   "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
-        // )[0];
+        let lastTrain = document.querySelectorAll(
+          "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
+        )[0];
 
-        // if (lastTrain) lastTrain.insertAdjacentElement("afterend", videoDiv);
-        // else
-        //   setTimeout(() => {
-        //     lastTrain = document.querySelectorAll(
-        //       "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
-        //     )[0];
-        //     lastTrain.insertAdjacentElement("afterend", videoDiv);
-        //   }, 6000);
+        if (lastTrain) lastTrain.insertAdjacentElement("afterend", videoDiv);
+        else
+          setTimeout(() => {
+            lastTrain = document.querySelectorAll(
+              "#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-last-child(1) > div.form-group.no-pad.col-xs-12.bull-back.border-all"
+            )[0];
+            lastTrain.insertAdjacentElement("afterend", videoDiv);
+          }, 6000);
         try {
-          let leftover = document.querySelectorAll("#adContainer1")[0];
+          let leftover = document.querySelectorAll("#v-irctc-co-in")[0];
 
           let parent = leftover.parentElement;
           parent.removeChild(leftover);
         } catch (err) {}
 
         let adContainer = document.createElement("div");
-        adContainer.id = "adContainer1";
+        adContainer.id = "v-irctc-co-in";
         adContainer.style.cssText = `
    display: flex;
    justify-content: center;
@@ -2273,7 +2314,7 @@ display:none;
  </span>
 
     
-     <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+     <div id="div-ub-irctc.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
      
 
      <span
@@ -2285,7 +2326,7 @@ display:none;
       }
 
       unibots.cmd.push(() => {
-        unibotsPlayer("irctc");
+        unibotsPlayer("irctc.co.in_1712646358600");
       });
 
       // let p = document.createElement("p");
@@ -2302,7 +2343,7 @@ display:none;
     try {
       setVideoAdHeader();
       let videoDiv = document.createElement("div");
-      videoDiv.id = "div-ub-irctc";
+      videoDiv.id = "div-ub-irctc.co.in_1712646358600";
       videoDiv.style.cssText = `
  width:fit-content;
  margin:10px auto
@@ -2311,7 +2352,7 @@ display:none;
         document.body.appendChild(videoDiv);
       } else {
         try {
-          let leftover = document.querySelectorAll("#adContainer1")[0];
+          let leftover = document.querySelectorAll("#v-irctc-co-in")[0];
 
           let parent = leftover.parentElement;
           parent.removeChild(leftover);
@@ -2320,7 +2361,7 @@ display:none;
         let trainsDiv = document.querySelector(".tbis-div ");
 
         let adContainer = document.createElement("div");
-        adContainer.id = "adContainer1";
+        adContainer.id = "v-irctc-co-in";
         adContainer.style.cssText = `
    display: flex;
    justify-content: center;
@@ -2344,7 +2385,7 @@ display:none;
  </span>
 
    
-     <div id="div-ub-irctc" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
+     <div id="div-ub-irctc.co.in_1712646358600" style="margin:0; max-width:400px; max-height:280px; overflow:hidden;"></div>
 
 
      <span
@@ -2358,7 +2399,7 @@ display:none;
       }
 
       unibots.cmd.push(() => {
-        unibotsPlayer("irctc");
+        unibotsPlayer("irctc.co.in_1712646358600");
       });
     } catch (err) {
       console.log(err);
@@ -2435,7 +2476,7 @@ display:none;
     if (iframe) {
       iframe.style.display = "flex";
       const videoDiv = document.createElement("div");
-      videoDiv.id = "div-ub-irctc_chatbot1";
+      videoDiv.id = "div-ub-irctc.co.in_1712646358600_chatbot1";
       videoDiv.style.cssText = `
 
  width: 100%;
@@ -2455,7 +2496,7 @@ unibots.cmd.push(() => {
 
       videoDiv.appendChild(videoScript);
       const headScript = document.createElement("script");
-      headScript.src = "https://cdn.unibotscdn.com/ubplayer/player.js";
+      headScript.src = "https://cdn.unibotscdn.com/player/mvp/player.js";
       headScript.async = true;
 
       // const doc =
