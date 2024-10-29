@@ -1191,7 +1191,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t8/askdisha-bucket/IRCTC-banner-crop1.gif"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t15/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
@@ -1269,7 +1269,7 @@ margin-bottom: -2px;">SALE
          />
        </a>
     <div id="splash-scrollable" style="    width: 100%;
-    display: flex;
+    display: flow;
     justify-content: flex-start;
     flex-direction:column;
     align-items: center;
@@ -1303,8 +1303,8 @@ border-bottom-right-radius: 4px;
     display:none;
     "></iframe>  
 
-    <div id='div-gpt-ad-1695628300486-0'>
-   </div>      
+  //   <div id='div-gpt-ad-1695628300486-0'>
+  //  </div>      
  </div>
      </div>
    `;
