@@ -237,9 +237,9 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "330px",
         placeholderBottom: "-20%",
         cross: {
-          size: "1.5em",
+          size: "1.2em",
 
-          padding: "0.3em",
+          padding: "0.25em",
           top: "13px",
           right: "10px",
         },
@@ -259,8 +259,8 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "14px",
-          padding: "7px",
+          font: "12px",
+          padding: "2%",
           icon: "16px",
           marginLeft: "6px",
         },
@@ -843,7 +843,6 @@ position: absolute;
 background: white;
 top: 28px;
 left: -33px;
-display: none;
 text-decoration: none;
 color: black;
 padding: 0px 7px;
@@ -1189,24 +1188,31 @@ margin-bottom: -2px;">SALE
      position: absolute;
      padding: ${mediaObj.cross.padding};">
  
-     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
+     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}" id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t8/askdisha-bucket/IRCTC-banner-crop1.gif"
-         style="width: 33%; height: 100%; border-radius: 8px"
+         src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-crop.gif"
+         style="width: 100%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
        />
-       <div
+     </div>
+     <div style="    display: flex;
+     justify-content: center;
+     align-items: center;
+     column-gap: 6px;
+     width:96%;
+     margin: 0px auto;
+     ">
+     <div
        style="
-         height: 100%;
          display: flex;
          justify-content: center;
          align-items: center;
          background: #0068ff;
-         width: 35%;
-         margin: 2% auto;
+         width: 50%;
+         margin: 0 auto;
          border-radius: 10px;
-         padding: ${mediaObj.button.padding} 0%;
+         padding: ${mediaObj.button.padding} 0px;
          cursor: pointer;
        "
        id="disha-banner-button"
@@ -1241,10 +1247,61 @@ margin-bottom: -2px;">SALE
          Book Ticket
        </p>
      </div>
+     <div
+       style="
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #0068ff;
+         width: 50%;
+         margin: 0 auto;
+         border-radius: 10px;
+         padding: ${mediaObj.button.padding} 0px;
+         cursor: pointer;
+       "
+       id="disha-banner-button2"
+     >
+       <div
+         style="
+           width: ${mediaObj.button.icon};
+           height: ${mediaObj.button.icon};
+           border-radius: 50%;
+           background: transparent;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+         "
+       >
+         <img
+           src="https://sdk.irctc.corover.ai/askdisha-bucket/disha-support.png"
+           alt=""
+           style="width: 80%"
+           decoding = "async"
+         />
+       </div>
+       <p
+         style="
+           margin: 0;
+           margin-left: ${mediaObj.button.marginLeft};
+           font-family: sans-serif;
+           font-size: ${mediaObj.button.font};
+           color: white;
+         "
+       >
+         Support
+       </p>
+     </div>
      </div>
      <div style=" text-align: center;
      font-family: sans-serif;">
      
+     <p style="    margin: 0;
+     font-size: 11px;
+     font-weight: 600;
+     color: #555555;">...in a <span style="color: #4c84ea;">fast</span>, <span style="color: #4c84ea;">easy</span> and <span style="color: #4c84ea;">secure</span> way   <span style="    font-size: 9px;
+     margin: 0;
+     color: slategray;
+     margin-top: 0px;">(Without your IRCTC password)</span></p>
    
      </div>
      <div
@@ -1282,13 +1339,13 @@ margin-bottom: -2px;">SALE
     <p style="
 position: absolute;
 background: white;
-display: none;
 top: 0px;
 left: 21px;
+display: none;
 padding: 0px 10px;
 border-bottom-right-radius: 4px;
 ">Ad</p>
-
+    <iframe src="https://test.irctc.corover.ai/?support=true" width="100%" height="290px" frameborder="0" allowfullscreen=""></iframe>
      
     <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
     width: 100%;
@@ -1464,7 +1521,7 @@ border-bottom-right-radius: 4px;
           "none";
         document.getElementById("dod").style.display = "none";
       } else if (!isSmall) {
-        console.log("HIT");
+        // console.log("HIT");
         document.getElementById("askDishaSdk").style.display = "flex";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
           "block";
