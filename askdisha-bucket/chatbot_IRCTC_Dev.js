@@ -210,7 +210,7 @@ const setPlaceholderMaxHeight = () => {
       },
       // bannerHeight: "180px",
       WhiteMarginTop: "22px",
-      scrollHeight: "270px",
+      scrollHeight: "290px",
       videoAd: {
         height: "270px",
         width: "100%",
@@ -245,7 +245,7 @@ const setPlaceholderMaxHeight = () => {
         },
         // bannerHeight: "132px",
         WhiteMarginTop: "10px",
-        scrollHeight: "270px",
+        scrollHeight: "290px",
         videoAd: {
           height: "270px",
           width: "100%",
@@ -283,7 +283,7 @@ const setPlaceholderMaxHeight = () => {
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
-        scrollHeight: "270px",
+        scrollHeight: "290px",
         videoAd: {
           height: "270px",
           width: "100%",
@@ -321,7 +321,7 @@ const setPlaceholderMaxHeight = () => {
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
-        scrollHeight: "270px",
+        scrollHeight: "2790px",
         videoAd: {
           height: "270px",
           width: "100%",
@@ -1191,7 +1191,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t6/askdisha-bucket/IRCTC-banner-crop1.gif"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t7/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
@@ -1245,13 +1245,6 @@ margin-bottom: -2px;">SALE
      <div style=" text-align: center;
      font-family: sans-serif;">
      
-     <p style="    margin: 0;
-     font-size: 11px;
-     font-weight: 600;
-     color: #555555;">...in a <span style="color: #4c84ea;">fast</span>, <span style="color: #4c84ea;">easy</span> and <span style="color: #4c84ea;">secure</span> way   <span style="    font-size: 9px;
-     margin: 0;
-     color: slategray;
-     margin-top: 0px;">(Without your IRCTC password)</span></p>
    
      </div>
      <div
@@ -1296,7 +1289,7 @@ padding: 0px 10px;
 border-bottom-right-radius: 4px;
 ">Ad</p>
 
-    <iframe src="https://test.irctc.corover.ai/?support=true" width="100%" height="270px" frameborder="0" allowfullscreen=""></iframe>
+    <iframe src="https://test.irctc.corover.ai/?support=true" width="100%" height="290px" frameborder="0" allowfullscreen=""></iframe>
      
     <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
     width: 100%;
