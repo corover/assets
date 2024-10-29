@@ -275,7 +275,7 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "420px",
         placeholderBottom: "-25px",
         cross: {
-          size: "22px",
+          size: "12px",
 
           padding: "7px",
           top: "8px",
@@ -298,7 +298,7 @@ const setPlaceholderMaxHeight = () => {
         },
         button: {
           font: "16px",
-          padding: "10px",
+          padding: "2%",
           icon: "25px",
           marginLeft: "8px",
         },
@@ -1188,7 +1188,7 @@ margin-bottom: -2px;">SALE
      position: absolute;
      padding: ${mediaObj.cross.padding};">
  
-     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}" id="disha-image">
+     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex" id="disha-image">
        <img
          src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
