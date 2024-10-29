@@ -1458,19 +1458,19 @@ border-bottom-right-radius: 4px;
       //       isOpenTrainList=true;
       //      }
       //     else if (!isSmall) {
-      if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
-        openBanner(false);
-        document.getElementById("askDishaSdk").style.display = "none";
-        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "none";
-        document.getElementById("dod").style.display = "none";
-      } else if (!isSmall) {
+      // if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
+      //   openBanner(false);
+      //   document.getElementById("askDishaSdk").style.display = "none";
+      //   document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+      //     "none";
+      //   document.getElementById("dod").style.display = "none";
+      // } else if (!isSmall) {
         console.log("HIT");
         document.getElementById("askDishaSdk").style.display = "flex";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
           "block";
         document.getElementById("dod").style.display = "inline";
-      }
+      // }
     }, 200);
 
     document.getElementById("disha-banner-close").onclick = () => {
