@@ -210,7 +210,7 @@ const setPlaceholderMaxHeight = () => {
       },
       // bannerHeight: "180px",
       WhiteMarginTop: "22px",
-      scrollHeight: "223px",
+      scrollHeight: "270px",
       videoAd: {
         height: "270px",
         width: "100%",
@@ -245,7 +245,7 @@ const setPlaceholderMaxHeight = () => {
         },
         // bannerHeight: "132px",
         WhiteMarginTop: "10px",
-        scrollHeight: "223px",
+        scrollHeight: "270px",
         videoAd: {
           height: "270px",
           width: "100%",
@@ -283,7 +283,7 @@ const setPlaceholderMaxHeight = () => {
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
-        scrollHeight: "223px",
+        scrollHeight: "270px",
         videoAd: {
           height: "270px",
           width: "100%",
@@ -313,7 +313,7 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "440px",
         placeholderBottom: "0px",
         cross: {
-          size: "22px",
+          size: "12px",
 
           padding: "7px",
           top: "8px",
@@ -321,7 +321,7 @@ const setPlaceholderMaxHeight = () => {
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
-        scrollHeight: "223px",
+        scrollHeight: "270px",
         videoAd: {
           height: "270px",
           width: "100%",
@@ -843,6 +843,7 @@ position: absolute;
 background: white;
 top: 28px;
 left: -33px;
+display: none;
 text-decoration: none;
 color: black;
 padding: 0px 7px;
@@ -1188,7 +1189,7 @@ margin-bottom: -2px;">SALE
      position: absolute;
      padding: ${mediaObj.cross.padding};">
  
-     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex" id="disha-image">
+     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
          src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
@@ -1293,6 +1294,8 @@ left: 21px;
 padding: 0px 10px;
 border-bottom-right-radius: 4px;
 ">Ad</p>
+
+    <iframe src="https://test.irctc.corover.ai/?support=true" width="100%" height="270px" frameborder="0" allowfullscreen=""></iframe>
      
     <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
     width: 100%;
