@@ -1289,7 +1289,6 @@ padding: 0px 10px;
 border-bottom-right-radius: 4px;
 ">Ad</p>
 
-    <iframe src="https://test.irctc.corover.ai/?support=true" width="100%" height="290px" frameborder="0" allowfullscreen=""></iframe>
      
     <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
     width: 100%;
