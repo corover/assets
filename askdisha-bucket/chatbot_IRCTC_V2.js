@@ -202,11 +202,11 @@ const setPlaceholderMaxHeight = () => {
       placeholderHeight: "470px",
       placeholderBottom: "0px",
       cross: {
-        size: "35px",
+        size: "22px",
 
-        padding: "10px",
-        top: "25px",
-        right: "10px",
+        padding: "7px",
+        top: "8px",
+        right: "15px",
       },
       // bannerHeight: "180px",
       WhiteMarginTop: "22px",
@@ -237,9 +237,9 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "330px",
         placeholderBottom: "-20%",
         cross: {
-          size: "1.5em",
+          size: "1.2em",
 
-          padding: "0.3em",
+          padding: "0.25em",
           top: "13px",
           right: "10px",
         },
