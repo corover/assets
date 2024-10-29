@@ -261,7 +261,7 @@ const setPlaceholderMaxHeight = () => {
         button: {
           font: "14px",
           padding: "7px",
-          icon: "20px",
+          icon: "16px",
           marginLeft: "6px",
         },
       };
@@ -297,9 +297,9 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "16px",
+          font: "12px",
           padding: "2%",
-          icon: "25px",
+          icon: "16px",
           marginLeft: "8px",
         },
       };
@@ -335,9 +335,9 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "16px",
-          padding: "10px",
-          icon: "25px",
+          font: "12px",
+          padding: "2%",
+          icon: "16px",
           marginLeft: "8px",
         },
       };
