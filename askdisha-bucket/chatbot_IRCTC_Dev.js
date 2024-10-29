@@ -202,7 +202,7 @@ const setPlaceholderMaxHeight = () => {
       placeholderHeight: "470px",
       placeholderBottom: "0px",
       cross: {
-        size: "35px",
+        size: "12px",
 
         padding: "10px",
         top: "25px",
@@ -224,9 +224,9 @@ const setPlaceholderMaxHeight = () => {
         scale: "0.8",
       },
       button: {
-        font: "16px",
-        padding: "10px",
-        icon: "25px",
+        font: "12px",
+        padding: "2%",
+        icon: "16px",
         marginLeft: "8px",
       },
     };
@@ -1190,29 +1190,22 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}" id="disha-image">
        <img
-         src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-crop.gif"
-         style="width: 100%; height: 100%; border-radius: 8px"
+         src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-crop1.gif"
+         style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
        />
-     </div>
-     <div style="    display: flex;
-     justify-content: center;
-     align-items: center;
-     column-gap: 6px;
-     width:96%;
-     margin: 0px auto;
-     ">
-     <div
+       <div
        style="
+         height: 100%;
          display: flex;
          justify-content: center;
          align-items: center;
          background: #0068ff;
-         width: 50%;
-         margin: 0 auto;
+         width: 35%;
+         margin: 2% auto;
          border-radius: 10px;
-         padding: ${mediaObj.button.padding} 0px;
+         padding: ${mediaObj.button.padding} 0%;
          cursor: pointer;
        "
        id="disha-banner-button"
@@ -1245,50 +1238,6 @@ margin-bottom: -2px;">SALE
          "
        >
          Book Ticket
-       </p>
-     </div>
-     <div
-       style="
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         background: #0068ff;
-         width: 50%;
-         margin: 0 auto;
-         border-radius: 10px;
-         padding: ${mediaObj.button.padding} 0px;
-         cursor: pointer;
-       "
-       id="disha-banner-button2"
-     >
-       <div
-         style="
-           width: ${mediaObj.button.icon};
-           height: ${mediaObj.button.icon};
-           border-radius: 50%;
-           background: transparent;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-         "
-       >
-         <img
-           src="https://sdk.irctc.corover.ai/askdisha-bucket/disha-support.png"
-           alt=""
-           style="width: 80%"
-           decoding = "async"
-         />
-       </div>
-       <p
-         style="
-           margin: 0;
-           margin-left: ${mediaObj.button.marginLeft};
-           font-family: sans-serif;
-           font-size: ${mediaObj.button.font};
-           color: white;
-         "
-       >
-         Support
        </p>
      </div>
      </div>
