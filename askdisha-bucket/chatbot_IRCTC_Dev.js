@@ -1191,7 +1191,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t/askdisha-bucket/IRCTC-banner-crop1.gif"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t6/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
@@ -1289,6 +1289,7 @@ margin-bottom: -2px;">SALE
     <p style="
 position: absolute;
 background: white;
+display: none;
 top: 0px;
 left: 21px;
 padding: 0px 10px;
