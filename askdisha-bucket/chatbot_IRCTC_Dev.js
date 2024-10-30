@@ -205,7 +205,7 @@ const setPlaceholderMaxHeight = () => {
         size: "12px",
 
         padding: "10px",
-        top: "25px",
+        top: "10px",
         right: "10px",
       },
       // bannerHeight: "180px",
@@ -278,8 +278,8 @@ const setPlaceholderMaxHeight = () => {
           size: "12px",
 
           padding: "7px",
-          top: "8px",
-          right: "15px",
+          top: "10px",
+          right: "10px",
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
@@ -316,8 +316,8 @@ const setPlaceholderMaxHeight = () => {
           size: "12px",
 
           padding: "7px",
-          top: "8px",
-          right: "15px",
+          top: "10px",
+          right: "10px",
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
