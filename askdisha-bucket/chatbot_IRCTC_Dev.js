@@ -1204,7 +1204,7 @@ margin-bottom: -2px;">SALE
          align-items: center;
          background: #0068ff;
          width: 35%;
-         margin: 2% auto;
+         margin: 2% 11% 2% auto;
          border-radius: 10px;
          padding: ${mediaObj.button.padding} 0%;
          cursor: pointer;
