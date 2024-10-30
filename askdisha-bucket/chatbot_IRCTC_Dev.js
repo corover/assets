@@ -1291,20 +1291,6 @@ border-bottom-right-radius: 4px;
 
     <iframe src="https://test.irctc.corover.ai/?support=true" width="100%" height="290px" frameborder="0" allowfullscreen=""></iframe>
      
-    <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
-    width: 100%;
-    min-height: ${mediaObj.videoAd.height};
-    justify-content: center;
-    align-items: center;
-    border: 0px;
-    background-color:#ece5db;
-    transform: scale(${mediaObj.videoAd.scale});
-    margin-top: ${mediaObj.videoAd.margin};
-    display:none;
-    "></iframe>  
-
-  //   <div id='div-gpt-ad-1695628300486-0'>
-  //  </div>      
  </div>
      </div>
    `;
@@ -2491,3 +2477,21 @@ unibots.cmd.push(() => {
 </style>`
   );
 })();
+
+
+
+
+{/* <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
+width: 100%;
+min-height: ${mediaObj.videoAd.height};
+justify-content: center;
+align-items: center;
+border: 0px;
+background-color:#ece5db;
+transform: scale(${mediaObj.videoAd.scale});
+margin-top: ${mediaObj.videoAd.margin};
+display:none;
+"></iframe>  
+
+<div id='div-gpt-ad-1695628300486-0'>
+</div>       */}
