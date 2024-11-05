@@ -77,57 +77,6 @@
 //   }
 // }
 
-
-// Function to fetch data from the API and change the button text
-function updateButtonText() {
-  // Default to English (if no API call or failure)
-  const ticketButton = document.getElementById('ticketButton');
-  ticketButton.textContent = 'Book Ticket'; // Default English text
-
-  // First try to fetch Hindi translation (API endpoint for Hindi)
-  fetch('https://test.irctc.corover.ai/dishaAPI/bot/questions/hi')  // Hindi API endpoint
-    .then(response => {
-      // Check if the response is OK
-      if (!response.ok) {
-        throw new Error('Network response was not ok for Hindi');
-      }
-      return response.json(); // Assuming the API returns JSON
-    })
-    .then(data => {
-      // If Hindi API is successful, update the text
-      ticketButton.textContent = 'बुक टिकट'; // Hindi translation of "Book Ticket"
-      
-      console.log('API Response (Hindi):', data);
-    })
-    .catch(error => {
-      console.error('Error fetching Hindi data:', error);
-
-      // If Hindi fails, try fetching Gujarati translation (API endpoint for Gujarati)
-      fetch('https://test.irctc.corover.ai/dishaAPI/bot/questions/gu') // Gujarati API endpoint
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok for Gujarati');
-          }
-          return response.json();
-        })
-        .then(data => {
-          // If Gujarati API is successful, update the text
-          ticketButton.textContent = 'બુક ટિકિટ'; // Gujarati translation of "Book Ticket"
-
-          console.log('API Response (Gujarati):', data);
-        })
-        .catch(error => {
-          console.error('Error fetching Gujarati data:', error);
-          // Both API calls failed, so keep the text in English ("Book Ticket")
-          ticketButton.textContent = 'Book Ticket';
-        });
-    });
-}
-
-// Call the function to update the text automatically on page load
-window.addEventListener('load', updateButtonText);
-
-
 let overlayDiv = document.createElement("div");
 overlayDiv.style.cssText = `
 display: none;
