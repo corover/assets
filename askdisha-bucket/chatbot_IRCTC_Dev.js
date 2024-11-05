@@ -80,48 +80,46 @@
 
 // Function to fetch data from the API and change the button text
 function updateButtonText() {
-  // Fetch data from the API (it could be either Hindi or Gujarati)
-  fetch('https://test.irctc.corover.ai/dishaAPI/bot/questions/hi')  // Default to Hindi API endpoint, change if needed.
+  // Default to English (if no API call or failure)
+  const ticketButton = document.getElementById('ticketButton');
+  ticketButton.textContent = 'Book Ticket'; // Default English text
+
+  // First try to fetch Hindi translation (API endpoint for Hindi)
+  fetch('https://test.irctc.corover.ai/dishaAPI/bot/questions/hi')  // Hindi API endpoint
     .then(response => {
       // Check if the response is OK
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Network response was not ok for Hindi');
       }
       return response.json(); // Assuming the API returns JSON
     })
     .then(data => {
-      // Depending on your API response, update the button text
-      // Here we're using Hindi (change logic as needed)
-      const ticketButton = document.getElementById('ticketButton');
+      // If Hindi API is successful, update the text
       ticketButton.textContent = 'बुक टिकट'; // Hindi translation of "Book Ticket"
-
-      // Log the response data (optional)
+      
       console.log('API Response (Hindi):', data);
     })
     .catch(error => {
       console.error('Error fetching Hindi data:', error);
 
-      // If Hindi fails, try the Gujarati API
+      // If Hindi fails, try fetching Gujarati translation (API endpoint for Gujarati)
       fetch('https://test.irctc.corover.ai/dishaAPI/bot/questions/gu') // Gujarati API endpoint
         .then(response => {
           if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Network response was not ok for Gujarati');
           }
           return response.json();
         })
         .then(data => {
-          // If the Gujarati API is successful, update the text to Gujarati
-          const ticketButton = document.getElementById('ticketButton');
+          // If Gujarati API is successful, update the text
           ticketButton.textContent = 'બુક ટિકિટ'; // Gujarati translation of "Book Ticket"
 
-          // Log the response data (optional)
           console.log('API Response (Gujarati):', data);
         })
         .catch(error => {
           console.error('Error fetching Gujarati data:', error);
-          // Optionally handle error and set a fallback text if both calls fail
-          const ticketButton = document.getElementById('ticketButton');
-          ticketButton.textContent = 'Book Ticket'; // Default fallback
+          // Both API calls failed, so keep the text in English ("Book Ticket")
+          ticketButton.textContent = 'Book Ticket';
         });
     });
 }
