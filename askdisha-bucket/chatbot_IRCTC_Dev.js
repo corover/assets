@@ -77,6 +77,67 @@
 //   }
 // }
 
+
+
+// Function to fetch language-specific translations from the API
+function fetchTranslation() {
+  // Define the API URLs for Hindi, Gujarati, and English
+  const apiUrls = {
+    hi: 'https://test.irctc.corover.ai/dishaAPI/bot/questions/hi',
+    gu: 'https://test.irctc.corover.ai/dishaAPI/bot/questions/gu',
+    en: 'https://test.irctc.corover.ai/dishaAPI/bot/questions/en',
+  };
+
+  // Function to update the text based on the response from the API
+  function updateText(language, text) {
+    const ticketButton = document.getElementById('ticketButton');
+    
+    // If translation exists, update the text; else fallback to English
+    if (text) {
+      ticketButton.innerHTML = text;
+    } else {
+      // Fallback to English if translation is unavailable
+      ticketButton.innerHTML = 'Book Ticket';
+    }
+  }
+
+  // Try to fetch translations for Hindi, Gujarati, or English in that order
+  fetch(apiUrls.hi)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.translation) {
+        updateText('hi', data.translation);
+      } else {
+        return fetch(apiUrls.gu); // If Hindi fails, try Gujarati
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.translation) {
+        updateText('gu', data.translation);
+      } else {
+        return fetch(apiUrls.en); // If Gujarati fails, try English
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.translation) {
+        updateText('en', data.translation);
+      } else {
+        updateText('en', 'Book Ticket'); // If all fail, default to English
+      }
+    })
+    .catch(error => {
+      // Handle network errors or other issues
+      console.error('Error fetching translations:', error);
+      updateText('en', 'Book Ticket'); // Default to English if there's an error
+    });
+}
+
+// Trigger the translation when the page is loaded
+document.addEventListener('DOMContentLoaded', fetchTranslation);
+
+
 let overlayDiv = document.createElement("div");
 overlayDiv.style.cssText = `
 display: none;
