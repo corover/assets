@@ -237,7 +237,7 @@ const setPlaceholderMaxHeight = () => {
       },
       // bannerHeight: "180px",
       WhiteMarginTop: "22px",
-      scrollHeight: "290px",
+      scrollHeight: "310px",
       videoAd: {
         height: "290px",
         width: "100%",
@@ -272,7 +272,7 @@ const setPlaceholderMaxHeight = () => {
         },
         // bannerHeight: "132px",
         WhiteMarginTop: "10px",
-        scrollHeight: "290px",
+        scrollHeight: "310px",
         videoAd: {
           height: "290px",
           width: "100%",
@@ -310,7 +310,7 @@ const setPlaceholderMaxHeight = () => {
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
-        scrollHeight: "290px",
+        scrollHeight: "310px",
         videoAd: {
           height: "290px",
           width: "100%",
@@ -348,7 +348,7 @@ const setPlaceholderMaxHeight = () => {
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
-        scrollHeight: "290px",
+        scrollHeight: "310px",
         videoAd: {
           height: "290px",
           width: "100%",
