@@ -1407,10 +1407,10 @@ border-bottom-right-radius: 4px;
     };
     openBanner(false);
 
-    // setTimeout(() => {
-    //   if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
-    //     openBanner(true);
-    // }, 4000);
+    setTimeout(() => {
+      if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
+        openBanner(true);
+    }, 4000);
 
     setTimeout(() => {
       if (window.screen.width < 600) switchIcon(true);
