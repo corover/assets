@@ -78,64 +78,33 @@
 // }
 
 
+let iframe1 = document.getElementById('iframe1');
+let iframe2 = document.getElementById('iframe2');
 
-// Function to fetch language-specific translations from the API
-function fetchTranslation() {
-  // Define the API URLs for Hindi, Gujarati, and English
-  const apiUrls = {
-    hi: 'https://test.irctc.corover.ai/dishaAPI/bot/questions/hi',
-    gu: 'https://test.irctc.corover.ai/dishaAPI/bot/questions/gu',
-    en: 'https://test.irctc.corover.ai/dishaAPI/bot/questions/en',
-  };
+function switchToIframe1() {
+    iframe1.style.display = "block";  
+    iframe2.style.display = "none";  
 
-  // Function to update the text based on the response from the API
-  function updateText(language, text) {
-    const ticketButton = document.getElementById('ticketButton');
-    
-    // If translation exists, update the text; else fallback to English
-    if (text) {
-      ticketButton.innerHTML = text;
-    } else {
-      // Fallback to English if translation is unavailable
-      ticketButton.innerHTML = 'Book Ticket';
-    }
-  }
-
-  // Try to fetch translations for Hindi, Gujarati, or English in that order
-  fetch(apiUrls.hi)
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.translation) {
-        updateText('hi', data.translation);
-      } else {
-        return fetch(apiUrls.gu); // If Hindi fails, try Gujarati
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.translation) {
-        updateText('gu', data.translation);
-      } else {
-        return fetch(apiUrls.en); // If Gujarati fails, try English
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.translation) {
-        updateText('en', data.translation);
-      } else {
-        updateText('en', 'Book Ticket'); // If all fail, default to English
-      }
-    })
-    .catch(error => {
-      // Handle network errors or other issues
-      console.error('Error fetching translations:', error);
-      updateText('en', 'Book Ticket'); // Default to English if there's an error
-    });
+    iframe1.style.zIndex = "10";      
+    iframe2.style.zIndex = "5";      
 }
 
-// Trigger the translation when the page is loaded
-document.addEventListener('DOMContentLoaded', fetchTranslation);
+
+if (localStorage.getItem('apiCalled') === 'true') {
+    switchToIframe1();  
+}
+
+
+window.fetch = function(url, options) {
+    if (url.includes("https://test.irctc.corover.ai/dishaAPI/bot/sendQuery")) {
+        localStorage.setItem('apiCalled', 'true');
+        switchToIframe1();  
+    }
+    return fetch.apply(this, arguments);  
+};
+
+
+
 
 
 let overlayDiv = document.createElement("div");
@@ -1351,7 +1320,10 @@ padding: 0px 10px;
 border-bottom-right-radius: 4px;
 ">Ad</p>
 
-    <iframe src="https://test.irctc.corover.ai/?support=true" width="100%" height="290px" frameborder="0" allowfullscreen=""></iframe>
+    <iframe id="iframe1" src="https://test.irctc.corover.ai/?support=true" width="100%" height="290px" frameborder="0" allowfullscreen=""></iframe>
+
+    <iframe id="iframe2" src="about:blank" scrolling="no" style="padding: 0px; width: 100%; min-height: 290px; justify-content: center; align-items: center; border: 0px; background-color:#ece5db; transform: scale(1); margin-top: 20px; display:none;" frameborder="0"></iframe>
+
      
  </div>
      </div>
