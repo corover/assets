@@ -91,10 +91,10 @@ window.addEventListener('message', (event) => {
 
   if (type === 'API_SUCCESS') {
     console.log('API Success:', data);
-    document.getElementById('div-gpt-ad-1695628300486-0').style.zIndex = '0';
+    document.getElementById('book-ticket-iframe').style.zIndex = '0';
     document.getElementById('chatbot').style.zIndex = '1';
     
-    document.getElementById('div-gpt-ad-1695628300486-0').style.display = 'none';
+    document.getElementById('book-ticket-iframe').style.display = 'none';
   } else if (type === 'API_ERROR') {
     console.error('API Error:', message);
     // Handle error, e.g., show an error message, update the UI, etc.
@@ -1327,6 +1327,13 @@ border-bottom-right-radius: 4px;
     </iframe>
     
 
+    <iframe id="book-ticket-iframe" 
+            src="about:blank" 
+            scrolling="no" 
+            style="position: absolute; top: 0; left: 0; z-index: 2; 
+                   padding: 0; width: 100%; min-height: 290px; background-color: #ece5db; 
+                   border: 0px;">
+    </iframe>
     <div id='div-gpt-ad-1695628300486-0'>
    </div>     
      
