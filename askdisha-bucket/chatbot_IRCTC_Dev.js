@@ -1320,7 +1320,7 @@ border-bottom-right-radius: 4px;
         <iframe id="chatbot" 
             src="https://test.irctc.corover.ai/?support=true" 
             width="100%" 
-            height="290px" 
+            height="310px" 
             frameborder="0" 
             allowfullscreen=""
             style="position: absolute; top: 0; left: 0; z-index: 1;">
