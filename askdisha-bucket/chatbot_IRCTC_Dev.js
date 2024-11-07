@@ -79,63 +79,26 @@
 
 
 
-// Function to fetch language-specific translations from the API
-function fetchTranslation() {
-  // Define the API URLs for Hindi, Gujarati, and English
-  const apiUrls = {
-    hi: 'https://test.irctc.corover.ai/dishaAPI/bot/questions/hi',
-    gu: 'https://test.irctc.corover.ai/dishaAPI/bot/questions/gu',
-    en: 'https://test.irctc.corover.ai/dishaAPI/bot/questions/en',
-  };
+function onChatbotMessage(message) {
 
-  // Function to update the text based on the response from the API
-  function updateText(language, text) {
-    const ticketButton = document.getElementById('ticketButton');
-    
-    // If translation exists, update the text; else fallback to English
-    if (text) {
-      ticketButton.innerHTML = text;
-    } else {
-      // Fallback to English if translation is unavailable
-      ticketButton.innerHTML = 'Book Ticket';
-    }
+  if (message === 'windows.parents') {
+      document.getElementById('book-ticket-iframe').style.zIndex = '0';
+      document.getElementById('chatbot').style.zIndex = '1';
+      
+      document.getElementById('book-ticket-iframe').style.display = 'none';
   }
-
-  // Try to fetch translations for Hindi, Gujarati, or English in that order
-  fetch(apiUrls.hi)
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.translation) {
-        updateText('hi', data.translation);
-      } else {
-        return fetch(apiUrls.gu); // If Hindi fails, try Gujarati
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.translation) {
-        updateText('gu', data.translation);
-      } else {
-        return fetch(apiUrls.en); // If Gujarati fails, try English
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.translation) {
-        updateText('en', data.translation);
-      } else {
-        updateText('en', 'Book Ticket'); // If all fail, default to English
-      }
-    })
-    .catch(error => {
-      // Handle network errors or other issues
-      console.error('Error fetching translations:', error);
-      updateText('en', 'Book Ticket'); // Default to English if there's an error
-    });
 }
 
-// Trigger the translation when the page is loaded
-document.addEventListener('DOMContentLoaded', fetchTranslation);
+window.addEventListener('message', function(event) {
+  if (event.origin === 'https://test.irctc.corover.ai') {
+      const message = event.data;
+      onChatbotMessage(message);
+  }
+});
+
+
+
+
 
 
 let overlayDiv = document.createElement("div");
@@ -1351,7 +1314,23 @@ padding: 0px 10px;
 border-bottom-right-radius: 4px;
 ">Ad</p>
 
-    <iframe src="https://test.irctc.corover.ai/?support=true" width="100%" height="290px" frameborder="0" allowfullscreen=""></iframe>
+        <iframe id="chatbot" 
+            src="https://test.irctc.corover.ai/?support=true" 
+            width="100%" 
+            height="290px" 
+            frameborder="0" 
+            allowfullscreen=""
+            style="position: absolute; top: 0; left: 0; z-index: 1;">
+    </iframe>
+    
+
+    <iframe id="book-ticket-iframe" 
+            src="about:blank" 
+            scrolling="no" 
+            style="position: absolute; top: 0; left: 0; z-index: 2; 
+                   padding: 0; width: 100%; min-height: 290px; background-color: #ece5db; 
+                   border: 0px;">
+    </iframe>
      
  </div>
      </div>
