@@ -239,7 +239,7 @@ const setPlaceholderMaxHeight = () => {
       WhiteMarginTop: "22px",
       scrollHeight: "290px",
       videoAd: {
-        height: "270px",
+        height: "290px",
         width: "100%",
         margin: "-32px",
         scale: "1.0",
@@ -251,7 +251,7 @@ const setPlaceholderMaxHeight = () => {
         scale: "0.8",
       },
       button: {
-        font: "12px",
+        font: "14px",
         padding: "2%",
         icon: "16px",
         marginLeft: "8px",
@@ -274,7 +274,7 @@ const setPlaceholderMaxHeight = () => {
         WhiteMarginTop: "10px",
         scrollHeight: "290px",
         videoAd: {
-          height: "270px",
+          height: "290px",
           width: "100%",
           margin: "-36px",
           scale: "0.9",
@@ -312,7 +312,7 @@ const setPlaceholderMaxHeight = () => {
         WhiteMarginTop: "12px",
         scrollHeight: "290px",
         videoAd: {
-          height: "270px",
+          height: "290px",
           width: "100%",
           margin: "-32px",
           scale: "1.0",
@@ -324,7 +324,7 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "12px",
+          font: "14px",
           padding: "2%",
           icon: "16px",
           marginLeft: "8px",
@@ -350,7 +350,7 @@ const setPlaceholderMaxHeight = () => {
         WhiteMarginTop: "12px",
         scrollHeight: "290px",
         videoAd: {
-          height: "270px",
+          height: "290px",
           width: "100%",
           margin: "-32px",
           scale: "1.0",
@@ -362,7 +362,7 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "12px",
+          font: "14px",
           padding: "2%",
           icon: "16px",
           marginLeft: "8px",
@@ -1230,7 +1230,7 @@ margin-bottom: -2px;">SALE
          justify-content: center;
          align-items: center;
          background: #0068ff;
-         width: 35%;
+         width: 45%;
          margin: 2% 11% 2% auto;
          border-radius: 10px;
          padding: ${mediaObj.button.padding} 0%;
