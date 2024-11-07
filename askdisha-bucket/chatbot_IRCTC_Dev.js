@@ -79,24 +79,27 @@
 
 
 
-function onChatbotMessage(message) {
 
-  if (message === 'windows.parents') {
-      document.getElementById('book-ticket-iframe').style.zIndex = '0';
-      document.getElementById('chatbot').style.zIndex = '1';
-      
-      document.getElementById('book-ticket-iframe').style.display = 'none';
+window.addEventListener('message', (event) => {
+  // Make sure the message is coming from a trusted iframe
+  // Replace '*' with the actual iframe domain for security
+  if (event.origin !== 'https://test.irctc.corover.ai') {
+    return;
   }
-}
 
-window.addEventListener('message', function(event) {
-  if (event.origin === 'https://test.irctc.corover.ai') {
-      const message = event.data;
-      onChatbotMessage(message);
+  const { type, data, message } = event.data;
+
+  if (type === 'API_SUCCESS') {
+    console.log('API Success:', data);
+    document.getElementById('book-ticket-iframe').style.zIndex = '0';
+    document.getElementById('chatbot').style.zIndex = '1';
+    
+    document.getElementById('book-ticket-iframe').style.display = 'none';
+  } else if (type === 'API_ERROR') {
+    console.error('API Error:', message);
+    // Handle error, e.g., show an error message, update the UI, etc.
   }
 });
-
-
 
 
 
