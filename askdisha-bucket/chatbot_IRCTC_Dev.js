@@ -80,28 +80,6 @@
 
 
 
-window.addEventListener('message', (event) => {
-  // Make sure the message is coming from a trusted iframe
-  // Replace '*' with the actual iframe domain for security
-  if (event.origin !== 'https://test.irctc.corover.ai') {
-    return;
-  }
-
-  const { type, data, message } = event.data;
-
-  if (type === 'API_SUCCESS') {
-    console.log('API Success:', data);
-    document.getElementById('div-gpt-ad-1695628300486-0').style.zIndex = '0';
-    document.getElementById('chatbot').style.zIndex = '1';
-    
-    document.getElementById('div-gpt-ad-1695628300486-0').style.display = 'none';
-  } else if (type === 'API_ERROR') {
-    console.error('API Error:', message);
-    // Handle error, e.g., show an error message, update the UI, etc.
-  }
-});
-
-
 
 
 let overlayDiv = document.createElement("div");
@@ -1218,7 +1196,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@29Oct-t15/askdisha-bucket/IRCTC-banner-crop1.gif"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@07Nov-t10/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
@@ -1327,12 +1305,7 @@ border-bottom-right-radius: 4px;
     </iframe>
     
 
-    </iframe>
-    <div id='div-gpt-ad-1695628300486-0'
-    style="position: absolute; top: 0; left: 0; z-index: 2; 
-                   padding: 0; width: 100%; min-height: 250px; background-color: #ece5db; 
-                   border: 0px;">
-   </div>     
+    </iframe>   
      
  </div>
      </div>
