@@ -1619,23 +1619,13 @@ window.addEventListener('message', function(event) {
     console.log('Message:', message.message);
     botOpen();  
   }
-});
-
-
-window.addEventListener('message', function(event) {
-  console.log("Event: ",event);
-  if (event.origin !== 'https://test.irctc.corover.ai') {
-    return; 
-  }
-
-  const message = event.data;
-
-  if (message.type === 'LANGUAGE_UPDATE') {
+  else   if (message.type === 'LANGUAGE_UPDATE') {
     console.log('Redirect condition met:', message.data);
     console.log('Message:', message.message);  
     lang=message.data;
   }
 });
+
 
 
     function checkForToken(e) {
