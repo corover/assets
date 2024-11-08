@@ -85,7 +85,7 @@ const lan = {
   hi: { book: "टिकट बुक करें" },
   gu: { book: "ટિકિટ બુક કરો" },
 };
-const lang="en";
+let lang="en";
 
 let overlayDiv = document.createElement("div");
 overlayDiv.style.cssText = `
@@ -1615,17 +1615,23 @@ window.addEventListener('message', function(event) {
   const message = event.data;
 
   if (message.type === 'REDIRECT_CONDITION_MET') {
-    console.log('Redirect condition met:', message.data);
-    console.log('Message:', message.message);
     botOpen();  
   }
   else   if (message.type === 'LANGUAGE_UPDATE') {
-    console.log('Redirect condition met:', message.data);
-    console.log('Message:', message.message);  
-    lang=message.data;
+     lang=message.data;
+     updateLanguage(); 
   }
 });
 
+function updateLanguage() {
+  const ticketButton = document.getElementById('ticketButton');
+  if (ticketButton) {
+    ticketButton.textContent = lan[lang].book; 
+  }
+}
+
+
+updateLanguage();
 
 
     function checkForToken(e) {
