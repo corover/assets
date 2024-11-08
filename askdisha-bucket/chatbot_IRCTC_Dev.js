@@ -1600,6 +1600,29 @@ border-bottom-right-radius: 4px;
       isFirstTime = false;
     }
 
+
+window.addEventListener('message', function(event) {
+  if (event.origin !== 'https://test.irctc.corover.ai') {
+    return; 
+  }
+
+  const message = event.data;
+
+  if (message.type === 'API_SUCCESS') {
+    console.log('API Success:', message.data);
+  } else if (message.type === 'API_ERROR') {
+    console.log('API Error:', message.message);
+  } else if (message.type === 'REDIRECT_CONDITION_MET') {
+    console.log('Redirect condition met:', message.data);
+    console.log('Message:', message.message);
+    
+    botOpen();  
+    
+
+  }
+});
+
+
     function checkForToken(e) {
       if (e.data == "getToken") {
         getToken();
