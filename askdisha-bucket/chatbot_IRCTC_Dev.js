@@ -1602,7 +1602,7 @@ border-bottom-right-radius: 4px;
 
 
 window.addEventListener('message', function(event) {
-  if (event.origin !== 'https://test.irctc.corover.ai') {
+  if (event.origin !== 'http://localhost:3000/') {
     return; 
   }
 
