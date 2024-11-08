@@ -1608,11 +1608,7 @@ window.addEventListener('message', function(event) {
 
   const message = event.data;
 
-  if (message.type === 'API_SUCCESS') {
-    console.log('API Success:', message.data);
-  } else if (message.type === 'API_ERROR') {
-    console.log('API Error:', message.message);
-  } else if (message.type === 'REDIRECT_CONDITION_MET') {
+  if (message.type === 'REDIRECT_CONDITION_MET') {
     console.log('Redirect condition met:', message.data);
     console.log('Message:', message.message);
     
