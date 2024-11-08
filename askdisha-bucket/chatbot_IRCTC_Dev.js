@@ -1602,7 +1602,8 @@ border-bottom-right-radius: 4px;
 
 
 window.addEventListener('message', function(event) {
-  if (event.origin !== 'http://localhost:3000/') {
+  console.log("Event: ",event);
+  if (event.origin !== 'https://test.irctc.corover.ai') {
     return; 
   }
 
@@ -1611,10 +1612,7 @@ window.addEventListener('message', function(event) {
   if (message.type === 'REDIRECT_CONDITION_MET') {
     console.log('Redirect condition met:', message.data);
     console.log('Message:', message.message);
-    
     botOpen();  
-    
-
   }
 });
 
