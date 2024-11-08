@@ -80,7 +80,12 @@
 
 
 
-
+const lan = {
+  en: { book: "Book Ticket" },
+  hi: { book: "टिकट बुक करें" },
+  gu: { book: "ટિકિટ બુક કરો" },
+};
+const lang="en";
 
 let overlayDiv = document.createElement("div");
 overlayDiv.style.cssText = `
@@ -1235,17 +1240,17 @@ margin-bottom: -2px;">SALE
          />
        </div>
        <p
-         id="ticketButton"
-         style="
-           margin: 0;
-           margin-left: ${mediaObj.button.marginLeft};
-           font-family: sans-serif;
-           font-size: ${mediaObj.button.font};
-           color: white;
-         "
-       >
-         Book Ticket
-       </p>
+  id="ticketButton"
+  style="
+    margin: 0;
+    margin-left: ${mediaObj.button.marginLeft};
+    font-family: sans-serif;
+    font-size: ${mediaObj.button.font};
+    color: white;
+  "
+>
+  ${lan[lang].book}
+</p>
      </div>
      </div>
      <div style=" text-align: center;
@@ -1613,6 +1618,22 @@ window.addEventListener('message', function(event) {
     console.log('Redirect condition met:', message.data);
     console.log('Message:', message.message);
     botOpen();  
+  }
+});
+
+
+window.addEventListener('message', function(event) {
+  console.log("Event: ",event);
+  if (event.origin !== 'https://test.irctc.corover.ai') {
+    return; 
+  }
+
+  const message = event.data;
+
+  if (message.type === 'LANGUAGE_UPDATE') {
+    console.log('Redirect condition met:', message.data);
+    console.log('Message:', message.message);  
+    lang=message.data;
   }
 });
 
