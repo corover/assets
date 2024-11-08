@@ -82,6 +82,8 @@
 
 const lan = {
   en: { book: "Book Ticket" },
+  gb: { book: "Book Ticket" },
+  uk: { book: "Book Ticket" },
   hi: { book: "टिकट बुक करें" },
   gu: { book: "ટિકિટ બુક કરો" },
 };
