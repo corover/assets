@@ -757,7 +757,7 @@ margin-top:15px;
     adDownIframe2.innerHTML = `
 <span></span>
 `;
-    adDownIframe2.href = "https://test.irctc.corover.ai/";
+    adDownIframe2.href = "https://test1.irctc.corover.ai/";
     adDownIframe2.target = "_blank";
     const adDownIframe = document.createElement("div");
     // adDownIframe.src = "https://assistant.corover.mobi/320x50_placeholder.html";
@@ -922,7 +922,7 @@ border-top-right-radius: 4px;
     n.id = "Disha-Bot";
     n.setAttribute(
       "allow",
-      "geolocation https://test.irctc.corover.ai/; microphone https://test.irctc.corover.ai/; camera; otp-credentials; midi; accelerometer; gyroscope; payment"
+      "geolocation https://test1.irctc.corover.ai/; microphone https://test1.irctc.corover.ai/; camera; otp-credentials; midi; accelerometer; gyroscope; payment"
     );
     n.style.width = "100%";
     n.style.height = "100%";
@@ -1303,7 +1303,7 @@ border-bottom-right-radius: 4px;
 ">Ad</p>
 
         <iframe id="chatbot" 
-            src="https://test.irctc.corover.ai/?support=true" 
+            src="https://test1.irctc.corover.ai/?support=true" 
             width="100%" 
             height="310px" 
             frameborder="0" 
@@ -1335,8 +1335,8 @@ border-bottom-right-radius: 4px;
     // </div>
 
     const openSupport = () => {
-      let urlDeskTop = `https://test.irctc.corover.ai/?support=true`;
-      let urlMobile = `https://test.irctc.corover.ai/?support=true/#web`;
+      let urlDeskTop = `https://test1.irctc.corover.ai/?support=true`;
+      let urlMobile = `https://test1.irctc.corover.ai/?support=true/#web`;
       let url = "";
       if (isMobile) url = urlMobile;
       else url = urlDeskTop;
@@ -1504,8 +1504,8 @@ border-bottom-right-radius: 4px;
 
     function botOpen() {
       if (isMobile) {
-        if (iOS()) window.location.assign("https://test.irctc.corover.ai/#web");
-        else window.open("https://test.irctc.corover.ai/#web", "_blank");
+        if (iOS()) window.location.assign("https://test1.irctc.corover.ai/#web");
+        else window.open("https://test1.irctc.corover.ai/#web", "_blank");
         return;
       }
       openBanner(false);
@@ -1537,7 +1537,7 @@ border-bottom-right-radius: 4px;
 
       if (!initialized && n.src == "about:blank") {
         // n.src = `https://assistant.corover.mobi/eticket/`;
-        n.contentWindow.location.replace(`https://test.irctc.corover.ai/`);
+        n.contentWindow.location.replace(`https://test1.irctc.corover.ai/`);
         // console.log("Fresh Load");
         initialized = true;
         // document.getElementById("feedBackIframe").src =
@@ -1610,7 +1610,7 @@ border-bottom-right-radius: 4px;
 
 window.addEventListener('message', function(event) {
   console.log("Event: ",event);
-  if (event.origin !== 'https://test.irctc.corover.ai') {
+  if (event.origin !== 'https://test1.irctc.corover.ai') {
     return; 
   }
 
@@ -1897,8 +1897,8 @@ updateLanguage();
             inputs[2].value.split("/")[0];
 
           if (source && destination) {
-            let urlDeskTop = `https://test.irctc.corover.ai/`;
-            let urlMobile = `https://test.irctc.corover.ai/#web`;
+            let urlDeskTop = `https://test1.irctc.corover.ai/`;
+            let urlMobile = `https://test1.irctc.corover.ai/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
@@ -1920,8 +1920,8 @@ updateLanguage();
             //   );
             // }
           } else {
-            let urlDeskTop = `https://test.irctc.corover.ai/`;
-            let urlMobile = `https://test.irctc.corover.ai/#web`;
+            let urlDeskTop = `https://test1.irctc.corover.ai/`;
+            let urlMobile = `https://test1.irctc.corover.ai/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
@@ -1938,8 +1938,8 @@ updateLanguage();
           }
         } else {
           //   botOpen();
-          let urlDeskTop = `https://test.irctc.corover.ai/`;
-          let urlMobile = `https://test.irctc.corover.ai/#web`;
+          let urlDeskTop = `https://test1.irctc.corover.ai/`;
+          let urlMobile = `https://test1.irctc.corover.ai/#web`;
           let url = "";
           if (isMobile) url = urlMobile;
           else url = urlDeskTop;
@@ -1990,8 +1990,8 @@ display:none;
 `;
     document.body.appendChild(overlayWidget);
     overlayWidget.onclick = () => {
-      if (iOS()) window.location.assign("https://test.irctc.corover.ai/#web");
-      else window.open("https://test.irctc.corover.ai/#web", "_blank");
+      if (iOS()) window.location.assign("https://test1.irctc.corover.ai/#web");
+      else window.open("https://test1.irctc.corover.ai/#web", "_blank");
     };
     // launcher.style.backgroundImage = `url("")`;
     // launcher.style.borderWidth = "0px";
