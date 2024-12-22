@@ -81,11 +81,11 @@
 
 
 const lan = {
-  en: { book: "Book Ticket" },
-  gb: { book: "Book Ticket" },
-  us: { book: "Book Ticket" },
-  hi: { book: "टिकट बुक करें" },
-  gu: { book: "ટિકિટ બુક કરો" },
+  en: { book: "Book Train Ticket" },
+  gb: { book: "Book Train Ticket" },
+  us: { book: "Book Train Ticket" },
+  hi: { book: "ट्रैन टिकट बुक करें" },
+  gu: { book: "ટ્રેન ટિકિટ બુક કરો" },
 };
 let lang="en";
 
@@ -1203,7 +1203,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@03Dec-t/askdisha-bucket/IRCTC-banner-crop1.gif"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@23Dec-t/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
