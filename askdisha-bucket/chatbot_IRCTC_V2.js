@@ -1505,6 +1505,40 @@ border-bottom-right-radius: 4px;
       }
   }, 200);
 
+  const dodElement = document.getElementById("dod");
+if (dodElement) {
+    dodElement.addEventListener('click', () => {
+        clearInterval(intervalId);
+    });
+}
+
+
+let timeoutId;
+
+const debounce = (func, delay) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(func, delay);
+};
+
+const toggleVisibility = () => {
+    const dodElement = document.getElementById("dod");
+    if (dodElement) {
+        if (window.location.href.includes("irctc.co.in/nget/train-search") && isSmall) {
+            document.getElementById("askDishaSdk").style.display = "none";
+            document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
+            dodElement.style.display = "none";
+        } else {
+            document.getElementById("askDishaSdk").style.display = "flex";
+            document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
+            dodElement.style.display = "inline";
+        }
+    }
+};
+
+// Call this function after certain interactions (like window resizing or other events)
+debounce(toggleVisibility, 200);
+
+
     document.getElementById("disha-banner-close").onclick = () => {
       openBanner(false);
       // switchIcon();
