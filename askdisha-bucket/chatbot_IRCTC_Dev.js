@@ -800,7 +800,7 @@ margin-top:15px;
       adDownIframe.style.cssText = `
 position:fixed;
 bottom:0px;
-right:5px;
+right:55px;
 width:320px;
 height:50px;
 border:2px;
@@ -808,7 +808,7 @@ border:2px;
       adDownIframe2.style.cssText = `
 position:fixed;
 bottom:0px;
-right:5px;
+right:55px;
 width:320px;
 height:50px;
 border:2px;
@@ -870,7 +870,7 @@ if (isMobile)
   dealOfDay.style.cssText = `
    position: fixed;
    bottom:42px;
-   right:150px;
+   right:200px;
 `;
 else
   dealOfDay.style.cssText = `
@@ -889,13 +889,13 @@ if (isMobile) {
   closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
   closeButton.style.cssText = `
     background: #8181815e;
-    width: 22px;
-    height: 22px;
+    width: 12px;
+    height: 12px;
     cursor: pointer;
     z-index: 10000; /* Ensure the close button has the highest z-index */
     border-radius: 50%;
-    margin-left: -190px;
-    margin-top: 10px;
+    margin-left: -180px;
+    margin-top: 25px;
     position: absolute;
     padding: 5px;
   `;
@@ -1480,13 +1480,6 @@ border-bottom-right-radius: 4px;
       document.getElementById("dod").style.display = "none";
     }
 
-    setInterval(function() {
-      console.log("Checking ad visibility...");
-      if (document.getElementById("div-gpt-ad-1695628181945-0").style.display !== "block") {
-        console.log("Forcing display to block.");
-        document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
-      }
-    }, 1000);
     setInterval(() => {
       // Ensure the "dod" element exists in the DOM before trying to change its style
       const dodElement = document.getElementById("dod");
