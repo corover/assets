@@ -517,15 +517,26 @@ const setPlaceholderMaxHeight = () => {
     launcher.draggable = true;
     let maxIcon = document.createElement("img");
     maxIcon.decoding = "async";
-    maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
+    maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png?" + new Date().getTime();
     maxIcon.style.cssText = `
   position: absolute;
   right: 100px;
   width: 16px;
   top: 0px;
   display: block;
+  border: 2px solid red; 
  `;
     function switchIcon(ch) {
+      console.log("isSmall before:", isSmall);
+      if (isSmall) {
+        maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
+        console.log("maxIcon src changed to: maximise.png");
+      } else {
+        maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
+        console.log("maxIcon src changed to: minimum.png");
+      }
+      isSmall = !isSmall;
+      console.log("isSmall after:", isSmall);
       let s;
       if (true) {
         console.log(isSmall);
@@ -601,7 +612,7 @@ const setPlaceholderMaxHeight = () => {
     
       switchIcon(true);
     };
-    console.log(maxIcon);
+    
 
     launcher.appendChild(maxIcon);
     launcher.addEventListener("touchmove", (ev) => {
