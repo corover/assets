@@ -595,13 +595,13 @@ const setPlaceholderMaxHeight = () => {
       }
     }
     maxIcon.onclick = (e) => {
-      console.log("on click");
-      // isSmall = !isSmall;
-      e.preventDefault();
-      e.stopPropagation();
-
+      // console.log("on click");
+      // // isSmall = !isSmall;
       // e.preventDefault();
-      switchIcon(true);
+      // e.stopPropagation();
+
+      // // e.preventDefault();
+      // switchIcon(true);
     };
 
     launcher.appendChild(maxIcon);
