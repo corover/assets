@@ -594,6 +594,12 @@ const setPlaceholderMaxHeight = () => {
           }, 1000);
       }
     }
+    maxIcon.addEventListener('click', function(e) {
+      console.log("CLICK");
+      e.preventDefault();
+      e.stopPropagation();
+      switchIcon(true);  // Toggle the icon size on click
+    });
     maxIcon.onclick = (e) => {
       console.log("CLICK");
       // isSmall = !isSmall;
