@@ -1485,25 +1485,25 @@ border-bottom-right-radius: 4px;
         "none";
       document.getElementById("dod").style.display = "none";
     }
-    setInterval(() => {
-      // Ensure the "dod" element exists in the DOM before trying to change its style
-      const dodElement = document.getElementById("dod");
+  //   setInterval(() => {
+  //     // Ensure the "dod" element exists in the DOM before trying to change its style
+  //     const dodElement = document.getElementById("dod");
   
-      if (dodElement) {
-          // The element exists, so it's safe to modify its style
-          console.log("HIT");
-          // Example logic for showing and hiding the elements
-          if (window.location.href.includes("irctc.co.in/nget/train-search") && isSmall) {
-              document.getElementById("askDishaSdk").style.display = "none";
-              document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
-              dodElement.style.display = "none";  // Hide the deal of the day element
-          } else {
-              document.getElementById("askDishaSdk").style.display = "flex";
-              document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
-              dodElement.style.display = "inline";  // Show the deal of the day element
-          }
-      }
-  }, 200);
+  //     if (dodElement) {
+  //         // The element exists, so it's safe to modify its style
+  //         console.log("HIT");
+  //         // Example logic for showing and hiding the elements
+  //         if (window.location.href.includes("irctc.co.in/nget/train-search") && isSmall) {
+  //             document.getElementById("askDishaSdk").style.display = "none";
+  //             document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
+  //             dodElement.style.display = "none";  // Hide the deal of the day element
+  //         } else {
+  //             document.getElementById("askDishaSdk").style.display = "flex";
+  //             document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
+  //             dodElement.style.display = "inline";  // Show the deal of the day element
+  //         }
+  //     }
+  // }, 200);
 
   const dodElement = document.getElementById("dod");
 if (dodElement) {
