@@ -799,7 +799,8 @@ margin-top:15px;
       adDownIframe.style.cssText = `
 position:fixed;
 bottom:0px;
-right:5px;
+left:50%;
+transform: translateX(-50%);
 width:320px;
 height:50px;
 border:2px;
@@ -807,7 +808,8 @@ border:2px;
       adDownIframe2.style.cssText = `
 position:fixed;
 bottom:0px;
-right:5px;
+left:50%;
+transform: translateX(-50%);
 width:320px;
 height:50px;
 border:2px;
@@ -833,78 +835,113 @@ cursor:pointer
  `;
     }
 
+    let isAdVisible = false;
+    let forceHide = false;
     adDownIframe.scrolling = "no";
+adDownIframe2.scrolling = "no";
+document.body.appendChild(adDownIframe);
+//document.body.appendChild(adDownIframe2);
 
-    adDownIframe2.scrolling = "no";
-    document.body.appendChild(adDownIframe);
-    //document.body.appendChild(adDownIframe2);
-    const dealOfDay = document.createElement("a");
-    // https://bit.ly/3gBANx7 PLUTOS
-    //https://amzn.to/34WK1uY last
-    dealOfDay.style.display = `inline`;
-    dealOfDay.id = "dod";
-    if (isMobile) dealOfDay.href = "https://amzn.to/3i4lgCr";
-    else dealOfDay.href = "https://amzn.to/3i4lgCr";
+const dealOfDay = document.createElement("a");
+// https://bit.ly/3gBANx7 PLUTOS
+//https://amzn.to/34WK1uY last
+dealOfDay.style.display = `inline`;
+dealOfDay.id = "dod";
+if (isMobile) dealOfDay.href = "https://amzn.to/3i4lgCr";
+else dealOfDay.href = "https://amzn.to/3i4lgCr";
 
-    dealOfDay.target = "_blank";
-    dealOfDay.innerHTML = `
+dealOfDay.target = "_blank";
+dealOfDay.innerHTML = `
    <img width="156px" src="https://sdk.irctc.corover.ai/askdisha-bucket/DEALS....png" decoding="async"/>
    <p style="
-   position: absolute;
-   background: white;
-   top: 28px;
-   left: -33px;
-   display: none;
-   text-decoration: none;
-   color: black;
-   padding: 0px 7px;
-   border-top-left-radius: 4px;
-   border-top-right-radius: 4px;
-   ">Ad</p>
-   <img decoding="async" src="https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png" id="dod-close" style="
-     background: #8181815e;
-     width: 22px;
-     height: 22px;
-     cursor: pointer;
-     display: block;
-     border-radius: 50%;
-     margin-left: -25px;
      position: absolute;
-     padding: 5px;
-   ">
+     background: white;
+     top: 28px;
+     left: -35px;
+     display: none;
+     text-decoration: none;
+     color: black;
+     padding: 0px 7px;
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+   ">Ad</p>
 `;
 
-   
-
-    if (isMobile)
-      dealOfDay.style.cssText = `
+if (isMobile)
+  dealOfDay.style.cssText = `
    position: fixed;
    bottom:42px;
-   right:150px;
-   `;
-    else
-      dealOfDay.style.cssText = `
+   left:32%;
+   transform: translateX(-50%);
+`;
+else
+  dealOfDay.style.cssText = `
    position: fixed;
    bottom:40px;
    right:150px;
-   `;
-    dealOfDay.style.zIndex = "9";
-    document.body.appendChild(dealOfDay);
+`;
 
-    if (isMobile) {
-      adDownIframe.style.zIndex = "9";
-      adDownIframe2.style.zIndex = "8";
-      dealOfDay.style.zIndex = "99";
-      const closeButton = document.getElementById('dod-close');
-      closeButton.addEventListener('click', function() {
-        remove320();
-        dealOfDay.remove(); 
-      });
-    } else {
-      adDownIframe.style.zIndex = "2147483647";
-      adDownIframe2.style.zIndex = "2147483646";
-      dealOfDay.style.zIndex = "99999999999999";
+dealOfDay.style.zIndex = "9";
+document.body.appendChild(dealOfDay);
+
+// Create and append the close button separately
+if (isMobile) {
+  const closeButton = document.createElement("img");
+  closeButton.id = "dod-close";
+  closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
+  closeButton.style.cssText = `
+    background: #8181815e;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    z-index: 10000; /* Ensure the close button has the highest z-index */
+    border-radius: 50%;
+    margin-left: -180px;
+    margin-top: 25px;
+    position: absolute;
+    padding: 5px;
+  `;
+  
+  // Append the close button to the dealOfDay container
+  dealOfDay.appendChild(closeButton);
+
+  // Close button click listener
+  closeButton.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
+    event.preventDefault();   // Prevent the default action (which is following the link)
+    
+    forceHide = true;
+
+    remove320();  // Call your remove320 function
+    hideAd();     // Call your hideAd function
+    dealOfDay.remove(); // Remove the dealOfDay element
+    const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+    if (adElement) {
+      adElement.style.display = "none";  // Ensure it's hidden
+      adElement.style.visibility = "hidden"; // Make sure it's hidden but still takes no space
     }
+    document.body.style.zIndex = "2147483647";
+  });
+}
+setInterval(function() {
+  if (forceHide) {
+    const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+    if (adElement) {
+      adElement.style.display = "none";  // Forcefully hide the ad
+      adElement.style.visibility = "hidden"; // Ensures it remains hidden
+    }
+  }
+}, 500);
+
+if (isMobile) {
+  adDownIframe.style.zIndex = "9";
+  adDownIframe2.style.zIndex = "8";
+  dealOfDay.style.zIndex = "99";
+} else {
+  adDownIframe.style.zIndex = "2147483647";
+  adDownIframe2.style.zIndex = "2147483646";
+  dealOfDay.style.zIndex = "99999999999999";
+}
 
     setDishaWrapper();
 
@@ -1220,7 +1257,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@2jan/askdisha-bucket/IRCTC-banner-crop1.gif"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@3january/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
@@ -1443,59 +1480,24 @@ border-bottom-right-radius: 4px;
       document.getElementById("dod").style.display = "none";
     }
     setInterval(() => {
-      //   irctc.co.in/nget/train-search
-      //     if (
-      //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
-      //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
-      //       (
-      //         navigator.userAgent.includes("Android") ||
-      //   navigator.userAgent.includes("webOS") ||
-      //   navigator.userAgent.includes("iPhone") ||
-      //   navigator.userAgent.includes("iPad") ||
-      //   navigator.userAgent.includes("iPod") ||
-      //   navigator.userAgent.includes("BlackBerry") ||
-      //   navigator.userAgent.includes("Windows Phone")
-      //       )
-      //       )) {
-      //       openBanner(false);
-      //       document.getElementById("askDishaSdk").style.display = "none";
-      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      //         "none";
-      //       document.getElementById("dod").style.display = "none";
-      //      }
-      //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
-      //      !isOpenTrainList &&
-      //      (
-      //       !navigator.userAgent.includes("Android") ||
-      // !navigator.userAgent.includes("webOS") ||
-      // !navigator.userAgent.includes("iPhone") ||
-      // !navigator.userAgent.includes("iPad") ||
-      // !navigator.userAgent.includes("iPod") ||
-      // !navigator.userAgent.includes("BlackBerry") ||
-      // !navigator.userAgent.includes("Windows Phone")
-      //     )){
-      //       openBanner(true);
-      //       document.getElementById("askDishaSdk").style.display = "flex";
-      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      //         "block";
-      //       document.getElementById("dod").style.display = "inline";
-      //       isOpenTrainList=true;
-      //      }
-      //     else if (!isSmall) {
-      // if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
-      //   openBanner(false);
-      //   document.getElementById("askDishaSdk").style.display = "none";
-      //   document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      //     "none";
-      //   document.getElementById("dod").style.display = "none";
-      // } else if (!isSmall) {
-        // console.log("HIT");
-        document.getElementById("askDishaSdk").style.display = "flex";
-        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "block";
-        document.getElementById("dod").style.display = "inline";
-      // }
-    }, 200);
+      // Ensure the "dod" element exists in the DOM before trying to change its style
+      const dodElement = document.getElementById("dod");
+  
+      if (dodElement) {
+          // The element exists, so it's safe to modify its style
+          console.log("HIT");
+          // Example logic for showing and hiding the elements
+          if (window.location.href.includes("irctc.co.in/nget/train-search") && isSmall) {
+              document.getElementById("askDishaSdk").style.display = "none";
+              document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
+              dodElement.style.display = "none";  // Hide the deal of the day element
+          } else {
+              document.getElementById("askDishaSdk").style.display = "flex";
+              document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
+              dodElement.style.display = "inline";  // Show the deal of the day element
+          }
+      }
+  }, 200);
 
     document.getElementById("disha-banner-close").onclick = () => {
       openBanner(false);
