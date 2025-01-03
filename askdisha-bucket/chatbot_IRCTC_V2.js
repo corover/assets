@@ -601,6 +601,7 @@ const setPlaceholderMaxHeight = () => {
       e.stopPropagation();
 
       // // e.preventDefault();
+      debugger; 
       switchIcon(true);
     };
 
