@@ -526,10 +526,13 @@ const setPlaceholderMaxHeight = () => {
   display: block;
  `;
     function switchIcon(ch) {
+      debugger; 
       let s;
       if (true) {
         console.log(isSmall);
+        debugger; 
         if (!isSmall) {
+          debugger; 
           s = true;
 
           if (true) dealOfDay.style.display = `none`;
@@ -602,6 +605,7 @@ const setPlaceholderMaxHeight = () => {
       e.stopPropagation();
 
       // // e.preventDefault();
+      debugger; 
       switchIcon(true);
     };
 
