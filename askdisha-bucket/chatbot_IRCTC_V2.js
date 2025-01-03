@@ -822,6 +822,8 @@ cursor:pointer
  `;
     }
 
+    let isAdVisible = false;
+    let forceHide = false;
     adDownIframe.scrolling = "no";
 
     adDownIframe2.scrolling = "no";
@@ -842,7 +844,8 @@ cursor:pointer
 position: absolute;
 background: white;
 top: 28px;
-left: -33px;
+left: -35px;
+display: none;
 text-decoration: none;
 color: black;
 padding: 0px 7px;
@@ -855,7 +858,9 @@ border-top-right-radius: 4px;
       dealOfDay.style.cssText = `
    position: fixed;
    bottom:42px;
+   left:32%;
    right:150px;
+   transform: translateX(-50%);
    `;
     else
       dealOfDay.style.cssText = `
@@ -866,6 +871,54 @@ border-top-right-radius: 4px;
     dealOfDay.style.zIndex = "9";
     document.body.appendChild(dealOfDay);
 
+    if (isMobile) {
+      const closeButton = document.createElement("img");
+      closeButton.id = "dod-close";
+      closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
+      closeButton.style.cssText = `
+        background: #8181815e;
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        z-index: 10000; /* Ensure the close button has the highest z-index */
+        border-radius: 50%;
+        margin-left: -180px;
+        margin-top: 25px;
+        position: absolute;
+        padding: 5px;
+      `;
+      
+      // Append the close button to the dealOfDay container
+      dealOfDay.appendChild(closeButton);
+    
+      // Close button click listener
+      closeButton.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
+        event.preventDefault();   // Prevent the default action (which is following the link)
+        
+        forceHide = true;
+    
+        remove320();  // Call your remove320 function
+        hideAd();     // Call your hideAd function
+        dealOfDay.remove(); // Remove the dealOfDay element
+        const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+        if (adElement) {
+          adElement.style.display = "none";  // Ensure it's hidden
+          adElement.style.visibility = "hidden"; // Make sure it's hidden but still takes no space
+        }
+        document.body.style.zIndex = "2147483647";
+      });
+    }
+    setInterval(function() {
+      if (forceHide) {
+        const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+        if (adElement) {
+          adElement.style.display = "none";  // Forcefully hide the ad
+          adElement.style.visibility = "hidden"; // Ensures it remains hidden
+        }
+      }
+    }, 500);
+    
     if (isMobile) {
       adDownIframe.style.zIndex = "9";
       adDownIframe2.style.zIndex = "8";
