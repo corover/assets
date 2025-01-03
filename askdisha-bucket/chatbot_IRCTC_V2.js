@@ -526,6 +526,7 @@ const setPlaceholderMaxHeight = () => {
   display: block;
  `;
     function switchIcon(ch) {
+      console.log("IN");
       let s;
       if (true) {
         console.log(isSmall);
@@ -588,19 +589,6 @@ const setPlaceholderMaxHeight = () => {
         if (ch) isSmall = !isSmall;
         else
           setTimeout(() => {
-
-            document.addEventListener('DOMContentLoaded', () => {
-              const maxIcon = document.querySelector('#maxIcon');
-              if (maxIcon) {
-                  maxIcon.addEventListener('click', (e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      console.log("on click");
-                  });
-              } else {
-                  console.log("maxIcon not found");
-              }
-          });
             console.log(1);
             isSmall = s;
             console.log(isSmall);
@@ -608,13 +596,13 @@ const setPlaceholderMaxHeight = () => {
       }
     }
     maxIcon.onclick = (e) => {
-
-      // // isSmall = !isSmall;
-      e.preventDefault();
-      e.stopPropagation();
       console.log("on click");
+      // // isSmall = !isSmall;
+      // e.preventDefault();
+      // e.stopPropagation();
+
       // // e.preventDefault();
-      // switchIcon(true);
+      switchIcon(true);
     };
 
     launcher.appendChild(maxIcon);
