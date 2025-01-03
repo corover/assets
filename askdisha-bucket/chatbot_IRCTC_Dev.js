@@ -835,19 +835,19 @@ cursor:pointer
     }
 
     adDownIframe.scrolling = "no";
+adDownIframe2.scrolling = "no";
+document.body.appendChild(adDownIframe);
+//document.body.appendChild(adDownIframe2);
 
-    adDownIframe2.scrolling = "no";
-    document.body.appendChild(adDownIframe);
-    //document.body.appendChild(adDownIframe2);
-    const dealOfDay = document.createElement("a");
-    // https://bit.ly/3gBANx7 PLUTOS
-    //https://amzn.to/34WK1uY last
-    dealOfDay.style.display = `inline`;
-    dealOfDay.id = "dod";
-    if (isMobile) dealOfDay.href = "https://amzn.to/3ps6U6O";
-    else dealOfDay.href = "https://amzn.to/3ps6U6O";
+const dealOfDay = document.createElement("a");
+// https://bit.ly/3gBANx7 PLUTOS
+//https://amzn.to/34WK1uY last
+dealOfDay.style.display = `inline`;
+dealOfDay.id = "dod";
+if (isMobile) dealOfDay.href = "https://amzn.to/3ps6U6O";
+else dealOfDay.href = "https://amzn.to/3ps6U6O";
 
-    dealOfDay.target = "_blank";
+dealOfDay.target = "_blank";
 dealOfDay.innerHTML = `
    <img width="156px" src="https://sdk.irctc.corover.ai/askdisha-bucket/DEALS....png" decoding="async"/>
    <p style="
@@ -880,7 +880,7 @@ else
 dealOfDay.style.zIndex = "9";
 document.body.appendChild(dealOfDay);
 
-// Create the close button separately
+// Create and append the close button separately
 if (isMobile) {
   const closeButton = document.createElement("img");
   closeButton.id = "dod-close";
@@ -892,19 +892,22 @@ if (isMobile) {
     cursor: pointer;
     z-index: 10000; /* Ensure the close button has the highest z-index */
     border-radius: 50%;
-    margin-left: -25px;
+    margin-left: -190px;
+    margin-top: 10px;
     position: absolute;
     padding: 5px;
   `;
   
-  // Append the close button to the body
+  // Append the close button to the dealOfDay container
   dealOfDay.appendChild(closeButton);
 
   // Close button click listener
   closeButton.addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevent other event listeners from being triggered
-    remove320(); // Call your remove320 function
-    hideAd();
+    event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
+    event.preventDefault();   // Prevent the default action (which is following the link)
+    
+    remove320();  // Call your remove320 function
+    hideAd();     // Call your hideAd function
     dealOfDay.remove(); // Remove the dealOfDay element
   });
 }
