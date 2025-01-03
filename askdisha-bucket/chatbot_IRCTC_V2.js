@@ -1626,10 +1626,7 @@ border-bottom-right-radius: 4px;
 
     window.addEventListener('message', function(event) {
       console.log("Event received:", event);
-      console.log("Message received from origin:", event.origin);
-      console.log("Message data:", event.data);
-      console.log("Source window:", event.source); 
-      if (event.origin !== 'https://askdisha.irctc.co.in/') {
+      if (event.origin === 'https://askdisha.irctc.co.in' || event.origin === 'https://www.irctc.co.in') {
         return; 
       }
     
