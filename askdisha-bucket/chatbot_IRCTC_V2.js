@@ -77,6 +77,15 @@
 //   }
 // }
 
+const lan = {
+  en: { book: "Book Train Ticket" },
+  gb: { book: "Book Train Ticket" },
+  us: { book: "Book Train Ticket" },
+  hi: { book: "ट्रैन टिकट बुक करें" },
+  gu: { book: "ટ્રેન ટિકિટ બુક કરો" },
+};
+let lang="en";
+
 let overlayDiv = document.createElement("div");
 overlayDiv.style.cssText = `
 display: none;
@@ -204,15 +213,15 @@ const setPlaceholderMaxHeight = () => {
       cross: {
         size: "22px",
 
-        padding: "7px",
-        top: "8px",
-        right: "15px",
+        padding: "10px",
+        top: "10px",
+        right: "10px",
       },
       // bannerHeight: "180px",
       WhiteMarginTop: "22px",
-      scrollHeight: "223px",
+      scrollHeight: "310px",
       videoAd: {
-        height: "270px",
+        height: "290px",
         width: "100%",
         margin: "-32px",
         scale: "1.0",
@@ -224,9 +233,9 @@ const setPlaceholderMaxHeight = () => {
         scale: "0.8",
       },
       button: {
-        font: "16px",
-        padding: "10px",
-        icon: "25px",
+        font: "14px",
+        padding: "2%",
+        icon: "16px",
         marginLeft: "8px",
       },
     };
@@ -237,17 +246,17 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "330px",
         placeholderBottom: "-20%",
         cross: {
-          size: "1.2em",
+          size: "1.5em",
 
-          padding: "0.25em",
+          padding: "0.3em",
           top: "13px",
           right: "10px",
         },
         // bannerHeight: "132px",
         WhiteMarginTop: "10px",
-        scrollHeight: "223px",
+        scrollHeight: "310px",
         videoAd: {
-          height: "270px",
+          height: "290px",
           width: "100%",
           margin: "-36px",
           scale: "0.9",
@@ -261,7 +270,7 @@ const setPlaceholderMaxHeight = () => {
         button: {
           font: "14px",
           padding: "7px",
-          icon: "20px",
+          icon: "16px",
           marginLeft: "6px",
         },
       };
@@ -278,14 +287,14 @@ const setPlaceholderMaxHeight = () => {
           size: "22px",
 
           padding: "7px",
-          top: "8px",
-          right: "15px",
+          top: "10px",
+          right: "10px",
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
-        scrollHeight: "223px",
+        scrollHeight: "310px",
         videoAd: {
-          height: "270px",
+          height: "290px",
           width: "100%",
           margin: "-32px",
           scale: "1.0",
@@ -297,9 +306,9 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "16px",
-          padding: "10px",
-          icon: "25px",
+          font: "14px",
+          padding: "2%",
+          icon: "16px",
           marginLeft: "8px",
         },
       };
@@ -316,14 +325,14 @@ const setPlaceholderMaxHeight = () => {
           size: "22px",
 
           padding: "7px",
-          top: "8px",
-          right: "15px",
+          top: "10px",
+          right: "10px",
         },
         // bannerHeight: "158px",
         WhiteMarginTop: "12px",
-        scrollHeight: "223px",
+        scrollHeight: "310px",
         videoAd: {
-          height: "270px",
+          height: "290px",
           width: "100%",
           margin: "-32px",
           scale: "1.0",
@@ -335,9 +344,9 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "16px",
-          padding: "10px",
-          icon: "25px",
+          font: "14px",
+          padding: "2%",
+          icon: "16px",
           marginLeft: "8px",
         },
       };
@@ -789,7 +798,8 @@ margin-top:15px;
       adDownIframe.style.cssText = `
 position:fixed;
 bottom:0px;
-right:5px;
+left:50%;
+transform: translateX(-50%);
 width:320px;
 height:50px;
 border:2px;
@@ -797,7 +807,8 @@ border:2px;
       adDownIframe2.style.cssText = `
 position:fixed;
 bottom:0px;
-right:5px;
+left:50%;
+transform: translateX(-50%);
 width:320px;
 height:50px;
 border:2px;
@@ -823,6 +834,8 @@ cursor:pointer
  `;
     }
 
+    let isAdVisible = false;
+    let forceHide = false;
     adDownIframe.scrolling = "no";
 
     adDownIframe2.scrolling = "no";
@@ -833,8 +846,8 @@ cursor:pointer
     //https://amzn.to/34WK1uY last
     dealOfDay.style.display = `inline`;
     dealOfDay.id = "dod";
-    if (isMobile) dealOfDay.href = "https://amzn.to/3ps6U6O";
-    else dealOfDay.href = "https://amzn.to/3ps6U6O";
+    if (isMobile) dealOfDay.href = "https://amzn.to/3i4lgCr";
+    else dealOfDay.href = "https://amzn.to/3i4lgCr";
 
     dealOfDay.target = "_blank";
     dealOfDay.innerHTML = `
@@ -843,7 +856,8 @@ cursor:pointer
 position: absolute;
 background: white;
 top: 28px;
-left: -33px;
+left: -35px;
+display: none;
 text-decoration: none;
 color: black;
 padding: 0px 7px;
@@ -856,7 +870,8 @@ border-top-right-radius: 4px;
       dealOfDay.style.cssText = `
    position: fixed;
    bottom:42px;
-   right:150px;
+   left:32%;
+   transform: translateX(-50%);
    `;
     else
       dealOfDay.style.cssText = `
@@ -866,7 +881,54 @@ border-top-right-radius: 4px;
    `;
     dealOfDay.style.zIndex = "9";
     document.body.appendChild(dealOfDay);
-
+    
+    if (isMobile) {
+      const closeButton = document.createElement("img");
+      closeButton.id = "dod-close";
+      closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
+      closeButton.style.cssText = `
+        background: #8181815e;
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        z-index: 10000; /* Ensure the close button has the highest z-index */
+        border-radius: 50%;
+        margin-left: -180px;
+        margin-top: 25px;
+        position: absolute;
+        padding: 5px;
+      `;
+      
+      // Append the close button to the dealOfDay container
+      dealOfDay.appendChild(closeButton);
+    
+      // Close button click listener
+      closeButton.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
+        event.preventDefault();   // Prevent the default action (which is following the link)
+        
+        forceHide = true;
+    
+        remove320();  // Call your remove320 function
+        hideAd();     // Call your hideAd function
+        dealOfDay.remove(); // Remove the dealOfDay element
+        const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+        if (adElement) {
+          adElement.style.display = "none";  // Ensure it's hidden
+          adElement.style.visibility = "hidden"; // Make sure it's hidden but still takes no space
+        }
+        document.body.style.zIndex = "2147483647";
+      });
+    }
+    setInterval(function() {
+      if (forceHide) {
+        const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+        if (adElement) {
+          adElement.style.display = "none";  // Forcefully hide the ad
+          adElement.style.visibility = "hidden"; // Ensures it remains hidden
+        }
+      }
+    }, 500);
     if (isMobile) {
       adDownIframe.style.zIndex = "9";
       adDownIframe2.style.zIndex = "8";
@@ -1189,31 +1251,24 @@ margin-bottom: -2px;">SALE
      position: absolute;
      padding: ${mediaObj.cross.padding};">
  
-     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}" id="disha-image">
+       <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
          src="https://sdk.irctc.corover.ai/askdisha-bucket/IRCTC-banner-crop.gif"
-         style="width: 100%; height: 100%; border-radius: 8px"
+         style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
        />
-     </div>
-     <div style="    display: flex;
-     justify-content: center;
-     align-items: center;
-     column-gap: 6px;
-     width:96%;
-     margin: 0px auto;
-     ">
      <div
        style="
+        height: 100%;
          display: flex;
          justify-content: center;
          align-items: center;
          background: #0068ff;
-         width: 50%;
-         margin: 0 auto;
+         width: 45%;
+         margin: 2% 14% 2% auto;
          border-radius: 10px;
-         padding: ${mediaObj.button.padding} 0px;
+         padding: ${mediaObj.button.padding} 0%;
          cursor: pointer;
        "
        id="disha-banner-button"
@@ -1237,6 +1292,7 @@ margin-bottom: -2px;">SALE
          />
        </div>
        <p
+         id="ticketButton"
          style="
            margin: 0;
            margin-left: ${mediaObj.button.marginLeft};
@@ -1245,64 +1301,12 @@ margin-bottom: -2px;">SALE
            color: white;
          "
        >
-         Book Ticket
-       </p>
-     </div>
-     <div
-       style="
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         background: #0068ff;
-         width: 50%;
-         margin: 0 auto;
-         border-radius: 10px;
-         padding: ${mediaObj.button.padding} 0px;
-         cursor: pointer;
-       "
-       id="disha-banner-button2"
-     >
-       <div
-         style="
-           width: ${mediaObj.button.icon};
-           height: ${mediaObj.button.icon};
-           border-radius: 50%;
-           background: transparent;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-         "
-       >
-         <img
-           src="https://sdk.irctc.corover.ai/askdisha-bucket/disha-support.png"
-           alt=""
-           style="width: 80%"
-           decoding = "async"
-         />
-       </div>
-       <p
-         style="
-           margin: 0;
-           margin-left: ${mediaObj.button.marginLeft};
-           font-family: sans-serif;
-           font-size: ${mediaObj.button.font};
-           color: white;
-         "
-       >
-         Support
+       ${lan[lang].book}
        </p>
      </div>
      </div>
      <div style=" text-align: center;
      font-family: sans-serif;">
-     
-     <p style="    margin: 0;
-     font-size: 11px;
-     font-weight: 600;
-     color: #555555;">...in a <span style="color: #4c84ea;">fast</span>, <span style="color: #4c84ea;">easy</span> and <span style="color: #4c84ea;">secure</span> way   <span style="    font-size: 9px;
-     margin: 0;
-     color: slategray;
-     margin-top: 0px;">(Without your IRCTC password)</span></p>
    
      </div>
      <div
@@ -1327,7 +1331,7 @@ margin-bottom: -2px;">SALE
          />
        </a>
     <div id="splash-scrollable" style="    width: 100%;
-    display: flex;
+    display: flow;
     justify-content: flex-start;
     flex-direction:column;
     align-items: center;
@@ -1340,26 +1344,24 @@ margin-bottom: -2px;">SALE
     <p style="
 position: absolute;
 background: white;
+display: none;
 top: 0px;
 left: 21px;
 padding: 0px 10px;
 border-bottom-right-radius: 4px;
 ">Ad</p>
      
-    <iframe id="book-ticket-iframe" src="about:blank" scrolling="no" style="    padding: 0px;
-    width: 100%;
-    min-height: ${mediaObj.videoAd.height};
-    justify-content: center;
-    align-items: center;
-    border: 0px;
-    background-color:#ece5db;
-    transform: scale(${mediaObj.videoAd.scale});
-    margin-top: ${mediaObj.videoAd.margin};
-    display:none;
-    "></iframe>  
-
-    <div id='div-gpt-ad-1695628300486-0'>
-   </div>      
+    <iframe id="chatbot" 
+              src="https://askdisha.irctc.co.in/?support=true" 
+              width="100%" 
+              height="310px" 
+              frameborder="0" 
+              allowfullscreen=""
+              style="position: absolute; top: 0; left: 0; z-index: 1;">
+      </iframe>
+      
+  
+      </iframe>  
  </div>
      </div>
    `;
@@ -1396,7 +1398,7 @@ border-bottom-right-radius: 4px;
 
     document.body.appendChild(placeholderCard);
     document.getElementById("disha-banner-button").onclick = botOpen;
-    document.getElementById("disha-banner-button2").onclick = openSupport;
+    // document.getElementById("disha-banner-button2").onclick = openSupport;
     document.getElementById("disha-image").onclick = botOpen;
 
     const openBanner = (bool) => {
@@ -1433,10 +1435,10 @@ border-bottom-right-radius: 4px;
     };
     openBanner(false);
 
-    // setTimeout(() => {
-    //   if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
-    //     openBanner(true);
-    // }, 4000);
+    setTimeout(() => {
+      if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
+        openBanner(true);
+    }, 4000);
 
     setTimeout(() => {
       if (window.screen.width < 600) switchIcon(true);
@@ -1474,59 +1476,24 @@ border-bottom-right-radius: 4px;
       document.getElementById("dod").style.display = "none";
     }
     setInterval(() => {
-      //   irctc.co.in/nget/train-search
-      //     if (
-      //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
-      //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
-      //       (
-      //         navigator.userAgent.includes("Android") ||
-      //   navigator.userAgent.includes("webOS") ||
-      //   navigator.userAgent.includes("iPhone") ||
-      //   navigator.userAgent.includes("iPad") ||
-      //   navigator.userAgent.includes("iPod") ||
-      //   navigator.userAgent.includes("BlackBerry") ||
-      //   navigator.userAgent.includes("Windows Phone")
-      //       )
-      //       )) {
-      //       openBanner(false);
-      //       document.getElementById("askDishaSdk").style.display = "none";
-      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      //         "none";
-      //       document.getElementById("dod").style.display = "none";
-      //      }
-      //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
-      //      !isOpenTrainList &&
-      //      (
-      //       !navigator.userAgent.includes("Android") ||
-      // !navigator.userAgent.includes("webOS") ||
-      // !navigator.userAgent.includes("iPhone") ||
-      // !navigator.userAgent.includes("iPad") ||
-      // !navigator.userAgent.includes("iPod") ||
-      // !navigator.userAgent.includes("BlackBerry") ||
-      // !navigator.userAgent.includes("Windows Phone")
-      //     )){
-      //       openBanner(true);
-      //       document.getElementById("askDishaSdk").style.display = "flex";
-      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      //         "block";
-      //       document.getElementById("dod").style.display = "inline";
-      //       isOpenTrainList=true;
-      //      }
-      //     else if (!isSmall) {
-      if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
-        openBanner(false);
-        document.getElementById("askDishaSdk").style.display = "none";
-        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "none";
-        document.getElementById("dod").style.display = "none";
-      } else if (!isSmall) {
-        // console.log("HIT");
-        document.getElementById("askDishaSdk").style.display = "flex";
-        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "block";
-        document.getElementById("dod").style.display = "inline";
+      // Ensure the "dod" element exists in the DOM before trying to change its style
+      const dodElement = document.getElementById("dod");
+  
+      if (dodElement) {
+          // The element exists, so it's safe to modify its style
+          console.log("HIT");
+          // Example logic for showing and hiding the elements
+          if (window.location.href.includes("irctc.co.in/nget/train-search") && isSmall) {
+              document.getElementById("askDishaSdk").style.display = "none";
+              document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
+              dodElement.style.display = "none";  // Hide the deal of the day element
+          } else {
+              document.getElementById("askDishaSdk").style.display = "flex";
+              document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
+              dodElement.style.display = "inline";  // Show the deal of the day element
+          }
       }
-    }, 200);
+  }, 200);
 
     document.getElementById("disha-banner-close").onclick = () => {
       openBanner(false);
@@ -1653,6 +1620,27 @@ border-bottom-right-radius: 4px;
       isFirstTime = false;
     }
 
+    window.addEventListener('message', function(event) {
+      console.log("Event received:", event);
+      console.log("Message received from origin:", event.origin);
+      console.log("Message data:", event.data);
+      console.log("Source window:", event.source);
+    
+      // Check the origin of the message
+      if (event.origin === 'https://askdisha.irctc.co.in' || event.origin === 'https://www.irctc.co.in') {
+        const message = event.data;
+    
+        if (message.type === 'REDIRECT_CONDITION_MET') {
+          botOpen();  // Trigger some action in the parent
+        } else if (message.type === 'LANGUAGE_UPDATE') {
+          lang = message.data;
+          updateLanguage();
+        }
+      } else {
+        console.error("Received message from an unauthorized origin:", event.origin);
+      }
+    });
+    
     function checkForToken(e) {
       if (e.data == "getToken") {
         getToken();
