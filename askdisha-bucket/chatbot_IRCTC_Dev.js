@@ -862,6 +862,17 @@ padding: 0px 7px;
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
 ">Ad</p>
+<img decoding="async" src="https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png" id="dod-close" style="
+     background: #8181815e;
+     width: 22px;
+     height: 22px;
+     cursor: pointer;
+     display: block;
+     border-radius: 50%;
+     margin-left: -25px;
+     position: absolute;
+     padding: 5px;
+   ">
    `;
 
     if (isMobile)
@@ -883,7 +894,7 @@ border-top-right-radius: 4px;
       adDownIframe.style.zIndex = "9";
       adDownIframe2.style.zIndex = "8";
       dealOfDay.style.zIndex = "99";
-      const closeButton = document.getElementById('dod-close');
+            const closeButton = document.getElementById('dod-close');
       closeButton.addEventListener('click', function() {
         remove320();
         dealOfDay.remove(); 
@@ -1208,7 +1219,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@3jan-t2/askdisha-bucket/IRCTC-banner-crop1.gif"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@3jan-t3/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
