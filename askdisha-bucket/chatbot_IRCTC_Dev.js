@@ -800,7 +800,8 @@ margin-top:15px;
       adDownIframe.style.cssText = `
 position:fixed;
 bottom:0px;
-right:55px;
+left:50%;
+transform: translateX(-50%);
 width:320px;
 height:50px;
 border:2px;
@@ -808,7 +809,8 @@ border:2px;
       adDownIframe2.style.cssText = `
 position:fixed;
 bottom:0px;
-right:55px;
+left:50%;
+transform: translateX(-50%);
 width:320px;
 height:50px;
 border:2px;
@@ -870,7 +872,8 @@ if (isMobile)
   dealOfDay.style.cssText = `
    position: fixed;
    bottom:42px;
-   right:200px;
+   left:50%;
+   transform: translateX(-50%);
 `;
 else
   dealOfDay.style.cssText = `
