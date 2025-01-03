@@ -594,15 +594,15 @@ const setPlaceholderMaxHeight = () => {
           }, 1000);
       }
     }
-    // maxIcon.onclick = (e) => {
-    //   console.log("on click");
-    //   // isSmall = !isSmall;
-    //   e.preventDefault();
-    //   e.stopPropagation();
+    maxIcon.onclick = (e) => {
+      console.log("on click");
+      // isSmall = !isSmall;
+      e.preventDefault();
+      e.stopPropagation();
 
-    //   // e.preventDefault();
-    //   switchIcon(true);
-    // };
+      // e.preventDefault();
+      switchIcon(true);
+    };
 
     launcher.appendChild(maxIcon);
     launcher.addEventListener("touchmove", (ev) => {
