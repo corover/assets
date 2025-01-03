@@ -595,12 +595,12 @@ const setPlaceholderMaxHeight = () => {
       }
     }
     maxIcon.onclick = (e) => {
+      console.log("CLICK");
       // isSmall = !isSmall;
       e.preventDefault();
       e.stopPropagation();
 
       // e.preventDefault();
-      console.log("isSmall");
       switchIcon(true);
     };
 
