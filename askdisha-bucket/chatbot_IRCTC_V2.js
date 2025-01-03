@@ -515,6 +515,7 @@ const setPlaceholderMaxHeight = () => {
   display: block;
  `;
     function switchIcon(ch) {
+      debugger; 
       let s;
       if (true) {
         console.log(isSmall);
