@@ -588,17 +588,33 @@ const setPlaceholderMaxHeight = () => {
         if (ch) isSmall = !isSmall;
         else
           setTimeout(() => {
+
+            document.addEventListener('DOMContentLoaded', () => {
+              const maxIcon = document.querySelector('#maxIcon');
+              if (maxIcon) {
+                  maxIcon.addEventListener('click', (e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      console.log("on click");
+                  });
+              } else {
+                  console.log("maxIcon not found");
+              }
+          });
             console.log(1);
             isSmall = s;
             console.log(isSmall);
           }, 1000);
       }
     }
-    console.log("Attempting to bind event");
     maxIcon.onclick = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log("on click");
+
+      // // isSmall = !isSmall;
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("on click");
+      // // e.preventDefault();
+      // switchIcon(true);
     };
 
     launcher.appendChild(maxIcon);
