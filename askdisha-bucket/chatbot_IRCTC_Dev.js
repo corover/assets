@@ -867,11 +867,12 @@ border-top-right-radius: 4px;
      width: 22px;
      height: 22px;
      cursor: pointer;
-     display: block;
+     display: ${isMobile ? 'block' : 'none'};
      border-radius: 50%;
      margin-left: -25px;
      position: absolute;
      padding: 5px;
+     z-index: 10000;
    ">
    `;
 
