@@ -1192,7 +1192,7 @@ if (isMobile) {
       adDownIframe2.style.display = `block`;
 
       if (!isMobile && isSmall) {
-        switchIcon();
+        switchIcon(true);
       }
 
       hideAd();
