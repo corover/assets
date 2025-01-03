@@ -834,6 +834,7 @@ cursor:pointer
  `;
     }
 
+    let isAdVisible = false;
     adDownIframe.scrolling = "no";
 adDownIframe2.scrolling = "no";
 document.body.appendChild(adDownIframe);
@@ -906,8 +907,10 @@ if (isMobile) {
     event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
     event.preventDefault();   // Prevent the default action (which is following the link)
     
-    document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "block";
+    if (!isAdVisible) {
+      document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
+      isAdVisible = true;  // Set the flag to true to prevent re-showing
+    }
     remove320();  // Call your remove320 function
     hideAd();     // Call your hideAd function
     dealOfDay.remove(); // Remove the dealOfDay element
