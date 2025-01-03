@@ -1488,59 +1488,25 @@ border-bottom-right-radius: 4px;
       }
     }, 1000);
     setInterval(() => {
-      //   irctc.co.in/nget/train-search
-      //     if (
-      //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
-      //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
-      //       (
-      //         navigator.userAgent.includes("Android") ||
-      //   navigator.userAgent.includes("webOS") ||
-      //   navigator.userAgent.includes("iPhone") ||
-      //   navigator.userAgent.includes("iPad") ||
-      //   navigator.userAgent.includes("iPod") ||
-      //   navigator.userAgent.includes("BlackBerry") ||
-      //   navigator.userAgent.includes("Windows Phone")
-      //       )
-      //       )) {
-      //       openBanner(false);
-      //       document.getElementById("askDishaSdk").style.display = "none";
-      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      //         "none";
-      //       document.getElementById("dod").style.display = "none";
-      //      }
-      //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
-      //      !isOpenTrainList &&
-      //      (
-      //       !navigator.userAgent.includes("Android") ||
-      // !navigator.userAgent.includes("webOS") ||
-      // !navigator.userAgent.includes("iPhone") ||
-      // !navigator.userAgent.includes("iPad") ||
-      // !navigator.userAgent.includes("iPod") ||
-      // !navigator.userAgent.includes("BlackBerry") ||
-      // !navigator.userAgent.includes("Windows Phone")
-      //     )){
-      //       openBanner(true);
-      //       document.getElementById("askDishaSdk").style.display = "flex";
-      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      //         "block";
-      //       document.getElementById("dod").style.display = "inline";
-      //       isOpenTrainList=true;
-      //      }
-      //     else if (!isSmall) {
-      // if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
-      //   openBanner(false);
-      //   document.getElementById("askDishaSdk").style.display = "none";
-      //   document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      //     "none";
-      //   document.getElementById("dod").style.display = "none";
-      // } else if (!isSmall) {
-        console.log("HIT");
-        document.getElementById("askDishaSdk").style.display = "flex";
-        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "block";
-        document.getElementById("dod").style.display = "inline";
-      // }
-    }, 200);
+      // Ensure the "dod" element exists in the DOM before trying to change its style
+      const dodElement = document.getElementById("dod");
+  
+      if (dodElement) {
+          // The element exists, so it's safe to modify its style
+          console.log("HIT");
+          // Example logic for showing and hiding the elements
+          if (window.location.href.includes("irctc.co.in/nget/train-search") && isSmall) {
+              document.getElementById("askDishaSdk").style.display = "none";
+              document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
+              dodElement.style.display = "none";  // Hide the deal of the day element
+          } else {
+              document.getElementById("askDishaSdk").style.display = "flex";
+              document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
+              dodElement.style.display = "inline";  // Show the deal of the day element
+          }
+      }
+  }, 200);
+  
 
     document.getElementById("disha-banner-close").onclick = () => {
       openBanner(false);
