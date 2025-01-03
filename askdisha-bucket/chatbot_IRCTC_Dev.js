@@ -872,7 +872,7 @@ if (isMobile)
   dealOfDay.style.cssText = `
    position: fixed;
    bottom:42px;
-   left:50%;
+   left:32%;
    transform: translateX(-50%);
 `;
 else
