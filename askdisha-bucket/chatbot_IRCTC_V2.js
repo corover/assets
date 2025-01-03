@@ -893,8 +893,8 @@ if (isMobile) {
   closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
   closeButton.style.cssText = `
     background: #8181815e;
-    width: 12px;
-    height: 12px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
     z-index: 10000; /* Ensure the close button has the highest z-index */
     border-radius: 50%;
@@ -1501,12 +1501,12 @@ border-bottom-right-radius: 4px;
   //     }
   // }, 200);
 
-  const dodElement = document.getElementById("dod");
-if (dodElement) {
-    dodElement.addEventListener('click', () => {
-        clearInterval(intervalId);
-    });
-}
+//   const dodElement = document.getElementById("dod");
+// if (dodElement) {
+//     dodElement.addEventListener('click', () => {
+//         clearInterval(intervalId);
+//     });
+// }
 
 
 let timeoutId;
