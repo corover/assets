@@ -899,10 +899,7 @@ border-top-right-radius: 4px;
       closeButton.addEventListener('click', function(event) {
         event.stopPropagation(); // Prevent other event listeners from being triggered
         remove320(); // Call your remove320 function
-        const adDiv = document.getElementById('div-gpt-ad-1695628181945-0');
-        if (adDiv) {
-            adDiv.style.display = "none";  // Hide the ad div
-        }
+        hideAd();
         dealOfDay.remove(); // Remove the dealOfDay element
       });
     } else {
@@ -1225,7 +1222,7 @@ margin-bottom: -2px;">SALE
  
      <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@3jan-t5/askdisha-bucket/IRCTC-banner-crop1.gif"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@3jan-t4/askdisha-bucket/IRCTC-banner-crop1.gif"
          style="width: 33%; height: 100%; border-radius: 8px"
          alt=""
          decoding = "async"
