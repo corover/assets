@@ -212,7 +212,7 @@ const setPlaceholderMaxHeight = () => {
       placeholderHeight: "470px",
       placeholderBottom: "0px",
       cross: {
-        size: "12px",
+        size: "22px",
 
         padding: "10px",
         top: "10px",
@@ -285,7 +285,7 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "420px",
         placeholderBottom: "-25px",
         cross: {
-          size: "12px",
+          size: "22px",
 
           padding: "7px",
           top: "10px",
@@ -323,7 +323,7 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "440px",
         placeholderBottom: "0px",
         cross: {
-          size: "12px",
+          size: "22px",
 
           padding: "7px",
           top: "10px",
