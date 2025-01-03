@@ -848,66 +848,76 @@ cursor:pointer
     else dealOfDay.href = "https://amzn.to/3ps6U6O";
 
     dealOfDay.target = "_blank";
-    dealOfDay.innerHTML = `
+dealOfDay.innerHTML = `
    <img width="156px" src="https://sdk.irctc.corover.ai/askdisha-bucket/DEALS....png" decoding="async"/>
    <p style="
-position: absolute;
-background: white;
-top: 28px;
-left: -35px;
-display: none;
-text-decoration: none;
-color: black;
-padding: 0px 7px;
-border-top-left-radius: 4px;
-border-top-right-radius: 4px;
-">Ad</p>
-<img decoding="async" src="https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png" id="dod-close" style="
-     background: #8181815e;
-     width: 22px;
-     height: 22px;
-     cursor: pointer;
-     display: ${isMobile ? 'block' : 'none'};
-     border-radius: 50%;
-     margin-left: -25px;
      position: absolute;
-     padding: 5px;
-     z-index: 10000;
-   ">
-   `;
+     background: white;
+     top: 28px;
+     left: -35px;
+     display: none;
+     text-decoration: none;
+     color: black;
+     padding: 0px 7px;
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+   ">Ad</p>
+`;
 
-    if (isMobile)
-      dealOfDay.style.cssText = `
+if (isMobile)
+  dealOfDay.style.cssText = `
    position: fixed;
    bottom:42px;
    right:150px;
-   `;
-    else
-      dealOfDay.style.cssText = `
+`;
+else
+  dealOfDay.style.cssText = `
    position: fixed;
    bottom:40px;
    right:150px;
-   `;
-    dealOfDay.style.zIndex = "9";
-    document.body.appendChild(dealOfDay);
+`;
 
-    if (isMobile) {
-      adDownIframe.style.zIndex = "9";
-      adDownIframe2.style.zIndex = "8";
-      dealOfDay.style.zIndex = "99";
-      const closeButton = document.getElementById('dod-close');
+dealOfDay.style.zIndex = "9";
+document.body.appendChild(dealOfDay);
+
+// Create the close button separately
+if (isMobile) {
+  const closeButton = document.createElement("img");
+  closeButton.id = "dod-close";
+  closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
+  closeButton.style.cssText = `
+    background: #8181815e;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 10000; /* Ensure the close button has the highest z-index */
+    border-radius: 50%;
+    margin-left: -25px;
+    position: absolute;
+    padding: 5px;
+  `;
   
-      closeButton.addEventListener('click', function(event) {
-        event.stopPropagation(); // Prevent other event listeners from being triggered
-        remove320(); // Call your remove320 function
-        hideAd();
-        dealOfDay.remove(); // Remove the dealOfDay element
-      });
-    } else {
-      adDownIframe.style.zIndex = "2147483647";
-      adDownIframe2.style.zIndex = "2147483646";
-      dealOfDay.style.zIndex = "99999999999999";
-    }
+  // Append the close button to the body
+  dealOfDay.appendChild(closeButton);
+
+  // Close button click listener
+  closeButton.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent other event listeners from being triggered
+    remove320(); // Call your remove320 function
+    hideAd();
+    dealOfDay.remove(); // Remove the dealOfDay element
+  });
+}
+
+if (isMobile) {
+  adDownIframe.style.zIndex = "9";
+  adDownIframe2.style.zIndex = "8";
+  dealOfDay.style.zIndex = "99";
+} else {
+  adDownIframe.style.zIndex = "2147483647";
+  adDownIframe2.style.zIndex = "2147483646";
+  dealOfDay.style.zIndex = "99999999999999";
+}
 
     setDishaWrapper();
 
