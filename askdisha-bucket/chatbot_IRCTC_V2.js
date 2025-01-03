@@ -601,7 +601,6 @@ const setPlaceholderMaxHeight = () => {
       e.stopPropagation();
 
       // // e.preventDefault();
-      debugger; 
       switchIcon(true);
     };
 
@@ -1532,7 +1531,7 @@ const toggleVisibility = () => {
 };
 
 // Call this function after certain interactions (like window resizing or other events)
-debounce(toggleVisibility, 200);
+debounce(toggleVisibility, 10);
 
 
     document.getElementById("disha-banner-close").onclick = () => {
