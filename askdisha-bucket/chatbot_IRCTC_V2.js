@@ -519,11 +519,13 @@ const setPlaceholderMaxHeight = () => {
     maxIcon.decoding = "async";
     maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png?" + new Date().getTime();
     maxIcon.style.cssText = `
-  position: absolute;
-  right: 100px;
-  width: 16px;
-  top: 0px;
-  display: block;
+  position: fixed; 
+  top: 50%;         
+  left: 50%;        
+  width: 100px;     
+  height: 100px;    
+  transform: translate(-50%, -50%); 
+  z-index: 9999;    
   border: 2px solid red; 
  `;
     function switchIcon(ch) {
@@ -614,10 +616,15 @@ const setPlaceholderMaxHeight = () => {
       }
     }
     maxIcon.onclick = (e) => {
-      console.log("CLICK");
+      console.log("CLICK detected");
       e.preventDefault();
       e.stopPropagation();
     
+      // Log the DOM tree and the status of maxIcon
+      console.log("maxIcon in DOM?", document.body.contains(maxIcon)); // Check if maxIcon is still in DOM
+      console.log("maxIcon styles:", maxIcon.style);
+      console.log("maxIcon position:", maxIcon.style.position);
+      
       switchIcon(true);
     };
     

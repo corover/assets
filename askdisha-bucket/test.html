@@ -8,36 +8,27 @@
     #maxIcon {
       position: absolute;
       right: 100px;
-      width: 16px;
       top: 0px;
+      width: 16px;
       z-index: 9999;
+      border: 2px solid red; /* To ensure visibility for testing */
     }
   </style>
 </head>
 <body>
   <script>
     let maxIcon = document.createElement("img");
-    maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
-    maxIcon.id = "maxIcon";  // Add an ID for easy debugging
+    maxIcon.src = "https://via.placeholder.com/150?text=Initial+Icon";
+    maxIcon.id = "maxIcon"; // Add an ID for easier debugging
     document.body.appendChild(maxIcon);
 
-    let isSmall = true;
-    function switchIcon(ch) {
-      console.log("isSmall before:", isSmall);
-      if (isSmall) {
-        maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
-      } else {
-        maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
-      }
-      isSmall = !isSmall;
-      console.log("isSmall after:", isSmall);
-    }
-
     maxIcon.onclick = (e) => {
-      console.log("CLICK");
+      console.log("CLICK detected");
       e.preventDefault();
       e.stopPropagation();
-      switchIcon(true);
+
+      // Log current position to check visibility
+      console.log("maxIcon position:", maxIcon.style.position);
     };
   </script>
 </body>
