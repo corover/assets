@@ -595,7 +595,7 @@ const setPlaceholderMaxHeight = () => {
       }
     }
     maxIcon.onclick = (e) => {
-      // console.log("on click");
+      console.log("on click");
       // // isSmall = !isSmall;
       // e.preventDefault();
       // e.stopPropagation();
