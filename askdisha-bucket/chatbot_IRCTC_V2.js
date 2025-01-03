@@ -517,36 +517,15 @@ const setPlaceholderMaxHeight = () => {
     launcher.draggable = true;
     let maxIcon = document.createElement("img");
     maxIcon.decoding = "async";
-    maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png?" + new Date().getTime();
+    maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
     maxIcon.style.cssText = `
-  position: fixed; 
-  top: 50%;         
-  left: 50%;        
-  width: 100px;     
-  height: 100px;    
-  transform: translate(-50%, -50%); 
-  z-index: 9999;    
-  border: 2px solid red; 
+  position: absolute;
+  right: 100px;
+  width: 16px;
+  top: 0px;
+  display: block;
  `;
     function switchIcon(ch) {
-      console.log("isSmall before:", isSmall);
-  
-      if (isSmall) {
-        maxIcon.src = "https://via.placeholder.com/150?text=Maximise";
-        console.log("maxIcon src changed to: maximise.png");
-      } else {
-        maxIcon.src = "https://via.placeholder.com/150?text=Minimum";
-        console.log("maxIcon src changed to: minimum.png");
-      }
-    
-      isSmall = !isSmall;
-      console.log("isSmall after:", isSmall);
-    
-      maxIcon.style.position = "fixed";
-      maxIcon.style.top = "50%";
-      maxIcon.style.left = "50%";
-      maxIcon.style.transform = "translate(-50%, -50%)";
-      maxIcon.style.zIndex = 9999;
       let s;
       if (true) {
         console.log(isSmall);
@@ -616,18 +595,13 @@ const setPlaceholderMaxHeight = () => {
       }
     }
     maxIcon.onclick = (e) => {
-      console.log("CLICK detected");
+      // isSmall = !isSmall;
       e.preventDefault();
       e.stopPropagation();
-    
-      // Log the DOM tree and the status of maxIcon
-      console.log("maxIcon in DOM?", document.body.contains(maxIcon)); // Check if maxIcon is still in DOM
-      console.log("maxIcon styles:", maxIcon.style);
-      console.log("maxIcon position:", maxIcon.style.position);
-      
+
+      // e.preventDefault();
       switchIcon(true);
     };
-    
 
     launcher.appendChild(maxIcon);
     launcher.addEventListener("touchmove", (ev) => {
