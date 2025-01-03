@@ -1192,7 +1192,8 @@ if (isMobile) {
       adDownIframe2.style.display = `block`;
 
       if (!isMobile && isSmall) {
-        switchIcon(false);
+        console.log(isSmall);
+        switchIcon();
       }
 
       hideAd();
