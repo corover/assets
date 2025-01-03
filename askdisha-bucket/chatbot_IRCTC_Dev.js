@@ -1467,6 +1467,14 @@ border-bottom-right-radius: 4px;
         "none";
       document.getElementById("dod").style.display = "none";
     }
+
+    setInterval(function() {
+      console.log("Checking ad visibility...");
+      if (document.getElementById("div-gpt-ad-1695628181945-0").style.display !== "block") {
+        console.log("Forcing display to block.");
+        document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
+      }
+    }, 1000);
     setInterval(() => {
       //   irctc.co.in/nget/train-search
       //     if (
