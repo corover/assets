@@ -526,7 +526,6 @@ const setPlaceholderMaxHeight = () => {
   display: block;
  `;
     function switchIcon(ch) {
-      console.log("IN");
       let s;
       if (true) {
         console.log(isSmall);
@@ -597,9 +596,10 @@ const setPlaceholderMaxHeight = () => {
     }
     maxIcon.onclick = (e) => {
       console.log("on click");
+      debugger; 
       // // isSmall = !isSmall;
-      // e.preventDefault();
-      // e.stopPropagation();
+      e.preventDefault();
+      e.stopPropagation();
 
       // // e.preventDefault();
       switchIcon(true);
