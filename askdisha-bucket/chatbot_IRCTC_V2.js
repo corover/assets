@@ -600,6 +600,7 @@ const setPlaceholderMaxHeight = () => {
       e.stopPropagation();
 
       // e.preventDefault();
+      console.log("isSmall");
       switchIcon(true);
     };
 
@@ -1192,7 +1193,6 @@ if (isMobile) {
       adDownIframe2.style.display = `block`;
 
       if (!isMobile && isSmall) {
-        console.log(isSmall);
         switchIcon();
       }
 
