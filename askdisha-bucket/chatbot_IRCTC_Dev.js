@@ -848,8 +848,8 @@ const dealOfDay = document.createElement("a");
 //https://amzn.to/34WK1uY last
 dealOfDay.style.display = `inline`;
 dealOfDay.id = "dod";
-if (isMobile) dealOfDay.href = "https://amzn.to/3ps6U6O";
-else dealOfDay.href = "https://amzn.to/3ps6U6O";
+if (isMobile) dealOfDay.href = "https://amzn.to/3i4lgCr";
+else dealOfDay.href = "https://amzn.to/3i4lgCr";
 
 dealOfDay.target = "_blank";
 dealOfDay.innerHTML = `
