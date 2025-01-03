@@ -1356,7 +1356,7 @@ border-bottom-right-radius: 4px;
 ">Ad</p>
      
         <iframe id="chatbot" 
-            src="https://test1.irctc.corover.ai/?support=true" 
+            src="https://askdisha.irctc.co.in/?support=true" 
             width="100%" 
             height="310px" 
             frameborder="0" 
@@ -1626,7 +1626,7 @@ border-bottom-right-radius: 4px;
 
     window.addEventListener('message', function(event) {
       console.log("Event: ",event);
-      if (event.origin !== 'https://test1.irctc.corover.ai') {
+      if (event.origin !== 'https://askdisha.irctc.co.in/') {
         return; 
       }
     
