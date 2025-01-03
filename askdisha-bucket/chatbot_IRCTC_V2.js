@@ -1628,21 +1628,23 @@ border-bottom-right-radius: 4px;
       console.log("Event received:", event);
       console.log("Message received from origin:", event.origin);
       console.log("Message data:", event.data);
-      console.log("Source window:", event.source); 
+      console.log("Source window:", event.source);
+    
+      // Check the origin of the message
       if (event.origin === 'https://askdisha.irctc.co.in' || event.origin === 'https://www.irctc.co.in') {
-        return; 
-      }
+        const message = event.data;
     
-      const message = event.data;
-    
-      if (message.type === 'REDIRECT_CONDITION_MET') {
-        botOpen();  
-      }
-      else   if (message.type === 'LANGUAGE_UPDATE') {
-         lang=message.data;
-         updateLanguage(); 
+        if (message.type === 'REDIRECT_CONDITION_MET') {
+          botOpen();  // Trigger some action in the parent
+        } else if (message.type === 'LANGUAGE_UPDATE') {
+          lang = message.data;
+          updateLanguage();
+        }
+      } else {
+        console.error("Received message from an unauthorized origin:", event.origin);
       }
     });
+    
     
     function updateLanguage() {
       const ticketButton = document.getElementById('ticketButton');
