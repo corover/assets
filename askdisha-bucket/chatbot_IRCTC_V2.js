@@ -523,84 +523,83 @@ const setPlaceholderMaxHeight = () => {
   top: 0px;
   display: block;
  `;
-    function switchIcon(ch) {
-      debugger; 
-      let s;
-      if (true) {
-        console.log(isSmall);
-        if (!isSmall) {
-          s = true;
+ function switchIcon(ch) {
+  let s;
+  if (true) {
+    console.log(isSmall);
+    if (!isSmall) {
+      s = true;
 
-          if (true) dealOfDay.style.display = `none`;
+      if (true) dealOfDay.style.display = `none`;
 
-          remove320();
-          adDownIframe2.style.display = `none`;
-          maxIcon.src =
-            "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
-          dishaWrapper.style.bottom = "200px";
+      remove320();
+      adDownIframe2.style.display = `none`;
+      maxIcon.src =
+        "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
+      dishaWrapper.style.bottom = "200px";
 
-          dishaWrapper.style.right = "-18px";
-          launcher.style.transform = "rotate(-12deg)";
-          maxIcon.style.cssText = `
-        position: absolute;
-        right: 14px;
-        width: 14px;
-        top: -18px;
-        transform: rotate(-168deg);
-      `;
+      dishaWrapper.style.right = "-18px";
+      launcher.style.transform = "rotate(-12deg)";
+      maxIcon.style.cssText = `
+    position: absolute;
+    right: 14px;
+    width: 14px;
+    top: -18px;
+    transform: rotate(-168deg);
+  `;
 
-          launcher.style.width = "50px";
-          launcher.style.height = "50px";
-          launcher.style.minWidth = "50px";
+      launcher.style.width = "50px";
+      launcher.style.height = "50px";
+      launcher.style.minWidth = "50px";
 
-          if (!isMobile) {
-            messageWrapper.style.display = "none";
-          }
-          //   googletag.destroySlots([IR_UB]);
-        } else {
-          s = false;
-          // messageDialog.style.display = "block";
-          // messageDialogClose.style.display = "block";
-          if (true) dealOfDay.style.display = `inline`;
+      if (!isMobile) {
+        messageWrapper.style.display = "none";
+      }
+      //   googletag.destroySlots([IR_UB]);
+    } else {
+      s = false;
+      // messageDialog.style.display = "block";
+      // messageDialogClose.style.display = "block";
+      if (true) dealOfDay.style.display = `inline`;
 
-          add320();
-          adDownIframe2.style.display = `block`;
-          setDishaWrapper();
-          launcher.style.width = "120px";
-          launcher.style.height = "120px";
-          launcher.style.minWidth = "120px";
+      add320();
+      adDownIframe2.style.display = `block`;
+      setDishaWrapper();
+      launcher.style.width = "120px";
+      launcher.style.height = "120px";
+      launcher.style.minWidth = "120px";
 
-          maxIcon.src =
-            "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
-          launcher.style.transform = "none";
-          maxIcon.style.cssText = `
-        position: absolute;
-        right: 98px;
-        width: 16px;
-        top: -2px;
-      `;
+      maxIcon.src =
+        "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
+      launcher.style.transform = "none";
+      maxIcon.style.cssText = `
+    position: absolute;
+    right: 98px;
+    width: 16px;
+    top: -2px;
+  `;
 
-          if (!isMobile) {
-            messageWrapper.style.display = "block";
-          }
-        }
-        if (ch) isSmall = !isSmall;
-        else
-          setTimeout(() => {
-            // console.log(1);
-            isSmall = s;
-            // console.log(isSmall);
-          }, 1000);
+      if (!isMobile) {
+        messageWrapper.style.display = "block";
       }
     }
-    maxIcon.onclick = (e) => {
-      // isSmall = !isSmall;
-      e.preventDefault();
-      e.stopPropagation();
+    if (ch) isSmall = !isSmall;
+    else
+      setTimeout(() => {
+        // console.log(1);
+        isSmall = s;
+        // console.log(isSmall);
+      }, 1000);
+  }
+}
+maxIcon.onclick = (e) => {
+  // isSmall = !isSmall;
+  e.preventDefault();
+  e.stopPropagation();
 
-      // e.preventDefault();
-      switchIcon(true);
-    };
+  // e.preventDefault();
+  switchIcon(true);
+};
 
     launcher.appendChild(maxIcon);
     launcher.addEventListener("touchmove", (ev) => {
@@ -1640,7 +1639,7 @@ border-bottom-right-radius: 4px;
         console.error("Received message from an unauthorized origin:", event.origin);
       }
     });
-    
+
     function checkForToken(e) {
       if (e.data == "getToken") {
         getToken();
