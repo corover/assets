@@ -835,6 +835,7 @@ cursor:pointer
     }
 
     let isAdVisible = false;
+    let forceHide = false;
     adDownIframe.scrolling = "no";
 adDownIframe2.scrolling = "no";
 document.body.appendChild(adDownIframe);
@@ -907,17 +908,28 @@ if (isMobile) {
     event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
     event.preventDefault();   // Prevent the default action (which is following the link)
     
-    if (!isAdVisible) {
-      // Change display to block, or you can use visibility: hidden to prevent it from being affected by refresh
-      document.getElementById("div-gpt-ad-1695628181945-0").style.visibility = "visible";
-      document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
-      isAdVisible = true;  // Set the flag to true to prevent re-showing
-    }
+    forceHide = true;
+
     remove320();  // Call your remove320 function
     hideAd();     // Call your hideAd function
     dealOfDay.remove(); // Remove the dealOfDay element
+    const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+    if (adElement) {
+      adElement.style.display = "none";  // Ensure it's hidden
+      adElement.style.visibility = "hidden"; // Make sure it's hidden but still takes no space
+    }
+    document.body.style.zIndex = "2147483647";
   });
 }
+setInterval(function() {
+  if (forceHide) {
+    const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+    if (adElement) {
+      adElement.style.display = "none";  // Forcefully hide the ad
+      adElement.style.visibility = "hidden"; // Ensures it remains hidden
+    }
+  }
+}, 500);
 
 if (isMobile) {
   adDownIframe.style.zIndex = "9";
