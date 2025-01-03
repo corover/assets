@@ -528,15 +528,23 @@ const setPlaceholderMaxHeight = () => {
  `;
     function switchIcon(ch) {
       console.log("isSmall before:", isSmall);
+  
       if (isSmall) {
-        maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
+        maxIcon.src = "https://via.placeholder.com/150?text=Maximise";
         console.log("maxIcon src changed to: maximise.png");
       } else {
-        maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
+        maxIcon.src = "https://via.placeholder.com/150?text=Minimum";
         console.log("maxIcon src changed to: minimum.png");
       }
+    
       isSmall = !isSmall;
       console.log("isSmall after:", isSmall);
+    
+      maxIcon.style.position = "fixed";
+      maxIcon.style.top = "50%";
+      maxIcon.style.left = "50%";
+      maxIcon.style.transform = "translate(-50%, -50%)";
+      maxIcon.style.zIndex = 9999;
       let s;
       if (true) {
         console.log(isSmall);
