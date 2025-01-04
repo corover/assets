@@ -1454,7 +1454,7 @@ border-bottom-right-radius: 4px;
       if (true) dealOfDay.style.display = `none`;
 
       remove320();
-      adDownIframe2.style.display = `none`;
+      // adDownIframe2.style.display = `none`;
       maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
       dishaWrapper.style.bottom = "200px";
 
