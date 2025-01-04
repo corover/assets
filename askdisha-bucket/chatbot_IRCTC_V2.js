@@ -1389,7 +1389,7 @@ border-bottom-right-radius: 4px;
 
     const openSupport = () => {
       let urlDeskTop = `https://askdisha.irctc.co.in/?support=true`;
-      let urlMobile = `https://askdisha.irctc.co.in/?support=true/#web`;
+      let urlMobile = `https://askdisha.irctc.co.in/?support=true/`;
       let url = "";
       if (isMobile) url = urlMobile;
       else url = urlDeskTop;
@@ -1556,8 +1556,8 @@ debounce(toggleVisibility, 10);
 
     function botOpen() {
       if (isMobile) {
-        if (iOS()) window.location.assign("https://askdisha.irctc.co.in/#web");
-        else window.open("https://askdisha.irctc.co.in/#web", "_blank");
+        if (iOS()) window.location.assign("https://askdisha.irctc.co.in/");
+        else window.open("https://askdisha.irctc.co.in/", "_blank");
         return;
       }
       openBanner(false);
@@ -1953,7 +1953,7 @@ debounce(toggleVisibility, 10);
 
           if (source && destination) {
             let urlDeskTop = `https://askdisha.irctc.co.in/`;
-            let urlMobile = `https://askdisha.irctc.co.in/#web`;
+            let urlMobile = `https://askdisha.irctc.co.in/`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
@@ -1976,7 +1976,7 @@ debounce(toggleVisibility, 10);
             // }
           } else {
             let urlDeskTop = `https://askdisha.irctc.co.in/`;
-            let urlMobile = `https://askdisha.irctc.co.in/#web`;
+            let urlMobile = `https://askdisha.irctc.co.in/`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
@@ -1994,7 +1994,7 @@ debounce(toggleVisibility, 10);
         } else {
           //   botOpen();
           let urlDeskTop = `https://askdisha.irctc.co.in/`;
-          let urlMobile = `https://askdisha.irctc.co.in/#web`;
+          let urlMobile = `https://askdisha.irctc.co.in/`;
           let url = "";
           if (isMobile) url = urlMobile;
           else url = urlDeskTop;
@@ -2045,8 +2045,8 @@ display:none;
 `;
     document.body.appendChild(overlayWidget);
     overlayWidget.onclick = () => {
-      if (iOS()) window.location.assign("https://askdisha.irctc.co.in/#web");
-      else window.open("https://askdisha.irctc.co.in/#web", "_blank");
+      if (iOS()) window.location.assign("https://askdisha.irctc.co.in/");
+      else window.open("https://askdisha.irctc.co.in/", "_blank");
     };
     // launcher.style.backgroundImage = `url("")`;
     // launcher.style.borderWidth = "0px";
