@@ -1357,13 +1357,15 @@ border-bottom-right-radius: 4px;
 ">Ad</p>
      
         <iframe id="chatbot" 
-            src="https://askdisha.irctc.co.in/?support=true" 
-            width="100%" 
-            height="310px" 
-            frameborder="0" 
-            allowfullscreen=""
-            style="position: absolute; top: 0; left: 0; z-index: 1;">
-    </iframe>
+        src="https://askdisha.irctc.co.in/?support=true" 
+        width="100%" 
+        height="310px" 
+        frameborder="0" 
+        allowfullscreen 
+        allow="microphone; camera; autoplay" 
+        style="position: absolute; top: 0; left: 0; z-index: 1;">
+</iframe>
+
     
 
     </iframe>       
