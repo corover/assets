@@ -82,7 +82,7 @@ const lan = {
   en: { book: "Book Train Ticket" },
   gb: { book: "Book Train Ticket" },
   us: { book: "Book Train Ticket" },
-  hi: { book: "ट्रैन टिकट बुक करें" },
+  hi: { book: "ट्रेन टिकट बुक करें" },
   gu: { book: "ટ્રેન ટિકિટ બુક કરો" },
 };
 let lang="en";
