@@ -1449,6 +1449,7 @@ border-bottom-right-radius: 4px;
 
     setTimeout(() => {
       if (window.location.href.includes("nget/booking/train-list"))
+        console.log("IN");
         remove320();  // Call your remove320 function
       hideAd();     // Call your hideAd function
       dealOfDay.remove(); // Remove the dealOfDay element
