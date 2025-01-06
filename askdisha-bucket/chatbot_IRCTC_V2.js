@@ -1442,6 +1442,7 @@ border-bottom-right-radius: 4px;
     openBanner(false);
 
     setTimeout(() => {
+      console.log("1st");
       if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
         openBanner(true);
     }, 4000);
@@ -1449,6 +1450,7 @@ border-bottom-right-radius: 4px;
 
 
     setTimeout(() => {
+      console.log("IN");
       if (window.location.href.includes("nget/booking/train-list")) {
         console.log("IN");  // This will log "IN" if the URL contains the string "nget/booking/train-list"
         remove320();         // Call your remove320 function
