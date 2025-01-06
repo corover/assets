@@ -1441,10 +1441,20 @@ border-bottom-right-radius: 4px;
     };
     openBanner(false);
 
-    // setTimeout(() => {
-    //   if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
-    //     openBanner(true);
-    // }, 4000);
+    setTimeout(() => {
+      if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
+        openBanner(true);
+      else{
+        remove320();  // Call your remove320 function
+        hideAd();     // Call your hideAd function
+        dealOfDay.remove(); // Remove the dealOfDay element
+        const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+        if (adElement) {
+          adElement.style.display = "none";  // Ensure it's hidden
+          adElement.style.visibility = "hidden"; // Make sure it's hidden but still takes no space
+        }
+      }
+    }, 4000);
 
     setTimeout(() => {
       if (window.screen.width < 600) switchIcon(true);
