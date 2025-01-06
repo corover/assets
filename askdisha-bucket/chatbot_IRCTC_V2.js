@@ -1444,16 +1444,6 @@ border-bottom-right-radius: 4px;
     setTimeout(() => {
       if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
         openBanner(true);
-      else{
-        remove320();  // Call your remove320 function
-        hideAd();     // Call your hideAd function
-        dealOfDay.remove(); // Remove the dealOfDay element
-        const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
-        if (adElement) {
-          adElement.style.display = "none";  // Ensure it's hidden
-          adElement.style.visibility = "hidden"; // Make sure it's hidden but still takes no space
-        }
-      }
     }, 4000);
 
     setTimeout(() => {
@@ -1529,7 +1519,7 @@ const debounce = (func, delay) => {
 const toggleVisibility = () => {
     const dodElement = document.getElementById("dod");
     if (dodElement) {
-        if (window.location.href.includes("irctc.co.in/nget/train-search") && isSmall) {
+        if (window.location.href.includes("irctc.co.in/nget/train-search") || isSmall) {
             document.getElementById("askDishaSdk").style.display = "none";
             document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
             dodElement.style.display = "none";
