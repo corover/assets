@@ -77,18 +77,21 @@ const isMob = () => {
 let isMobile = isMob();
 
 // below function to define homepage adunts
-const defineGPTslots = (all, Adunit_IR_UB_300x250, Adunit_IR_UB_320x50) => {
+const defineGPTslots = (all,
+  //  Adunit_IR_UB_300x250, 
+   Adunit_IR_UB_320x50
+  ) => {
   window.googletag = window.googletag || { cmd: [] };
   googletag.cmd.push(function () {
-    if (all && !isMobile) { //comment this if block to remove 300x250_chatbot slot defination
-      IR_UB_NEW = googletag
-        .defineSlot(
-          Adunit_IR_UB_300x250,
-          [300, 250],
-          "div-gpt-ad-1695628300486-0"
-        )
-        .addService(googletag.pubads());
-    }
+  //   if (all && !isMobile) { //comment this if block to remove 300x250_chatbot slot defination
+  //     IR_UB_NEW = googletag
+  //       .defineSlot(
+  //         Adunit_IR_UB_300x250,
+  //         [300, 250],
+  //         "div-gpt-ad-1695628300486-0"
+  //       )
+  //       .addService(googletag.pubads());
+  //   }
 
     IR_UB = googletag
       .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1695628181945-0")
@@ -103,7 +106,7 @@ if (!adunitData && adunitData == undefined) {
     .then((adunitData) => {
       defineGPTslots(
         true,
-        adunitData["Adunit_IR_UB_300x250"],
+      //   adunitData["Adunit_IR_UB_300x250"],
         adunitData["Adunit_IR_UB_320x50"]
       );
     })
@@ -113,7 +116,7 @@ if (!adunitData && adunitData == undefined) {
 } else {
   defineGPTslots(
     true,
-    adunitData["Adunit_IR_UB_300x250"],
+  //   adunitData["Adunit_IR_UB_300x250"],
     adunitData["Adunit_IR_UB_320x50"]
   );
 }
@@ -176,7 +179,7 @@ const reloadADs = (all) => {
       .then((adunitData) => {
         defineGPTslots(
           all,
-          adunitData["Adunit_IR_UB_300x250"],
+          // adunitData["Adunit_IR_UB_300x250"],
           adunitData["Adunit_IR_UB_320x50"]
         );
       })
@@ -186,7 +189,7 @@ const reloadADs = (all) => {
   } else {
     defineGPTslots(
       all,
-      adunitData["Adunit_IR_UB_300x250"],
+      // adunitData["Adunit_IR_UB_300x250"],
       adunitData["Adunit_IR_UB_320x50"]
     );
   }
@@ -195,11 +198,11 @@ const reloadADs = (all) => {
     googletag.display("div-gpt-ad-1695628181945-0");
   });
   //display inbot ad
-  if (all && !isMobile) {
-    googletag.cmd.push(function () {
-      googletag.display("div-gpt-ad-1695628300486-0");
-    });
-  }
+  // if (all && !isMobile) {
+  //   googletag.cmd.push(function () {
+  //     googletag.display("div-gpt-ad-1695628300486-0");
+  //   });
+  // }
 };
 
 let oldUrl = window.location.href;
@@ -235,11 +238,11 @@ const runNewDisplayAd = () => {
   googletag.cmd.push(function () {
     googletag.display("div-gpt-ad-1695628181945-0");
   });
-  if (!isMobile) {   //comment this if block to stop 300x250_chatbot request
-    googletag.cmd.push(function () {
-      googletag.display("div-gpt-ad-1695628300486-0");
-    });
-  }
+  // if (!isMobile) {   //comment this if block to stop 300x250_chatbot request
+  //   googletag.cmd.push(function () {
+  //     googletag.display("div-gpt-ad-1695628300486-0");
+  //   });
+  // }
 };
 //function to refresh  ads
 function refreshHomeAdWindow() {
