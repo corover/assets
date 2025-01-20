@@ -556,6 +556,7 @@ const setPlaceholderMaxHeight = () => {
 
           if (!isMobile) {
             messageWrapper.style.display = "none";
+            add320();
           }
           //   googletag.destroySlots([IR_UB]);
         } else {
@@ -927,10 +928,10 @@ if (isMobile) {
 setInterval(function() {
   if (forceHide) {
     const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
-    // if (adElement) {
-    //   adElement.style.display = "none";  // Forcefully hide the ad
-    //   adElement.style.visibility = "hidden"; // Ensures it remains hidden
-    // }
+    if (adElement) {
+      adElement.style.display = "none";  // Forcefully hide the ad
+      adElement.style.visibility = "hidden"; // Ensures it remains hidden
+    }
   }
 }, 500);
 
