@@ -924,15 +924,15 @@ if (isMobile) {
     document.body.style.zIndex = "2147483647";
   });
 }
-// setInterval(function() {
-//   if (forceHide) {
-//     const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
-//     if (adElement) {
-//       adElement.style.display = "none";  // Forcefully hide the ad
-//       adElement.style.visibility = "hidden"; // Ensures it remains hidden
-//     }
-//   }
-// }, 500);
+setInterval(function() {
+  if (forceHide) {
+    const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+    if (adElement) {
+      adElement.style.display = "none";  // Forcefully hide the ad
+      adElement.style.visibility = "hidden"; // Ensures it remains hidden
+    }
+  }
+}, 500);
 
 if (isMobile) {
   adDownIframe.style.zIndex = "9";
@@ -1435,7 +1435,7 @@ border-bottom-right-radius: 4px;
       }
       if (isSmall) {
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "none";
+          "block";
         document.getElementById("dod").style.display = "none";
       }
     };
