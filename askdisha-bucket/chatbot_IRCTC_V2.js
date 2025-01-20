@@ -1411,7 +1411,8 @@ border-bottom-right-radius: 4px;
       if (isMobile) {
         dishaWrapper.style.display = "flex";
         if (!isSmall) dealOfDay.style.display = "inline";
-        if (!isSmall) add320();
+        // if (!isSmall) 
+        add320();
         adDownIframe2.style.display = "block";
         placeholderCard.style.display = "none";
         return;
@@ -1435,7 +1436,7 @@ border-bottom-right-radius: 4px;
       }
       if (isSmall) {
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-          "block";
+          "none";
         document.getElementById("dod").style.display = "none";
       }
     };
