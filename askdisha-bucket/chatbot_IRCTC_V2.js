@@ -1410,11 +1410,51 @@ border-bottom-right-radius: 4px;
     const openBanner = (bool) => {
       if (isMobile) {
         dishaWrapper.style.display = "flex";
-        if (!isSmall) dealOfDay.style.display = "inline";
+        // if (!isSmall) 
+        dealOfDay.style.display = "inline";
         // if (!isSmall) 
         add320();
         adDownIframe2.style.display = "block";
         placeholderCard.style.display = "none";
+    
+        // Create and append the close button
+        const closeButton = document.createElement("img");
+        closeButton.id = "dod-close";
+        closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
+        closeButton.style.cssText = `
+          background: #8181815e;
+          width: 22px;
+          height: 22px;
+          cursor: pointer;
+          z-index: 10000; /* Ensure the close button has the highest z-index */
+          border-radius: 50%;
+          margin-left: -180px;
+          margin-top: 25px;
+          position: absolute;
+          padding: 5px;
+        `;
+    
+        // Append the close button to the dealOfDay container
+        dealOfDay.appendChild(closeButton);
+    
+        // Close button click listener
+        closeButton.addEventListener('click', function(event) {
+          event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
+          event.preventDefault();   // Prevent the default action (which is following the link)
+          
+          forceHide = true;
+    
+          remove320();  // Call your remove320 function
+          hideAd();     // Call your hideAd function
+          dealOfDay.remove(); // Remove the dealOfDay element
+          const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+          if (adElement) {
+            adElement.style.display = "none";  // Ensure it's hidden
+            adElement.style.visibility = "hidden"; // Make sure it's hidden but still takes no space
+          }
+          document.body.style.zIndex = "2147483647";
+        });
+    
         return;
       }
       isSplashScreenOpen = bool;
