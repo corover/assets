@@ -927,10 +927,10 @@ if (isMobile) {
 setInterval(function() {
   if (forceHide) {
     const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
-    if (adElement) {
-      adElement.style.display = "none";  // Forcefully hide the ad
-      adElement.style.visibility = "hidden"; // Ensures it remains hidden
-    }
+    // if (adElement) {
+    //   adElement.style.display = "none";  // Forcefully hide the ad
+    //   adElement.style.visibility = "hidden"; // Ensures it remains hidden
+    // }
   }
 }, 500);
 
@@ -1454,7 +1454,7 @@ border-bottom-right-radius: 4px;
       isSmall = true;
       if (true) dealOfDay.style.display = `none`;
 
-      // remove320();
+      remove320();
       adDownIframe2.style.display = `none`;
       maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
       dishaWrapper.style.bottom = "200px";
