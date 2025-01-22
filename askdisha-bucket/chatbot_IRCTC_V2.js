@@ -87,6 +87,66 @@ const lan = {
 };
 let lang="en";
 
+
+document.getElementById("apiButton").addEventListener("click", function() {
+  // Data to be sent in the request
+  const requestData = {
+      query: "who is group general manager/it?",
+      source: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      inputType: "TEXT",
+      next_context: null,
+      cxpayload: null,
+      userToken: "7f85ee7e-a722-4793-9229-87659c391c98",
+      suggestion: false,
+      isFallback: false,
+      isRefund: false,
+      channel: "https://www.irctc.co.in/",
+      prevCode: null,
+      audioUrl: null,
+      dSession: "VfeR3E4RFadActKZnf+MmaNFBK1yT3eiGOu4JWp8aLzuuggyoS4yeOqoemi1kISBjZAPhJpYoetHH6BMMpe7Q3yK4xuUl8A1qiSs36ZFH2FacRLbil9ObtJkaDyWeZVcaTlYX4JbHbiKFt6jcSN4Tv5yiYbeBZgdcwp8uDMJXWf3KMOqKbAhIV7QHutmRaovHPT7cHgM96ad7IpcoEQT+ulQ3f5a5+LWyKYhcNleCz6gFbj9Pm68v+TthMLHD7cMh0tv4xdDt3HAoIZ30/MeyskqeR1v8aJyeu2U3r4dSYloH4+wFMaA0XR3qlZEfTCKnjsoa7W3wG1xLuf7m807VEnodXXsS0xapv0wqi66R4OB+78mPIn7tb2YfWuqd+R3mDKdb0WFKNBf6SGWn37nS4yDSDeiZRqF/ewlirHbpbmKqTGO1Pc/OP2OG9ntvPVn1tWwgO8qIJXRXkDwvpQrs9z31H7hWc0JnzXEQch2p2xNdin+HVUOvSwRVP4aq+hn+hiUC1ClMW6IiFN9XVdwHvZN1qVnZTm4V3YQveqlaTn6TRXr6FHoVQGxAgupyWF7Ac477bYe0CDNM7688Mu0nRWdKeO2q9Zs8g+J5SaOBTTdInv59KnF1O3HCjfbKgBOxspL1MnQUeVdkseSltHGeC7MiOeM1AtrvBxTkl86xWG20aL/xNyYHSrGzMngYx9fbGiowGJ1XcQbCY+zxFz6PJ1rvF+MdRcY/8x+VaoV0wIq+F4g1kEHKFkipPNsU4wdxaA1GhRmKude2kEf7nF6jrwAl9IdWUUyfuZ9nuFZ2hwxtM0RyYGAEvfphE08WzqMr5ZI1leq8ZBLH7n5uuAXxS1nlzlz0SXnf+cc8F760Ust6weud+QSKWly5cWM1b++fp00vebDojvF28D1HM8vGzXIMu9Fdf7mJzBZph9H3l4s1x8G6gd1L8OHu9DSpGA8pseaebnI8NRrMtxIzqgNXfLmvrYxm/CzthYdSUlRXbo4hN47t80lJRlsUAhL4XVNe8BtIQavIfcHiGNHtAbqwlCz0Uz3t5+b0yRcrp/IZrpR2QIdiKASES+Ou+ZW6E3vZ7DgVogc6hBeEzeSo4h3b3fryYuL0R2uz6COn0se7T9+O0QQx/JPq1LJbILohst/tC0nozHNDXbpBpiOdYv0CxUzrZhXu2kodoQGl2C/JsTnuDGZAY9I0BZ+wdz/mBiXJOa8SNP6hvjVaNixIfIOyij/xBBfcE2LUlnEFSducSqqbI22g6YxI6jWqA1ZgBfDaVcNtFhnq4llbK9x3g0EKdLsRHUL2wBpO+c6eRE7T5WAXOPKCBLkcSjSs8pngR+w0i4vGLl/LS9dp4lbz1W2ww==",
+      deviceId: null,
+      sessionId: "54a46028-8326-4925-92a5-a0eb72d8955d",
+      status: 1
+  };
+
+  // API endpoint
+  const apiUrl = 'https://askdisha.irctc.co.in/dishaAPI/bot/sendQuery/en';
+
+  // Making the fetch call
+  fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Accept-Language': 'en-GB,en;q=0.9',
+          'App-Id': '29fd4f94-f793-4227-9588-056b5ffb1318',
+          'Auth-Key': '2b5fb5d4-0753-4302-b661-f8580e9effb0',
+          'Content-Type': 'application/json',
+          'Cookie': '_ga_SHTZYKNHG2=GS1.1.1737579434.1.0.1737579434.0.0.0; __gads=ID=4b26fffee00fa762:T=1737579434:RT=1737579434:S=ALNI_MauzVQv9PmAEvq6c04HrU0VReumcw; __gpi=UID=0000100637d0a558:T=1737579434:RT=1737579434:S=ALNI_Mb4ZWFX1f7wCC7ZWieYJiR59Uh22A; __eoi=ID=00005c8b76ca3620:T=1737579434:RT=1737579434:S=AA-AfjaYoJP6GBiaylGgTVEHLUA5; _gid=GA1.3.1164310990.1737579436; _gat_gtag_UA_122267849_1=1; _ga_NFN218243Z=GS1.1.1737579435.1.0.1737579435.0.0.0; _ga=GA1.1.1340372605.1737579434; _ga_JSTMKS9Y3J=GS1.1.1737579436.1.0.1737579436.0.0.0',
+          'Cxtoken': 'null',
+          'Origin': 'https://askdisha.irctc.co.in',
+          'Priority': 'u=1, i',
+          'Referer': 'https://askdisha.irctc.co.in/?support=true',
+          'Sec-Ch-Ua': '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+          'Sec-Ch-Ua-Mobile': '?0',
+          'Sec-Ch-Ua-Platform': '"macOS"',
+          'Sec-Fetch-Dest': 'empty',
+          'Sec-Fetch-Mode': 'cors',
+          'Sec-Fetch-Site': 'same-origin',
+          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+      },
+      body: JSON.stringify(requestData)
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log("Response Data:", data);
+      // Handle the response data as needed
+  })
+  .catch(error => {
+      console.error("Error:", error);
+  });
+});
+
+
 let overlayDiv = document.createElement("div");
 overlayDiv.style.cssText = `
 display: none;
@@ -886,63 +946,6 @@ dealOfDay.style.zIndex = "9";
 document.body.appendChild(dealOfDay);
 
 
-document.getElementById("apiButton").addEventListener("click", function() {
-  // Data to be sent in the request
-  const requestData = {
-      query: "who is group general manager/it?",
-      source: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-      inputType: "TEXT",
-      next_context: null,
-      cxpayload: null,
-      userToken: "7f85ee7e-a722-4793-9229-87659c391c98",
-      suggestion: false,
-      isFallback: false,
-      isRefund: false,
-      channel: "https://www.irctc.co.in/",
-      prevCode: null,
-      audioUrl: null,
-      dSession: "VfeR3E4RFadActKZnf+MmaNFBK1yT3eiGOu4JWp8aLzuuggyoS4yeOqoemi1kISBjZAPhJpYoetHH6BMMpe7Q3yK4xuUl8A1qiSs36ZFH2FacRLbil9ObtJkaDyWeZVcaTlYX4JbHbiKFt6jcSN4Tv5yiYbeBZgdcwp8uDMJXWf3KMOqKbAhIV7QHutmRaovHPT7cHgM96ad7IpcoEQT+ulQ3f5a5+LWyKYhcNleCz6gFbj9Pm68v+TthMLHD7cMh0tv4xdDt3HAoIZ30/MeyskqeR1v8aJyeu2U3r4dSYloH4+wFMaA0XR3qlZEfTCKnjsoa7W3wG1xLuf7m807VEnodXXsS0xapv0wqi66R4OB+78mPIn7tb2YfWuqd+R3mDKdb0WFKNBf6SGWn37nS4yDSDeiZRqF/ewlirHbpbmKqTGO1Pc/OP2OG9ntvPVn1tWwgO8qIJXRXkDwvpQrs9z31H7hWc0JnzXEQch2p2xNdin+HVUOvSwRVP4aq+hn+hiUC1ClMW6IiFN9XVdwHvZN1qVnZTm4V3YQveqlaTn6TRXr6FHoVQGxAgupyWF7Ac477bYe0CDNM7688Mu0nRWdKeO2q9Zs8g+J5SaOBTTdInv59KnF1O3HCjfbKgBOxspL1MnQUeVdkseSltHGeC7MiOeM1AtrvBxTkl86xWG20aL/xNyYHSrGzMngYx9fbGiowGJ1XcQbCY+zxFz6PJ1rvF+MdRcY/8x+VaoV0wIq+F4g1kEHKFkipPNsU4wdxaA1GhRmKude2kEf7nF6jrwAl9IdWUUyfuZ9nuFZ2hwxtM0RyYGAEvfphE08WzqMr5ZI1leq8ZBLH7n5uuAXxS1nlzlz0SXnf+cc8F760Ust6weud+QSKWly5cWM1b++fp00vebDojvF28D1HM8vGzXIMu9Fdf7mJzBZph9H3l4s1x8G6gd1L8OHu9DSpGA8pseaebnI8NRrMtxIzqgNXfLmvrYxm/CzthYdSUlRXbo4hN47t80lJRlsUAhL4XVNe8BtIQavIfcHiGNHtAbqwlCz0Uz3t5+b0yRcrp/IZrpR2QIdiKASES+Ou+ZW6E3vZ7DgVogc6hBeEzeSo4h3b3fryYuL0R2uz6COn0se7T9+O0QQx/JPq1LJbILohst/tC0nozHNDXbpBpiOdYv0CxUzrZhXu2kodoQGl2C/JsTnuDGZAY9I0BZ+wdz/mBiXJOa8SNP6hvjVaNixIfIOyij/xBBfcE2LUlnEFSducSqqbI22g6YxI6jWqA1ZgBfDaVcNtFhnq4llbK9x3g0EKdLsRHUL2wBpO+c6eRE7T5WAXOPKCBLkcSjSs8pngR+w0i4vGLl/LS9dp4lbz1W2ww==",
-      deviceId: null,
-      sessionId: "54a46028-8326-4925-92a5-a0eb72d8955d",
-      status: 1
-  };
-
-  // API endpoint
-  const apiUrl = 'https://askdisha.irctc.co.in/dishaAPI/bot/sendQuery/en';
-
-  // Making the fetch call
-  fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Accept-Language': 'en-GB,en;q=0.9',
-          'App-Id': '29fd4f94-f793-4227-9588-056b5ffb1318',
-          'Auth-Key': '2b5fb5d4-0753-4302-b661-f8580e9effb0',
-          'Content-Type': 'application/json',
-          'Cookie': '_ga_SHTZYKNHG2=GS1.1.1737579434.1.0.1737579434.0.0.0; __gads=ID=4b26fffee00fa762:T=1737579434:RT=1737579434:S=ALNI_MauzVQv9PmAEvq6c04HrU0VReumcw; __gpi=UID=0000100637d0a558:T=1737579434:RT=1737579434:S=ALNI_Mb4ZWFX1f7wCC7ZWieYJiR59Uh22A; __eoi=ID=00005c8b76ca3620:T=1737579434:RT=1737579434:S=AA-AfjaYoJP6GBiaylGgTVEHLUA5; _gid=GA1.3.1164310990.1737579436; _gat_gtag_UA_122267849_1=1; _ga_NFN218243Z=GS1.1.1737579435.1.0.1737579435.0.0.0; _ga=GA1.1.1340372605.1737579434; _ga_JSTMKS9Y3J=GS1.1.1737579436.1.0.1737579436.0.0.0',
-          'Cxtoken': 'null',
-          'Origin': 'https://askdisha.irctc.co.in',
-          'Priority': 'u=1, i',
-          'Referer': 'https://askdisha.irctc.co.in/?support=true',
-          'Sec-Ch-Ua': '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
-          'Sec-Ch-Ua-Mobile': '?0',
-          'Sec-Ch-Ua-Platform': '"macOS"',
-          'Sec-Fetch-Dest': 'empty',
-          'Sec-Fetch-Mode': 'cors',
-          'Sec-Fetch-Site': 'same-origin',
-          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-      },
-      body: JSON.stringify(requestData)
-  })
-  .then(response => response.json())
-  .then(data => {
-      console.log("Response Data:", data);
-      // Handle the response data as needed
-  })
-  .catch(error => {
-      console.error("Error:", error);
-  });
-});
 
 
 
