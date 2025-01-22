@@ -1269,6 +1269,7 @@ margin-bottom: -2px;">SALE
          alt=""
          decoding = "async"
        />
+       <button onclick="test()">Click Me</button>
      <div
        style="
          height: 100%;
@@ -1301,7 +1302,6 @@ margin-bottom: -2px;">SALE
            style="width: 46%"
            decoding = "async"
          />
-         <button onclick="test()">Click Me</button>
        </div>
        <p
          id="ticketButton"
