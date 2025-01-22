@@ -1483,7 +1483,7 @@ border-bottom-right-radius: 4px;
     openBanner(false);
 
     setTimeout(() => {
-      if (!isOpen && !window.location.href.includes("nget/booking/train-list"))
+      if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup"))
         openBanner(true);
     }, 4000);
 
