@@ -1239,6 +1239,8 @@ border-top-right-radius: 18px;
 border-bottom-right-radius: 18px;
 ">
 
+<button id="apiButton" onclick="test()">Send API Request</button>
+
 <img style="    width: 40px;
 display: block;
 margin: 0 auto;" src="https://dishav3.ap-south-1.linodeobjects.com/amazon.png" alt="AmazonNudge" loading="lazy">
@@ -1269,7 +1271,6 @@ margin-bottom: -2px;">SALE
          alt=""
          decoding = "async"
        />
-       <button onclick="test()">Click Me</button>
      <div
        style="
          height: 100%;
