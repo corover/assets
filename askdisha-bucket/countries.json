@@ -1,4 +1,6 @@
-[
+{
+    "type": "SET_COUNTRIES",
+    "value": [
     "Afghanistan",
     "Albania",
     "Algeria",
@@ -253,3 +255,4 @@
     "Zimbabwe",
     "Åland Islands"
 ]
+}
