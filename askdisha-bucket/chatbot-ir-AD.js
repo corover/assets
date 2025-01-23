@@ -71,26 +71,49 @@ const isMob = () => {
 let isMobile = isMob();
 
 // below function to define homepage adunts
+// const defineGPTslots = (all, Adunit_IR_UB_300x250, Adunit_IR_UB_320x50) => {
+//   window.googletag = window.googletag || { cmd: [] };
+//   googletag.cmd.push(function () {
+//     if (all && !isMobile) { //comment this if block to remove 300x250_chatbot slot defination
+//       IR_UB_NEW = googletag
+//         .defineSlot(
+//           Adunit_IR_UB_300x250,
+//           [300, 250],
+//           "div-gpt-ad-1698143839353-0"
+//         )
+//         .addService(googletag.pubads());
+//     }
+
+//     IR_UB = googletag
+//       .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1699617760427-0")
+//       .addService(googletag.pubads());
+//     googletag.pubads().enableSingleRequest();
+//     googletag.enableServices();
+//   });
+// };
+
 const defineGPTslots = (all, Adunit_IR_UB_300x250, Adunit_IR_UB_320x50) => {
   window.googletag = window.googletag || { cmd: [] };
   googletag.cmd.push(function () {
     if (all && !isMobile) { //comment this if block to remove 300x250_chatbot slot defination
+      // Replaced with new ad unit ID
       IR_UB_NEW = googletag
         .defineSlot(
-          Adunit_IR_UB_300x250,
+          '/37179215/GPT_NWEB_HOME_BOTTOM_RIGHT', // New ad unit path
           [300, 250],
-          "div-gpt-ad-1698143839353-0"
+          'div-gpt-ad-1737542509635-0' // New div ID
         )
         .addService(googletag.pubads());
     }
 
     IR_UB = googletag
-      .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1699617760427-0")
+      .defineSlot(Adunit_IR_UB_320x50, [320, 50], 'div-gpt-ad-1699617760427-0')
       .addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
   });
 };
+
 
 //function to define slots for homepage adunits
 if (!adunitData && adunitData == undefined) {
