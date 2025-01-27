@@ -2718,7 +2718,7 @@ unibots.cmd.push(() => {
   document.head.insertAdjacentHTML(
     "beforeend",
     `<style type="text/css">
- #div-gpt-ad-1695628181945-0{position:fixed !important;background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/320_50.gif);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;}
+ #div-gpt-ad-1695628181945-0{position:fixed !important;background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/B.gif);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;}
  #div-gpt-ad-1695628300486-0{display:block !important;background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/300_250.png);background-origin: content-box;background-repeat: no-repeat;background-size: contain !important;background-position: center;
   min-width: 300px; min-height: 250px;
  }
