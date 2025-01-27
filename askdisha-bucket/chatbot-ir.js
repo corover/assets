@@ -1255,7 +1255,7 @@
                   transform: scale(${mediaObj.videoAd.scale});
                   margin-top: ${mediaObj.videoAd.margin};
                   "></iframe>  
-                  <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width};margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale});background:url('https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/300_250.png');background-repeat:no-repeat;background-size:contain !important"> 
+                  <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width};margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale});background:url('https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/askdisha_ad.png');background-repeat:no-repeat;background-size:contain !important"> 
                 
                   </div>
               </div>
@@ -1908,7 +1908,7 @@
           min-width: 320px !important;
           min-height:50px !important;
           z-index:2 !important;
-          background-image: url(https://storage.googleapis.com/corover-prod-bucket/disha-eticket/ads.svg);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
+          background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/B.gif);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
           }
     
           .gpt320--show{
@@ -1966,7 +1966,7 @@
               min-width: 320px !important;
               min-height: 50px !important;
               z-index: 2 !important;
-              background-image: url(https://storage.googleapis.com/corover-prod-bucket/disha-eticket/ads.svg);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
+              background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/B.gif);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
            
           }
     
