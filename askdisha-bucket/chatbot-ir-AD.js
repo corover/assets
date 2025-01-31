@@ -99,15 +99,15 @@ const defineGPTslots = (all, Adunit_IR_UB_300x250, Adunit_IR_UB_320x50) => {
       // Replaced with new ad unit ID
       IR_UB_NEW = googletag
         .defineSlot(
-          '/37179215/GPT_NWEB_HOME_BOTTOM_RIGHT', // New ad unit path
+          Adunit_IR_UB_300x250,
           [300, 250],
-          'div-gpt-ad-1737542509635-0' // New div ID
+          "div-gpt-ad-1698143839353-0"
         )
         .addService(googletag.pubads());
     }
 
     IR_UB = googletag
-      .defineSlot(Adunit_IR_UB_320x50, [320, 50], 'div-gpt-ad-1699617760427-0')
+      .defineSlot(Adunit_IR_UB_320x50, [320, 50], "div-gpt-ad-1699617760427-0")
       .addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
