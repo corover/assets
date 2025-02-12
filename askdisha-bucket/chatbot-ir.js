@@ -1255,7 +1255,7 @@
                   transform: scale(${mediaObj.videoAd.scale});
                   margin-top: ${mediaObj.videoAd.margin};
                   "></iframe>  
-                  <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width};margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale});background:url('https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/askdisha_ad.png');background-repeat:no-repeat;background-size:contain !important"> 
+                  <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width};margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale});background:url('https://cdn.jsdelivr.net/gh/corover/assets@4feb/askdisha-bucket/Mahakumbh%20Ad%20Creative%20300x250.gif');background-repeat:no-repeat;background-size:contain !important"> 
                 
                   </div>
               </div>
@@ -1966,7 +1966,7 @@
               min-width: 320px !important;
               min-height: 50px !important;
               z-index: 2 !important;
-              background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/B.gif);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
+              background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@4feb/askdisha-bucket/MahaKumbh%20GIF%20320x50.gif);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
            
           }
     
