@@ -1256,7 +1256,7 @@
                   margin-top: ${mediaObj.videoAd.margin};
                   "></iframe>  
                   <a href="https://amzn.to/4h0EeGZ" target="_blank" style="display: block;">
-                    <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width}; margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale}); background:url('https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir1/askdisha-bgucket/1.png'); background-repeat: no-repeat; background-size: contain !important;">
+                    <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width}; margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale}); background:url('https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bgucket/1.png'); background-repeat: no-repeat; background-size: contain !important;">
                     </div>
                   </a>
               </div>
@@ -1910,7 +1910,7 @@
                 min-width: 320px !important;
                 min-height: 50px !important;
                 z-index: 2 !important;
-                background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir1/askdisha-bucket/1.png);
+                background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/2.png);
                 background-origin: content-box;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -1956,7 +1956,7 @@
             // If the ad container is empty, add the image with the hyperlink
             adContainer.innerHTML = `
                 <a href="https://amzn.to/4h0EeGZ" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir1/askdisha-bucket/1.png" alt="Dil Se Dost Banner" style="width: 100%; height: auto;">
+                    <img src="https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/2.png" alt="Dil Se Dost Banner" style="width: 100%; height: auto;">
                 </a>
             `;
         }
@@ -1973,7 +1973,7 @@
                 min-width: 320px !important;
                 min-height: 50px !important;
                 z-index: 2 !important;
-                background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir1/askdisha-bucket/1.png);
+                background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/2.png);
                 background-origin: content-box;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -2019,7 +2019,7 @@
             // If the ad container is empty, add the image with the hyperlink
             adContainer.innerHTML = `
                 <a href="https://amzn.to/4h0EeGZ" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir1/askdisha-bucket/1.png" alt="Dil Se Dost Banner" style="width: 100%; height: auto;">
+                    <img src="https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/2.png" alt="Dil Se Dost Banner" style="width: 100%; height: auto;">
                 </a>
             `;
         }
