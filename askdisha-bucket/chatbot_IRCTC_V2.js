@@ -2718,34 +2718,79 @@ unibots.cmd.push(() => {
   document.head.insertAdjacentHTML(
     "beforeend",
     `<style type="text/css">
- #div-gpt-ad-1695628181945-0{position:fixed !important;background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/B.gif);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;}
- #div-gpt-ad-1695628300486-0{display:block !important;background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/300_250.png);background-origin: content-box;background-repeat: no-repeat;background-size: contain !important;background-position: center;
-  min-width: 300px; min-height: 250px;
- }
-
- .disha-loader {
-  border: 10px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 10px solid rgb(52, 109, 179);
-  width: 60px;
-  height: 60px;
-  -webkit-animation: disha-spin 1s linear infinite; /* Safari */
-  animation: disha-spin 1s linear infinite;
-  margin-bottom:20px
-}
-
-/* Safari */
-@-webkit-keyframes disha-spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes disha-spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-</style>`
+      #div-gpt-ad-1695628181945-0 {
+        position: fixed !important;
+        background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/2.png);
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: #ece5db;
+      }
+      
+      #div-gpt-ad-1695628300486-0 {
+        display: block !important;
+        background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/1.png);
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        background-size: contain !important;
+        background-position: center;
+        min-width: 300px;
+        min-height: 250px;
+      }
+  
+      .disha-loader {
+        border: 10px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 10px solid rgb(52, 109, 179);
+        width: 60px;
+        height: 60px;
+        -webkit-animation: disha-spin 1s linear infinite; /* Safari */
+        animation: disha-spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+  
+      /* Safari */
+      @-webkit-keyframes disha-spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+  
+      @keyframes disha-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>`
   );
+  
+  // Function to create the linkable divs only if no ad is loaded
+  function createAdLink(id, imageUrl) {
+    const adDiv = document.getElementById(id);
+    
+    if (!adDiv || !adDiv.hasChildNodes()) { // Check if the ad hasn't been loaded
+      const link = document.createElement('a');
+      link.href = "https://amzn.to/4h0EeGZ";
+      link.target = "_blank";
+      link.style.display = "block";
+      link.style.width = "100%";
+      link.style.height = "100%";
+  
+      // Set background image if no ad content is loaded
+      adDiv.style.backgroundImage = `url(${imageUrl})`;
+      
+      // Wrap the div inside the anchor
+      link.appendChild(adDiv);
+      
+      // Append the link to the body or a parent container
+      document.body.appendChild(link);
+    } else {
+      // If ad content is loaded, just append the ad div normally
+      document.body.appendChild(adDiv);
+    }
+  }
+  
+  // Create the clickable ad divs only if ads aren't loaded
+  createAdLink("div-gpt-ad-1695628181945-0", "https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/2.png");
+  createAdLink("div-gpt-ad-1695628300486-0", "https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/1.png");
+  
 })();
 
