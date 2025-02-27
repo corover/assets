@@ -2726,6 +2726,8 @@ unibots.cmd.push(() => {
         background-size: contain;
         background-color: #ece5db;
         display: none; /* Initially hidden */
+        width: 100%; /* Ensure the div takes full width */
+        height: 100%; /* Ensure the div takes full height */
       }
       
       #div-gpt-ad-1695628300486-0 {
@@ -2738,6 +2740,8 @@ unibots.cmd.push(() => {
         min-width: 300px;
         min-height: 250px;
         display: none; /* Initially hidden */
+        width: 100%; /* Ensure the div takes full width */
+        height: 100%; /* Ensure the div takes full height */
       }
   
       .disha-loader {
@@ -2764,17 +2768,35 @@ unibots.cmd.push(() => {
     </style>`
   );
   
-  // Function to create the ad divs
+  // Function to create the ad divs wrapped in anchor tags
   function createAdDivs() {
+    // Create anchor tags
+    const link1 = document.createElement('a');
+    link1.href = "https://amzn.to/4h0EeGZ";
+    link1.target = "_blank";
+    link1.style.display = "block";
+    link1.style.width = "100%";
+    link1.style.height = "100%";
+  
+    const link2 = document.createElement('a');
+    link2.href = "https://amzn.to/4h0EeGZ";
+    link2.target = "_blank";
+    link2.style.display = "block";
+    link2.style.width = "100%";
+    link2.style.height = "100%";
+  
+    // Create ad divs
     const ad1 = document.createElement('div');
     ad1.id = "div-gpt-ad-1695628181945-0";
-    ad1.style.display = "block"; // Show the ad div
-    document.body.appendChild(ad1);
+    link1.appendChild(ad1);
   
     const ad2 = document.createElement('div');
     ad2.id = "div-gpt-ad-1695628300486-0";
-    ad2.style.display = "block"; // Show the ad div
-    document.body.appendChild(ad2);
+    link2.appendChild(ad2);
+  
+    // Append anchor tags to the body
+    document.body.appendChild(link1);
+    document.body.appendChild(link2);
   }
   
   // Function to check if ad content is loaded
