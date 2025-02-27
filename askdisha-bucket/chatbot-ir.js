@@ -1255,9 +1255,10 @@
                   transform: scale(${mediaObj.videoAd.scale});
                   margin-top: ${mediaObj.videoAd.margin};
                   "></iframe>  
-                  <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width};margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale});background:url('https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/askdisha_ad.png');background-repeat:no-repeat;background-size:contain !important"> 
-                
-                  </div>
+                  <a href="https://amzn.to/4h0EeGZ" target="_blank" style="display: block;">
+                    <div id="scrollIframeContainer" style="height: ${mediaObj.belowAD.height}; width: ${mediaObj.belowAD.width}; margin-left: ${mediaObj.belowAD.margin}; margin-top: -20px; transform: scale(${mediaObj.belowAD.scale}); background:url('https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir/askdisha-bucket/Dil_Se_Dost_300x250.jpg'); background-repeat: no-repeat; background-size: contain !important;">
+                    </div>
+                  </a>
               </div>
                   </div>
                 
@@ -1895,123 +1896,127 @@
 
     // setSecondVideoAdinIframe();
 
-    if (isMobile)
+    if (isMobile) {
+        // Inject CSS
         document.head.insertAdjacentHTML(
             "beforeend",
             `<style type="text/css">
-           
-            #div-gpt-ad-1699617760427-0{
-          position: fixed !important;
-          bottom: 0px !important;
-          left: 0px !important;
-          border: none !important;
-          min-width: 320px !important;
-          min-height:50px !important;
-          z-index:2 !important;
-          background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/B.gif);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
-          }
-    
-          .gpt320--show{
-            display:block;
-          }
-    
-          .gpt320--hide{
-            display:none;
-          }
-         
-  
-          @media screen and (max-width:635px) {
-            // #div-gpt-ad-1699617760427-0
-            // {
-            //   left: unset !important;
-            // }
+            
+            #div-gpt-ad-1699617760427-0 {
+                position: fixed !important;
+                bottom: 0px !important;
+                left: 0px !important;
+                border: none !important;
+                min-width: 320px !important;
+                min-height: 50px !important;
+                z-index: 2 !important;
+                background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir/askdisha-bucket/Dil_Se_Dost_IRTC_Banner.jpg);
             }
-  
-  
-  
-         .disha-loader {
-          border: 10px solid #f3f3f3;
-          border-radius: 50%;
-          border-top: 10px solid #3498db;
-          width: 60px;
-          height: 60px;
-          -webkit-animation: disha-spin 1s linear infinite; /* Safari */
-          animation: disha-spin 1s linear infinite;
-          margin-bottom:20px
-        }
-        
-        /* Safari */
-        @-webkit-keyframes disha-spin {
-          0% { -webkit-transform: rotate(0deg); }
-          100% { -webkit-transform: rotate(360deg); }
-        }
-        
-        @keyframes disha-spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-  
-          </style>`
+    
+            .gpt320--show {
+                display: block;
+            }
+    
+            .gpt320--hide {
+                display: none;
+            }
+    
+            .disha-loader {
+                border: 10px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 10px solid #3498db;
+                width: 60px;
+                height: 60px;
+                -webkit-animation: disha-spin 1s linear infinite;
+                animation: disha-spin 1s linear infinite;
+                margin-bottom: 20px;
+            }
+    
+            @-webkit-keyframes disha-spin {
+                0% { -webkit-transform: rotate(0deg); }
+                100% { -webkit-transform: rotate(360deg); }
+            }
+    
+            @keyframes disha-spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            </style>`
         );
-    else
+    
+        // Check if the ad is not filled (ad element is empty)
+        var adContainer = document.querySelector('#div-gpt-ad-1699617760427-0');
+        
+        if (!adContainer || adContainer.innerHTML.trim() === '') {
+            // If the ad container is empty, add the image with the hyperlink
+            adContainer.innerHTML = `
+                <a href="https://amzn.to/4h0EeGZ" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir/askdisha-bucket/Dil_Se_Dost_IRTC_Banner.jpg" alt="Dil Se Dost Banner" style="width: 100%; height: auto;">
+                </a>
+            `;
+        }
+    } else {
+        // Inject CSS
         document.head.insertAdjacentHTML(
             "beforeend",
             `<style type="text/css">
-           
-            #div-gpt-ad-1699617760427-0{
-              position: fixed !important;
-              bottom: 0px !important;
-              // left: 0px !important;
-              border: none !important;
-              min-width: 320px !important;
-              min-height: 50px !important;
-              z-index: 2 !important;
-              background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27jan/askdisha-bucket/B.gif);background-origin: content-box;background-repeat: no-repeat;background-size: contain; background-color: #ece5db;
-           
-          }
-    
-          .gpt320--show{
-            display:block;
-          }
-    
-          .gpt320--hide{
-            display:none;
-          }
-         
-  
-          @media screen and (max-width:635px) {
-            #div-gpt-ad-1699617760427-0
-            {
-              left: unset !important;
+            
+            #div-gpt-ad-1699617760427-0 {
+                position: fixed !important;
+                bottom: 0px !important;
+                border: none !important;
+                min-width: 320px !important;
+                min-height: 50px !important;
+                z-index: 2 !important;
+                background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir/askdisha-bucket/Dil_Se_Dost_IRTC_Banner.jpg);
             }
+    
+            .gpt320--show {
+                display: block;
             }
-  
-  
-  
-         .disha-loader {
-          border: 10px solid #f3f3f3;
-          border-radius: 50%;
-          border-top: 10px solid #3498db;
-          width: 60px;
-          height: 60px;
-          -webkit-animation: disha-spin 1s linear infinite; /* Safari */
-          animation: disha-spin 1s linear infinite;
-          margin-bottom:20px
-        }
-        
-        /* Safari */
-        @-webkit-keyframes disha-spin {
-          0% { -webkit-transform: rotate(0deg); }
-          100% { -webkit-transform: rotate(360deg); }
-        }
-        
-        @keyframes disha-spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-  
-          </style>`
+    
+            .gpt320--hide {
+                display: none;
+            }
+    
+            .disha-loader {
+                border: 10px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 10px solid #3498db;
+                width: 60px;
+                height: 60px;
+                -webkit-animation: disha-spin 1s linear infinite;
+                animation: disha-spin 1s linear infinite;
+                margin-bottom: 20px;
+            }
+    
+            @-webkit-keyframes disha-spin {
+                0% { -webkit-transform: rotate(0deg); }
+                100% { -webkit-transform: rotate(360deg); }
+            }
+    
+            @keyframes disha-spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            </style>`
         );
+    
+        // Check if the ad is not filled (ad element is empty)
+        var adContainer = document.querySelector('#div-gpt-ad-1699617760427-0');
+        
+        if (!adContainer || adContainer.innerHTML.trim() === '') {
+            // If the ad container is empty, add the image with the hyperlink
+            adContainer.innerHTML = `
+                <a href="https://amzn.to/4h0EeGZ" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir/askdisha-bucket/Dil_Se_Dost_IRTC_Banner.jpg" alt="Dil Se Dost Banner" style="width: 100%; height: auto;">
+                </a>
+            `;
+        }
+    }
+    
 
 
 })();
