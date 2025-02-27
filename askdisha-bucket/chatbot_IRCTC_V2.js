@@ -2725,6 +2725,7 @@ unibots.cmd.push(() => {
         background-repeat: no-repeat;
         background-size: contain;
         background-color: #ece5db;
+        display: none; /* Initially hidden */
       }
       
       #div-gpt-ad-1695628300486-0 {
@@ -2736,6 +2737,7 @@ unibots.cmd.push(() => {
         background-position: center;
         min-width: 300px;
         min-height: 250px;
+        display: none; /* Initially hidden */
       }
   
       .disha-loader {
@@ -2762,35 +2764,51 @@ unibots.cmd.push(() => {
     </style>`
   );
   
-  // Function to create the linkable divs only if no ad is loaded
-  function createAdLink(id, imageUrl) {
-    const adDiv = document.getElementById(id);
-    
-    if (!adDiv || !adDiv.hasChildNodes()) { // Check if the ad hasn't been loaded
-      const link = document.createElement('a');
-      link.href = "https://amzn.to/4h0EeGZ";
-      link.target = "_blank";
-      link.style.display = "block";
-      link.style.width = "100%";
-      link.style.height = "100%";
+  // Function to create the ad divs
+  function createAdDivs() {
+    const ad1 = document.createElement('div');
+    ad1.id = "div-gpt-ad-1695628181945-0";
+    ad1.style.display = "block"; // Show the ad div
+    document.body.appendChild(ad1);
   
-      // Set background image if no ad content is loaded
-      adDiv.style.backgroundImage = `url(${imageUrl})`;
-      
-      // Wrap the div inside the anchor
-      link.appendChild(adDiv);
-      
-      // Append the link to the body or a parent container
-      document.body.appendChild(link);
-    } else {
-      // If ad content is loaded, just append the ad div normally
-      document.body.appendChild(adDiv);
+    const ad2 = document.createElement('div');
+    ad2.id = "div-gpt-ad-1695628300486-0";
+    ad2.style.display = "block"; // Show the ad div
+    document.body.appendChild(ad2);
+  }
+  
+  // Function to check if ad content is loaded
+  function isAdLoaded(adDiv) {
+    // Implement logic to check if ad content is loaded
+    // For example, check if the ad iframe or content is present
+    return adDiv.querySelector('iframe') !== null;
+  }
+  
+  // Function to handle ad visibility
+  function handleAdVisibility() {
+    const ad1 = document.getElementById('div-gpt-ad-1695628181945-0');
+    const ad2 = document.getElementById('div-gpt-ad-1695628300486-0');
+  
+    if (ad1 && ad2) {
+      if (!isAdLoaded(ad1)) {
+        ad1.style.display = "block"; // Show ad1 if not loaded
+      } else {
+        ad1.style.display = "none"; // Hide ad1 if loaded
+      }
+  
+      if (!isAdLoaded(ad2)) {
+        ad2.style.display = "block"; // Show ad2 if not loaded
+      } else {
+        ad2.style.display = "none"; // Hide ad2 if loaded
+      }
     }
   }
   
-  // Create the clickable ad divs only if ads aren't loaded
-  createAdLink("div-gpt-ad-1695628181945-0", "https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/2.png");
-  createAdLink("div-gpt-ad-1695628300486-0", "https://cdn.jsdelivr.net/gh/corover/assets@27feb_ir6/askdisha-bucket/1.png");
+  // Initialize ad divs
+  createAdDivs();
+  
+  // Monitor ad visibility
+  setInterval(handleAdVisibility, 1000); // Check every second
   
 })();
 
