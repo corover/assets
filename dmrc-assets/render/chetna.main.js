@@ -26,11 +26,15 @@ z-index: 999999999;
 background-color: transparent;
 display: flex;
 justify-content: flex-end;
-align-items: center;
+// align-items: center;
 bottom: 5.4vh;
 right: 2vh;
 width: fit-content;
 max-width: 95%;
+flex-direction: column;
+align-items: end;
+bottom: 1vh;
+gap: 7px;
 `;
 
 const FULL_DISPLAY_CSS = `border-radius: 8px;
@@ -66,7 +70,7 @@ height: 100%;`;
 
 const BOTTOM_LABEL_CSS = `padding: .8vh;
 background: white;
-position: fixed;
+// position: fixed;
 bottom: 1.0vh;
 border-top-left-radius: 8px;
 border-bottom-left-radius: 8px;
@@ -82,7 +86,7 @@ height: fit-content;`;
 const HOVER_CSS = `padding: .8vh;
 bottom: 16.5vh;
 background: white;
-position: fixed;
+// position: fixed;
 border-radius: .8vh;
 -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -234,8 +238,8 @@ const openBot = () => {
   bottomInfo.onmouseover = onHover;
   bottomInfo.onmouseleave = onHoverLeave;
 
-  mainDiv.appendChild(launcher);
   mainDiv.appendChild(hoverInfo);
+  mainDiv.appendChild(launcher);
   mainDiv.appendChild(bottomInfo);
   mainDiv.appendChild(iframe);
   mainDiv.appendChild(close);
