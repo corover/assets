@@ -1486,18 +1486,26 @@ border-bottom-right-radius: 4px;
     const checkBannerSpace = () => {
       const viewportHeight = window.innerHeight;  // Get the height of the viewport
       const bannerHeight = 300;  // You may need to adjust this based on the actual banner height
-      const cubeElement = document.querySelector("#cube");
-      
+      const cubeElement = document.querySelector("#adg_cuboid_container");  // Cube's container element
+    
       if (!cubeElement) return true; // No cube, so it's safe to open the banner
     
       const cubeRect = cubeElement.getBoundingClientRect();  // Get the cube's position and size
-      const cubeHeight = cubeRect.height;
-      const cubeTop = cubeRect.top;
+      const cubeHeight = cubeRect.height;  // Height of the cube
+      const cubeTop = cubeRect.top;  // Distance from the top of the viewport to the cube
     
-      // Check if the space below the cube is enough to display the banner
-      const spaceBelowCube = viewportHeight - cubeTop - cubeHeight;
+      // Log the cube's position and viewport height for debugging
+      console.log("Viewport Height:", viewportHeight);
+      console.log("Cube Top:", cubeTop);
+      console.log("Cube Height:", cubeHeight);
       
-      // If the space below the cube is less than the banner height, return false to not show the banner
+      // Calculate the available space below the cube
+      const spaceBelowCube = viewportHeight - (cubeTop + cubeHeight); // The space from the bottom of the cube to the bottom of the viewport
+    
+      // Log the available space below the cube
+      console.log("Available Space Below Cube:", spaceBelowCube);
+    
+      // If the space below the cube is greater than the banner height, return true (space available for banner)
       return spaceBelowCube > bannerHeight;
     };
 
