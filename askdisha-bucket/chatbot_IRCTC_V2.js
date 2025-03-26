@@ -1482,9 +1482,39 @@ border-bottom-right-radius: 4px;
     };
     openBanner(false);
 
+
+    const checkBannerSpace = () => {
+      const viewportHeight = window.innerHeight;  // Get the height of the viewport
+      const bannerHeight = 350;  // You may need to adjust this based on the actual banner height
+      const cubeElement = document.querySelector("#cube");
+      
+      if (!cubeElement) return true; // No cube, so it's safe to open the banner
+    
+      const cubeRect = cubeElement.getBoundingClientRect();  // Get the cube's position and size
+      const cubeHeight = cubeRect.height;
+      const cubeTop = cubeRect.top;
+    
+      // Check if the space below the cube is enough to display the banner
+      const spaceBelowCube = viewportHeight - cubeTop - cubeHeight;
+      
+      // If the space below the cube is less than the banner height, return false to not show the banner
+      return spaceBelowCube > bannerHeight;
+    };
+
+    // setTimeout(() => {
+    //   if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup"))
+    //     openBanner(true);
+    // }, 4000);
+
+
     setTimeout(() => {
-      if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup"))
-        openBanner(true);
+      if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup")) {
+        if (checkBannerSpace()) {
+          openBanner(true);  // Open the banner if there's enough space
+        } else {
+          openBanner(false); // Keep the banner closed if not enough space
+        }
+      }
     }, 4000);
 
     setTimeout(() => {
