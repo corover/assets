@@ -1512,6 +1512,9 @@ border-bottom-right-radius: 4px;
         } else {
           openBanner(false);  // Otherwise, close the banner
         }
+      } else {
+        // If #adg_cuboid_container doesn't exist, open the banner
+        openBanner(true);
       }
     };
     
@@ -1525,6 +1528,18 @@ border-bottom-right-radius: 4px;
         checkAndOpenBanner();
       }
     }, 4000);
+
+    const observer = new MutationObserver(() => {
+      let cubeContainer = document.getElementById("adg_cuboid_container");
+      if (cubeContainer) {
+        // If the element appears, close the banner
+        openBanner(false);
+        observer.disconnect(); // Stop observing once the element is found
+      }
+    });
+    
+    // Observe changes in the DOM to detect when #adg_cuboid_container is added
+    observer.observe(document.body, { childList: true, subtree: true });
 
     setTimeout(() => {
       if (window.screen.width < 600) switchIcon(true);
