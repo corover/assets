@@ -1482,12 +1482,47 @@ border-bottom-right-radius: 4px;
     };
     openBanner(false);
 
+
+    const setPlaceholderMaxHeight = () => {
+      let cubeDisha = document.querySelector("#adg_cuboid_container")?.firstChild;
+    
+      if (cubeDisha) {
+        let stylesCubeDisha = window.getComputedStyle(cubeDisha);
+        let heightCubeDisha = parseFloat(stylesCubeDisha.height.split("px")[0]);
+        let topCubeDisha = parseFloat(stylesCubeDisha.top.split("px")[0]);
+        let totalMarginFromTop = heightCubeDisha + topCubeDisha - 28.0;
+        if (totalMarginFromTop < 400) {
+          let pla = document.getElementById("disha-placeholder-card");
+          pla.style.maxHeight = `calc(100vh - ${totalMarginFromTop}px)`;
+        }
+      }
+    };
+    
+    const checkAndOpenBanner = () => {
+      let cubeContainer = document.getElementById("adg_cuboid_container");
+    
+      if (cubeContainer) {
+        // Get the position of the #adg_cuboid_container relative to the viewport
+        let rect = cubeContainer.getBoundingClientRect();
+        let remainingSpace = window.innerHeight - rect.bottom; // space from the bottom of the container to the bottom of the page
+    
+        // Check if the remaining space is at least 320px
+        if (remainingSpace >= 320) {
+          openBanner(true);  // Open the banner if the remaining space is >= 320px
+        } else {
+          openBanner(false);  // Otherwise, close the banner
+        }
+      }
+    };
+    
+
+    
+
     setTimeout(() => {
       if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup"))
       {
         setPlaceholderMaxHeight();
-        openBanner(true);
-        setPlaceholderMaxHeight();
+        checkAndOpenBanner();
       }
     }, 4000);
 
