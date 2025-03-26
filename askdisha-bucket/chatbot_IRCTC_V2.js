@@ -153,7 +153,7 @@ margin-bottom: 0px;">Please Wait...</p>
 // };
 
 const setPlaceholderMaxHeight = () => {
-  let cubeDisha = document.querySelector("#cube")?.firstChild;
+  let cubeDisha = document.querySelector("#adg_cuboid_container")?.firstChild;
 
   if (cubeDisha) {
     let stylesCubeDisha = window.getComputedStyle(cubeDisha);
@@ -1482,71 +1482,10 @@ border-bottom-right-radius: 4px;
     };
     openBanner(false);
 
-
-// Function to check if there is enough space below the cube to display the banner
-const checkBannerSpace = () => {
-  const viewportHeight = window.innerHeight;  // Get the height of the viewport
-  const bannerHeight = 300;  // Adjust this based on the actual banner height
-  const cubeElement = document.querySelector("#adg_cuboid_container");  // Cube's container element
-
-  if (!cubeElement) return true;  // Cube is required for calculation; if not found, assume enough space
-
-  const cubeRect = cubeElement.getBoundingClientRect();  // Get the cube's position and size
-  const cubeHeight = cubeRect.height;  // Height of the cube
-  const cubeTop = cubeRect.top;  // Distance from the top of the viewport to the cube
-
-  // Log the cube's position and viewport height for debugging
-  console.log("Viewport Height:", viewportHeight);
-  console.log("Cube Top:", cubeTop);
-  console.log("Cube Height:", cubeHeight);
-  
-  // Calculate the available space below the cube
-  const spaceBelowCube = viewportHeight - (cubeTop + cubeHeight); // The space from the bottom of the cube to the bottom of the viewport
-
-  // Log the available space below the cube
-  console.log("Available Space Below Cube:", spaceBelowCube);
-
-  // If the space below the cube is greater than the banner height, return true (space available for banner)
-  return spaceBelowCube > bannerHeight;
-};
-
-const openBannerIfPossible = () => {
-  // Check if the banner should open after a delay
-  setTimeout(() => {
-    // Only check the space if the page is not on the restricted URLs and the banner is not already open
-    if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup")) {
-      // Check if there's enough space to open the banner
-      if (checkBannerSpace()) {
-        console.log("Opening Banner!");
-        openBanner(true);  // Open the banner if there's enough space
-      } else {
-        console.log("Not enough space to open banner.");
-        openBanner(false); // Keep the banner closed if not enough space
-      }
-    }
-  }, 4000);  // Delay before attempting to open the banner
-};
-
-// Always keep the cube visible
-document.addEventListener('DOMContentLoaded', () => {
-  const cubeElement = document.querySelector("#adg_cuboid_container");
-  if (cubeElement) {
-    // Ensure the cube is visible (just in case it’s hidden or removed)
-    cubeElement.style.display = 'block';  // You can also adjust based on your layout (e.g., flex, block, etc.)
-  }
-  
-  // Call to attempt opening the banner based on available space
-  openBannerIfPossible();
-});
-
-
-    // setTimeout(() => {
-    //   if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup"))
-    //     openBanner(true);
-    // }, 4000);
-
-
-
+    setTimeout(() => {
+      if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup"))
+        openBanner(true);
+    }, 4000);
 
     setTimeout(() => {
       if (window.screen.width < 600) switchIcon(true);
