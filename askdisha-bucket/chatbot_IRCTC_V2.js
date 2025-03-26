@@ -1487,19 +1487,22 @@ border-bottom-right-radius: 4px;
 const checkBannerSpace = () => {
   const viewportHeight = window.innerHeight;  // Get the height of the viewport
   const bannerHeight = 300;  // Height of the banner (adjust as needed)
-  const cubeElement = document.querySelector("#adg_cuboid_container");  // Get the cube element
+  const cubeElement = document.querySelector("#adg_cuboid_container");  // Cube's container element
 
-  if (!cubeElement) return true;  // If no cube found, assume enough space
+  if (!cubeElement) {
+    console.log("Cube element not found!");  // Log if cube is missing
+    return true;  // Assume enough space if cube is missing
+  }
 
   // Get the cube's position and size relative to the viewport
   const cubeRect = cubeElement.getBoundingClientRect();
-  const cubeTop = cubeRect.top;  // Distance from the top of the viewport
+  const cubeTop = cubeRect.top;  // Distance from the top of the viewport to the cube
   const cubeHeight = cubeRect.height;  // Height of the cube
 
   // Log the cube's position and viewport height for debugging
   console.log("Viewport Height:", viewportHeight);
-  console.log("Cube Top:", cubeTop);
-  console.log("Cube Height:", cubeHeight);
+  console.log("Cube Top Position:", cubeTop); // Distance from top of viewport
+  console.log("Cube Height:", cubeHeight);  // Height of the cube
 
   // Calculate the space below the cube in the viewport
   const spaceBelowCube = viewportHeight - (cubeTop + cubeHeight);  // Available space below the cube
@@ -1508,15 +1511,23 @@ const checkBannerSpace = () => {
   console.log("Available Space Below Cube:", spaceBelowCube);
 
   // If space below the cube is greater than the banner height, return true (space available for banner)
-  return spaceBelowCube > bannerHeight;
+  const canOpenBanner = spaceBelowCube > bannerHeight;
+  console.log("Can open banner:", canOpenBanner);
+
+  return canOpenBanner;
 };
 
 // Function to handle the opening/closing of the banner
 const openBannerIfPossible = () => {
   setTimeout(() => {
+    console.log("Checking if the banner can open...");
+
+    // Only check the space if the page is not on restricted URLs and the banner is not already open
     if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup")) {
-      // Check if there's enough space to open the banner
-      if (checkBannerSpace()) {
+      const canOpen = checkBannerSpace();
+      console.log("Can open banner:", canOpen);
+
+      if (canOpen) {
         console.log("Opening Banner!");
         openBanner(true);  // Open the banner if there's enough space
       } else {
@@ -1531,7 +1542,7 @@ const openBannerIfPossible = () => {
 document.addEventListener('DOMContentLoaded', () => {
   const cubeElement = document.querySelector("#adg_cuboid_container");
   if (cubeElement) {
-    cubeElement.style.display = 'block';  // Ensure the cube is visible (you can adjust this based on your layout)
+    cubeElement.style.display = 'block';  // Ensure the cube is visible
   }
 
   openBannerIfPossible();  // Try to open the banner based on available space
