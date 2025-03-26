@@ -1485,7 +1485,7 @@ border-bottom-right-radius: 4px;
 
     const checkBannerSpace = () => {
       const viewportHeight = window.innerHeight;  // Get the height of the viewport
-      const bannerHeight = 350;  // You may need to adjust this based on the actual banner height
+      const bannerHeight = 300;  // You may need to adjust this based on the actual banner height
       const cubeElement = document.querySelector("#cube");
       
       if (!cubeElement) return true; // No cube, so it's safe to open the banner
