@@ -1484,7 +1484,11 @@ border-bottom-right-radius: 4px;
 
     setTimeout(() => {
       if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup"))
+      {
+        setPlaceholderMaxHeight();
         openBanner(true);
+        setPlaceholderMaxHeight();
+      }
     }, 4000);
 
     setTimeout(() => {
