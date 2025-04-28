@@ -33,14 +33,14 @@ width: fit-content;
 max-width: 95%;
 flex-direction: column;
 align-items: end;
-bottom: 1vh;
+bottom: 6vh;
 gap: 7px;
 `;
 
 const FULL_DISPLAY_CSS = `border-radius: 8px;
 box-sizing: border-box;
 right: 0; 
-width: 41.8vh !important; 
+width: 55vh !important; 
 max-width: none; 
 position: fixed; 
 z-index: 999; 
@@ -70,7 +70,7 @@ height: 100%;`;
 
 const BOTTOM_LABEL_CSS = `padding: .8vh;
 background: white;
-// position: fixed;
+position: fixed;
 bottom: 1.0vh;
 border-top-left-radius: 8px;
 border-bottom-left-radius: 8px;
@@ -213,8 +213,8 @@ const openBot = () => {
   close.style.width = "2vh";
   close.style.height = "2vh";
   close.style.position = "absolute";
-  close.style.top = "1.8vh";
-  close.style.right = "1.5vh";
+  close.style.top = "3.8vh";
+  close.style.right = "2.5vh";
   close.style.cursor = "pointer";
   close.style.display = "none";
 
