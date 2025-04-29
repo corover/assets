@@ -214,7 +214,7 @@ const openBot = () => {
   close.style.height = "2vw";
   close.style.position = "absolute";
   close.style.top = "14px";
-  close.style.right = "2.5vh";
+  close.style.right = "14px";
   close.style.cursor = "pointer";
   close.style.display = "none";
 
