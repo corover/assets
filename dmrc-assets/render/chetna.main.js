@@ -210,8 +210,8 @@ const openBot = () => {
   mainDiv.id = "dmrc-chatbot-main";
   mainDiv.style.cssText = INIT_CSS;
   close.innerHTML = CLOSE_ICON;
-  close.style.width = "2vh";
-  close.style.height = "2vh";
+  close.style.width = "2vw";
+  close.style.height = "2vw";
   close.style.position = "absolute";
   close.style.top = "14px";
   close.style.right = "2.5vh";
