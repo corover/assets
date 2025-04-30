@@ -217,6 +217,7 @@ const openBot = () => {
   close.style.right = "14px";
   close.style.cursor = "pointer";
   close.style.display = "none";
+  close.style.textAlign = "end";
 
   close.onclick = () => {
     isOpen = false;
