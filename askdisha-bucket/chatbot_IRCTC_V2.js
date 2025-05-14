@@ -425,6 +425,7 @@ const setPlaceholderMaxHeight = () => {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  scale: 0.75;
   bottom: 54px;
   right: 20px;
   width: fit-content;
@@ -443,6 +444,7 @@ const setPlaceholderMaxHeight = () => {
   justify-content: flex-end;
   align-items: center;
   bottom: 54px;
+  scale: 0.75;
   right: 20px;
   width: fit-content;
   max-width: 95%;
