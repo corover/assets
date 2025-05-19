@@ -425,7 +425,6 @@ const setPlaceholderMaxHeight = () => {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  scale: 0.75;
   bottom: 54px;
   right: 20px;
   width: fit-content;
@@ -444,7 +443,6 @@ const setPlaceholderMaxHeight = () => {
   justify-content: flex-end;
   align-items: center;
   bottom: 54px;
-  scale: 0.75;
   right: 20px;
   width: fit-content;
   max-width: 95%;
@@ -497,7 +495,7 @@ const setPlaceholderMaxHeight = () => {
     let launcher = document.createElement("div");
     launcher.id = "askDishaLuncher";
     launcher.style.cssText =
-      "background-size: cover;background-position: 6px -3px;background-repeat: no-repeat;background-color: transparent; width: 120px; height: 120px; border-radius: 100%; -webkit-box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%); box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);  -webkit-backface-visibility: hidden; -webkit-transition: all 0.5s; transition: all 0.5s; cursor: pointer; z-index: 9; border-radius: 50%;";
+      "background-size: cover;background-position: 6px -3px;background-repeat: no-repeat;background-color: transparent; width: 120px; height: 120px; border-radius: 100%; -webkit-box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%); box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);  -webkit-backface-visibility: hidden; -webkit-transition: all 0.5s; transition: all 0.5s; cursor: pointer; scale: 0.75; z-index: 9; border-radius: 50%;";
     checkMobile();
     if (isMobile) {
       // launcher.style.backgroundImage = `url("https://sdk.irctc.corover.ai/askdisha-bucket/disha.svg")`;
