@@ -498,13 +498,13 @@ const setPlaceholderMaxHeight = () => {
       "background-size: cover;background-position: 6px -3px;background-repeat: no-repeat;background-color: transparent; width: 120px; height: 120px; border-radius: 100%; -webkit-box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%); box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);  -webkit-backface-visibility: hidden; -webkit-transition: all 0.5s; transition: all 0.5s; cursor: pointer; scale: 0.75; z-index: 9; border-radius: 50%;";
     checkMobile();
     if (isMobile) {
-      // launcher.style.backgroundImage = `url("https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/disha.svg")`;
+      // launcher.style.backgroundImage = `url("https://cdn.jsdelivr.net/gh/corover/assets@2Jun25/askdisha-bucket/disha.svg")`;
       launcher.style.borderWidth = "0px";
       launcher.style.backgroundPosition = "center";
       messageWrapper.style.display = "none";
     } else {
       // launcher.style.backgroundImage = `url(
-      //     "https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/disha.svg"
+      //     "https://cdn.jsdelivr.net/gh/corover/assets@2Jun25/askdisha-bucket/disha.svg"
       //   )`;
       launcher.style.backgroundPosition = "center";
     }
@@ -853,7 +853,7 @@ else dealOfDay.href = "https://amzn.to/3i4lgCr";
 
 dealOfDay.target = "_blank";
 dealOfDay.innerHTML = `
-   <img width="156px" src="https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/DEALS....png" decoding="async"/>
+   <img width="156px" src="https://cdn.jsdelivr.net/gh/corover/assets@2Jun25/askdisha-bucket/DEALS....png" decoding="async"/>
    <p style="
      position: absolute;
      background: white;
@@ -889,7 +889,7 @@ document.body.appendChild(dealOfDay);
 if (isMobile) {
   const closeButton = document.createElement("img");
   closeButton.id = "dod-close";
-  closeButton.src = "https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/white-cross.png";
+  closeButton.src = "https://cdn.jsdelivr.net/gh/corover/assets@2Jun25/askdisha-bucket/white-cross.png";
   closeButton.style.cssText = `
     background: #8181815e;
     width: 22px;
@@ -1244,7 +1244,7 @@ margin-top: 1px;
 margin-bottom: -2px;">SALE
 </p>
 </a>
-     <img decoding="async" src="https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/white-cross.png" id="disha-banner-close" style="    z-index: 9;
+     <img decoding="async" src="https://cdn.jsdelivr.net/gh/corover/assets@2Jun25/askdisha-bucket/white-cross.png" id="disha-banner-close" style="    z-index: 9;
      background: #8181815e;
      width: ${mediaObj.cross.size};
      height: ${mediaObj.cross.size};
@@ -1290,7 +1290,7 @@ margin-bottom: -2px;">SALE
          "
        >
          <img
-           src="https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/train-blue.svg"
+           src="https://cdn.jsdelivr.net/gh/corover/assets@2Jun25/askdisha-bucket/train-blue.svg"
            alt=""
            style="width: 46%"
            decoding = "async"
@@ -1420,7 +1420,7 @@ border-bottom-right-radius: 4px;
         // Create and append the close button
         const closeButton = document.createElement("img");
         closeButton.id = "dod-close";
-        closeButton.src = "https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/white-cross.png";
+        closeButton.src = "https://cdn.jsdelivr.net/gh/corover/assets@2Jun25/askdisha-bucket/white-cross.png";
         closeButton.style.cssText = `
           background: #8181815e;
           width: 22px;
@@ -1551,7 +1551,7 @@ border-bottom-right-radius: 4px;
 
       remove320();
       adDownIframe2.style.display = `none`;
-      maxIcon.src = "https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/maximise.png";
+      maxIcon.src = "https://cdn.jsdelivr.net/gh/corover/assets@2Jun25/askdisha-bucket/maximise.png";
       dishaWrapper.style.bottom = "200px";
 
       dishaWrapper.style.right = "-18px";
@@ -2182,7 +2182,7 @@ debounce(toggleVisibility, 10);
     // 70 and 63
 
     overlayWidget.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/launcher.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@2Jun25/askdisha-bucket/launcher.gif";
     overlayWidget.style.cssText = `
 height: 110px;
 width: 103px;
