@@ -510,14 +510,14 @@ const setPlaceholderMaxHeight = () => {
     }
     let launcherImage = document.createElement("img");
     launcherImage.src =
-      "https://sdk.irctc.corover.ai/askdisha-bucket/launcher.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/launcher.gif";
     launcherImage.style.width = "100%";
     launcherImage.style.text = "border-radius :50%";
     launcher.appendChild(launcherImage);
     launcher.draggable = true;
     let maxIcon = document.createElement("img");
     maxIcon.decoding = "async";
-    maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
+    maxIcon.src = "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png";
     maxIcon.style.cssText = `
   position: absolute;
   right: 100px;
@@ -537,7 +537,7 @@ const setPlaceholderMaxHeight = () => {
           // remove320();
           // adDownIframe2.style.display = `none`;
           maxIcon.src =
-            "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
+            "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/maximise.png";
           dishaWrapper.style.bottom = "200px";
 
           dishaWrapper.style.right = "-18px";
@@ -572,7 +572,7 @@ const setPlaceholderMaxHeight = () => {
           launcher.style.minWidth = "120px";
 
           maxIcon.src =
-            "https://sdk.irctc.corover.ai/askdisha-bucket/minimum.png";
+            "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png";
           launcher.style.transform = "none";
           maxIcon.style.cssText = `
         position: absolute;
