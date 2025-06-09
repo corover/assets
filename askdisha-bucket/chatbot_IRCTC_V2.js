@@ -1264,8 +1264,8 @@ margin-bottom: -2px;">SALE
      position: absolute;
      padding: ${mediaObj.cross.padding};">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@3january/askdisha-bucket/DishaMini.svg"
-         style="width: 33%; height: 100%; border-radius: 8px; margin-left: 20px; margin-top: 10px;"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/DishaMini.svg"
+         style="width: 33%; height: 65%; border-radius: 8px; margin-left: 20px; margin-top: 10px;"
          alt=""
          decoding = "async"
        />
@@ -1290,7 +1290,7 @@ margin-bottom: -2px;">SALE
        id="disha-banner-button"
      >
       <img 
-         src="https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/OptionsMini.svg"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/OptionsMini.svg"
          style="width: 20px; height: 20px; margin-right: 5px; padding:5px;"
          alt=""
          decoding="async"
