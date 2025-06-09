@@ -515,7 +515,7 @@ const setPlaceholderMaxHeight = () => {
     }
     let launcherImage = document.createElement("img");
     launcherImage.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/launcher.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/launchergif.gif";
     launcherImage.style.width = "100%";
     launcherImage.style.text = "border-radius :50%";
     launcher.appendChild(launcherImage);
@@ -1252,13 +1252,13 @@ margin-bottom: -2px;">SALE
 
 
      <div style="cursor:pointer;width: 100%; height: 64px; display: flex; background-color: #2639AB; position: relative; border-top-left-radius: 23px; border-top-right-radius: 23px;" id="disha-image">
-       <img decoding="async" src="https://storage.googleapis.com/qci/qci-pdf/Close%201.svg" id="disha-banner-close" style="z-index: 9;
-     background: #8181815e;
+       <img decoding="async" src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/Cross.svg" id="disha-banner-close" style="z-index: 9;
+     
      width: ${mediaObj.cross.size};
      height: ${mediaObj.cross.size};
      cursor: pointer;
      display: block;
-     border-radius: 50%;
+     
      right: 0px;
      top: -40px;
      position: absolute;
