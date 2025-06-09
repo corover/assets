@@ -1252,7 +1252,7 @@ margin-bottom: -2px;">SALE
 
 
      <div style="cursor:pointer;width: 100%; height: 64px; display: flex; background-color: #2639AB; position: relative; border-top-left-radius: 23px; border-top-right-radius: 23px;" id="disha-image">
-       <img decoding="async" src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/Cross.svg" id="disha-banner-close" style="z-index: 9;
+       <img decoding="async" src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/CrossIcon.svg" id="disha-banner-close" style="z-index: 9;
      
      width: ${mediaObj.cross.size};
      height: ${mediaObj.cross.size};
@@ -1269,7 +1269,7 @@ margin-bottom: -2px;">SALE
          alt=""
          decoding = "async"
        />
-       <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 10px;">
+       <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 30px;">
          <h3 style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 14px; white-space: nowrap; margin-bottom:6px" id="askDisha-title">${lan[lang].askDisha}</h3>
          <p style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 12px; white-space: nowrap;" id="nextGen-title">${lan[lang].nextGen}</p>
        </div>
@@ -1291,7 +1291,7 @@ margin-bottom: -2px;">SALE
      >
       <img 
          src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/OptionsMini.svg"
-         style="width: 20px; height: 20px; margin-right: 5px; padding:5px;"
+         style="width: 20px; height: 20px; padding:5px;"
          alt=""
          decoding="async"
       />
@@ -1299,7 +1299,7 @@ margin-bottom: -2px;">SALE
          id="ticketButton"
          style="
            margin: 0;
-           margin-left: ${mediaObj.button.marginLeft};
+           margin-left: 0;
            font-family: sans-serif;
            font-size: ${mediaObj.button.font};
            color: #2639AB;
@@ -2194,7 +2194,7 @@ debounce(toggleVisibility, 10);
     // 70 and 63
 
     overlayWidget.src =
-      "https://sdk.irctc.corover.ai/askdisha-bucket/launcher.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/launchergif.gif";
     overlayWidget.style.cssText = `
 height: 110px;
 width: 103px;
