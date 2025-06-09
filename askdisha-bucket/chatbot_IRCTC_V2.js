@@ -79,11 +79,16 @@
 
 
 const lan = {
-  en: { book: "Book Train Ticket" },
-  gb: { book: "Book Train Ticket" },
-  us: { book: "Book Train Ticket" },
-  hi: { book: "ट्रेन टिकट बुक करें" },
-  gu: { book: "ટ્રેન ટિકિટ બુક કરો" },
+  en: { book: "AI Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
+  gb: { book: "AI Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
+  us: { book: "AI Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
+  hi: { book: "एआई टिकट बुकिंग", askDisha: "आस्क दिशा 2.0", nextGen: "नेक्स्टजेन एआई टिकटिंग" },
+  gu: { book: "એઆઈ ટિકિટ બુકિંગ", askDisha: "આસ્ક દિશા 2.0", nextGen: "નેક્સ્ટજેન એઆઈ ટિકિટિંગ" },
+  ta: { book: "AI டிக்கெட் புக்கிங்", askDisha: "ஆஸ்க் திசா 2.0", nextGen: "நெக்ஸ்ட்ஜென் AI டிக்கெட்டிங்" },
+  te: { book: "AI టికెట్ బుకింగ్", askDisha: "ఆస్క్ దిశ 2.0", nextGen: "నెక్స్ట్‌జెన్ AI టికెటింగ్" },
+  bn: { book: "এআই টিকিট বুকিং", askDisha: "আস্ক দিশা 2.0", nextGen: "নেক্সটজেন এআই টিকেটিং" },
+  ml: { book: "AI ടിക്കറ്റ് ബുക്കിംഗ്", askDisha: "ആസ്ക് ദിശ 2.0", nextGen: "നെക്സ്റ്റ്ജെൻ AI ടിക്കറ്റിംഗ്" },
+  kn: { book: "AI ಟಿಕೆಟ್ ಬುಕಿಂಗ್", askDisha: "ಆಸ್ಕ್ ದಿಶಾ 2.0", nextGen: "ನೆಕ್ಸ್ಟ್‌ಜೆನ್ AI ಟಿಕೆಟಿಂಗ್" }
 };
 let lang="en";
 
@@ -757,7 +762,7 @@ margin-top:15px;
     adDownIframe2.innerHTML = `
 <span></span>
 `;
-    adDownIframe2.href = "https://askdisha.irctc.co.in/";
+    adDownIframe2.href = "https://revamp.irctc.corover.ai/";
     adDownIframe2.target = "_blank";
     const adDownIframe = document.createElement("div");
     // adDownIframe.src = "https://assistant.corover.mobi/320x50_placeholder.html";
@@ -889,7 +894,7 @@ document.body.appendChild(dealOfDay);
 if (isMobile) {
   const closeButton = document.createElement("img");
   closeButton.id = "dod-close";
-  closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
+  // closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
   closeButton.style.cssText = `
     background: #8181815e;
     width: 22px;
@@ -977,7 +982,7 @@ if (isMobile) {
     n.id = "Disha-Bot";
     n.setAttribute(
       "allow",
-      "geolocation https://askdisha.irctc.co.in/; microphone https://askdisha.irctc.co.in/; camera; otp-credentials; midi; accelerometer; gyroscope; payment"
+      "geolocation https://revamp.irctc.corover.ai/; microphone https://revamp.irctc.corover.ai/; camera; otp-credentials; midi; accelerometer; gyroscope; payment"
     );
     n.style.width = "100%";
     n.style.height = "100%";
@@ -1213,7 +1218,7 @@ if (isMobile) {
 height:auto;
  display: block;
  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
- overflow-y:hidden;
+//  overflow-y:hidden;   // remove this line to allow scrolling
  max-height:100vh;
      `;
     placeholderCard.innerHTML = `
@@ -1244,58 +1249,52 @@ margin-top: 1px;
 margin-bottom: -2px;">SALE
 </p>
 </a>
-     <img decoding="async" src="https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png" id="disha-banner-close" style="    z-index: 9;
+
+
+     <div style="cursor:pointer;width: 100%; height: 64px; display: flex; background-color: #2639AB; position: relative; border-top-left-radius: 23px; border-top-right-radius: 23px;" id="disha-image">
+       <img decoding="async" src="https://storage.googleapis.com/qci/qci-pdf/Close%201.svg" id="disha-banner-close" style="z-index: 9;
      background: #8181815e;
      width: ${mediaObj.cross.size};
      height: ${mediaObj.cross.size};
      cursor: pointer;
      display: block;
      border-radius: 50%;
-     right: ${mediaObj.cross.right};
-     top: ${mediaObj.cross.top};
+     right: 0px;
+     top: -40px;
      position: absolute;
      padding: ${mediaObj.cross.padding};">
- 
-     <div style="cursor:pointer;width: 100%; height: ${mediaObj.bannerHeight}; display: flex; background-color: #f6f6f6 " id="disha-image">
        <img
-         src="https://cdn.jsdelivr.net/gh/corover/assets@3january/askdisha-bucket/IRCTC-banner-crop1.gif"
-         style="width: 33%; height: 100%; border-radius: 8px"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@3january/askdisha-bucket/DishaMini.svg"
+         style="width: 33%; height: 100%; border-radius: 8px; margin-left: 20px; margin-top: 10px;"
          alt=""
          decoding = "async"
        />
+       <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 10px;">
+         <h3 style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 14px; white-space: nowrap; margin-bottom:6px" id="askDisha-title">${lan[lang].askDisha}</h3>
+         <p style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 12px; white-space: nowrap;" id="nextGen-title">${lan[lang].nextGen}</p>
+       </div>
      <div
        style="
-         height: 100%;
+         height: 50%;
          display: flex;
          justify-content: center;
          align-items: center;
-         background: #0068ff;
+         background: #FFFFFF;
          width: 45%;
-         margin: 2% 14% 2% auto;
+         margin: 12px;
          border-radius: 10px;
-         padding: ${mediaObj.button.padding} 0%;
+         padding: 4px 7px;
          cursor: pointer;
+         margin-bottom: 10px;
        "
        id="disha-banner-button"
      >
-       <div
-         style="
-           width: ${mediaObj.button.icon};
-           height: ${mediaObj.button.icon};
-           border-radius: 50%;
-           background: white;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-         "
-       >
-         <img
-           src="https://sdk.irctc.corover.ai/askdisha-bucket/train-blue.svg"
-           alt=""
-           style="width: 46%"
-           decoding = "async"
-         />
-       </div>
+      <img 
+         src="https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/OptionsMini.svg"
+         style="width: 20px; height: 20px; margin-right: 5px; padding:5px;"
+         alt=""
+         decoding="async"
+      />
        <p
          id="ticketButton"
          style="
@@ -1303,7 +1302,8 @@ margin-bottom: -2px;">SALE
            margin-left: ${mediaObj.button.marginLeft};
            font-family: sans-serif;
            font-size: ${mediaObj.button.font};
-           color: white;
+           color: #2639AB;
+           white-space: nowrap;
          "
        >
        ${lan[lang].book}
@@ -1357,7 +1357,7 @@ border-bottom-right-radius: 4px;
 ">Ad</p>
      
         <iframe id="chatbot" 
-        src="https://askdisha.irctc.co.in/?support=true" 
+        src="https://revamp.irctc.corover.ai/?support=true" 
         width="100%" 
         height="310px" 
         frameborder="0" 
@@ -1389,8 +1389,8 @@ border-bottom-right-radius: 4px;
     // </div>
 
     const openSupport = () => {
-      let urlDeskTop = `https://askdisha.irctc.co.in/?support=true`;
-      let urlMobile = `https://askdisha.irctc.co.in/?support=true/#web`;
+      let urlDeskTop = `https://revamp.irctc.corover.ai/?support=true`;
+      let urlMobile = `https://revamp.irctc.corover.ai/?support=true/#web`;
       let url = "";
       if (isMobile) url = urlMobile;
       else url = urlDeskTop;
@@ -1643,7 +1643,8 @@ setInterval(() => {
   //       isOpenTrainList=true;
   //      }
   //     else if (!isSmall) {
-  if (!window.location.href.includes("irctc.co.in/nget/train-search")) {
+  // to be changed 
+  if (false && !window.location.href.includes("irctc.co.in/nget/train-search")) {
     openBanner(false);
     document.getElementById("askDishaSdk").style.display = "none";
     document.getElementById("div-gpt-ad-1695628181945-0").style.display =
@@ -1707,8 +1708,8 @@ debounce(toggleVisibility, 10);
 
     function botOpen() {
       if (isMobile) {
-        if (iOS()) window.location.assign("https://askdisha.irctc.co.in/#web");
-        else window.open("https://askdisha.irctc.co.in/#web", "_blank");
+        if (iOS()) window.location.assign("https://https://revamp.irctc.corover.ai//#web");
+        else window.open("https://revamp.irctc.corover.ai//#web", "_blank");
         return;
       }
       openBanner(false);
@@ -1740,7 +1741,7 @@ debounce(toggleVisibility, 10);
 
       if (!initialized && n.src == "about:blank") {
         // n.src = `https://assistant.corover.mobi/eticket/`;
-        n.contentWindow.location.replace(`https://askdisha.irctc.co.in/`);
+        n.contentWindow.location.replace(`https://revamp.irctc.corover.ai/`);
         // console.log("Fresh Load");
         initialized = true;
         // document.getElementById("feedBackIframe").src =
@@ -1817,7 +1818,7 @@ debounce(toggleVisibility, 10);
       console.log("Source window:", event.source);
     
       // Check the origin of the message
-      if (event.origin === 'https://askdisha.irctc.co.in' || event.origin === 'https://www.irctc.co.in') {
+      if (event.origin === 'https://revamp.irctc.corover.ai' || event.origin === 'https://www.irctc.co.in') {
         const message = event.data;
     
         if (message.type === 'REDIRECT_CONDITION_MET') {
@@ -1834,8 +1835,19 @@ debounce(toggleVisibility, 10);
     
     function updateLanguage() {
       const ticketButton = document.getElementById('ticketButton');
+      const askDishaTitle = document.getElementById('askDisha-title');
+      const nextGenTitle = document.getElementById('nextGen-title');
+      
       if (ticketButton) {
         ticketButton.textContent = lan[lang].book; 
+      }
+      
+      if (askDishaTitle) {
+        askDishaTitle.textContent = lan[lang].askDisha;
+      }
+      
+      if (nextGenTitle) {
+        nextGenTitle.textContent = lan[lang].nextGen;
       }
     }
     
@@ -2103,8 +2115,8 @@ debounce(toggleVisibility, 10);
             inputs[2].value.split("/")[0];
 
           if (source && destination) {
-            let urlDeskTop = `https://askdisha.irctc.co.in/`;
-            let urlMobile = `https://askdisha.irctc.co.in/#web`;
+            let urlDeskTop = `https://revamp.irctc.corover.ai/`;
+            let urlMobile = `https://revamp.irctc.corover.ai/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
@@ -2126,8 +2138,8 @@ debounce(toggleVisibility, 10);
             //   );
             // }
           } else {
-            let urlDeskTop = `https://askdisha.irctc.co.in/`;
-            let urlMobile = `https://askdisha.irctc.co.in/#web`;
+            let urlDeskTop = `https://revamp.irctc.corover.ai/`;
+            let urlMobile = `https://revamp.irctc.corover.ai/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
@@ -2144,8 +2156,8 @@ debounce(toggleVisibility, 10);
           }
         } else {
           //   botOpen();
-          let urlDeskTop = `https://askdisha.irctc.co.in/`;
-          let urlMobile = `https://askdisha.irctc.co.in/#web`;
+          let urlDeskTop = `https://revamp.irctc.corover.ai/`;
+          let urlMobile = `https://revamp.irctc.corover.ai/#web`;
           let url = "";
           if (isMobile) url = urlMobile;
           else url = urlDeskTop;
@@ -2196,8 +2208,8 @@ display:none;
 `;
     document.body.appendChild(overlayWidget);
     overlayWidget.onclick = () => {
-      if (iOS()) window.location.assign("https://askdisha.irctc.co.in/#web");
-      else window.open("https://askdisha.irctc.co.in/#web", "_blank");
+      if (iOS()) window.location.assign("https://revamp.irctc.corover.ai/#web");
+      else window.open("https://revamp.irctc.corover.ai/#web", "_blank");
     };
     // launcher.style.backgroundImage = `url("")`;
     // launcher.style.borderWidth = "0px";
