@@ -516,7 +516,7 @@ const setPlaceholderMaxHeight = () => {
 
     let launcherImage = document.createElement("img");
     launcherImage.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/launcherMain.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/Launchergif.gif";
     launcherImage.style.width = "100%";
     launcherImage.style.text = "border-radius :50%";
     launcher.appendChild(launcherImage);
@@ -539,7 +539,7 @@ const setPlaceholderMaxHeight = () => {
        <div style="font-size: 14px; white-space: nowrap;">
          <span style="color: #2a2a2a;">👋 Hi, I'm AskDisha,</span>
         </div>
-       <div style="font-size: 14px; white-space: nowrap;">
+       <div style="font-size: 14px; white-space: nowrap; color: #2a2a2a;">
           Click to book tickets easily with AI.
         </div>
       </div>
@@ -2240,7 +2240,7 @@ border-bottom-right-radius: 4px;
     // 70 and 63
 
     overlayWidget.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/LauncherMain.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/Launchergif.gif";
     overlayWidget.style.cssText = `
 height: 110px;
 width: 103px;
