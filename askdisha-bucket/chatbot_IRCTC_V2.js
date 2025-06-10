@@ -515,7 +515,7 @@ const setPlaceholderMaxHeight = () => {
     }
     let launcherImage = document.createElement("img");
     launcherImage.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/launchergif.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/launcherMain.gif";
     launcherImage.style.width = "100%";
     launcherImage.style.text = "border-radius :50%";
     launcher.appendChild(launcherImage);
