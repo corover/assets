@@ -90,7 +90,7 @@ const lan = {
   ml: { book: "AI ടിക്കറ്റ് ബുക്കിംഗ്", askDisha: "ആസ്ക് ദിശ 2.0", nextGen: "നെക്സ്റ്റ്ജെൻ AI ടിക്കറ്റിംഗ്" },
   kn: { book: "AI ಟಿಕೆಟ್ ಬುಕಿಂಗ್", askDisha: "ಆಸ್ಕ್ ದಿಶಾ 2.0", nextGen: "ನೆಕ್ಸ್ಟ್‌ಜೆನ್ AI ಟಿಕೆಟಿಂಗ್" }
 };
-let lang="en";
+let lang = "en";
 
 let overlayDiv = document.createElement("div");
 overlayDiv.style.cssText = `
@@ -362,7 +362,7 @@ const setPlaceholderMaxHeight = () => {
 
     return mediaObj;
   }
-  
+
 
   let mediaObj = getMediaobject();
 
@@ -520,15 +520,28 @@ const setPlaceholderMaxHeight = () => {
     launcherImage.style.text = "border-radius :50%";
     launcher.appendChild(launcherImage);
     launcher.draggable = true;
-    let maxIcon = document.createElement("img");
-    maxIcon.decoding = "async";
-    maxIcon.src = "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png";
+    let maxIcon = document.createElement("div");
     maxIcon.style.cssText = `
   position: absolute;
-  right: 100px;
-  width: 16px;
-  top: 0px;
+  right: 0px;
+  top: -60px;
   display: block;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+ `;
+    maxIcon.innerHTML = `
+              <div style="display: flex; flex-direction: column; padding: 5px; text-align: center; font-weight: 500; font-family:lato;">
+       <div style="font-size: 14px; white-space: nowrap;">
+         <span style="color: #2a2a2a;">👋 Hi, I'm AskDisha,</span>
+        </div>
+       <div style="font-size: 14px; white-space: nowrap;">
+          Click to book tickets easily with AI.
+        </div>
+      </div>
  `;
     function switchIcon(ch) {
       let s;
@@ -541,8 +554,15 @@ const setPlaceholderMaxHeight = () => {
 
           // remove320();
           // adDownIframe2.style.display = `none`;
-          maxIcon.src =
-            "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/maximise.png";
+          maxIcon.innerHTML = `
+        <div style="display: flex; align-items: center;">
+          <span style="color: #2639AB; margin-right: 5px;">↗️</span>
+          <div style="font-size: 12px; white-space: nowrap;">
+            <span style="font-weight: bold;">Maximize</span>
+            <span> Expand AskDisha</span>
+          </div>
+        </div>
+      `;
           dishaWrapper.style.bottom = "200px";
 
           dishaWrapper.style.right = "-18px";
@@ -550,9 +570,12 @@ const setPlaceholderMaxHeight = () => {
           maxIcon.style.cssText = `
         position: absolute;
         right: 14px;
-        width: 14px;
         top: -18px;
-        transform: rotate(-168deg);
+        background-color: white;
+        border-radius: 8px;
+        padding: 5px 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border: 1px solid #2639AB;
       `;
 
           launcher.style.width = "50px";
@@ -576,14 +599,26 @@ const setPlaceholderMaxHeight = () => {
           launcher.style.height = "120px";
           launcher.style.minWidth = "120px";
 
-          maxIcon.src =
-            "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png";
+          maxIcon.innerHTML = `
+                 <div style="display: flex; flex-direction: column; padding: 5px; text-align: center;">
+          <div style="font-size: 14px; white-space: nowrap;">
+            <span style="color: #000000;">👋 Hi, I'm AskDisha,</span>
+          </div>
+          <div style="font-size: 14px; white-space: nowrap;">
+            Click to book tickets easily with AI.
+          </div>
+        </div>
+      `;
           launcher.style.transform = "none";
           maxIcon.style.cssText = `
         position: absolute;
         right: 98px;
-        width: 16px;
         top: -2px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 5px 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border: 1px solid #ff5722;
       `;
 
           if (!isMobile) {
@@ -621,7 +656,7 @@ const setPlaceholderMaxHeight = () => {
     ad.style.left = "1%";
     ad.style.top =
       (window.devicePixelRatio > 1 && window.devicePixelRatio < 2) ||
-      window.devicePixelRatio > 2.4
+        window.devicePixelRatio > 2.4
         ? "0%"
         : "4%";
     // ad.style.transform = "translate-y(-50%)";
@@ -844,20 +879,20 @@ cursor:pointer
     let isAdVisible = false;
     let forceHide = false;
     adDownIframe.scrolling = "no";
-adDownIframe2.scrolling = "no";
-document.body.appendChild(adDownIframe);
-//document.body.appendChild(adDownIframe2);
+    adDownIframe2.scrolling = "no";
+    document.body.appendChild(adDownIframe);
+    //document.body.appendChild(adDownIframe2);
 
-const dealOfDay = document.createElement("a");
-// https://bit.ly/3gBANx7 PLUTOS
-//https://amzn.to/34WK1uY last
-dealOfDay.style.display = `inline`;
-dealOfDay.id = "dod";
-if (isMobile) dealOfDay.href = "https://amzn.to/3i4lgCr";
-else dealOfDay.href = "https://amzn.to/3i4lgCr";
+    const dealOfDay = document.createElement("a");
+    // https://bit.ly/3gBANx7 PLUTOS
+    //https://amzn.to/34WK1uY last
+    dealOfDay.style.display = `inline`;
+    dealOfDay.id = "dod";
+    if (isMobile) dealOfDay.href = "https://amzn.to/3i4lgCr";
+    else dealOfDay.href = "https://amzn.to/3i4lgCr";
 
-dealOfDay.target = "_blank";
-dealOfDay.innerHTML = `
+    dealOfDay.target = "_blank";
+    dealOfDay.innerHTML = `
    <img width="156px" src="https://sdk.irctc.corover.ai/askdisha-bucket/DEALS....png" decoding="async"/>
    <p style="
      position: absolute;
@@ -873,29 +908,29 @@ dealOfDay.innerHTML = `
    ">Ad</p>
 `;
 
-if (isMobile)
-  dealOfDay.style.cssText = `
+    if (isMobile)
+      dealOfDay.style.cssText = `
    position: fixed;
    bottom:42px;
    left:32%;
    transform: translateX(-50%);
 `;
-else
-  dealOfDay.style.cssText = `
+    else
+      dealOfDay.style.cssText = `
    position: fixed;
    bottom:40px;
    right:150px;
 `;
 
-dealOfDay.style.zIndex = "9";
-document.body.appendChild(dealOfDay);
+    dealOfDay.style.zIndex = "9";
+    document.body.appendChild(dealOfDay);
 
-// Create and append the close button separately
-if (isMobile) {
-  const closeButton = document.createElement("img");
-  closeButton.id = "dod-close";
-  // closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
-  closeButton.style.cssText = `
+    // Create and append the close button separately
+    if (isMobile) {
+      const closeButton = document.createElement("img");
+      closeButton.id = "dod-close";
+      // closeButton.src = "https://sdk.irctc.corover.ai/askdisha-bucket/white-cross.png";
+      closeButton.style.cssText = `
     background: #8181815e;
     width: 22px;
     height: 22px;
@@ -907,47 +942,47 @@ if (isMobile) {
     position: absolute;
     padding: 5px;
   `;
-  
-  // Append the close button to the dealOfDay container
-  dealOfDay.appendChild(closeButton);
 
-  // Close button click listener
-  closeButton.addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
-    event.preventDefault();   // Prevent the default action (which is following the link)
-    
-    forceHide = true;
+      // Append the close button to the dealOfDay container
+      dealOfDay.appendChild(closeButton);
 
-    remove320();  // Call your remove320 function
-    hideAd();     // Call your hideAd function
-    dealOfDay.remove(); // Remove the dealOfDay element
-    const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
-    if (adElement) {
-      adElement.style.display = "none";  // Ensure it's hidden
-      adElement.style.visibility = "hidden"; // Make sure it's hidden but still takes no space
+      // Close button click listener
+      closeButton.addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
+        event.preventDefault();   // Prevent the default action (which is following the link)
+
+        forceHide = true;
+
+        remove320();  // Call your remove320 function
+        hideAd();     // Call your hideAd function
+        dealOfDay.remove(); // Remove the dealOfDay element
+        const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+        if (adElement) {
+          adElement.style.display = "none";  // Ensure it's hidden
+          adElement.style.visibility = "hidden"; // Make sure it's hidden but still takes no space
+        }
+        document.body.style.zIndex = "2147483647";
+      });
     }
-    document.body.style.zIndex = "2147483647";
-  });
-}
-setInterval(function() {
-  if (forceHide) {
-    const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
-    if (adElement) {
-      adElement.style.display = "none";  // Forcefully hide the ad
-      adElement.style.visibility = "hidden"; // Ensures it remains hidden
-    }
-  }
-}, 500);
+    setInterval(function () {
+      if (forceHide) {
+        const adElement = document.getElementById("div-gpt-ad-1695628181945-0");
+        if (adElement) {
+          adElement.style.display = "none";  // Forcefully hide the ad
+          adElement.style.visibility = "hidden"; // Ensures it remains hidden
+        }
+      }
+    }, 500);
 
-if (isMobile) {
-  adDownIframe.style.zIndex = "9";
-  adDownIframe2.style.zIndex = "8";
-  dealOfDay.style.zIndex = "99";
-} else {
-  adDownIframe.style.zIndex = "2147483647";
-  adDownIframe2.style.zIndex = "2147483646";
-  dealOfDay.style.zIndex = "99999999999999";
-}
+    if (isMobile) {
+      adDownIframe.style.zIndex = "9";
+      adDownIframe2.style.zIndex = "8";
+      dealOfDay.style.zIndex = "99";
+    } else {
+      adDownIframe.style.zIndex = "2147483647";
+      adDownIframe2.style.zIndex = "2147483646";
+      dealOfDay.style.zIndex = "99999999999999";
+    }
 
     setDishaWrapper();
 
@@ -1081,10 +1116,10 @@ if (isMobile) {
         // console.log(1000);
         // ev.preventDefault();
         // window.open(`https://assistant.corover.mobi/eticket/`, "_blank").focus();
-        if(!isMobile){
+        if (!isMobile) {
           openBanner(true);
         }
-        else{
+        else {
           botOpen();
         }
         // botOpen();
@@ -1265,11 +1300,11 @@ margin-bottom: -2px;">SALE
      padding: ${mediaObj.cross.padding};">
        <img
          src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/DishaMini.svg"
-         style="width: 33%; height: 65%; border-radius: 8px; margin-left: 20px; margin-top: 10px;"
+         style="width: 33%; height: 65%; border-radius: 8px;  margin-top: 10px; margin-left:8px;"
          alt=""
          decoding = "async"
        />
-       <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 30px;">
+       <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 10px; margin-right:18px">
          <h3 style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 14px; white-space: nowrap; margin-bottom:6px" id="askDisha-title">${lan[lang].askDisha}</h3>
          <p style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 12px; white-space: nowrap;" id="nextGen-title">${lan[lang].nextGen}</p>
        </div>
@@ -1291,7 +1326,7 @@ margin-bottom: -2px;">SALE
      >
       <img 
          src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/OptionsMini.svg"
-         style="width: 20px; height: 20px; padding:5px;"
+         style="width: 20px; height: 20px; margin-right: 4px; padding:0;"
          alt=""
          decoding="async"
       />
@@ -1299,7 +1334,7 @@ margin-bottom: -2px;">SALE
          id="ticketButton"
          style="
            margin: 0;
-           margin-left: 0;
+           margin-left: ${mediaObj.button.marginLeft};
            font-family: sans-serif;
            font-size: ${mediaObj.button.font};
            color: #2639AB;
@@ -1416,7 +1451,7 @@ border-bottom-right-radius: 4px;
         add320();
         adDownIframe2.style.display = "block";
         placeholderCard.style.display = "none";
-    
+
         // Create and append the close button
         const closeButton = document.createElement("img");
         closeButton.id = "dod-close";
@@ -1433,17 +1468,17 @@ border-bottom-right-radius: 4px;
           position: absolute;
           padding: 5px;
         `;
-    
+
         // Append the close button to the dealOfDay container
         dealOfDay.appendChild(closeButton);
-    
+
         // Close button click listener
-        closeButton.addEventListener('click', function(event) {
+        closeButton.addEventListener('click', function (event) {
           event.stopPropagation(); // Prevent event propagation (stops the click from reaching the parent <a> tag)
           event.preventDefault();   // Prevent the default action (which is following the link)
-          
+
           forceHide = true;
-    
+
           remove320();  // Call your remove320 function
           hideAd();     // Call your hideAd function
           dealOfDay.remove(); // Remove the dealOfDay element
@@ -1454,7 +1489,7 @@ border-bottom-right-radius: 4px;
           }
           document.body.style.zIndex = "2147483647";
         });
-    
+
         return;
       }
       isSplashScreenOpen = bool;
@@ -1485,7 +1520,7 @@ border-bottom-right-radius: 4px;
 
     const setPlaceholderMaxHeight = () => {
       let cubeDisha = document.querySelector("#adg_cuboid_container")?.firstChild;
-    
+
       if (cubeDisha) {
         let stylesCubeDisha = window.getComputedStyle(cubeDisha);
         let heightCubeDisha = parseFloat(stylesCubeDisha.height.split("px")[0]);
@@ -1497,15 +1532,15 @@ border-bottom-right-radius: 4px;
         }
       }
     };
-    
+
     const checkAndOpenBanner = () => {
       let cubeContainer = document.getElementById("adg_cuboid_container");
-    
+
       if (cubeContainer) {
         // Get the position of the #adg_cuboid_container relative to the viewport
         let rect = cubeContainer.getBoundingClientRect();
         let remainingSpace = window.innerHeight - rect.bottom; // space from the bottom of the container to the bottom of the page
-    
+
         // Check if the remaining space is at least 320px
         if (remainingSpace >= 320) {
           openBanner(true);  // Open the banner if the remaining space is >= 320px
@@ -1517,13 +1552,12 @@ border-bottom-right-radius: 4px;
         openBanner(true);
       }
     };
-    
 
-    
+
+
 
     setTimeout(() => {
-      if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup"))
-      {
+      if (!isOpen && !window.location.href.includes("nget/booking/train-list") && !window.location.href.includes("/nget/profile/user-signup")) {
         setPlaceholderMaxHeight();
         checkAndOpenBanner();
       }
@@ -1537,7 +1571,7 @@ border-bottom-right-radius: 4px;
         observer.disconnect(); // Stop observing once the element is found
       }
     });
-    
+
     // Observe changes in the DOM to detect when #adg_cuboid_container is added
     observer.observe(document.body, { childList: true, subtree: true });
 
@@ -1551,7 +1585,15 @@ border-bottom-right-radius: 4px;
 
       remove320();
       adDownIframe2.style.display = `none`;
-      maxIcon.src = "https://sdk.irctc.corover.ai/askdisha-bucket/maximise.png";
+      maxIcon.innerHTML = `
+        <div style="display: flex; align-items: center;">
+          <span style="color: #2639AB; margin-right: 5px;">↗️</span>
+          <div style="font-size: 12px; white-space: nowrap;">
+            <span style="font-weight: bold;">Maximize</span>
+            <span> Expand AskDisha</span>
+          </div>
+        </div>
+      `;
       dishaWrapper.style.bottom = "200px";
 
       dishaWrapper.style.right = "-18px";
@@ -1559,9 +1601,12 @@ border-bottom-right-radius: 4px;
       maxIcon.style.cssText = `
         position: absolute;
         right: 14px;
-        width: 14px;
         top: -18px;
-        transform: rotate(-168deg);
+        background-color: white;
+        border-radius: 8px;
+        padding: 5px 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border: 1px solid #2639AB;
       `;
 
       launcher.style.width = "50px";
@@ -1576,114 +1621,114 @@ border-bottom-right-radius: 4px;
         "none";
       document.getElementById("dod").style.display = "none";
     }
-  //   setInterval(() => {
-  //     // Ensure the "dod" element exists in the DOM before trying to change its style
-  //     const dodElement = document.getElementById("dod");
-  
-  //     if (dodElement) {
-  //         // The element exists, so it's safe to modify its style
-  //         console.log("HIT");
-  //         // Example logic for showing and hiding the elements
-  //         if (window.location.href.includes("irctc.co.in/nget/train-search") && isSmall) {
-  //             document.getElementById("askDishaSdk").style.display = "none";
-  //             document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
-  //             dodElement.style.display = "none";  // Hide the deal of the day element
-  //         } else {
-  //             document.getElementById("askDishaSdk").style.display = "flex";
-  //             document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
-  //             dodElement.style.display = "inline";  // Show the deal of the day element
-  //         }
-  //     }
-  // }, 200);
+    //   setInterval(() => {
+    //     // Ensure the "dod" element exists in the DOM before trying to change its style
+    //     const dodElement = document.getElementById("dod");
 
-//   const dodElement = document.getElementById("dod");
-// if (dodElement) {
-//     dodElement.addEventListener('click', () => {
-//         clearInterval(intervalId);
-//     });
-// }
+    //     if (dodElement) {
+    //         // The element exists, so it's safe to modify its style
+    //         console.log("HIT");
+    //         // Example logic for showing and hiding the elements
+    //         if (window.location.href.includes("irctc.co.in/nget/train-search") && isSmall) {
+    //             document.getElementById("askDishaSdk").style.display = "none";
+    //             document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
+    //             dodElement.style.display = "none";  // Hide the deal of the day element
+    //         } else {
+    //             document.getElementById("askDishaSdk").style.display = "flex";
+    //             document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
+    //             dodElement.style.display = "inline";  // Show the deal of the day element
+    //         }
+    //     }
+    // }, 200);
 
-setInterval(() => {
-  //   irctc.co.in/nget/train-search
-  //     if (
-  //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
-  //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
-  //       (
-  //         navigator.userAgent.includes("Android") ||
-  //   navigator.userAgent.includes("webOS") ||
-  //   navigator.userAgent.includes("iPhone") ||
-  //   navigator.userAgent.includes("iPad") ||
-  //   navigator.userAgent.includes("iPod") ||
-  //   navigator.userAgent.includes("BlackBerry") ||
-  //   navigator.userAgent.includes("Windows Phone")
-  //       )
-  //       )) {
-  //       openBanner(false);
-  //       document.getElementById("askDishaSdk").style.display = "none";
-  //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-  //         "none";
-  //       document.getElementById("dod").style.display = "none";
-  //      }
-  //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
-  //      !isOpenTrainList &&
-  //      (
-  //       !navigator.userAgent.includes("Android") ||
-  // !navigator.userAgent.includes("webOS") ||
-  // !navigator.userAgent.includes("iPhone") ||
-  // !navigator.userAgent.includes("iPad") ||
-  // !navigator.userAgent.includes("iPod") ||
-  // !navigator.userAgent.includes("BlackBerry") ||
-  // !navigator.userAgent.includes("Windows Phone")
-  //     )){
-  //       openBanner(true);
-  //       document.getElementById("askDishaSdk").style.display = "flex";
-  //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-  //         "block";
-  //       document.getElementById("dod").style.display = "inline";
-  //       isOpenTrainList=true;
-  //      }
-  //     else if (!isSmall) {
-  // to be changed 
-  if (false && !window.location.href.includes("irctc.co.in/nget/train-search")) {
-    openBanner(false);
-    document.getElementById("askDishaSdk").style.display = "none";
-    document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      "none";
-    document.getElementById("dod").style.display = "none";
-  } else if (!isSmall) {
-    // console.log("HIT");
-    document.getElementById("askDishaSdk").style.display = "flex";
-    document.getElementById("div-gpt-ad-1695628181945-0").style.display =
-      "block";
-    document.getElementById("dod").style.display = "inline";
-  }
-}, 200);
+    //   const dodElement = document.getElementById("dod");
+    // if (dodElement) {
+    //     dodElement.addEventListener('click', () => {
+    //         clearInterval(intervalId);
+    //     });
+    // }
+
+    setInterval(() => {
+      //   irctc.co.in/nget/train-search
+      //     if (
+      //       (!window.location.href.includes("irctc.co.in/nget/train-search") &&
+      //       (window.location.href.includes("irctc.co.in/nget/booking/train-list")) &&
+      //       (
+      //         navigator.userAgent.includes("Android") ||
+      //   navigator.userAgent.includes("webOS") ||
+      //   navigator.userAgent.includes("iPhone") ||
+      //   navigator.userAgent.includes("iPad") ||
+      //   navigator.userAgent.includes("iPod") ||
+      //   navigator.userAgent.includes("BlackBerry") ||
+      //   navigator.userAgent.includes("Windows Phone")
+      //       )
+      //       )) {
+      //       openBanner(false);
+      //       document.getElementById("askDishaSdk").style.display = "none";
+      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+      //         "none";
+      //       document.getElementById("dod").style.display = "none";
+      //      }
+      //      else if(window.location.href.includes("irctc.co.in/nget/booking/train-list") &&
+      //      !isOpenTrainList &&
+      //      (
+      //       !navigator.userAgent.includes("Android") ||
+      // !navigator.userAgent.includes("webOS") ||
+      // !navigator.userAgent.includes("iPhone") ||
+      // !navigator.userAgent.includes("iPad") ||
+      // !navigator.userAgent.includes("iPod") ||
+      // !navigator.userAgent.includes("BlackBerry") ||
+      // !navigator.userAgent.includes("Windows Phone")
+      //     )){
+      //       openBanner(true);
+      //       document.getElementById("askDishaSdk").style.display = "flex";
+      //       document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+      //         "block";
+      //       document.getElementById("dod").style.display = "inline";
+      //       isOpenTrainList=true;
+      //      }
+      //     else if (!isSmall) {
+      // to be changed 
+      if (false && !window.location.href.includes("irctc.co.in/nget/train-search")) {
+        openBanner(false);
+        document.getElementById("askDishaSdk").style.display = "none";
+        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+          "none";
+        document.getElementById("dod").style.display = "none";
+      } else if (!isSmall) {
+        // console.log("HIT");
+        document.getElementById("askDishaSdk").style.display = "flex";
+        document.getElementById("div-gpt-ad-1695628181945-0").style.display =
+          "block";
+        document.getElementById("dod").style.display = "inline";
+      }
+    }, 200);
 
 
-let timeoutId;
+    let timeoutId;
 
-const debounce = (func, delay) => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(func, delay);
-};
+    const debounce = (func, delay) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(func, delay);
+    };
 
-const toggleVisibility = () => {
-    const dodElement = document.getElementById("dod");
-    if (dodElement) {
+    const toggleVisibility = () => {
+      const dodElement = document.getElementById("dod");
+      if (dodElement) {
         if (window.location.href.includes("irctc.co.in/nget/train-search") || isSmall) {
-            document.getElementById("askDishaSdk").style.display = "none";
-            document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
-            dodElement.style.display = "none";
+          document.getElementById("askDishaSdk").style.display = "none";
+          document.getElementById("div-gpt-ad-1695628181945-0").style.display = "none";
+          dodElement.style.display = "none";
         } else {
-            document.getElementById("askDishaSdk").style.display = "flex";
-            document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
-            dodElement.style.display = "inline";
+          document.getElementById("askDishaSdk").style.display = "flex";
+          document.getElementById("div-gpt-ad-1695628181945-0").style.display = "block";
+          dodElement.style.display = "inline";
         }
-    }
-};
+      }
+    };
 
-// Call this function after certain interactions (like window resizing or other events)
-debounce(toggleVisibility, 10);
+    // Call this function after certain interactions (like window resizing or other events)
+    debounce(toggleVisibility, 10);
 
 
     document.getElementById("disha-banner-close").onclick = () => {
@@ -1811,16 +1856,16 @@ debounce(toggleVisibility, 10);
       isFirstTime = false;
     }
 
-    window.addEventListener('message', function(event) {
+    window.addEventListener('message', function (event) {
       console.log("Event received:", event);
       console.log("Message received from origin:", event.origin);
       console.log("Message data:", event.data);
       console.log("Source window:", event.source);
-    
+
       // Check the origin of the message
       if (event.origin === 'https://revamp.irctc.corover.ai' || event.origin === 'https://www.irctc.co.in') {
         const message = event.data;
-    
+
         if (message.type === 'REDIRECT_CONDITION_MET') {
           botOpen();  // Trigger some action in the parent
         } else if (message.type === 'LANGUAGE_UPDATE') {
@@ -1831,27 +1876,27 @@ debounce(toggleVisibility, 10);
         console.error("Received message from an unauthorized origin:", event.origin);
       }
     });
-    
-    
+
+
     function updateLanguage() {
       const ticketButton = document.getElementById('ticketButton');
       const askDishaTitle = document.getElementById('askDisha-title');
       const nextGenTitle = document.getElementById('nextGen-title');
-      
+
       if (ticketButton) {
-        ticketButton.textContent = lan[lang].book; 
+        ticketButton.textContent = lan[lang].book;
       }
-      
+
       if (askDishaTitle) {
         askDishaTitle.textContent = lan[lang].askDisha;
       }
-      
+
       if (nextGenTitle) {
         nextGenTitle.textContent = lan[lang].nextGen;
       }
     }
-    
-    
+
+
     updateLanguage();
 
     function checkForToken(e) {
@@ -1864,7 +1909,7 @@ debounce(toggleVisibility, 10);
         if (req.token) {
           setToken(req.cxtoken);
         }
-      } catch (e) {}
+      } catch (e) { }
     }
     function checkForState(e) {
       if (e.data == "getState") {
@@ -1876,7 +1921,7 @@ debounce(toggleVisibility, 10);
         if (req.isState) {
           setState(req.state);
         }
-      } catch (e) {}
+      } catch (e) { }
     }
     function checkForRecent(e) {
       if (e.data == "getRecent") {
@@ -1888,7 +1933,7 @@ debounce(toggleVisibility, 10);
         if (req.isRecent) {
           setRecent(req.recent);
         }
-      } catch (e) {}
+      } catch (e) { }
     }
     function setRecent(value) {
       if (
@@ -2194,7 +2239,7 @@ debounce(toggleVisibility, 10);
     // 70 and 63
 
     overlayWidget.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/launchergif.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/LauncherMain.gif";
     overlayWidget.style.cssText = `
 height: 110px;
 width: 103px;
@@ -2360,9 +2405,9 @@ display:none;
 
   function setVideoAdHeader() {
     let videoScript = document.createElement("script");
-    videoScript.innerHTML=`(function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//a.vdo.ai/core/v-irctc-co-in/vdo.ai.js');`;
+    videoScript.innerHTML = `(function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//a.vdo.ai/core/v-irctc-co-in/vdo.ai.js');`;
     videoScript.setAttribute("data-cfasync", "false");
-  
+
     document.head.appendChild(videoScript);
   }
 
@@ -2374,7 +2419,7 @@ display:none;
       let leftover = document.querySelectorAll("#v-irctc-co-in")[0];
       let parent = leftover.parentElement;
       parent.removeChild(leftover);
-    } catch (err) {}
+    } catch (err) { }
     if (!isMobile) {
       try {
         let adContainer = document.createElement("div");
@@ -2419,7 +2464,7 @@ display:none;
     } else {
       try {
         let videoDiv = document.createElement("div");
-        videoDiv.id="v-irctc-co-in";
+        videoDiv.id = "v-irctc-co-in";
         // videoDiv.id = "div-ub-irctc.co.in_1712646358600";
         videoDiv.style.cssText = `
        width:100%;
@@ -2431,7 +2476,7 @@ display:none;
         document
           .querySelectorAll(".clearfix")[4]
           .appendChild(videoDiv);
-          // .insertAdjacentElement("afterend", videoDiv);
+        // .insertAdjacentElement("afterend", videoDiv);
         setTimeout(() => {
           unibots.cmd.push(() => {
             unibotsPlayer("irctc.co.in_1712646358600");
@@ -2483,7 +2528,7 @@ display:none;
 
           let parent = leftover.parentElement;
           parent.removeChild(leftover);
-        } catch (err) {}
+        } catch (err) { }
 
         let adContainer = document.createElement("div");
         adContainer.id = "v-irctc-co-in";
@@ -2558,7 +2603,7 @@ display:none;
 
           let parent = leftover.parentElement;
           parent.removeChild(leftover);
-        } catch (err) {}
+        } catch (err) { }
 
         let trainsDiv = document.querySelector(".tbis-div ");
 
