@@ -513,6 +513,7 @@ const setPlaceholderMaxHeight = () => {
       //   )`;
       launcher.style.backgroundPosition = "center";
     }
+
     let launcherImage = document.createElement("img");
     launcherImage.src =
       "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/launcherMain.gif";
