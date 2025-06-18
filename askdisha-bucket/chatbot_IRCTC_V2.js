@@ -798,7 +798,7 @@ margin-top:15px;
     adDownIframe2.innerHTML = `
 <span></span>
 `;
-    adDownIframe2.href = "https://revamp.irctc.corover.ai/";
+    adDownIframe2.href = "http://localhost:3000/";
     adDownIframe2.target = "_blank";
     const adDownIframe = document.createElement("div");
     // adDownIframe.src = "https://assistant.corover.mobi/320x50_placeholder.html";
@@ -1018,7 +1018,7 @@ cursor:pointer
     n.id = "Disha-Bot";
     n.setAttribute(
       "allow",
-      "geolocation https://revamp.irctc.corover.ai/; microphone https://revamp.irctc.corover.ai/; camera; otp-credentials; midi; accelerometer; gyroscope; payment"
+      "geolocation http://localhost:3000/; microphone http://localhost:3000/; camera; otp-credentials; midi; accelerometer; gyroscope; payment"
     );
     n.style.width = "100%";
     n.style.height = "100%";
@@ -1326,7 +1326,7 @@ margin-bottom: -2px;">SALE
        id="disha-banner-button"
      >
       <img 
-         src="c:\IRCTC-Staging\IRCTC-BOOKING-UI\src\Assets\F\BImage.svg"
+         src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/OptionsMini.svg"
          style="width: 20px; height: 20px; margin-right: 4px; padding:0;"
          alt=""
          decoding="async"
@@ -1393,7 +1393,7 @@ border-bottom-right-radius: 4px;
 ">Ad</p>
      
         <iframe id="chatbot" 
-        src="https://revamp.irctc.corover.ai/?support=true" 
+        src="http://localhost:3000?support=true" 
         width="100%" 
         height="310px" 
         frameborder="0" 
@@ -1425,8 +1425,8 @@ border-bottom-right-radius: 4px;
     // </div>
 
     const openSupport = () => {
-      let urlDeskTop = `https://revamp.irctc.corover.ai/?support=true`;
-      let urlMobile = `https://revamp.irctc.corover.ai/?support=true/#web`;
+      let urlDeskTop = `http://localhost:3000?support=true`;
+      let urlMobile = `http://localhost:3000/?support=true/#web`;
       let url = "";
       if (isMobile) url = urlMobile;
       else url = urlDeskTop;
@@ -1754,8 +1754,8 @@ border-bottom-right-radius: 4px;
 
     function botOpen() {
       if (isMobile) {
-        if (iOS()) window.location.assign("https://https://revamp.irctc.corover.ai//#web");
-        else window.open("https://revamp.irctc.corover.ai//#web", "_blank");
+        if (iOS()) window.location.assign("https://http://localhost:3000//#web");
+        else window.open("http://localhost:3000//#web", "_blank");
         return;
       }
       openBanner(false);
@@ -1787,7 +1787,7 @@ border-bottom-right-radius: 4px;
 
       if (!initialized && n.src == "about:blank") {
         // n.src = `https://assistant.corover.mobi/eticket/`;
-        n.contentWindow.location.replace(`https://revamp.irctc.corover.ai/`);
+        n.contentWindow.location.replace(`http://localhost:3000`);
         // console.log("Fresh Load");
         initialized = true;
         // document.getElementById("feedBackIframe").src =
@@ -1864,7 +1864,7 @@ border-bottom-right-radius: 4px;
       console.log("Source window:", event.source);
 
       // Check the origin of the message
-      if (event.origin === 'https://revamp.irctc.corover.ai' || event.origin === 'https://www.irctc.co.in') {
+      if (event.origin === 'http://localhost:3000' || event.origin === 'https://www.irctc.co.in') {
         const message = event.data;
 
         if (message.type === 'REDIRECT_CONDITION_MET') {
@@ -2161,8 +2161,8 @@ border-bottom-right-radius: 4px;
             inputs[2].value.split("/")[0];
 
           if (source && destination) {
-            let urlDeskTop = `https://revamp.irctc.corover.ai/`;
-            let urlMobile = `https://revamp.irctc.corover.ai/#web`;
+            let urlDeskTop = `http://localhost:3000/`;
+            let urlMobile = `http://localhost:3000/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
@@ -2184,8 +2184,8 @@ border-bottom-right-radius: 4px;
             //   );
             // }
           } else {
-            let urlDeskTop = `https://revamp.irctc.corover.ai/`;
-            let urlMobile = `https://revamp.irctc.corover.ai/#web`;
+            let urlDeskTop = `http://localhost:3000/`;
+            let urlMobile = `http://localhost:3000/#web`;
             let url = "";
             if (isMobile) url = urlMobile;
             else url = urlDeskTop;
@@ -2202,8 +2202,8 @@ border-bottom-right-radius: 4px;
           }
         } else {
           //   botOpen();
-          let urlDeskTop = `https://revamp.irctc.corover.ai/`;
-          let urlMobile = `https://revamp.irctc.corover.ai/#web`;
+          let urlDeskTop = `http://localhost:3000/`;
+          let urlMobile = `http://localhost:3000/#web`;
           let url = "";
           if (isMobile) url = urlMobile;
           else url = urlDeskTop;
@@ -2254,8 +2254,8 @@ display:none;
 `;
     document.body.appendChild(overlayWidget);
     overlayWidget.onclick = () => {
-      if (iOS()) window.location.assign("https://revamp.irctc.corover.ai/#web");
-      else window.open("https://revamp.irctc.corover.ai/#web", "_blank");
+      if (iOS()) window.location.assign("http://localhost:3000/#web");
+      else window.open("http://localhost:3000/#web", "_blank");
     };
     // launcher.style.backgroundImage = `url("")`;
     // launcher.style.borderWidth = "0px";
