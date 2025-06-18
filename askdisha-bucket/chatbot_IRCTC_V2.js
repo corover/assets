@@ -1326,7 +1326,7 @@ margin-bottom: -2px;">SALE
        id="disha-banner-button"
      >
       <img 
-         src="https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/OptionsMini.svg"
+         src="c:\IRCTC-Staging\IRCTC-BOOKING-UI\src\Assets\F\BImage.svg"
          style="width: 20px; height: 20px; margin-right: 4px; padding:0;"
          alt=""
          decoding="async"
