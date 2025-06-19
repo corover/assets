@@ -1376,11 +1376,11 @@ margin-bottom: -2px;">SALE
          align-items: center;
          background: #FFFFFF;
          width: 45%;
-         margin: 13px;
+         margin: 10px 0px;
          border-radius: 10px;
-         padding: 2px 7px;
+         padding: 2px 1px;
          cursor: pointer;
-         margin-bottom: 10px;
+         margin-bottom: 10px 0px;
        "
        id="disha-banner-button"
      >
