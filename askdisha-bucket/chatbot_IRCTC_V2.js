@@ -516,7 +516,7 @@ const setPlaceholderMaxHeight = () => {
 
     let launcherImage = document.createElement("img");
     launcherImage.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/LauncherImage.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/FLauncher.gif";
     launcherImage.style.width = "100%";
     launcherImage.style.text = "border-radius :50%";
     launcher.appendChild(launcherImage);
@@ -2267,7 +2267,7 @@ border-bottom-right-radius: 4px;
     // 70 and 63
 
     overlayWidget.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/LauncherImage.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/FLauncher.gif";
     overlayWidget.style.cssText = `
 height: 110px;
 width: 103px;
