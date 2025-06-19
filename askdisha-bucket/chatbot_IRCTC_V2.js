@@ -535,7 +535,7 @@ const setPlaceholderMaxHeight = () => {
   border-radius: 8px;
  `;
     maxIcon.innerHTML = `
-              <div style="display: flex; flex-direction: column; padding: 5px; text-align: center; font-weight: 500; font-family:lato;">
+              <div style="display: flex; flex-direction: column; padding: 5px; text-align: center; font-weight: 500; font-family:sans-serif;">
        <div style="font-size: 14px; white-space: nowrap;">
          <span style="color: #2a2a2a;">👋 Hi, I'm AskDisha,</span>
         </div>
@@ -1317,9 +1317,9 @@ margin-bottom: -2px;">SALE
          align-items: center;
          background: #FFFFFF;
          width: 45%;
-         margin: 12px;
+         margin: 13px;
          border-radius: 10px;
-         padding: 4px 7px;
+         padding: 2px 7px;
          cursor: pointer;
          margin-bottom: 10px;
        "
@@ -1335,7 +1335,7 @@ margin-bottom: -2px;">SALE
          id="ticketButton"
          style="
            margin: 0;
-           margin-left: ${mediaObj.button.marginLeft};
+          //  margin-left: ${mediaObj.button.marginLeft};
            font-family: sans-serif;
            font-size: ${mediaObj.button.font};
            color: #2639AB;
@@ -1734,7 +1734,8 @@ border-bottom-right-radius: 4px;
 
     document.getElementById("disha-banner-close").onclick = () => {
       openBanner(false);
-      // switchIcon();
+      hideAd();
+      botClose();
     };
 
     function iOS() {
