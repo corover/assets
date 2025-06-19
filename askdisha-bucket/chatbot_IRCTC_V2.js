@@ -1370,7 +1370,7 @@ margin-bottom: -2px;">SALE
        </div>
      <div
        style="
-         height: 50%;
+         height: 55%;
          display: flex;
          justify-content: center;
          align-items: center;
@@ -1378,9 +1378,9 @@ margin-bottom: -2px;">SALE
          width: 45%;
          margin-bottom: 10px;
          margin-right: 5px;
-         margin-top: 10px;
+         margin-top: 14px;
          border-radius: 10px;
-         padding: 2px 1px;
+         padding: 2px 7px;
          cursor: pointer;
        "
        id="disha-banner-button"
