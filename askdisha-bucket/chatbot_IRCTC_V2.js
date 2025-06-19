@@ -217,7 +217,7 @@ const setPlaceholderMaxHeight = () => {
       placeholderHeight: "470px",
       placeholderBottom: "0px",
       cross: {
-        size: "22px",
+        size: "32px",
 
         padding: "10px",
         top: "10px",
@@ -516,7 +516,7 @@ const setPlaceholderMaxHeight = () => {
 
     let launcherImage = document.createElement("img");
     launcherImage.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/FLauncher.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange2/askdisha-bucket/FLauncher.gif";
     launcherImage.style.width = "100%";
     launcherImage.style.text = "border-radius :50%";
     launcher.appendChild(launcherImage);
@@ -1369,18 +1369,22 @@ margin-bottom: -2px;">SALE
          <p style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 12px; white-space: nowrap;" id="nextGen-title">${lan[lang].nextGen}</p>
        </div>
      <div
-       style="
-         height: 50%;
+       style=style="
+         height: 58%;
          display: flex;
          justify-content: center;
          align-items: center;
          background: #FFFFFF;
          width: 45%;
-         margin: 13px;
+         margin-top:12px;
+         margin-right:8px;
+        //  margin: 13px;
          border-radius: 10px;
-         padding: 2px 7px;
+         padding: 12px;
          cursor: pointer;
          margin-bottom: 10px;
+         margin-right:8px;
+         margin-top:12px;
        "
        id="disha-banner-button"
      >
@@ -2312,7 +2316,7 @@ border-bottom-right-radius: 4px;
     // 70 and 63
 
     overlayWidget.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/FLauncher.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange2/askdisha-bucket/FLauncher.gif";
     overlayWidget.style.cssText = `
 height: 110px;
 width: 103px;
