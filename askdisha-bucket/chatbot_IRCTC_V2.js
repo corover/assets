@@ -239,7 +239,7 @@ const setPlaceholderMaxHeight = () => {
         scale: "0.8",
       },
       button: {
-        font: "14px",
+        font: "12px",
         padding: "2%",
         icon: "16px",
         marginLeft: "8px",
@@ -274,7 +274,7 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "14px",
+          font: "12px",
           padding: "7px",
           icon: "16px",
           marginLeft: "6px",
@@ -312,7 +312,7 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "14px",
+          font: "12px",
           padding: "2%",
           icon: "16px",
           marginLeft: "8px",
@@ -350,7 +350,7 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "14px",
+          font: "12px",
           padding: "2%",
           icon: "16px",
           marginLeft: "8px",
@@ -1375,7 +1375,7 @@ margin-bottom: -2px;">SALE
          justify-content: center;
          align-items: center;
          background: #FFFFFF;
-         width: 45%;
+         width: 42%;
          margin-bottom: 10px;
          margin-right: 5px;
          margin-top: 14px;
