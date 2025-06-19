@@ -219,7 +219,7 @@ const setPlaceholderMaxHeight = () => {
       cross: {
         size: "32px",
 
-        padding: "10px",
+        padding: "0px",
         top: "10px",
         right: "10px",
       },
@@ -1365,7 +1365,7 @@ margin-bottom: -2px;">SALE
          decoding = "async"
        />
        <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 10px; margin-right:18px">
-         <h3 style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 14px; white-space: nowrap; margin-bottom:6px" id="askDisha-title">${lan[lang].askDisha}</h3>
+         <h3 style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 14px; white-space: nowrap; margin-bottom:0px" id="askDisha-title">${lan[lang].askDisha}</h3>
          <p style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 12px; white-space: nowrap;" id="nextGen-title">${lan[lang].nextGen}</p>
        </div>
      <div
