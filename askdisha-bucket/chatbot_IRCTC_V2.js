@@ -292,7 +292,7 @@ const setPlaceholderMaxHeight = () => {
         cross: {
           size: "32px",
 
-          padding: "7px",
+          padding: "0px",
           top: "10px",
           right: "10px",
         },
