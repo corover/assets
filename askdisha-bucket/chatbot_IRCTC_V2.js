@@ -521,7 +521,18 @@ const setPlaceholderMaxHeight = () => {
     launcherImage.style.text = "border-radius :50%";
     launcher.appendChild(launcherImage);
     launcher.draggable = true;
+    let mIcon = document.createElement("img");
+    mIcon.id = "minimiseIcon";
+    mIcon.src = "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png";
+    mIcon.style.cssText = `
+  position: absolute;
+  right: 100px;   
+  width: 16px;
+  top: 0px;
+  display: block;
+ `;
     let maxIcon = document.createElement("div");
+    // maxIcon.src = "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png";
     maxIcon.style.cssText = `
   position: absolute;
   right: 0px;
@@ -547,6 +558,7 @@ const setPlaceholderMaxHeight = () => {
     maxIcon.style.display = "none"; // Hide by default
 
     launcherImage.addEventListener("mouseenter", function () {
+      if (isSmall) return;
       maxIcon.style.display = "block";
     });
     launcherImage.addEventListener("mouseleave", function () {
@@ -559,11 +571,23 @@ const setPlaceholderMaxHeight = () => {
     });
 
     function switchIcon(ch) {
+      console.log("switchIcon called");
       let s;
       if (true) {
         console.log(isSmall);
         if (!isSmall) {
           s = true;
+
+          mIcon.src =
+            "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/maximise.png";
+
+          mIcon.style.cssText = `
+        position: absolute;
+        right: 14px;
+        width: 14px;
+        top: -18px;
+        transform: rotate(-168deg);
+      `;
 
           // if (true) dealOfDay.style.display = `none`;
 
@@ -613,7 +637,14 @@ const setPlaceholderMaxHeight = () => {
           launcher.style.width = "120px";
           launcher.style.height = "120px";
           launcher.style.minWidth = "120px";
-
+          mIcon.src =
+            "https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png";
+          mIcon.style.cssText = `
+        position: absolute;
+        right: 98px;
+        width: 16px;
+        top: -2px;
+      `;
           maxIcon.innerHTML = `
                  <div style="display: flex; flex-direction: column; padding: 5px; text-align: center;">
           <div style="font-size: 14px; white-space: nowrap;">
@@ -649,6 +680,15 @@ const setPlaceholderMaxHeight = () => {
           }, 1000);
       }
     }
+    mIcon.onclick = (e) => {
+      console.log("on click");
+      // // isSmall = !isSmall;
+      e.preventDefault();
+      e.stopPropagation();
+
+      // // e.preventDefault();
+      switchIcon(true);
+    };
     maxIcon.onclick = (e) => {
       console.log("on click");
       // // isSmall = !isSmall;
@@ -660,6 +700,7 @@ const setPlaceholderMaxHeight = () => {
     };
 
     launcher.appendChild(maxIcon);
+    launcher.appendChild(mIcon);
     launcher.addEventListener("touchmove", (ev) => {
       ev.preventDefault();
       switchIcon(false);
@@ -1190,7 +1231,7 @@ cursor:pointer
     messageDialog.addEventListener(
       "touchstart",
       () => {
-        console.log("message dialog touch start");
+
         // window.open(`https://assistant.corover.mobi/eticket/`, "_blank").focus();
         botOpen();
       },
@@ -1199,7 +1240,7 @@ cursor:pointer
     messageDialog.addEventListener(
       "click",
       () => {
-        console.log("message dialog click");
+
         // window.open(`https://assistant.corover.mobi/eticket/`, "_blank").focus();
         botOpen();
       },
@@ -1225,7 +1266,7 @@ cursor:pointer
       messageDialog.style.display = "none";
     }
     function botClose() {
-      console.log("bot closed function called")
+
       // console.log(isSmall);
       if (!isSmall) {
         messageDialog.style.display = "none";
@@ -1602,6 +1643,7 @@ border-bottom-right-radius: 4px;
     observer.observe(document.body, { childList: true, subtree: true });
 
     setTimeout(() => {
+      console.log("Checking for adg_cuboid_container...");
       if (window.screen.width < 600) switchIcon(true);
     }, 50);
 
@@ -1715,7 +1757,7 @@ border-bottom-right-radius: 4px;
       //      }
       //     else if (!isSmall) {
       // to be changed 
-      if (false && !window.location.href.includes("irctc.co.in/nget/train-search")) {
+      if (window.location.href.includes("irctc.co.in/nget/train-search")) {
         openBanner(false);
         document.getElementById("askDishaSdk").style.display = "none";
         document.getElementById("div-gpt-ad-1695628181945-0").style.display =
@@ -1781,8 +1823,8 @@ border-bottom-right-radius: 4px;
     function botOpen() {
       console.log("botOpen function called");
       if (isMobile) {
-        if (iOS()) window.location.assign("https://https://askdisha.irctc.co.in//#web");
-        else window.open("https://askdisha.irctc.co.in//#web", "_blank");
+        if (iOS()) window.location.assign("https://askdisha.irctc.co.in/#web");
+        else window.open("https://askdisha.irctc.co.in/#web", "_blank");
         return;
       }
       openBanner(false);
