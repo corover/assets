@@ -252,9 +252,9 @@ const setPlaceholderMaxHeight = () => {
         placeholderHeight: "330px",
         placeholderBottom: "-20%",
         cross: {
-          size: "1.5em",
+          size: "3em",
 
-          padding: "0.3em",
+          padding: "0em",
           top: "13px",
           right: "10px",
         },
