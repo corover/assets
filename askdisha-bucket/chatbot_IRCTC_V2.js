@@ -546,15 +546,15 @@ const setPlaceholderMaxHeight = () => {
  `;
     maxIcon.style.display = "none"; // Hide by default
 
-    launcherImage.addEventListener("mouseenter", function() {
+    launcherImage.addEventListener("mouseenter", function () {
       maxIcon.style.display = "block";
     });
-    launcherImage.addEventListener("mouseleave", function() {
+    launcherImage.addEventListener("mouseleave", function () {
       maxIcon.style.display = "none";
     });
 
     // Also hide when mouse leaves the whole launcher area
-    launcher.addEventListener("mouseleave", function() {
+    launcher.addEventListener("mouseleave", function () {
       maxIcon.style.display = "none";
     });
 
@@ -1362,6 +1362,7 @@ margin-bottom: -2px;">SALE
           position: relative;
           left:-4px;
           top: 1px;
+          font-weight: 600;
          "
        >
        ${lan[lang].book}
