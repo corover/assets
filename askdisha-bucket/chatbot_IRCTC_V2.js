@@ -414,7 +414,7 @@ const setPlaceholderMaxHeight = () => {
     let initCSS =
       "display: none; z-index: 9; height: fit-content; position: fixed; border-radius: 50%; bottom: 38px; width: fit-content; right: 45px; box-shadow: none;";
     let smallCSS =
-      "border-radius: 8px; box-sizing: border-box;right: 0; width: fit-content !important; max-width: none; position: fixed; z-index: 999; bottom: 0px; visibility: visible; opacity: 1; min-width: 410px; right: 16px; height: calc(var(--vh, 1vh) * 100); left:50%; transform:translateX(-50%)";
+      "border-radius: 8px; box-sizing: border-box;right: 0; width: fit-content !important; max-width: none; position: fixed; z-index: 999; bottom: 0px; visibility: visible; opacity: 1; min-width: 450px; right: 16px; height: calc(var(--vh, 1vh) * 100); left:50%; transform:translateX(-50%)";
     let maxCSS =
       "border-radius: 8px; box-sizing: border-box;right: 0; width: 100% !important; max-width: none; position: fixed; z-index: 999; bottom: 0px; visibility: visible; opacity: 1;box-shadow: 0 7px 6px 1px rgb(0 0 0 / 16%); -webkit-box-shadow: 0 7px 6px 1px rgb(0 0 0 / 16%); -moz-box-shadow: 0 7px 6px 1px rgba(0,0,0,.16); height: 100%";
     //Creates Div
@@ -516,7 +516,7 @@ const setPlaceholderMaxHeight = () => {
 
     let launcherImage = document.createElement("img");
     launcherImage.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/launchergif.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/LauncherImage.gif";
     launcherImage.style.width = "100%";
     launcherImage.style.text = "border-radius :50%";
     launcher.appendChild(launcherImage);
@@ -535,7 +535,7 @@ const setPlaceholderMaxHeight = () => {
   border-radius: 8px;
  `;
     maxIcon.innerHTML = `
-              <div style="display: flex; flex-direction: column; padding: 5px; text-align: center; font-weight: 500; font-family:sans-serif;">
+              <div style="display: flex; flex-direction: column; padding: 5px; text-align: center; font-weight: bold; font-family:lato , sans-serif;">
        <div style="font-size: 14px; white-space: nowrap;">
          <span style="color: #2a2a2a;">👋 Hi, I'm AskDisha,</span>
         </div>
@@ -544,6 +544,20 @@ const setPlaceholderMaxHeight = () => {
         </div>
       </div>
  `;
+    maxIcon.style.display = "none"; // Hide by default
+
+    launcherImage.addEventListener("mouseenter", function() {
+      maxIcon.style.display = "block";
+    });
+    launcherImage.addEventListener("mouseleave", function() {
+      maxIcon.style.display = "none";
+    });
+
+    // Also hide when mouse leaves the whole launcher area
+    launcher.addEventListener("mouseleave", function() {
+      maxIcon.style.display = "none";
+    });
+
     function switchIcon(ch) {
       let s;
       if (true) {
@@ -1114,6 +1128,7 @@ cursor:pointer
     launcher.addEventListener(
       "click",
       () => {
+
         // console.log(1000);
         // ev.preventDefault();
         // window.open(`https://assistant.corover.mobi/eticket/`, "_blank").focus();
@@ -1175,6 +1190,7 @@ cursor:pointer
     messageDialog.addEventListener(
       "touchstart",
       () => {
+        console.log("message dialog touch start");
         // window.open(`https://assistant.corover.mobi/eticket/`, "_blank").focus();
         botOpen();
       },
@@ -1183,6 +1199,7 @@ cursor:pointer
     messageDialog.addEventListener(
       "click",
       () => {
+        console.log("message dialog click");
         // window.open(`https://assistant.corover.mobi/eticket/`, "_blank").focus();
         botOpen();
       },
@@ -1208,6 +1225,7 @@ cursor:pointer
       messageDialog.style.display = "none";
     }
     function botClose() {
+      console.log("bot closed function called")
       // console.log(isSmall);
       if (!isSmall) {
         messageDialog.style.display = "none";
@@ -1340,6 +1358,10 @@ margin-bottom: -2px;">SALE
            font-size: ${mediaObj.button.font};
            color: #2639AB;
            white-space: nowrap;
+          margin-left: 4px;
+          position: relative;
+          left:-4px;
+          top: 1px;
          "
        >
        ${lan[lang].book}
@@ -1440,8 +1462,10 @@ border-bottom-right-radius: 4px;
 
     document.body.appendChild(placeholderCard);
     document.getElementById("disha-banner-button").onclick = botOpen;
+
     // document.getElementById("disha-banner-button2").onclick = openSupport;
-    document.getElementById("disha-image").onclick = botOpen;
+    // 19 june 
+    // document.getElementById("disha-image").onclick = botOpen;
 
     const openBanner = (bool) => {
       if (isMobile) {
@@ -1754,6 +1778,7 @@ border-bottom-right-radius: 4px;
     }
 
     function botOpen() {
+      console.log("botOpen function called");
       if (isMobile) {
         if (iOS()) window.location.assign("https://http://localhost:3000//#web");
         else window.open("http://localhost:3000//#web", "_blank");
@@ -1869,6 +1894,7 @@ border-bottom-right-radius: 4px;
         const message = event.data;
 
         if (message.type === 'REDIRECT_CONDITION_MET') {
+          console.log("Redirect condition met, opening bot");
           botOpen();  // Trigger some action in the parent
         } else if (message.type === 'LANGUAGE_UPDATE') {
           lang = message.data;
@@ -2241,7 +2267,7 @@ border-bottom-right-radius: 4px;
     // 70 and 63
 
     overlayWidget.src =
-      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/launchergif.gif";
+      "https://cdn.jsdelivr.net/gh/corover/assets@UIChange/askdisha-bucket/LauncherImage.gif";
     overlayWidget.style.cssText = `
 height: 110px;
 width: 103px;
