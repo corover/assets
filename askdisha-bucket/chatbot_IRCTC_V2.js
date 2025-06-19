@@ -949,7 +949,7 @@ cursor:pointer
 
     dealOfDay.target = "_blank";
     dealOfDay.innerHTML = `
-   <img width="156px" src="https://sdk.irctc.corover.ai/askdisha-bucket/DEALS....png" decoding="async"/>
+   <img width="156px" src="https://cdn.jsdelivr.net/gh/corover/assets@2Jul25/askdisha-bucket/DEALS....png" decoding="async"/>
    <p style="
      position: absolute;
      background: white;
