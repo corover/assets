@@ -1369,22 +1369,18 @@ margin-bottom: -2px;">SALE
          <p style="margin: 0; color: #FFFFFF; font-family: sans-serif; font-size: 12px; white-space: nowrap;" id="nextGen-title">${lan[lang].nextGen}</p>
        </div>
      <div
-       style=style="
-         height: 58%;
+       style="
+         height: 50%;
          display: flex;
          justify-content: center;
          align-items: center;
          background: #FFFFFF;
          width: 45%;
-         margin-top:12px;
-         margin-right:8px;
-        //  margin: 13px;
+         margin: 13px;
          border-radius: 10px;
-         padding: 12px;
+         padding: 2px 7px;
          cursor: pointer;
          margin-bottom: 10px;
-         margin-right:8px;
-         margin-top:12px;
        "
        id="disha-banner-button"
      >
