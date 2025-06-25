@@ -79,11 +79,11 @@
 
 
 const lan = {
-  en: { book: "Easy Train Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
-  gb: { book: "Easy Train Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
-  us: { book: "Easy Train Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
-  hi: { book: "आसान ट्रेन टिकट बुकिंग", askDisha: "आस्क दिशा 2.0", nextGen: "नेक्स्टजेन एआई टिकटिंग" },
-  gu: { book: "સરસ ટ્રેન ટિકિટ બુકિંગ", askDisha: "આસ્ક દિશા 2.0", nextGen: "નેક્સ્ટજેન એઆઈ ટિકિટિંગ" },
+  en: { book: "Easy Train Ticket Booking!", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
+  gb: { book: "Easy Train Ticket Booking!", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
+  us: { book: "Easy Train Ticket Booking!", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
+  hi: { book: "आसान ट्रेन टिकट बुकिंग!", askDisha: "आस्क दिशा 2.0", nextGen: "नेक्स्टजेन एआई टिकटिंग" },
+  gu: { book: "સરસ ટ્રેન ટિકિટ બુકિંગ!", askDisha: "આસ્ક દિશા 2.0", nextGen: "નેક્સ્ટજેન એઆઈ ટિકિટિંગ" },
   ta: { book: "எளிதான ரயில் டிக்கெட் புக்கிங்", askDisha: "ஆஸ்க் திசா 2.0", nextGen: "நெக்ஸ்ட்ஜென் AI டிக்கெட்டிங்" },
   te: { book: "ఈజీ ట్రైన్ టికెట్ బుకింగ్", askDisha: "ఆస్క్ దిశ 2.0", nextGen: "నెక్స్ట్‌జెన్ AI టికెటింగ్" },
   bn: { book: "সহজ ট্রেন টিকিট বুকিং", askDisha: "আস্ক দিশা 2.0", nextGen: "নেক্সটজেন এআই টিকেটিং" },
