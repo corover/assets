@@ -79,17 +79,18 @@
 
 
 const lan = {
-  en: { book: "AI Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
-  gb: { book: "AI Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
-  us: { book: "AI Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
-  hi: { book: "एआई टिकट बुकिंग", askDisha: "आस्क दिशा 2.0", nextGen: "नेक्स्टजेन एआई टिकटिंग" },
-  gu: { book: "એઆઈ ટિકિટ બુકિંગ", askDisha: "આસ્ક દિશા 2.0", nextGen: "નેક્સ્ટજેન એઆઈ ટિકિટિંગ" },
-  ta: { book: "AI டிக்கெட் புக்கிங்", askDisha: "ஆஸ்க் திசா 2.0", nextGen: "நெக்ஸ்ட்ஜென் AI டிக்கெட்டிங்" },
-  te: { book: "AI టికెట్ బుకింగ్", askDisha: "ఆస్క్ దిశ 2.0", nextGen: "నెక్స్ట్‌జెన్ AI టికెటింగ్" },
-  bn: { book: "এআই টিকিট বুকিং", askDisha: "আস্ক দিশা 2.0", nextGen: "নেক্সটজেন এআই টিকেটিং" },
-  ml: { book: "AI ടിക്കറ്റ് ബുക്കിംഗ്", askDisha: "ആസ്ക് ദിശ 2.0", nextGen: "നെക്സ്റ്റ്ജെൻ AI ടിക്കറ്റിംഗ്" },
-  kn: { book: "AI ಟಿಕೆಟ್ ಬುಕಿಂಗ್", askDisha: "ಆಸ್ಕ್ ದಿಶಾ 2.0", nextGen: "ನೆಕ್ಸ್ಟ್‌ಜೆನ್ AI ಟಿಕೆಟಿಂಗ್" }
+  en: { book: "Easy Train Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
+  gb: { book: "Easy Train Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
+  us: { book: "Easy Train Ticket Booking", askDisha: "AskDisha 2.0", nextGen: "NextGen AI Ticketing" },
+  hi: { book: "आसान ट्रेन टिकट बुकिंग", askDisha: "आस्क दिशा 2.0", nextGen: "नेक्स्टजेन एआई टिकटिंग" },
+  gu: { book: "સરસ ટ્રેન ટિકિટ બુકિંગ", askDisha: "આસ્ક દિશા 2.0", nextGen: "નેક્સ્ટજેન એઆઈ ટિકિટિંગ" },
+  ta: { book: "எளிதான ரயில் டிக்கெட் புக்கிங்", askDisha: "ஆஸ்க் திசா 2.0", nextGen: "நெக்ஸ்ட்ஜென் AI டிக்கெட்டிங்" },
+  te: { book: "ఈజీ ట్రైన్ టికెట్ బుకింగ్", askDisha: "ఆస్క్ దిశ 2.0", nextGen: "నెక్స్ట్‌జెన్ AI టికెటింగ్" },
+  bn: { book: "সহজ ট্রেন টিকিট বুকিং", askDisha: "আস্ক দিশা 2.0", nextGen: "নেক্সটজেন এআই টিকেটিং" },
+  ml: { book: "എളുപ്പത്തിലുള്ള ട്രെയിൻ ടിക്കറ്റ് ബുക്കിംഗ്", askDisha: "ആസ്ക് ദിശ 2.0", nextGen: "നെക്സ്റ്റ്ജെൻ AI ടിക്കറ്റിംഗ്" },
+  kn: { book: "ಸಹಜ ರೈಲು ಟಿಕೆಟ್ ಬುಕಿಂಗ್", askDisha: "ಆಸ್ಕ್ ದಿಶಾ 2.0", nextGen: "ನೆಕ್ಸ್ಟ್‌ಜೆನ್ AI ಟಿಕೆಟಿಂಗ್" }
 };
+
 let lang = "en";
 
 let overlayDiv = document.createElement("div");
@@ -239,7 +240,7 @@ const setPlaceholderMaxHeight = () => {
         scale: "0.8",
       },
       button: {
-        font: "12px",
+        font: "10px",
         padding: "2%",
         icon: "16px",
         marginLeft: "8px",
@@ -274,7 +275,7 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "12px",
+          font: "10px",
           padding: "7px",
           icon: "16px",
           marginLeft: "6px",
@@ -312,7 +313,7 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "12px",
+          font: "10px",
           padding: "2%",
           icon: "16px",
           marginLeft: "8px",
@@ -350,7 +351,7 @@ const setPlaceholderMaxHeight = () => {
           scale: "0.8",
         },
         button: {
-          font: "12px",
+          font: "10px",
           padding: "2%",
           icon: "16px",
           marginLeft: "8px",
@@ -1375,7 +1376,7 @@ margin-bottom: -2px;">SALE
          justify-content: center;
          align-items: center;
          background: #FFFFFF;
-         width: 42%;
+         width: 60%;
          margin-bottom: 10px;
          margin-right: 5px;
          margin-top: 14px;
@@ -1405,6 +1406,8 @@ margin-bottom: -2px;">SALE
           left:-4px;
           top: 1px;
           font-weight: 600;
+          white-space: normal;
+          word-break: break-word;
          "
        >
        ${lan[lang].book}
