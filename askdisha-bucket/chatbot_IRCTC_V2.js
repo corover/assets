@@ -596,10 +596,8 @@ const setPlaceholderMaxHeight = () => {
           // adDownIframe2.style.display = `none`;
           maxIcon.innerHTML = `
         <div style="display: flex; align-items: center;">
-          <span style="color: #2639AB; margin-right: 5px;">↗️</span>
           <div style="font-size: 12px; white-space: nowrap;">
-            <span style="font-weight: bold;">Maximize</span>
-            <span> Expand AskDisha</span>
+            <span style="font-weight: bold;">Easy Booking on AskDISHA</span>
           </div>
         </div>
       `;
